@@ -25,6 +25,8 @@ Hyaena Technologies Web is the Web Implementation of Hyaena Technologies
 ```shell
 git clone
 
+dart pub upgrade
+
 dart run build_runner build
 
 dart run build_runner serve
@@ -32,13 +34,17 @@ dart run build_runner serve
 dart run build_runner test
 
 dart run build_runner watch
-
-dart pub global activate webdev
 ```
 
 OR
 
 ```shell
+git clone
+
+dart pub upgrade
+
+dart pub global activate webdev
+
 webdev build
 
 webdev serve
