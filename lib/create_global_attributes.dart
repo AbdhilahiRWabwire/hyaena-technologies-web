@@ -1,6 +1,6 @@
 import 'package:web/web.dart';
 
-// Attribute Creators for the Document Object Model
+// Global Attribute Creators for the Document Object Model
 
 Attr createAccessKey = document.createAttribute('accesskey');
 
