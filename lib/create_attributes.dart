@@ -1,6 +1,6 @@
 import 'package:web/web.dart';
 
-// Attribute Creation Functions for Hypertext Markup Language
+// Attribute Creators for the Document Object Model
 
 Attr createAccept = document.createAttribute('accept');
 
@@ -38,6 +38,6 @@ Attr createResourceRelationship = document.createAttribute('rel');
 
 Attr createRequiredAttribute = document.createAttribute('required');
 
-Attr createSize = document.createAttribute('size');
+Attr createSizeAttribute = document.createAttribute('size');
 
 Attr createSteppingInterval = document.createAttribute('step');

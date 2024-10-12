@@ -1,6 +1,6 @@
 import 'package:web/web.dart';
 
-// Element Creation Functions for Hypertext Markup Language
+// Element Creators for the Document Object Model
 
 Element createAnchor = document.createElement('a');
 
@@ -18,7 +18,7 @@ Element createAudio = document.createElement('audio');
 
 Element createBringAttentionTo = document.createElement('b');
 
-Element createBaseUniformResourceLocator = document.createElement('base');
+Element createBaseElement = document.createElement('base');
 
 Element createBidirectionalIsolate = document.createElement('bdi');
 
@@ -90,7 +90,7 @@ Element createSectionHeadingFive = document.createElement('h5');
 
 Element createSectionHeadingSix = document.createElement('h6');
 
-Element createHeading = document.createElement('head');
+Element createHead = document.createElement('head');
 
 Element createHeader = document.createElement('header');
 
@@ -130,7 +130,7 @@ Element createMenu = document.createElement('menu');
 
 Element createMetaData = document.createElement('meta');
 
-Element createMeter = document.createElement('meter');
+Element createProgressMeter = document.createElement('meter');
 
 Element createNavigationSection = document.createElement('nav');
 
@@ -206,7 +206,7 @@ Element createTableFoot = document.createElement('tfoot');
 
 Element createTableHeader = document.createElement('th');
 
-Element createTableHeading = document.createElement('thead');
+Element createTableHead = document.createElement('thead');
 
 Element createDateTime = document.createElement('time');
 

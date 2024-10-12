@@ -1,6 +1,6 @@
 import 'package:web/web.dart';
 
-// Query Selectors for Hypertext Markup Language Elements
+// Query Selectors for for the Document Object Model
 
 Element queryAnchor = document.querySelector('a')!;
 
@@ -18,7 +18,7 @@ Element queryAudio = document.querySelector('audio')!;
 
 Element queryBringAttentionTo = document.querySelector('b')!;
 
-Element queryBaseUniformResourceLocator = document.querySelector('base')!;
+Element queryBaseElement = document.querySelector('base')!;
 
 Element queryBidirectionalIsolate = document.querySelector('bdi')!;
 
@@ -90,7 +90,7 @@ Element querySectionHeadingFive = document.querySelector('h5')!;
 
 Element querySectionHeadingSix = document.querySelector('h6')!;
 
-Element queryHeading = document.querySelector('head')!;
+Element queryHead = document.querySelector('head')!;
 
 Element queryHeader = document.querySelector('header')!;
 
@@ -130,7 +130,7 @@ Element queryMenu = document.querySelector('menu')!;
 
 Element queryMetaData = document.querySelector('meta')!;
 
-Element queryMeter = document.querySelector('meter')!;
+Element queryProgressMeter = document.querySelector('meter')!;
 
 Element queryNavigationSection = document.querySelector('nav')!;
 
@@ -206,7 +206,7 @@ Element queryTableFoot = document.querySelector('tfoot')!;
 
 Element queryTableHeader = document.querySelector('th')!;
 
-Element queryTableHeading = document.querySelector('thead')!;
+Element queryTableHead = document.querySelector('thead')!;
 
 Element queryDateTime = document.querySelector('time')!;
 

@@ -1,9 +1,9 @@
 import 'package:web/web.dart';
 
-// Cascading Style Sheet Object Model
+// Utilities for the Cascading Style Sheet Object Model
 
-// Cascading Style Sheet
-CSSStyleSheet styleSheet = CSSStyleSheet();
+// Cascading Style Sheet Type
+CSSStyleSheet cssStyleSheetType = CSSStyleSheet();
 
-// Array of Cascading Style Sheets
-StyleSheetList styleSheetArray = document.styleSheets;
+// Cascading Style Sheet Interface
+$CSS cssInterface = CSS;

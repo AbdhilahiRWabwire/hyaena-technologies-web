@@ -1,6 +1,6 @@
 import 'package:web/web.dart';
 
-// Attribute Creation Functions for Hypertext Markup Language
+// Attribute Creators for the Document Object Model
 
 Attr createAccessKey = document.createAttribute('accesskey');
 
@@ -40,23 +40,23 @@ Attr createItemScope = document.createAttribute('itemscope');
 
 Attr createItemType = document.createAttribute('itemtype');
 
-Attr createLanguage = document.createAttribute('lang');
+Attr createLanguageAttribute = document.createAttribute('lang');
 
 Attr createNumberUsedOnce = document.createAttribute('nonce');
 
-Attr createElementPart = document.createAttribute('part');
+Attr createPartAttribute = document.createAttribute('part');
 
 Attr createPopover = document.createAttribute('popover');
 
-Attr createElementSlot = document.createAttribute('slot');
+Attr createSlotAttribute = document.createAttribute('slot');
 
 Attr createSpellCheck = document.createAttribute('spellcheck');
 
-Attr createElementStyle = document.createAttribute('style');
+Attr createStyleAttribute = document.createAttribute('style');
 
 Attr createTabIndex = document.createAttribute('tabindex');
 
-Attr createElementTitle = document.createAttribute('title');
+Attr createTitleAttribute = document.createAttribute('title');
 
 Attr createTranslate = document.createAttribute('translate');
 
