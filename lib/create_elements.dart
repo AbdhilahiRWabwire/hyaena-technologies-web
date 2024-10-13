@@ -216,7 +216,7 @@ Element createTableRow = document.createElement('tr');
 
 Element createEmbeddedTextTrack = document.createElement('track');
 
-Element createUnarticulatedAnnotationUnderline = document.createElement('u');
+Element createUnderlineElement = document.createElement('u');
 
 Element createUnorderedList = document.createElement('ul');
 

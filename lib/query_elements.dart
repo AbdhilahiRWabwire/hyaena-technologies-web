@@ -216,7 +216,7 @@ Element queryTableRow = document.querySelector('tr')!;
 
 Element queryEmbeddedTextTrack = document.querySelector('track')!;
 
-Element queryUnarticulatedAnnotationUnderline = document.querySelector('u')!;
+Element queryUnderlineElement = document.querySelector('u')!;
 
 Element queryUnorderedList = document.querySelector('ul')!;
 

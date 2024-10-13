@@ -216,8 +216,7 @@ NodeList queryfulTableRow = document.querySelectorAll('tr');
 
 NodeList queryfulEmbeddedTextTrack = document.querySelectorAll('track');
 
-NodeList queryfulUnarticulatedAnnotationUnderline =
-    document.querySelectorAll('u');
+NodeList queryfulUnderlineElement = document.querySelectorAll('u');
 
 NodeList queryfulUnorderedList = document.querySelectorAll('ul');
 
