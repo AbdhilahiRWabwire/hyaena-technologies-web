@@ -10,6 +10,8 @@
   </h1>
 </a>
 
+[![Dart Workflow](https://github.com/HyaenaTechnologies/hyaena-technologies-web/actions/workflows/dart.yml/badge.svg)](https://github.com/HyaenaTechnologies/hyaena-technologies-web/actions/workflows/dart.yml)
+
 # Hyaena Technologies Web
 
 Hyaena Technologies is an Open Source Technology company.
