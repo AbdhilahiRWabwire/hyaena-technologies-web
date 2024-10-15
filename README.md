@@ -1,5 +1,6 @@
 [Dart]: https://dart.dev/
 [IDEA]: https://jetbrains.com/idea/
+[MDN]: https://developer.mozilla.org/en-US/docs/Web/API
 [VSCode]: https://code.visualstudio.com/docs
 
 <a href="https://github.com/HyaenaTechnologies/hyaena-technologies-web">
@@ -22,6 +23,7 @@ Hyaena Technologies Web is the Web Implementation of Hyaena Technologies
 
 - [Dart Language][Dart]
 - [IntelliJ IDEA][IDEA]
+- [Mozilla Developer Network Web Documentation][MDN]
 - [Visual Studio Code][VSCode]
 
 ```shell
