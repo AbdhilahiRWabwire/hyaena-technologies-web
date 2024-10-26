@@ -23,6 +23,9 @@ jobs:
 
     - name: Upgrade Packages
       run: dart pub upgrade
+
+    - name: Outdated Packages
+      run: dart pub outdated
       
     - name: Analyze Package
       run: dart analyze lib
