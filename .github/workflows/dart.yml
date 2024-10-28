@@ -21,17 +21,23 @@ jobs:
     - name: Set up Dart
       uses: dart-lang/setup-dart@v1.6.5
 
+    - name: Environment Information
+      run: dart info
+
+    - name: Activate webdev
+      run: dart pub global activate webdev
+
     - name: Upgrade Packages
       run: dart pub upgrade
+
+    - name: Dependency Graph
+      run: dart pub deps
 
     - name: Outdated Packages
       run: dart pub outdated
       
     - name: Analyze Package
       run: dart analyze lib
-
-    - name: Environment Information
-      run: dart info 
       
     - name: Fix Package Dry Run 
       run: dart fix lib --dry-run
@@ -41,6 +47,3 @@ jobs:
       
     - name: Format Package 
       run: dart format lib
-      
-    - name: Dependency Graph
-      run: dart pub deps

@@ -2,6 +2,7 @@
 [IDEA]: https://jetbrains.com/idea/
 [MDN]: https://developer.mozilla.org/en-US/docs/Web/API
 [VSCode]: https://code.visualstudio.com/docs
+[Zig Language]: https://ziglang.org/
 
 <a href="https://github.com/HyaenaTechnologies/hyaena-technologies-web">
   <h1>
@@ -25,6 +26,7 @@ Hyaena Technologies Web is the Web Implementation of Hyaena Technologies
 - [IntelliJ IDEA][IDEA]
 - [Mozilla Developer Network Web Documentation][MDN]
 - [Visual Studio Code][VSCode]
+- [Zig][Zig Language]
 
 ```shell
 git clone
@@ -52,4 +54,18 @@ dart pub global activate webdev
 webdev build
 
 webdev serve
+```
+
+## Build Web Server
+
+```shell
+git clone
+
+zig build
+```
+
+## Install Web Server
+
+```shell
+echo 'export PATH="$PATH:/usr/lib/htnet"' >> ~/.profile
 ```
