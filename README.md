@@ -16,9 +16,7 @@
 
 # Hyaena Technologies Web
 
-Hyaena Technologies is an Open Source Technology company.
-
-Hyaena Technologies Web is the Web Implementation of Hyaena Technologies
+Hyaena Technologies is an Open Source Technology company
 
 ## Build
 
@@ -67,5 +65,5 @@ zig build
 ## Install Web Server
 
 ```shell
-echo 'export PATH="$PATH:/usr/lib/htnet"' >> ~/.profile
+echo 'export PATH="$PATH:/usr/local/bin/htnet"' >> ~/.bashrc && sudo echo 'export PATH="$PATH:/usr/local/bin/htnet"' >> /etc/skel/.bashrc
 ```
