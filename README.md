@@ -49,6 +49,8 @@ dart pub upgrade
 
 dart pub global activate webdev
 
+echo 'export PATH="$PATH:~/.pub-cache/bin"' >> ~/.bashrc && sudo echo 'export PATH="$PATH:~/.pub-cache/bin"' >> /etc/skel/.bashrc
+
 webdev build
 
 webdev serve
