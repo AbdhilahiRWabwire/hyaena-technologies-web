@@ -18,7 +18,7 @@ RUN wget https://ziglang.org/download/0.13.0/zig-linux-x86_64-0.13.0.tar.xz && t
 RUN mv ./zig-linux-x86_64-0.13.0 ./zig && mv ./zig /usr/bin
 RUN echo 'export PATH="$PATH:/usr/bin/zig"' >> ~/.bashrc && echo 'export PATH="$PATH:/usr/bin/zig"' >> /etc/skel/.bashrc
 RUN add-apt-repository ppa:maveonair/helix-editor && apt update
-RUN apt -y install ed sed nano vim neovim helix 
+RUN apt -y install ed sed nano vim neovim helix kakoune micro 
 RUN dart info
 RUN dart pub global activate webdev
 RUN dart pub upgrade
