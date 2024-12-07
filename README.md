@@ -29,6 +29,14 @@ Hyaena Technologies is an Open Source Technology company
 ```shell
 git clone
 
+dart compile js
+```
+
+OR
+
+```shell
+git clone
+
 dart pub upgrade
 
 dart run build_runner build
