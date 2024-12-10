@@ -230,14 +230,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "7.0.1"
-  file_testing:
-    dependency: "direct dev"
-    description:
-      name: file_testing
-      sha256: eb0c85fd118ddc0d41c295c09f64e0924c256b071087cdc9828d5372c80d554d
-      url: "https://pub.dev"
-    source: hosted
-    version: "3.0.2"
   fixnum:
     dependency: "direct dev"
     description:
@@ -359,7 +351,7 @@ packages:
     source: hosted
     version: "5.0.0"
   logging:
-    dependency: "direct main"
+    dependency: "direct dev"
     description:
       name: logging
       sha256: c8245ada5f1717ed44271ed1c26b8ce85ca3228fd2ffdb75468ab01979309d61
@@ -375,7 +367,7 @@ packages:
     source: hosted
     version: "0.1.2-main.4"
   markdown:
-    dependency: "direct main"
+    dependency: "direct dev"
     description:
       name: markdown
       sha256: ef2a1298144e3f985cc736b22e0ccdaf188b5b3970648f2d9dc13efd1d9df051
@@ -414,14 +406,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.0.2"
-  oauth2:
-    dependency: "direct dev"
-    description:
-      name: oauth2
-      sha256: c84470642cbb2bec450ccab2f8520c079cd1ca546a76ffd5c40589e07f4e8bf4
-      url: "https://pub.dev"
-    source: hosted
-    version: "2.0.3"
   package_config:
     dependency: transitive
     description:
@@ -431,7 +415,7 @@ packages:
     source: hosted
     version: "2.1.0"
   path:
-    dependency: "direct main"
+    dependency: "direct dev"
     description:
       name: path
       sha256: "75cca69d1490965be98c73ceaea117e8a04dd21217b37b292c9ddbec0d955bc5"
@@ -439,7 +423,7 @@ packages:
     source: hosted
     version: "1.9.1"
   pool:
-    dependency: "direct main"
+    dependency: "direct dev"
     description:
       name: pool
       sha256: "20fe868b6314b322ea036ba325e6fc0711a22948856475e2c2b6306e8ab39c2a"
