@@ -71,7 +71,7 @@ webdev serve
 ```shell
 git clone
 
-zig build
+go build
 ```
 
 ## Install Web Server
