@@ -1,7 +1,13 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"net/http"
+)
 
 func main() {
-	fmt.Println("Hyaena Technologies Server")
+	const port string = ":8080"
+	var fileServer http.Handler = http.FileServer(http.Dir("./lib"))
+	fmt.Println("Serving on Port: 8080")
+	http.ListenAndServe(port, fileServer)
 }

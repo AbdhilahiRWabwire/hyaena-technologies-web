@@ -2,6 +2,7 @@
 [IDEA]: https://jetbrains.com/idea/
 [MDN]: https://developer.mozilla.org/en-US/docs/Web/API
 [VSCode]: https://code.visualstudio.com/docs
+[WAI-ARIA]: https://www.w3.org/WAI/ARIA/apg/patterns/
 [Zig Language]: https://ziglang.org/
 
 <a href="https://github.com/HyaenaTechnologies/hyaena-technologies-web">
@@ -24,6 +25,7 @@ Hyaena Technologies is an Open Source Technology company
 - [IntelliJ IDEA][IDEA]
 - [Mozilla Developer Network Web Documentation][MDN]
 - [Visual Studio Code][VSCode]
+- [Web Accessibility Initiative][WAI-ARIA]
 - [Zig][Zig Language]
 
 ```shell
@@ -71,7 +73,7 @@ webdev serve
 ```shell
 git clone
 
-go build
+GOOS=linux GOARCH=amd64 go build -o ./bin/server ./server/source/main.go
 ```
 
 ## Install Web Server
