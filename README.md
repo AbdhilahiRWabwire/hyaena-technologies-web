@@ -1,9 +1,9 @@
 [Dart]: https://dart.dev/
+[Go Language]: https://go.dev/
 [IDEA]: https://jetbrains.com/idea/
 [MDN]: https://developer.mozilla.org/en-US/docs/Web/API
 [VSCode]: https://code.visualstudio.com/docs
 [WAI-ARIA]: https://www.w3.org/WAI/ARIA/apg/patterns/
-[Zig Language]: https://ziglang.org/
 
 <a href="https://github.com/HyaenaTechnologies/hyaena-technologies-web">
   <h1>
@@ -22,21 +22,11 @@ Hyaena Technologies is an Open Source Technology company
 ## Build
 
 - [Dart Language][Dart]
+- [Go][Go Language]
 - [IntelliJ IDEA][IDEA]
 - [Mozilla Developer Network Web Documentation][MDN]
 - [Visual Studio Code][VSCode]
 - [Web Accessibility Initiative][WAI-ARIA]
-- [Zig][Zig Language]
-
-```shell
-git clone
-
-dart pub upgrade
-
-dart compile js
-```
-
-OR
 
 ```shell
 git clone
