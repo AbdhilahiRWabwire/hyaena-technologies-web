@@ -73,7 +73,7 @@ webdev serve
 ```shell
 git clone
 
-GOOS=linux GOARCH=amd64 go build -o ./bin/server ./server/source/main.go
+GOOS=linux GOARCH=amd64 go build -o ./binary/server ./server/source/main.go
 ```
 
 ## Install Web Server
