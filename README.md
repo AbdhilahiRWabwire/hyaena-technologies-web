@@ -13,7 +13,7 @@
   </h1>
 </a>
 
-[![Dart Workflow](https://github.com/HyaenaTechnologies/hyaena-technologies-web/actions/workflows/dart.yml/badge.svg)](https://github.com/HyaenaTechnologies/hyaena-technologies-web/actions/workflows/dart.yml)
+[![Go Workflow](https://github.com/HyaenaTechnologies/hyaena-technologies-web/actions/workflows/go.yml/badge.svg)](https://github.com/HyaenaTechnologies/hyaena-technologies-web/actions/workflows/go.yml)
 
 # Hyaena Technologies Web
 
