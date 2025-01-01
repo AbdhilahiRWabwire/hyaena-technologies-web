@@ -7,7 +7,7 @@ import (
 
 const port string = ":8080"
 
-var fileServer http.Handler = http.FileServer(http.Dir("./lib"))
+var fileServer http.Handler = http.FileServer(http.Dir("./source"))
 
 func main() {
 	fmt.Println("Serving on Port: 8080")
