@@ -1,5 +1,6 @@
 [Go Language]: https://go.dev/
 [JavaScript Language]: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+[Fleet]: https://www.jetbrains.com/fleet/
 [MDN]: https://developer.mozilla.org/en-US/docs/Web/API
 [VSCode]: https://code.visualstudio.com/docs
 [WAI-ARIA]: https://www.w3.org/WAI/ARIA/apg/patterns/
@@ -22,6 +23,7 @@ Hyaena Technologies is an Open Source Technology company
 ## Build
 
 - [Go][Go Language]
+- [JetBrains Fleet][Fleet]
 - [JetBrains Webstorm][Webstorm]
 - [JavaScript][JavaScript Language]
 - [Mozilla Developer Network Web Documentation][MDN]
