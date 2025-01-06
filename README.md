@@ -1,6 +1,6 @@
+[Fleet]: https://www.jetbrains.com/fleet/
 [Go Language]: https://go.dev/
 [JavaScript Language]: https://developer.mozilla.org/en-US/docs/Web/JavaScript
-[Fleet]: https://www.jetbrains.com/fleet/
 [MDN]: https://developer.mozilla.org/en-US/docs/Web/API
 [VSCode]: https://code.visualstudio.com/docs
 [WAI-ARIA]: https://www.w3.org/WAI/ARIA/apg/patterns/
