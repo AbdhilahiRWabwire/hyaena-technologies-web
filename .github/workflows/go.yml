@@ -30,10 +30,10 @@ jobs:
       run: go vet ./server/source/main.go
     
     - name: Update Package to New APIs  
-      run: go fix ./server/source/main.go
+      run: go fix ./server
     
     - name: Format Package 
-      run: go fmt ./server/source/main.go
+      run: go fmt ./server
 
     - name: Compile Package and Dependencies
       run: GOOS=linux GOARCH=amd64 go build -o ./binary/htnet ./server/source/main.go
