@@ -14,8 +14,7 @@ RUN echo 'export PATH="$PATH:/usr/bin/go/bin"' >> ~/.bashrc && echo 'export PATH
 RUN wget https://go.dev/dl/go1.23.4.linux-amd64.tar.gz && tar --extract --file ./*.gz --verbose
 RUN mv ./go1.23.4.linux-amd64/go /usr/bin
 RUN go env
-RUN go list
-RUN go vet ./server
-RUN go fix ./server
-RUN go fmt ./server
+RUN go vet ./server/source/main.go
+RUN go fix ./server/source/main.go
+RUN go fmt ./server/source/main.go
 RUN GOOS=linux GOARCH=amd64 go build -o ./binary/htdinet ./server/source/main.go
