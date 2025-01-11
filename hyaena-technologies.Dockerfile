@@ -13,5 +13,4 @@ RUN echo 'export PATH="$PATH:/usr/local/include"' >> ~/.bashrc && echo 'export P
 RUN echo 'export PATH="$PATH:/usr/bin/go/bin"' >> ~/.bashrc && echo 'export PATH="$PATH:/usr/bin/go/bin"' >> /etc/skel/.bashrc 
 RUN wget https://go.dev/dl/go1.23.4.linux-amd64.tar.gz && tar --extract --file ./*.gz --verbose
 RUN mv ./go1.23.4.linux-amd64/go /usr/bin
-RUN dnf -y install ed sed nano vim neovim helix
 RUN GOOS=linux GOARCH=amd64 go build -o ./binary/htdinet ./server/source/main.go
