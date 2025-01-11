@@ -28,12 +28,6 @@ jobs:
     
     - name: Report Mistakes in Package  
       run: go vet ./server/source/main.go
-    
-    - name: Update Package to New APIs  
-      run: go fix ./server
-    
-    - name: Format Package 
-      run: go fmt ./server
 
     - name: Compile Package and Dependencies
       run: GOOS=linux GOARCH=amd64 go build -o ./binary/htnet ./server/source/main.go
