@@ -23,5 +23,20 @@ jobs:
       with:
         go-version: '1.23'
 
-    - name: Build Package
+    - name: Environment Information
+      run: go env
+
+    - name: List Packages or Modules 
+      run: go list
+    
+    - name: Report Mistakes in Package  
+      run: go vet ./server
+    
+    - name: Update Package to New APIs  
+      run: go fix ./server
+    
+    - name: Format Package 
+      run: go fmt ./server
+
+    - name: Compile Package and Dependencies
       run: GOOS=linux GOARCH=amd64 go build -o ./binary/htnet ./server/source/main.go
