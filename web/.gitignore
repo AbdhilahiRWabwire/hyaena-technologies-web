@@ -1,0 +1,5 @@
+# Build Directories
+/binary
+.build/
+build/
+**/build/

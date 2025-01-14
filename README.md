@@ -35,7 +35,7 @@ Hyaena Technologies is an Open Source Technology company
 ```shell
 git clone
 
-GOOS=linux GOARCH=amd64 go build -o ./binary/htnet ./server/source/main.go
+GOOS=linux GOARCH=amd64 go build -o ./binary/htnet ./source/main.go
 ```
 
 ## Install Web Server
