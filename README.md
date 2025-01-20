@@ -1,7 +1,6 @@
 [Fleet]: https://www.jetbrains.com/fleet/
 [GoLand]: https://jetbrains.com/go
 [Go Language]: https://go.dev/
-[JavaScript Language]: https://developer.mozilla.org/en-US/docs/Web/JavaScript
 [MDN]: https://developer.mozilla.org/en-US/docs/Web/API
 [VSCode]: https://code.visualstudio.com/docs
 [WAI-ARIA]: https://www.w3.org/WAI/ARIA/apg/patterns/
@@ -25,7 +24,6 @@ Hyaena Technologies is an Open Source Technology company
 - [Go][Go Language]
 - [JetBrains Fleet][Fleet]
 - [JetBrains GoLand][GoLand]
-- [JavaScript][JavaScript Language]
 - [Mozilla Developer Network Web Documentation][MDN]
 - [Visual Studio Code][VSCode]
 - [Web Accessibility Initiative][WAI-ARIA]
