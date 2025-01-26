@@ -5,7 +5,7 @@ WORKDIR /hyaena-technologies
 COPY ./ ./
 
 RUN dnf -y upgrade 
-RUN dnf -y install iptables firewalld nftables
+RUN dnf -y ufw install iptables firewalld nftables
 RUN echo 'export PATH="$PATH:/usr/bin"' >> ~/.bashrc && echo 'export PATH="$PATH:/usr/bin"' >> /etc/skel/.bashrc
 RUN echo 'export PATH="$PATH:/usr/local/bin"' >> ~/.bashrc && echo 'export PATH="$PATH:/usr/local/bin"' >> /etc/skel/.bashrc
 RUN echo 'export PATH="$PATH:/usr/include"' >> ~/.bashrc && echo 'export PATH="$PATH:/usr/include"' >> /etc/skel/.bashrc
