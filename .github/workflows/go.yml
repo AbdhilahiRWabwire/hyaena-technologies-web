@@ -39,4 +39,4 @@ jobs:
       run: go fmt ./source
 
     - name: Compile Package and Dependencies
-      run: GOOS=linux GOARCH=amd64 go build -o ./binary/htnet ./source/main.go
+      run: GOARCH=amd64 GOOS=linux go build -o ./binary/htnet ./source/main.go
