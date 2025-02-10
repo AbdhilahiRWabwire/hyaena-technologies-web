@@ -1,3 +1,3 @@
 #!/bin/zsh
 
-GOARCH=amd64 GOOS=linux go build -o ./binary/htdinet ./source/main.go
+GOARCH=amd64 GOOS=linux go build -o ./binary/htnet ./source/main.go
