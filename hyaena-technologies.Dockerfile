@@ -15,4 +15,4 @@ FROM amd64/alpine:latest
 
 COPY --from=builder ./ ./
 
-RUN ./binary/htdinet serve
+RUN ./binary/htnet serve
