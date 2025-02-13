@@ -13,7 +13,7 @@ RUN echo 'export PATH="$PATH:/usr/local/include"' >> ~/.bashrc && echo 'export P
 RUN echo 'export PATH="$PATH:/usr/bin/go/bin"' >> ~/.bashrc && echo 'export PATH="$PATH:/usr/bin/go/bin"' >> /etc/skel/.bashrc
 RUN echo 'export PATH="$PATH:/usr/lib"' >> ~/.bashrc && echo 'export PATH="$PATH:/usr/lib"' >> /etc/skel/.bashrc
 RUN echo 'export PATH="$PATH:/usr/local/lib"' >> ~/.bashrc && echo 'export PATH="$PATH:/usr/local/lib"' >> /etc/skel/.bashrc
-RUN wget https://go.dev/dl/go1.23.4.linux-amd64.tar.gz && tar --extract --file ./*.gz --verbose
+RUN wget https://go.dev/dl/go1.24.0.linux-amd64.tar.gz && tar --extract --file ./*.gz --verbose
 RUN mv ./go1.23.4.linux-amd64/go /usr/bin
 RUN go env
 RUN go list ./source
