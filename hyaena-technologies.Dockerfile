@@ -13,6 +13,8 @@ GOOS=linux GOARCH=amd64 go build -o ./binary/htnet ./source/main.go
 
 FROM amd64/alpine:latest
 
+WORKDIR /hyaena-technologies
+
 COPY --from=builder ./ ./
 
 RUN ./binary/htnet serve
