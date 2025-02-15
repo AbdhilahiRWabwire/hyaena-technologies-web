@@ -1,5 +1,5 @@
 package yaml
 
-// Yet Another Markup Language Model
+// YAML Ain't Markup Language Model
 type YAML struct {
 }
