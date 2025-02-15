@@ -34,6 +34,9 @@ Hyaena Technologies is an Open Source Technology company
 git clone
 
 cargo build
+
+./target/debug/htnet serve
+./target/release/htnet serve
 ```
 
 OR
@@ -42,6 +45,9 @@ OR
 git clone
 
 make build
+
+./target/debug/htnet serve
+./target/release/htnet serve
 ```
 
 OR
@@ -50,6 +56,9 @@ OR
 git clone
 
 ./shell/build.sh
+
+./target/debug/htnet serve
+./target/release/htnet serve
 ```
 
 ## Install Web Server

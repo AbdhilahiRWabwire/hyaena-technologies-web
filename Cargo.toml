@@ -1,7 +1,15 @@
 [package]
-name = "hyaena-technologies-server"
-version = "0.2.0"
+authors = ["Hyaena Technologies", "Abdhilahi R. Wabwire"]
+description = "Hyaena Technologies Web Server"
 edition = "2021"
+license = "BSD-3-Clause"
+license-file = "LICENSE"
+name = "hyaena-technologies-server"
+publish = false
+repository = "https://github.com/HyaenaTechnologies/hyaena-technologies-web"
+rust-version = "1.84.1"
+readme = "README.md"
+version = "0.2.0"
 
 [dependencies]
 anstyle = "1.0.10"
@@ -13,7 +21,6 @@ log = "0.4.25"
 minio = "0.1.0"
 opentelemetry = "0.28.0"
 opentelemetry-appender-log = "0.28.0"
-opentelemetry-appender-tracing = "0.28.1"
 opentelemetry-contrib = "0.20.0"
 opentelemetry-http = "0.28.0"
 opentelemetry-otlp = "0.28.0"
@@ -22,5 +29,20 @@ opentelemetry_sdk = "0.28.0"
 proc-exit = "2.0.2"
 s2n-quic = "1.53.0"
 serde_json = "1.0.138"
-socket2 = "0.5.8"
 surrealdb = "2.2.0"
+
+[dev-dependencies]
+regex = "1.11.1"
+socket2 = "0.5.8"
+
+[target.x86_64-apple-darwin]
+
+[target.aarch64-apple-darwin]
+
+[target.x86_64-unknown-linux-gnu]
+
+[target.aarch64-unknown-linux-gnu]
+
+[target.x86_64-pc-windows-msvc]
+
+[target.aarch64-pc-windows-msvc]
