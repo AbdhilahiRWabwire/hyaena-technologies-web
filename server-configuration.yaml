@@ -1,8 +1,8 @@
-apiVersion: htdinet/v0alpha2 # Configuration Version
+apiVersion: htnet/v0alpha2 # Configuration Version
 
 kind: Config	# Always Config.
 
-name:	data-interchange-server # Project Name
+name:	hyaena-technologies-server # Project Name
 
 sources: # Path to Sources and Assets
   sourceCode:

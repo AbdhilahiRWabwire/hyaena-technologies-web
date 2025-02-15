@@ -1,4 +1,4 @@
-apiVersion: htdinet/v0alpha2 # Configuration Version
+apiVersion: htnet/v0alpha2 # Configuration Version
 
 kind: Config	# Always Config.
 
