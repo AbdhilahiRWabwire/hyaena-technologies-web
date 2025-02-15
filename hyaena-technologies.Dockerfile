@@ -12,4 +12,4 @@ WORKDIR /hyaena-technologies
 
 COPY --from=builder ./ ./ 
 
-RUN ./target/debug/htdinet serve
+RUN ./target/debug/htnet serve
