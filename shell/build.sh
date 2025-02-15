@@ -1,3 +1,4 @@
 #!/bin/sh
 
-cargo build
+# Cargo Build Release Mode
+cargo build --release

@@ -33,10 +33,9 @@ Hyaena Technologies is an Open Source Technology company
 ```shell
 git clone
 
-cargo build
-
-./target/debug/htnet serve
-./target/release/htnet serve
+cargo build --release \ 
+mv ./target/release/hyaena-technologies-server ./binary \ 
+./binary/hyaena-technologies-server serve
 ```
 
 OR
@@ -44,10 +43,9 @@ OR
 ```shell
 git clone
 
-make build
-
-./target/debug/htnet serve
-./target/release/htnet serve
+make build-release \ 
+mv ./target/release/hyaena-technologies-server ./binary \ 
+./binary/hyaena-technologies-server serve
 ```
 
 OR
@@ -57,12 +55,14 @@ git clone
 
 ./shell/build.sh
 
-./target/debug/htnet serve
-./target/release/htnet serve
+../shell/build.sh \ 
+mv ./target/release/hyaena-technologies-server ./binary \ 
+./binary/hyaena-technologies-server serve
 ```
 
 ## Install Web Server
 
 ```shell
-echo 'export PATH="$PATH:/usr/local/bin/htnet"' >> ~/.bashrc && sudo echo 'export PATH="$PATH:/usr/local/bin/htnet"' >> /etc/skel/.bashrc
+echo 'export PATH="$PATH:/usr/local/bin/htnet"' >> ~/.bashrc \ 
+sudo echo 'export PATH="$PATH:/usr/local/bin/htnet"' >> /etc/skel/.bashrc
 ```

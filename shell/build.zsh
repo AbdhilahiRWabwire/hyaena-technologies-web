@@ -1,3 +1,4 @@
 #!/bin/zsh
 
-cargo build
+# Cargo Build Release Mode
+cargo build --release

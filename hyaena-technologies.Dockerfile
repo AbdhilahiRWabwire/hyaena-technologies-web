@@ -4,7 +4,10 @@ WORKDIR /hyaena-technologies
 
 COPY ./ ./
 
-RUN cargo build
+RUN cargo update \ 
+cargo check \  
+cargo build --release \ 
+mv ./target/release/hyaena-technologies-server ./binary
 
 FROM amd64/alpine:latest
 
@@ -12,4 +15,4 @@ WORKDIR /hyaena-technologies
 
 COPY --from=builder ./ ./ 
 
-RUN ./target/debug/htnet serve
+RUN ./binary/hyaena-technologies-server serve
