@@ -1,20 +1,15 @@
-FROM amd64/golang:alpine
+FROM amd64/rust:alpine
 
 WORKDIR /hyaena-technologies
 
 COPY ./ ./
 
-RUN go env \ 
-go list ./source \ 
-go vet ./source \ 
-go fix ./source \ 
-go fmt ./source \ 
-GOOS=linux GOARCH=amd64 go build -o ./binary/htnet ./source/main.go
+RUN cargo build
 
 FROM amd64/alpine:latest
 
 WORKDIR /hyaena-technologies
 
-COPY --from=builder ./ ./
+COPY --from=builder ./ ./ 
 
-RUN ./binary/htnet serve
+RUN ./binary/htdinet serve

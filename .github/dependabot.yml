@@ -7,10 +7,10 @@ updates:
       day: "saturday"
       interval: "weekly"
       time: "03:00"
-
-  - package-ecosystem: "gomod"
+  
+  - package-ecosystem: "cargo"
     commit-message:
-      prefix: "Go"
+      prefix: "Cargo"
     directory: "/" 
     schedule:
       day: "saturday"

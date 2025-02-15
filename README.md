@@ -1,7 +1,7 @@
 [Fleet]: https://www.jetbrains.com/fleet/
-[GoLand]: https://jetbrains.com/go
-[Go Language]: https://go.dev/
 [MDN]: https://developer.mozilla.org/en-US/docs/Web/API
+[Rust Language]: https://rust-lang.org
+[RustRover]: https://jetbrains.com/rust
 [VSCode]: https://code.visualstudio.com/docs
 [WAI-ARIA]: https://www.w3.org/WAI/ARIA/apg/patterns/
 
@@ -13,7 +13,7 @@
   </h1>
 </a>
 
-[![Go Workflow](https://github.com/HyaenaTechnologies/hyaena-technologies-web/actions/workflows/go.yml/badge.svg)](https://github.com/HyaenaTechnologies/hyaena-technologies-web/actions/workflows/go.yml)
+[![Rust Workflow](https://github.com/HyaenaTechnologies/hyaena-technologies-web/actions/workflows/rust.yml/badge.svg)](https://github.com/HyaenaTechnologies/hyaena-technologies-web/actions/workflows/rust.yml)
 
 # Hyaena Technologies Web
 
@@ -21,9 +21,9 @@ Hyaena Technologies is an Open Source Technology company
 
 ## Build
 
-- [Go][Go Language]
+- [Rust][Rust Language]
 - [JetBrains Fleet][Fleet]
-- [JetBrains GoLand][GoLand]
+- [JetBrains RustRover][RustRover]
 - [Mozilla Developer Network Web Documentation][MDN]
 - [Visual Studio Code][VSCode]
 - [Web Accessibility Initiative][WAI-ARIA]
@@ -33,7 +33,7 @@ Hyaena Technologies is an Open Source Technology company
 ```shell
 git clone
 
-GOARCH=amd64 GOOS=linux go build -o ./binary/htnet ./source/main.go
+cargo build
 ```
 
 OR
