@@ -1,0 +1,43 @@
+name: hyaena-technologies-web-services
+
+services:
+  spice-authorization:
+    image: amd64/authzed/spicedb:latest
+    ports:
+      - "80:8080"
+  spice-operator:
+    image: amd64/authzed/spicedb-operator:latest
+    ports:
+      - "80:8080"
+  spice-zed:
+    image: amd64/authzed/zed:latest
+    ports:
+      - "80:8080"
+  minio-storage:
+    image: amd64/minio/minio:latest
+    ports:
+      - "80:8080"
+  minio-operator:
+    image: amd64/minio/operator:latest
+    ports:
+      - "80:8080"
+  minio-control:
+    image: amd64/minio/mc:latest
+    ports:
+      - "80:8080"
+  greptime-time-series:
+    image: amd64/greptime/greptimedb:latest
+    ports:
+      - "80:8080"
+  greptime-operator:
+    image: amd64/greptime/greptimedb-operator:latest
+    ports:
+      - "80:8080"
+  greptime-initializer:
+    image: amd64/greptime/greptimedb-initializer:latest
+    ports:
+      - "80:8080"
+  surreal-graph:
+    image: amd64/surrealdb/surrealdb:latest
+    ports:
+      - "80:8080"
