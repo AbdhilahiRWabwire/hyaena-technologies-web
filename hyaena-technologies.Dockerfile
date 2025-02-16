@@ -1,4 +1,4 @@
-FROM amd64/rust:alpine
+FROM rust:alpine
 
 WORKDIR /hyaena-technologies
 
@@ -8,7 +8,7 @@ RUN cargo check \
 cargo build --release \ 
 mv ./target/release/hyaena-technologies-server ./binary
 
-FROM amd64/alpine:latest
+FROM alpine:latest
 
 WORKDIR /hyaena-technologies
 

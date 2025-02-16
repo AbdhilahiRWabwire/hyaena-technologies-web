@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   annotations:
-    kompose.cmd: kompose convert -f ./compose.yaml
+    kompose.cmd: kompose convert -f ./compose.yaml -o ./kubernetes
     kompose.version: 1.35.0 (9532ceef3)
   labels:
     io.kompose.service: greptime-time-series
@@ -15,13 +15,13 @@ spec:
   template:
     metadata:
       annotations:
-        kompose.cmd: kompose convert -f ./compose.yaml
+        kompose.cmd: kompose convert -f ./compose.yaml -o ./kubernetes
         kompose.version: 1.35.0 (9532ceef3)
       labels:
         io.kompose.service: greptime-time-series
     spec:
       containers:
-        - image: amd64/greptime/greptimedb:latest
+        - image: greptime/greptimedb:latest
           name: greptime-time-series
           ports:
             - containerPort: 8080
