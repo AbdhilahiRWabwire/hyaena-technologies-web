@@ -68,8 +68,8 @@ Hyaena Technologies is an Open Source Technology company
 git clone
 
 cargo build --release \ 
-mv ./target/release/hyaena-technologies-server ./binary \ 
-./binary/hyaena-technologies-server serve
+mv ./target/release/hyaena-technologies-web ./binary \ 
+./binary/hyaena-technologies-web serve
 ```
 
 OR
@@ -78,8 +78,8 @@ OR
 git clone
 
 make build-release \ 
-mv ./target/release/hyaena-technologies-server ./binary \ 
-./binary/hyaena-technologies-server serve
+mv ./target/release/hyaena-technologies-web ./binary \ 
+./binary/hyaena-technologies-web serve
 ```
 
 OR
@@ -88,8 +88,8 @@ OR
 git clone
 
 ./shell/build.sh \ 
-mv ./target/release/hyaena-technologies-server ./binary \ 
-./binary/hyaena-technologies-server serve
+mv ./target/release/hyaena-technologies-web ./binary \ 
+./binary/hyaena-technologies-web serve
 ```
 
 ## Containerize Web Server
@@ -97,7 +97,7 @@ mv ./target/release/hyaena-technologies-server ./binary \
 ```shell
 git clone
 
-docker build ./ --file ./hyaena-technologies.Dockerfile --tag hyaena-technologies-server:latest
+docker build ./ --file ./hyaena-technologies.Dockerfile --tag hyaena-technologies-web:latest
 ```
 
 OR

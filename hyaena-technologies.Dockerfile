@@ -1,19 +1,19 @@
 FROM rust:alpine
 
-WORKDIR /hyaena-technologies
+WORKDIR /hyaena-technologies-web
 
 COPY ./ ./
 
 RUN cargo check \  
 cargo build --release \ 
-mv ./target/release/hyaena-technologies-server ./binary
+mv ./target/release/hyaena-technologies-web ./binary
 
 FROM alpine:latest
 
-WORKDIR /hyaena-technologies
+WORKDIR /hyaena-technologies-web
 
 COPY --from=builder ./ ./ 
 
 EXPOSE 80:8080/tcp
 
-RUN ./binary/hyaena-technologies-server serve
+CMD ["./binary/hyaena-technologies-web", "serve"]

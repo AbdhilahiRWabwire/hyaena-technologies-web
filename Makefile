@@ -31,4 +31,4 @@ update:
 # Docker Build Package
 .PHONY: docker-build
 docker-build:
-	docker build ./ --file ./hyaena-technologies.Dockerfile --tag hyaena-technologies-server:latest
+	docker build ./ --file ./hyaena-technologies.Dockerfile --tag hyaena-technologies-web:latest
