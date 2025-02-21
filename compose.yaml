@@ -1,7 +1,7 @@
 name: hyaena-technologies-web
 
 services:
-  web-server:
+  web-service:
     image: hyaena-technologies-web:latest
     ports:
       - "80:8080"

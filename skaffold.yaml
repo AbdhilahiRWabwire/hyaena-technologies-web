@@ -45,3 +45,5 @@ manifests:
     - kubernetes/spice-zed-service.yaml
     - kubernetes/surreal-graph-deployment.yaml
     - kubernetes/surreal-graph-service.yaml
+    - kubernetes/web-service-deployment.yaml
+    - kubernetes/web-service-service.yaml
