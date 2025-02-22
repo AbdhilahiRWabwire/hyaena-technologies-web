@@ -69,7 +69,8 @@ git clone
 
 cargo build --release \ 
 mv ./target/release/hyaena-technologies-web ./binary \ 
-./binary/hyaena-technologies-web serve
+mv ./binary/hyaena-technologies-web ./binary/htnet \ 
+./binary/htnet serve
 ```
 
 OR
@@ -79,7 +80,8 @@ git clone
 
 make build-release \ 
 mv ./target/release/hyaena-technologies-web ./binary \ 
-./binary/hyaena-technologies-web serve
+mv ./binary/hyaena-technologies-web ./binary/htnet \ 
+./binary/htnet serve
 ```
 
 OR
@@ -87,9 +89,10 @@ OR
 ```shell
 git clone
 
-./shell/build.sh \ 
+./shell/rust.bash \ 
 mv ./target/release/hyaena-technologies-web ./binary \ 
-./binary/hyaena-technologies-web serve
+mv ./binary/hyaena-technologies-web ./binary/htnet \ 
+./binary/htnet serve
 ```
 
 ## Containerize Web Server
@@ -113,7 +116,7 @@ OR
 ```shell
 git clone
 
-./docker/build.sh
+./shell/docker.sh
 ```
 
 ## Install Web Server
