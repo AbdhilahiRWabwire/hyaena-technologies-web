@@ -4,7 +4,7 @@ WORKDIR /hyaena-technologies-web
 
 COPY ./ ./
 
-RUN cargo check \  
+RUN cargo check \ 
 cargo build --release \ 
 mv ./target/release/hyaena-technologies-web ./binary
 
