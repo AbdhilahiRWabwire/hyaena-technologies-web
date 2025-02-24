@@ -116,7 +116,7 @@ OR
 ```shell
 git clone
 
-./shell/docker.sh
+./shell/docker.bash
 ```
 
 ## Install Web Server
