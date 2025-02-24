@@ -2,13 +2,12 @@
 
 // @ts-check
 
-import "/utility/create-element.js"
+import "/html/create-element.js"
 
 // Main Entry Point
 /** @type {function(): void} */
 function main() {
-  /** @type {HTMLDivElement} */
-  const division = document.createElement('div');
+  division
 
   document.body.appendChild(division);
 }
