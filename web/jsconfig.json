@@ -6,4 +6,4 @@
         "target": "ES2023"
     },
     "include": ["source/**/*"]
-  }
+}

@@ -7,7 +7,7 @@ import "/html/create-element.js"
 // Main Entry Point
 /** @type {function(): void} */
 function main() {
-  division
+  contentDivision
 
-  document.body.appendChild(division);
+  document.body.appendChild(contentDivision);
 }
