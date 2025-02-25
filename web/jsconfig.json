@@ -5,5 +5,5 @@
         "module": "ES2022",
         "target": "ES2023"
     },
-    "include": ["source/**/*"]
+    "include": ["source/**/*", "test/**/*"]
 }
