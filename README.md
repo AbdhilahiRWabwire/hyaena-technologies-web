@@ -67,9 +67,9 @@ Hyaena Technologies is an Open Source Technology company
 ```shell
 git clone
 
-cargo build --release \ 
-mv ./target/release/hyaena-technologies-web ./binary \ 
-mv ./binary/hyaena-technologies-web ./binary/htnet \ 
+cargo build --release
+mv ./target/release/hyaena-technologies-web ./binary
+mv ./binary/hyaena-technologies-web ./binary/htnet
 ./binary/htnet serve
 ```
 
@@ -78,9 +78,9 @@ OR
 ```shell
 git clone
 
-make build-release \ 
-mv ./target/release/hyaena-technologies-web ./binary \ 
-mv ./binary/hyaena-technologies-web ./binary/htnet \ 
+make build-release
+mv ./target/release/hyaena-technologies-web ./binary
+mv ./binary/hyaena-technologies-web ./binary/htnet
 ./binary/htnet serve
 ```
 
@@ -89,9 +89,9 @@ OR
 ```shell
 git clone
 
-./shell/rust.bash \ 
-mv ./target/release/hyaena-technologies-web ./binary \ 
-mv ./binary/hyaena-technologies-web ./binary/htnet \ 
+./shell/rust.bash
+mv ./target/release/hyaena-technologies-web ./binary
+mv ./binary/hyaena-technologies-web ./binary/htnet
 ./binary/htnet serve
 ```
 
@@ -122,6 +122,6 @@ git clone
 ## Install Web Server
 
 ```shell
-echo 'export PATH="$PATH:/usr/local/bin/htnet"' >> ~/.bashrc \ 
+echo 'export PATH="$PATH:/usr/local/bin/htnet"' >> ~/.bashrc
 sudo echo 'export PATH="$PATH:/usr/local/bin/htnet"' >> /etc/skel/.bashrc
 ```
