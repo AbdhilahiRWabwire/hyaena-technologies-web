@@ -28,3 +28,5 @@ function main() {
   document.body.style.background = 'lightblue';
   document.body.appendChild(HTMLDocumentRoot);
 }
+
+main();
