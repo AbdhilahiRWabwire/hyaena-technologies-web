@@ -20,6 +20,7 @@
 [Surreal Database]: https://surrealdb.com/
 [VSCode]: https://code.visualstudio.com/docs
 [WAI-ARIA]: https://www.w3.org/WAI/ARIA/apg/patterns/
+[YAML]: https://yaml.org/
 
 <a href="https://github.com/HyaenaTechnologies/hyaena-technologies-web">
   <h1>
@@ -34,6 +35,11 @@
 # Hyaena Technologies Web
 
 Hyaena Technologies is an Open Source Technology company
+
+## Features
+
+- Environment Variables
+- [YAML Ain't Markup Language][YAML]
 
 ## Build
 
