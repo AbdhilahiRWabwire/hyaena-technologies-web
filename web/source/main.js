@@ -3,7 +3,6 @@
 // @ts-check
 
 import "./html/create-element.js"
-import "./html/create-global-attribute.js"
 
 // Main Entry Point
 /** @type {function(): void} */
