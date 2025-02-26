@@ -4,430 +4,430 @@
 
 // Hypertext Markup Language Elements
 
-// Hypertext Markup Language Anchor Element
+// Anchor Element
 /** @type {HTMLAnchorElement} */
-const anchor = document.createElement('a');
+const HTMLAnchor = document.createElement('a');
 
-// Hypertext Markup Language Abbreviation Element
+// Abbreviation Element
 /** @type {HTMLElement} */
-const abbreviation = document.createElement('abbr');
+const HTMLAbbreviation = document.createElement('abbr');
 
-// Hypertext Markup Language Contact Address Element
+// Contact Address Element
 /** @type {HTMLElement} */
 const contactAddress = document.createElement('address');
 
-// Hypertext Markup Language Image Map Area Element
+// Image Map Area Element
 /** @type {HTMLAreaElement} */
 const imageMapArea = document.createElement('area');
 
-// Hypertext Markup Language Article Contents Element
+// Article Contents Element
 /** @type {HTMLElement} */
 const articleContents = document.createElement('article');
 
-// Hypertext Markup Language Aside Element
+// Aside Element
 /** @type {HTMLElement} */
-const aside = document.createElement('aside');
+const HTMLAside = document.createElement('aside');
 
-// Hypertext Markup Language Embed Audio Element
+// Embed Audio Element
 /** @type {HTMLAudioElement} */
 const embedAudio = document.createElement('audio');
 
-// Hypertext Markup Language Bring Attention To Element
+// Bring Attention To Element
 /** @type {HTMLElement} */
 const bringAttentionTo = document.createElement('b');
 
-// Hypertext Markup Language Document Base URL Element
+// Document Base URL Element
 /** @type {HTMLBaseElement} */
 const documentBaseURL = document.createElement('base');
 
-// Hypertext Markup Language Bidirectional Isolate Element
+// Bidirectional Isolate Element
 /** @type {HTMLElement} */
 const bidirectionalIsolate = document.createElement('bdi');
 
-// Hypertext Markup Language Bidirectional Text Override Element
+// Bidirectional Text Override Element
 /** @type {HTMLElement} */
 const bidirectionalTextOverride = document.createElement('bdo');
 
-// Hypertext Markup Language Block Quotation Element
+// Block Quotation Element
 /** @type {HTMLQuoteElement} */
 const blockQuotation = document.createElement('blockquote');
 
-// Hypertext Markup Language Document Body Element
+// Document Body Element
 /** @type {HTMLBodyElement} */
 const documentBody = document.createElement('body');
 
-// Hypertext Markup Language Line Break Element
+// Line Break Element
 /** @type {HTMLBRElement} */
 const lineBreak = document.createElement('br');
 
-// Hypertext Markup Language Button Element
+// Button Element
 /** @type {HTMLButtonElement} */
-const button = document.createElement('button');
+const HTMLButton = document.createElement('button');
 
-// Hypertext Markup Language Graphics canvas Element
+// Graphics Canvas Element
 /** @type {HTMLCanvasElement} */
-const graphicscanvas = document.createElement('canvas');
+const graphicsCanvas = document.createElement('canvas');
 
-// Hypertext Markup Language Table Caption Element
+// Table Caption Element
 /** @type {HTMLTableCaptionElement} */
 const tableCaption = document.createElement('caption');
 
-// Hypertext Markup Language Citation Element
+// Citation Element
 /** @type {HTMLElement} */
-const citation = document.createElement('cite');
+const HTMLCitation = document.createElement('cite');
 
-// Hypertext Markup Language Inline Code Element
+// Inline Code Element
 /** @type {HTMLElement} */
 const inlineCode = document.createElement('code');
 
-// Hypertext Markup Language Table Column Element
+// Table Column Element
 /** @type {HTMLTableColElement} */
 const tableColumn = document.createElement('col');
 
-// Hypertext Markup Language Table Column Group Element
+// Table Column Group Element
 /** @type {HTMLTableColElement} */
 const tableColumnGroup = document.createElement('colgroup');
 
-// Hypertext Markup Language Data Element
+// Data Element
 /** @type {HTMLDataElement} */
 const HTMLdata = document.createElement('data');
 
-// Hypertext Markup Language Data List Element
+// Data List Element
 /** @type {HTMLDataListElement} */
 const HTMLdataList = document.createElement('datalist');
 
-// Hypertext Markup Language Description Details Element
+// Description Details Element
 /** @type {HTMLElement} */
 const descriptionDetails = document.createElement('dd');
 
-// Hypertext Markup Language Deleted Text Element
+// Deleted Text Element
 /** @type {HTMLModElement} */
 const deletedText = document.createElement('del');
 
-// Hypertext Markup Language Details Disclosure Element
+// Details Disclosure Element
 /** @type {HTMLDetailsElement} */
 const detailsDisclosure = document.createElement('details');
 
-// Hypertext Markup Language Definition Element
+// Definition Element
 /** @type {HTMLElement} */
-const definition = document.createElement('dfn');
+const HTMLDefinition = document.createElement('dfn');
 
-// Hypertext Markup Language Dialog Element
+// Dialog Element
 /** @type {HTMLDialogElement} */
-const dialog = document.createElement('dialog');
+const HTMLDialog = document.createElement('dialog');
 
-// Hypertext Markup Language Content Division Element
+// Content Division Element
 /** @type {HTMLDivElement} */
 const contentDivision = document.createElement('div');
 
-// Hypertext Markup Language Description List Element
+// Description List Element
 /** @type {HTMLDListElement} */
 const descriptionList = document.createElement('dl');
 
-// Hypertext Markup Language Description Term Element
+// Description Term Element
 /** @type {HTMLElement} */
 const descriptionTerm = document.createElement('dt');
 
-// Hypertext Markup Language Emphasis Element
+// Emphasis Element
 /** @type {HTMLElement} */
-const emphasis = document.createElement('em');
+const HTMLEmphasis = document.createElement('em');
 
-// Hypertext Markup Language Embed External Content Element
+// Embed External Content Element
 /** @type {HTMLEmbedElement} */
 const embedExternalContent = document.createElement('embed');
 
-// Hypertext Markup Language Field Set Element
+// Field Set Element
 /** @type {HTMLFieldSetElement} */
 const fieldSet = document.createElement('fieldset');
 
-// Hypertext Markup Language Figure Caption Element
+// Figure Caption Element
 /** @type {HTMLElement} */
 const figureCaption = document.createElement('figcaption');
 
-// Hypertext Markup Language Figure with Optional Caption Element
+// Figure with Optional Caption Element
 /** @type {HTMLElement} */
 const figureWithOptionalCaption = document.createElement('figure');
 
-// Hypertext Markup Language Footer Element
+// Footer Element
 /** @type {HTMLElement} */
-const footer = document.createElement('footer');
+const HTMLFooter = document.createElement('footer');
 
-// Hypertext Markup Language Form Element
+// Form Element
 /** @type {HTMLFormElement} */
-const form = document.createElement('form');
+const HTMLForm = document.createElement('form');
 
-// Hypertext Markup Language Section Heading Element
+// Section Heading Element
 /** @type {HTMLHeadingElement} */
 const HTMLSectionHeading = document.createElement('h1');
 
-// Hypertext Markup Language Document Metadata Header Element
+// Document Metadata Header Element
 /** @type {HTMLHeadElement} */
 const documentMetadataHeader = document.createElement('head');
 
-// Hypertext Markup Language Header Element
+// Header Element
 /** @type {HTMLElement} */
-const header = document.createElement('header');
+const HTMLHeader = document.createElement('header');
 
-// Hypertext Markup Language Header Group Element
+// Header Group Element
 /** @type {HTMLElement} */
 const headergGroup = document.createElement('hgroup');
 
-// Hypertext Markup Language Thematic Break Horizontal Rule Element
+// Thematic Break Horizontal Rule Element
 /** @type {HTMLHRElement} */
 const thematicBreakHorizontalRule = document.createElement('hr');
 
-// Hypertext Markup Language HTML Document Root Element
+// HTML Document Root Element
 /** @type {HTMLHtmlElement} */
 const HTMLDocumentRoot = document.createElement('html');
 
-// Hypertext Markup Language Idiomatic Text Element
+// Idiomatic Text Element
 /** @type {HTMLElement} */
 const idiomaticText = document.createElement('i');
 
-// Hypertext Markup Language Inline Frame Element
+// Inline Frame Element
 /** @type {HTMLIFrameElement} */
 const inlineFrame = document.createElement('iframe');
 
-// Hypertext Markup Language Image Embed Element
+// Image Embed Element
 /** @type {HTMLImageElement} */
 const imageEmbed = document.createElement('img');
 
-// Hypertext Markup Language Input Element
+// Input Element
 /** @type {HTMLInputElement} */
 const HTMLInput = document.createElement('input');
 
-// Hypertext Markup Language Inserted Text Elemen
+// Inserted Text Elemen
 /** @type {HTMLModElement} */
 const insertedText = document.createElement('ins');
 
-// Hypertext Markup Language Keyboard Input Element
+// Keyboard Input Element
 /** @type {HTMLElement} */
 const keyboardInput = document.createElement('kbd');
 
-// Hypertext Markup Language Label Element
+// Label Element
 /** @type {HTMLLabelElement} */
-const label = document.createElement('label');
+const HTMLLabel = document.createElement('label');
 
-// Hypertext Markup Language Field Set Legend Element
+// Field Set Legend Element
 /** @type {HTMLLegendElement} */
 const fieldSetLegend = document.createElement('legend');
 
-// Hypertext Markup Language List Item Element
+// List Item Element
 /** @type {HTMLLIElement} */
 const listItem = document.createElement('li');
 
-// Hypertext Markup Language External Resource Link Element
+// External Resource Link Element
 /** @type {HTMLLinkElement} */
 const externalResourceLink = document.createElement('link');
 
-// Hypertext Markup Language Main Element
+// Main Element
 /** @type {HTMLElement} */
-const main = document.createElement('main');
+const HTMLMain = document.createElement('main');
 
-// Hypertext Markup Language Image Map Element
+// Image Map Element
 /** @type {HTMLMapElement} */
 const imageMap = document.createElement('map');
 
-// Hypertext Markup Language Mark Text Element
+// Mark Text Element
 /** @type {HTMLElement} */
 const markText = document.createElement('mark');
 
-// Hypertext Markup Language Menu Element
+// Menu Element
 /** @type {HTMLMenuElement} */
-const menu = document.createElement('menu');
+const HTMLMenu = document.createElement('menu');
 
-// Hypertext Markup Language Metadata Element
+// Metadata Element
 /** @type {HTMLMetaElement} */
-const metadata = document.createElement('meta');
+const HTMLMetadata = document.createElement('meta');
 
-// Hypertext Markup Language Meter Element
+// Meter Element
 /** @type {HTMLMeterElement} */
 const HTMLMeter = document.createElement('meter');
 
-// Hypertext Markup Language Navigation Section Element
+// Navigation Section Element
 /** @type {HTMLElement} */
 const navigationSection = document.createElement('nav');
 
-// Hypertext Markup Language Noscript Element
+// Noscript Element
 /** @type {HTMLElement} */
-const noscript = document.createElement('noscript');
+const noScript = document.createElement('noscript');
 
-// Hypertext Markup Language External Object Element
+// External Object Element
 /** @type {HTMLObjectElement} */
 const externalObject = document.createElement('object');
 
-// Hypertext Markup Language Ordered List Element
+// Ordered List Element
 /** @type {HTMLOListElement} */
 const orderedList = document.createElement('ol');
 
-// Hypertext Markup Language Option Group Element
+// Option Group Element
 /** @type {HTMLOptGroupElement} */
 const optionGroup = document.createElement('optgroup');
 
-// Hypertext Markup Language Option Element
+// Option Element
 /** @type {HTMLOptionElement} */
 const HTMLoption = document.createElement('option');
 
-// Hypertext Markup Language Output Element
+// Output Element
 /** @type {HTMLOutputElement} */
-const output = document.createElement('output');
+const HTMLoutput = document.createElement('output');
 
-// Hypertext Markup Language Paragraph Element
+// Paragraph Element
 /** @type {HTMLParagraphElement} */
-const paragraph = document.createElement('p');
+const HTMLParagraph = document.createElement('p');
 
-// Hypertext Markup Language Picture Element
+// Picture Element
 /** @type {HTMLPictureElement} */
-const picture = document.createElement('picture');
+const HTMLPicture = document.createElement('picture');
 
-// Hypertext Markup Language Preformatted Text Element
+// Preformatted Text Element
 /** @type {HTMLPreElement} */
 const preformattedText = document.createElement('pre');
 
-// Hypertext Markup Language Progress Indicator Element
+// Progress Indicator Element
 /** @type {HTMLProgressElement} */
 const progressIndicator = document.createElement('progress');
 
-// Hypertext Markup Language Inline Quotation Element
+// Inline Quotation Element
 /** @type {HTMLQuoteElement} */
 const inlineQuotation = document.createElement('q');
 
-// Hypertext Markup Language Ruby Fallback Parenthesis Element
+// Ruby Fallback Parenthesis Element
 /** @type {HTMLElement} */
 const rubyFallbackParenthesis = document.createElement('rp');
 
-// Hypertext Markup Language Ruby Text Element
+// Ruby Text Element
 /** @type {HTMLElement} */
 const rubyText = document.createElement('rt');
 
-// Hypertext Markup Language Ruby Annotation Element
+// Ruby Annotation Element
 /** @type {HTMLElement} */
 const rubyAnnotation = document.createElement('ruby');
 
-// Hypertext Markup Language Strikethrough Element
+// Strikethrough Element
 /** @type {HTMLElement} */
 const strikethrough = document.createElement('s');
 
-// Hypertext Markup Language Sample Output Element
+// Sample Output Element
 /** @type {HTMLElement} */
 const sampleOutput = document.createElement('samp');
 
-// Hypertext Markup Language Script Element
+// Script Element
 /** @type {HTMLScriptElement} */
-const script = document.createElement('script');
+const HTMLscript = document.createElement('script');
 
-// Hypertext Markup Language Generic Search Element
+// Generic Search Element
 /** @type {HTMLElement} */
 const genericSearch = document.createElement('search');
 
-// Hypertext Markup Language Generic Search Element
+// Generic Search Element
 /** @type {HTMLElement} */
 const genericSection = document.createElement('section');
 
-// Hypertext Markup Language Select Element
+// Select Element
 /** @type {HTMLSelectElement} */
 const HTMLSelect = document.createElement('select');
 
-// Hypertext Markup Language Web Component Slot Element
+// Web Component Slot Element
 /** @type {HTMLSlotElement} */
 const webComponentSlot = document.createElement('slot');
 
-// Hypertext Markup Language Side Comment Element
+// Side Comment Element
 /** @type {HTMLElement} */
 const sideComment = document.createElement('small');
 
-// Hypertext Markup Language Media or Image Source Element
+// Media or Image Source Element
 /** @type {HTMLSourceElement} */
 const mediaOrImageSource = document.createElement('source');
 
-// Hypertext Markup Language Content Span Element
+// Content Span Element
 /** @type {HTMLSpanElement} */
 const contentSpan = document.createElement('span');
 
-// Hypertext Markup Language Strong Importance Element
+// Strong Importance Element
 /** @type {HTMLElement} */
 const strongImportance = document.createElement('strong');
 
-// Hypertext Markup Language Style Information Element
+// Style Information Element
 /** @type {HTMLStyleElement} */
 const styleInformation = document.createElement('style');
 
-// Hypertext Markup Language Subscript Element
+// Subscript Element
 /** @type {HTMLElement} */
-const subscript = document.createElement('sub');
+const subScript = document.createElement('sub');
 
-// Hypertext Markup Language Disclosure Summary Element
+// Disclosure Summary Element
 /** @type {HTMLElement} */
 const disclosureSummary = document.createElement('summary');
 
-// Hypertext Markup Language Superscript Element
+// Superscript Element
 /** @type {HTMLElement} */
-const superscript = document.createElement('sup');
+const superScript = document.createElement('sup');
 
-// Hypertext Markup Language Table Element
+// Table Element
 /** @type {HTMLTableElement} */
-const table = document.createElement('table');
+const HTMLTable = document.createElement('table');
 
-// Hypertext Markup Language Table Body Element
+// Table Body Element
 /** @type {HTMLTableSectionElement} */
 const tableBody = document.createElement('tbody');
 
-// Hypertext Markup Language Table Data Cell Element
+// Table Data Cell Element
 /** @type {HTMLTableCellElement} */
 const tableDataCell = document.createElement('td');
 
-// Hypertext Markup Language Content Template Element
+// Content Template Element
 /** @type {HTMLTemplateElement} */
 const contentTemplate = document.createElement('template');
 
-// Hypertext Markup Language Textarea Element
+// Text Area Element
 /** @type {HTMLTextAreaElement} */
-const textarea = document.createElement('textarea');
+const textArea = document.createElement('textarea');
 
-// Hypertext Markup Language Table Foot Element
+// Table Foot Element
 /** @type {HTMLTableSectionElement} */
 const tableFoot = document.createElement('tfoot');
 
-// Hypertext Markup Language Table Header Element
+// Table Header Element
 /** @type {HTMLTableCellElement} */
 const tableHeader = document.createElement('th');
 
-// Hypertext Markup Language Table Head Element
+// Table Head Element
 /** @type {HTMLTableSectionElement} */
 const tableHead = document.createElement('thead');
 
-// Hypertext Markup Language Date Time Element
+// Date Time Element
 /** @type {HTMLTimeElement} */
 const dateTime = document.createElement('time');
 
-// Hypertext Markup Language Document Title Element
+// Document Title Element
 /** @type {HTMLTitleElement} */
 const documentTitle  = document.createElement('title');
 
-// Hypertext Markup Language Table Row Element
+// Table Row Element
 /** @type {HTMLTableRowElement} */
 const tableRow = document.createElement('tr');
 
-// Hypertext Markup Language Embed Text Track Element
+// Embed Text Track Element
 /** @type {HTMLTrackElement} */
 const embedTextTrack = document.createElement('track');
 
-// Hypertext Markup Language Unarticulated Annotation Underline Element
+// Unarticulated Annotation Underline Element
 /** @type {HTMLElement} */
 const unarticulatedAnnotationUnderline = document.createElement('u');
 
-// Hypertext Markup Language Unordered List Element
+// Unordered List Element
 /** @type {HTMLUListElement} */
 const unorderedList = document.createElement('ul');
 
-// Hypertext Markup Language Variable Element
+// Variable Element
 /** @type {HTMLElement} */
-const variable = document.createElement('var');
+const HTMLvariable = document.createElement('var');
 
-// Hypertext Markup Language Video Embed Element
+// Video Embed Element
 /** @type {HTMLVideoElement} */
 const videoEmbed = document.createElement('video');
 
-// Hypertext Markup Language Line Break Opportunity Element
+// Line Break Opportunity Element
 /** @type {HTMLElement} */
 const lineBreakOpportunity = document.createElement('wbr');
