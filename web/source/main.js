@@ -12,7 +12,7 @@ function main() {
   
   documentMetadataHeader
   externalResourceLink
-  externalResourceLink.href = "theme/light.css";
+  externalResourceLink.href = "theme/dark.css";
   externalResourceLink.rel = "stylesheet";
   documentMetadataHeader.appendChild(externalResourceLink);
   HTMLMetadata
@@ -22,6 +22,7 @@ function main() {
   HTMLDocumentRoot.appendChild(documentMetadataHeader);
   
   documentBody
+  documentBody.classList.add("dark");
   HTMLMain
   HTMLParagraph
   HTMLParagraph.innerText = "Hyaena Technologies";
