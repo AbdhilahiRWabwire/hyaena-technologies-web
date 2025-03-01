@@ -79,50 +79,12 @@ mv ./binary/hyaena-technologies-web ./binary/htnet
 ./binary/htnet serve
 ```
 
-OR
-
-```shell
-git clone
-
-make build-release
-mv ./target/release/hyaena-technologies-web ./binary
-mv ./binary/hyaena-technologies-web ./binary/htnet
-./binary/htnet serve
-```
-
-OR
-
-```shell
-git clone
-
-./shell/rust.bash
-mv ./target/release/hyaena-technologies-web ./binary
-mv ./binary/hyaena-technologies-web ./binary/htnet
-./binary/htnet serve
-```
-
 ## Containerize Web Server
 
 ```shell
 git clone
 
 docker build ./ --file ./hyaena-technologies.Dockerfile --tag hyaena-technologies-web:latest
-```
-
-OR
-
-```shell
-git clone
-
-make docker-build
-```
-
-OR
-
-```shell
-git clone
-
-./shell/docker.bash
 ```
 
 ## Install Web Server
