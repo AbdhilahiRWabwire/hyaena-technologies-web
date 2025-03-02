@@ -14,6 +14,6 @@ WORKDIR /hyaena-technologies-web
 
 COPY --from=builder ./ ./ 
 
-EXPOSE 80:8080/tcp
+EXPOSE 8080/tcp
 
 CMD ["./binary/hyaena-technologies-web", "serve"]

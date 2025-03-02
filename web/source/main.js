@@ -12,7 +12,7 @@ function main() {
   
   documentMetadataHeader
   externalResourceLink
-  externalResourceLink.href = "theme/dark.css";
+  externalResourceLink.href = "/theme/dark.css";
   externalResourceLink.rel = "stylesheet";
   documentMetadataHeader.appendChild(externalResourceLink);
   HTMLMetadata

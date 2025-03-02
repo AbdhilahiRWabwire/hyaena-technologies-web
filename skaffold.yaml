@@ -37,6 +37,8 @@ manifests:
     - kubernetes/minio-operator-service.yaml
     - kubernetes/minio-storage-deployment.yaml
     - kubernetes/minio-storage-service.yaml
+    - kubernetes/opentelemetry-collector-deployment.yaml
+    - kubernetes/opentelemetry-collector-service.yaml
     - kubernetes/spice-authorization-deployment.yaml
     - kubernetes/spice-authorization-service.yaml
     - kubernetes/spice-operator-deployment.yaml
