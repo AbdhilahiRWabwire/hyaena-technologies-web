@@ -1,13 +1,13 @@
 [package]
 authors = ["Hyaena Technologies", "Abdhilahi R. Wabwire"]
-description = "Hyaena Technologies Web Server"
+description = "Hyaena Technologies Web Service"
 edition = "2024"
 license = "BSD-3-Clause"
 license-file = "LICENSE"
 name = "hyaena-technologies-web"
 publish = false
 repository = "https://github.com/HyaenaTechnologies/hyaena-technologies-web"
-rust-version = "1.84.1"
+rust-version = "1.85.0"
 readme = "README.md"
 version = "0.2.0"
 
