@@ -1,7 +1,7 @@
 [package]
 authors = ["Hyaena Technologies", "Abdhilahi R. Wabwire"]
 description = "Hyaena Technologies Web Server"
-edition = "2021"
+edition = "2024"
 license = "BSD-3-Clause"
 license-file = "LICENSE"
 name = "hyaena-technologies-web"
