@@ -7,30 +7,30 @@ import "./html/create-element.js"
 // Main Entry Point
 /** @type {function(): HTMLHtmlElement} */
 function main() {
-  HTMLDocumentRoot
-  HTMLDocumentRoot.lang = String("en");
+  htmlDocumentRoot
+  htmlDocumentRoot.lang = String("en");
   
-  HTMLDocumentMetadataHeader
-  HTMLExternalResourceLink
-  HTMLExternalResourceLink.href = String("/theme/dark.css");
-  HTMLExternalResourceLink.rel = String("stylesheet");
-  HTMLDocumentMetadataHeader.appendChild(HTMLExternalResourceLink);
-  HTMLMetadata
-  HTMLMetadata.name = String("main-index");
-  HTMLMetadata.content = String("width=device-width");
-  HTMLDocumentMetadataHeader.appendChild(HTMLMetadata);
-  HTMLDocumentRoot.appendChild(HTMLDocumentMetadataHeader);
+  htmlDocumentMetadataHeader
+  htmlExternalResourceLink
+  htmlExternalResourceLink.href = String("/theme/dark.css");
+  htmlExternalResourceLink.rel = String("stylesheet");
+  htmlDocumentMetadataHeader.appendChild(htmlExternalResourceLink);
+  htmlMetadata
+  htmlMetadata.name = String("main-index");
+  htmlMetadata.content = String("width=device-width");
+  htmlDocumentMetadataHeader.appendChild(htmlMetadata);
+  htmlDocumentRoot.appendChild(htmlDocumentMetadataHeader);
   
-  HTMLDocumentBody
-  HTMLDocumentBody.classList.add(String("dark"));
-  HTMLMain
-  HTMLParagraph
-  HTMLParagraph.innerText = String("Hyaena Technologies");
-  HTMLMain.appendChild(HTMLParagraph);
-  HTMLDocumentBody.appendChild(HTMLMain);
-  HTMLDocumentRoot.appendChild(HTMLDocumentBody);
+  htmlDocumentBody
+  htmlDocumentBody.classList.add(String("dark"));
+  htmlMain
+  htmlParagraph
+  htmlParagraph.innerText = String("Hyaena Technologies");
+  htmlMain.appendChild(htmlParagraph);
+  htmlDocumentBody.appendChild(htmlMain);
+  htmlDocumentRoot.appendChild(htmlDocumentBody);
   
-  return document.body.appendChild(HTMLDocumentRoot);
+  return document.appendChild(htmlDocumentRoot);
 }
 
 main();
