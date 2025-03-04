@@ -8,24 +8,24 @@ import "./html/create-element.js"
 /** @type {function(): HTMLHtmlElement} */
 function main() {
   HTMLDocumentRoot
-  HTMLDocumentRoot.lang = "en";
+  HTMLDocumentRoot.lang = String("en");
   
   documentMetadataHeader
   externalResourceLink
-  externalResourceLink.href = "/theme/dark.css";
-  externalResourceLink.rel = "stylesheet";
+  externalResourceLink.href = String("/theme/dark.css");
+  externalResourceLink.rel = String("stylesheet");
   documentMetadataHeader.appendChild(externalResourceLink);
   HTMLMetadata
-  HTMLMetadata.name = "main-index";
-  HTMLMetadata.content = "width=device-width";
+  HTMLMetadata.name = String("main-index");
+  HTMLMetadata.content = String("width=device-width");
   documentMetadataHeader.appendChild(HTMLMetadata);
   HTMLDocumentRoot.appendChild(documentMetadataHeader);
   
   documentBody
-  documentBody.classList.add("dark");
+  documentBody.classList.add(String("dark"));
   HTMLMain
   HTMLParagraph
-  HTMLParagraph.innerText = "Hyaena Technologies";
+  HTMLParagraph.innerText = String("Hyaena Technologie");
   HTMLMain.appendChild(HTMLParagraph);
   documentBody.appendChild(HTMLMain);
   HTMLDocumentRoot.appendChild(documentBody);
