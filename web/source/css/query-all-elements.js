@@ -4,430 +4,430 @@
 
 // Cascading Style Sheet Selectors - Query All Hypertext Markup Language Elements
 
-// Query Anchor Element
+// Query All Anchor Element
 /** @type {NodeListOf<HTMLAnchorElement>} */
 const queryAllHTMLAnchor = document.querySelectorAll("a");
 
-// Query Abbreviation Element
+// Query All Abbreviation Element
 /** @type {NodeListOf<HTMLElement>} */
 const queryAllHTMLAbbreviation = document.querySelectorAll("abbr");
 
-// Query Contact Address Element
+// Query All Contact Address Element
 /** @type {NodeListOf<HTMLElement>} */
-const queryAllContactAddress = document.querySelectorAll("address");
+const queryAllHTMLContactAddress = document.querySelectorAll("address");
 
-// Query Image Map Area Element
+// Query All Image Map Area Element
 /** @type {NodeListOf<HTMLAreaElement>} */
-const queryAllImageMapArea = document.querySelectorAll("area");
+const queryAllHTMLImageMapArea = document.querySelectorAll("area");
 
-// Query Article Contents Element
+// Query All Article Contents Element
 /** @type {NodeListOf<HTMLElement>} */
-const queryAllArticleContents = document.querySelectorAll("article");
+const queryAllHTMLArticleContents = document.querySelectorAll("article");
 
-// Query Aside Element
+// Query All Aside Element
 /** @type {NodeListOf<HTMLElement>} */
 const queryAllHTMLAside = document.querySelectorAll("aside");
 
-// Query Embed Audio Element
+// Query All Embed Audio Element
 /** @type {NodeListOf<HTMLAudioElement>} */
-const queryAllEmbedAudio = document.querySelectorAll("audio");
+const queryAllHTMLEmbedAudio = document.querySelectorAll("audio");
 
-// Query Bring Attention To Element
+// Query All Bring Attention To Element
 /** @type {NodeListOf<HTMLElement>} */
-const queryAllBringAttentionTo = document.querySelectorAll("b");
+const queryAllHTMLBringAttentionTo = document.querySelectorAll("b");
 
-// Query Document Base URL Element
+// Query All Document Base URL Element
 /** @type {NodeListOf<HTMLBaseElement>} */
-const queryAllDocumentBaseURL = document.querySelectorAll("base");
+const queryAllHTMLDocumentBaseURL = document.querySelectorAll("base");
 
-// Query Bidirectional Isolate Element
+// Query All Bidirectional Isolate Element
 /** @type {NodeListOf<HTMLElement>} */
-const queryAllBidirectionalIsolate = document.querySelectorAll("bdi");
+const queryAllHTMLBidirectionalIsolate = document.querySelectorAll("bdi");
 
-// Query Bidirectional Text Override Element
+// Query All Bidirectional Text Override Element
 /** @type {NodeListOf<HTMLElement>} */
-const queryAllBidirectionalTextOverride = document.querySelectorAll("bdo");
+const queryAllHTMLBidirectionalTextOverride = document.querySelectorAll("bdo");
 
-// Query Block Quotation Element
+// Query All Block Quotation Element
 /** @type {NodeListOf<HTMLQuoteElement>} */
-const queryAllBlockQuotation = document.querySelectorAll("blockquote");
+const queryAllHTMLBlockQuotation = document.querySelectorAll("blockquote");
 
-// Query Document Body Element
+// Query All Document Body Element
 /** @type {NodeListOf<HTMLBodyElement>} */
-const queryAllDocumentBody = document.querySelectorAll("body");
+const queryAllHTMLDocumentBody = document.querySelectorAll("body");
 
-// Query Line Break Element
+// Query All Line Break Element
 /** @type {NodeListOf<HTMLBRElement>} */
-const queryAllLineBreak = document.querySelectorAll("br");
+const queryAllHTMLLineBreak = document.querySelectorAll("br");
 
-// Query Button Element
+// Query All Button Element
 /** @type {NodeListOf<HTMLButtonElement>} */
 const queryAllHTMLButton = document.querySelectorAll("button");
 
-// Query Graphics Canvas Element
+// Query All Graphics Canvas Element
 /** @type {NodeListOf<HTMLCanvasElement>} */
-const queryAllGraphicsCanvas = document.querySelectorAll("canvas");
+const queryAllHTMLGraphicsCanvas = document.querySelectorAll("canvas");
 
-// Query Table Caption Element
+// Query All Table Caption Element
 /** @type {NodeListOf<HTMLTableCaptionElement>} */
-const queryAllTableCaption = document.querySelectorAll("caption");
+const queryAllHTMLTableCaption = document.querySelectorAll("caption");
 
-// Query Citation Element
+// Query All Citation Element
 /** @type {NodeListOf<HTMLElement>} */
 const queryAllHTMLCitation = document.querySelectorAll("cite");
 
-// Query Inline Code Element
+// Query All Inline Code Element
 /** @type {NodeListOf<HTMLElement>} */
-const queryAllInlineCode = document.querySelectorAll("code");
+const queryAllHTMLInlineCode = document.querySelectorAll("code");
 
-// Query Table Column Element
+// Query All Table Column Element
 /** @type {NodeListOf<HTMLTableColElement>} */
-const queryAllTableColumn = document.querySelectorAll("col");
+const queryAllHTMLTableColumn = document.querySelectorAll("col");
 
-// Query Table Column Group Element
+// Query All Table Column Group Element
 /** @type {NodeListOf<HTMLTableColElement>} */
-const queryAllTableColumnGroup = document.querySelectorAll("colgroup");
+const queryAllHTMLTableColumnGroup = document.querySelectorAll("colgroup");
 
-// Query Data Element
+// Query All Data Element
 /** @type {NodeListOf<HTMLDataElement>} */
-const queryAllHTMLdata = document.querySelectorAll("data");
+const queryAllHTMLData = document.querySelectorAll("data");
 
-// Query Data List Element
+// Query All Data List Element
 /** @type {NodeListOf<HTMLDataListElement>} */
-const queryAllHTMLdataList = document.querySelectorAll("datalist");
+const queryAllHTMLDataList = document.querySelectorAll("datalist");
 
-// Query Description Details Element
+// Query All Description Details Element
 /** @type {NodeListOf<HTMLElement>} */
-const queryAllDescriptionDetails = document.querySelectorAll("dd");
+const queryAllHTMLDescriptionDetails = document.querySelectorAll("dd");
 
-// Query Deleted Text Element
+// Query All Deleted Text Element
 /** @type {NodeListOf<HTMLModElement>} */
-const queryAllDeletedText = document.querySelectorAll("del");
+const queryAllHTMLDeletedText = document.querySelectorAll("del");
 
-// Query Details Disclosure Element
+// Query All Details Disclosure Element
 /** @type {NodeListOf<HTMLDetailsElement>} */
-const queryAllDetailsDisclosure = document.querySelectorAll("details");
+const queryAllHTMLDetailsDisclosure = document.querySelectorAll("details");
 
-// Query Definition Element
+// Query All Definition Element
 /** @type {NodeListOf<HTMLElement>} */
 const queryAllHTMLDefinition = document.querySelectorAll("dfn");
 
-// Query Dialog Element
+// Query All Dialog Element
 /** @type {NodeListOf<HTMLDialogElement>} */
 const queryAllHTMLDialog = document.querySelectorAll("dialog");
 
-// Query Content Division Element
+// Query All Content Division Element
 /** @type {NodeListOf<HTMLDivElement>} */
-const queryAllContentDivision = document.querySelectorAll("div");
+const queryAllHTMLContentDivision = document.querySelectorAll("div");
 
-// Query Description List Element
+// Query All Description List Element
 /** @type {NodeListOf<HTMLDListElement>} */
-const queryAllDescriptionList = document.querySelectorAll("dl");
+const queryAllHTMLDescriptionList = document.querySelectorAll("dl");
 
-// Query Description Term Element
+// Query All Description Term Element
 /** @type {NodeListOf<HTMLElement>} */
-const queryAllDescriptionTerm = document.querySelectorAll("dt");
+const queryAllHTMLDescriptionTerm = document.querySelectorAll("dt");
 
-// Query Emphasis Element
+// Query All Emphasis Element
 /** @type {NodeListOf<HTMLElement>} */
 const queryAllHTMLEmphasis = document.querySelectorAll("em");
 
-// Query Embed External Content Element
+// Query All Embed External Content Element
 /** @type {NodeListOf<HTMLEmbedElement>} */
-const queryAllEmbedExternalContent = document.querySelectorAll("embed");
+const queryAllHTMLEmbedExternalContent = document.querySelectorAll("embed");
 
-// Query Field Set Element
+// Query All Field Set Element
 /** @type {NodeListOf<HTMLFieldSetElement>} */
-const queryAllFieldSet = document.querySelectorAll("fieldset");
+const queryAllHTMLFieldSet = document.querySelectorAll("fieldset");
 
-// Query Figure Caption Element
+// Query All Figure Caption Element
 /** @type {NodeListOf<HTMLElement>} */
-const queryAllFigureCaption = document.querySelectorAll("figcaption");
+const queryAllHTMLFigureCaption = document.querySelectorAll("figcaption");
 
-// Query Figure with Optional Caption Element
+// Query All Figure with Optional Caption Element
 /** @type {NodeListOf<HTMLElement>} */
-const queryAllFigureWithOptionalCaption = document.querySelectorAll("figure");
+const queryAllHTMLFigureWithOptionalCaption = document.querySelectorAll("figure");
 
-// Query Footer Element
+// Query All Footer Element
 /** @type {NodeListOf<HTMLElement>} */
 const queryAllHTMLFooter = document.querySelectorAll("footer");
 
-// Query Form Element
+// Query All Form Element
 /** @type {NodeListOf<HTMLFormElement>} */
 const queryAllHTMLForm = document.querySelectorAll("form");
 
-// Query Section Heading Element
+// Query All Section Heading Element
 /** @type {NodeListOf<HTMLHeadingElement>} */
 const queryAllHTMLSectionHeading = document.querySelectorAll("h1");
 
-// Query Document Metadata Header Element
+// Query All Document Metadata Header Element
 /** @type {NodeListOf<HTMLHeadElement>} */
-const queryAllDocumentMetadataHeader = document.querySelectorAll("head");
+const queryAllHTMLDocumentMetadataHeader = document.querySelectorAll("head");
 
-// Query Header Element
+// Query All Header Element
 /** @type {NodeListOf<HTMLElement>} */
 const queryAllHTMLHeader = document.querySelectorAll("header");
 
-// Query Header Group Element
+// Query All Header Group Element
 /** @type {NodeListOf<HTMLElement>} */
-const queryAllHeadergGroup = document.querySelectorAll("hgroup");
+const queryAllHTMLHeadergGroup = document.querySelectorAll("hgroup");
 
-// Query Thematic Break Horizontal Rule Element
+// Query All Thematic Break Horizontal Rule Element
 /** @type {NodeListOf<HTMLHRElement>} */
-const queryAllThematicBreakHorizontalRule = document.querySelectorAll("hr");
+const queryAllHTMLThematicBreakHorizontalRule = document.querySelectorAll("hr");
 
-// Query HTML Document Root Element
+// Query All HTML Document Root Element
 /** @type {NodeListOf<HTMLHtmlElement>} */
 const queryAllHTMLDocumentRoot = document.querySelectorAll("html");
 
-// Query Idiomatic Text Element
+// Query All Idiomatic Text Element
 /** @type {NodeListOf<HTMLElement>} */
-const queryAllIdiomaticText = document.querySelectorAll("i");
+const queryAllHTMLIdiomaticText = document.querySelectorAll("i");
 
-// Query Inline Frame Element
+// Query All Inline Frame Element
 /** @type {NodeListOf<HTMLIFrameElement>} */
-const queryAllInlineFrame = document.querySelectorAll("iframe");
+const queryAllHTMLInlineFrame = document.querySelectorAll("iframe");
 
-// Query Image Embed Element
+// Query All Image Embed Element
 /** @type {NodeListOf<HTMLImageElement>} */
-const queryAllImageEmbed = document.querySelectorAll("img");
+const queryAllHTMLImageEmbed = document.querySelectorAll("img");
 
-// Query Input Element
+// Query All Input Element
 /** @type {NodeListOf<HTMLInputElement>} */
 const queryAllHTMLInput = document.querySelectorAll("input");
 
-// Query Inserted Text Elemen
+// Query All Inserted Text Elemen
 /** @type {NodeListOf<HTMLModElement>} */
-const queryAllInsertedText = document.querySelectorAll("ins");
+const queryAllHTMLInsertedText = document.querySelectorAll("ins");
 
-// Query Keyboard Input Element
+// Query All Keyboard Input Element
 /** @type {NodeListOf<HTMLElement>} */
-const queryAllKeyboardInput = document.querySelectorAll("kbd");
+const queryAllHTMLKeyboardInput = document.querySelectorAll("kbd");
 
-// Query Label Element
+// Query All Label Element
 /** @type {NodeListOf<HTMLLabelElement>} */
 const queryAllHTMLLabel = document.querySelectorAll("label");
 
-// Query Field Set Legend Element
+// Query All Field Set Legend Element
 /** @type {NodeListOf<HTMLLegendElement>} */
-const queryAllFieldSetLegend = document.querySelectorAll("legend");
+const queryAllHTMLFieldSetLegend = document.querySelectorAll("legend");
 
-// Query List Item Element
+// Query All List Item Element
 /** @type {NodeListOf<HTMLLIElement>} */
-const queryAllListItem = document.querySelectorAll("li");
+const queryAllHTMLListItem = document.querySelectorAll("li");
 
-// Query External Resource Link Element
+// Query All External Resource Link Element
 /** @type {NodeListOf<HTMLLinkElement>} */
-const queryAllExternalResourceLink = document.querySelectorAll("link");
+const queryAllHTMLExternalResourceLink = document.querySelectorAll("link");
 
-// Query Main Element
+// Query All Main Element
 /** @type {NodeListOf<HTMLElement>} */
 const queryAllHTMLMain = document.querySelectorAll("main");
 
-// Query Image Map Element
+// Query All Image Map Element
 /** @type {NodeListOf<HTMLMapElement>} */
-const queryAllImageMap = document.querySelectorAll("map");
+const queryAllHTMLImageMap = document.querySelectorAll("map");
 
-// Query Mark Text Element
+// Query All Mark Text Element
 /** @type {NodeListOf<HTMLElement>} */
-const queryAllMarkText = document.querySelectorAll("mark");
+const queryAllHTMLMarkText = document.querySelectorAll("mark");
 
-// Query Menu Element
+// Query All Menu Element
 /** @type {NodeListOf<HTMLMenuElement>} */
 const queryAllHTMLMenu = document.querySelectorAll("menu");
 
-// Query Metadata Element
+// Query All Metadata Element
 /** @type {NodeListOf<HTMLMetaElement>} */
 const queryAllHTMLMetadata = document.querySelectorAll("meta");
 
-// Query Meter Element
+// Query All Meter Element
 /** @type {NodeListOf<HTMLMeterElement>} */
 const queryAllHTMLMeter = document.querySelectorAll("meter");
 
-// Query Navigation Section Element
+// Query All Navigation Section Element
 /** @type {NodeListOf<HTMLElement>} */
-const queryAllNavigationSection = document.querySelectorAll("nav");
+const queryAllHTMLNavigationSection = document.querySelectorAll("nav");
 
-// Query Noscript Element
+// Query All Noscript Element
 /** @type {NodeListOf<HTMLElement>} */
-const queryAllNoScript = document.querySelectorAll("noscript");
+const queryAllHTMLNoScript = document.querySelectorAll("noscript");
 
-// Query External Object Element
+// Query All External Object Element
 /** @type {NodeListOf<HTMLObjectElement>} */
-const queryAllExternalObject = document.querySelectorAll("object");
+const queryAllHTMLExternalObject = document.querySelectorAll("object");
 
-// Query Ordered List Element
+// Query All Ordered List Element
 /** @type {NodeListOf<HTMLOListElement>} */
-const queryAllOrderedList = document.querySelectorAll("ol");
+const queryAllHTMLOrderedList = document.querySelectorAll("ol");
 
-// Query Option Group Element
+// Query All Option Group Element
 /** @type {NodeListOf<HTMLOptGroupElement>} */
-const queryAllOptionGroup = document.querySelectorAll("optgroup");
+const queryAllHTMLOptionGroup = document.querySelectorAll("optgroup");
 
-// Query Option Element
+// Query All Option Element
 /** @type {NodeListOf<HTMLOptionElement>} */
-const queryAllHTMLoption = document.querySelectorAll("option");
+const queryAllHTMLOption = document.querySelectorAll("option");
 
-// Query Output Element
+// Query All Output Element
 /** @type {NodeListOf<HTMLOutputElement>} */
-const queryAllHTMLoutput = document.querySelectorAll("output");
+const queryAllHTMLOutput = document.querySelectorAll("output");
 
-// Query Paragraph Element
+// Query All Paragraph Element
 /** @type {NodeListOf<HTMLParagraphElement>} */
 const queryAllHTMLParagraph = document.querySelectorAll("p");
 
-// Query Picture Element
+// Query All Picture Element
 /** @type {NodeListOf<HTMLPictureElement>} */
 const queryAllHTMLPicture = document.querySelectorAll("picture");
 
-// Query Preformatted Text Element
+// Query All Preformatted Text Element
 /** @type {NodeListOf<HTMLPreElement>} */
-const queryAllPreformattedText = document.querySelectorAll("pre");
+const queryAllHTMLPreformattedText = document.querySelectorAll("pre");
 
-// Query Progress Indicator Element
+// Query All Progress Indicator Element
 /** @type {NodeListOf<HTMLProgressElement>} */
-const queryAllProgressIndicator = document.querySelectorAll("progress");
+const queryAllHTMLProgressIndicator = document.querySelectorAll("progress");
 
-// Query Inline Quotation Element
+// Query All Inline Quotation Element
 /** @type {NodeListOf<HTMLQuoteElement>} */
-const queryAllInlineQuotation = document.querySelectorAll("q");
+const queryAllHTMLInlineQuotation = document.querySelectorAll("q");
 
-// Query Ruby Fallback Parenthesis Element
+// Query All Ruby Fallback Parenthesis Element
 /** @type {NodeListOf<HTMLElement>} */
-const queryAllRubyFallbackParenthesis = document.querySelectorAll("rp");
+const queryAllHTMLRubyFallbackParenthesis = document.querySelectorAll("rp");
 
-// Query Ruby Text Element
+// Query All Ruby Text Element
 /** @type {NodeListOf<HTMLElement>} */
-const queryAllRubyText = document.querySelectorAll("rt");
+const queryAllHTMLRubyText = document.querySelectorAll("rt");
 
-// Query Ruby Annotation Element
+// Query All Ruby Annotation Element
 /** @type {NodeListOf<HTMLElement>} */
-const queryAllRubyAnnotation = document.querySelectorAll("ruby");
+const queryAllHTMLRubyAnnotation = document.querySelectorAll("ruby");
 
-// Query Strikethrough Element
+// Query All Strike Through Element
 /** @type {NodeListOf<HTMLElement>} */
-const queryAllStrikethrough = document.querySelectorAll("s");
+const queryAllHTMLStrikeThrough = document.querySelectorAll("s");
 
-// Query Sample Output Element
+// Query All Sample Output Element
 /** @type {NodeListOf<HTMLElement>} */
-const queryAllSampleOutput = document.querySelectorAll("samp");
+const queryAllHTMLSampleOutput = document.querySelectorAll("samp");
 
-// Query Script Element
+// Query All Script Element
 /** @type {NodeListOf<HTMLScriptElement>} */
-const queryAllHTMLscript = document.querySelectorAll("script");
+const queryAllHTMLScript = document.querySelectorAll("script");
 
-// Query Generic Search Element
+// Query All Generic Search Element
 /** @type {NodeListOf<HTMLElement>} */
-const queryAllGenericSearch = document.querySelectorAll("search");
+const queryAllHTMLGenericSearch = document.querySelectorAll("search");
 
-// Query Generic Search Element
+// Query All Generic Search Element
 /** @type {NodeListOf<HTMLElement>} */
-const queryAllGenericSection = document.querySelectorAll("section");
+const queryAllHTMLGenericSection = document.querySelectorAll("section");
 
-// Query Select Element
+// Query All Select Element
 /** @type {NodeListOf<HTMLSelectElement>} */
 const queryAllHTMLSelect = document.querySelectorAll("select");
 
-// Query Web Component Slot Element
+// Query All Web Component Slot Element
 /** @type {NodeListOf<HTMLSlotElement>} */
-const queryAllWebComponentSlot = document.querySelectorAll("slot");
+const queryAllHTMLWebComponentSlot = document.querySelectorAll("slot");
 
-// Query Side Comment Element
+// Query All Side Comment Element
 /** @type {NodeListOf<HTMLElement>} */
-const queryAllSideComment = document.querySelectorAll("small");
+const queryAllHTMLSideComment = document.querySelectorAll("small");
 
-// Query Media or Image Source Element
+// Query All Media or Image Source Element
 /** @type {NodeListOf<HTMLSourceElement>} */
-const queryAllMediaOrImageSource = document.querySelectorAll("source");
+const queryAllHTMLMediaOrImageSource = document.querySelectorAll("source");
 
-// Query Content Span Element
+// Query All Content Span Element
 /** @type {NodeListOf<HTMLSpanElement>} */
-const queryAllContentSpan = document.querySelectorAll("span");
+const queryAllHTMLContentSpan = document.querySelectorAll("span");
 
-// Query Strong Importance Element
+// Query All Strong Importance Element
 /** @type {NodeListOf<HTMLElement>} */
-const queryAllStrongImportance = document.querySelectorAll("strong");
+const queryAllHTMLStrongImportance = document.querySelectorAll("strong");
 
-// Query Style Information Element
+// Query All Style Information Element
 /** @type {NodeListOf<HTMLStyleElement>} */
-const queryAllStyleInformation = document.querySelectorAll("style");
+const queryAllHTMLStyleInformation = document.querySelectorAll("style");
 
-// Query Subscript Element
+// Query All Subscript Element
 /** @type {NodeListOf<HTMLElement>} */
-const queryAllSubScript = document.querySelectorAll("sub");
+const queryAllHTMLSubScript = document.querySelectorAll("sub");
 
-// Query Disclosure Summary Element
+// Query All Disclosure Summary Element
 /** @type {NodeListOf<HTMLElement>} */
-const queryAllDisclosureSummary = document.querySelectorAll("summary");
+const queryAllHTMLDisclosureSummary = document.querySelectorAll("summary");
 
-// Query Superscript Element
+// Query All Superscript Element
 /** @type {NodeListOf<HTMLElement>} */
-const queryAllSuperScript = document.querySelectorAll("sup");
+const queryAllHTMLSuperScript = document.querySelectorAll("sup");
 
-// Query Table Element
+// Query All Table Element
 /** @type {NodeListOf<HTMLTableElement>} */
 const queryAllHTMLTable = document.querySelectorAll("table");
 
-// Query Table Body Element
+// Query All Table Body Element
 /** @type {NodeListOf<HTMLTableSectionElement>} */
-const queryAllTableBody = document.querySelectorAll("tbody");
+const queryAllHTMLTableBody = document.querySelectorAll("tbody");
 
-// Query Table Data Cell Element
+// Query All Table Data Cell Element
 /** @type {NodeListOf<HTMLTableCellElement>} */
-const queryAllTableDataCell = document.querySelectorAll("td");
+const queryAllHTMLTableDataCell = document.querySelectorAll("td");
 
-// Query Content Template Element
+// Query All Content Template Element
 /** @type {NodeListOf<HTMLTemplateElement>} */
-const queryAllContentTemplate = document.querySelectorAll("template");
+const queryAllHTMLContentTemplate = document.querySelectorAll("template");
 
-// Query Text Area Element
+// Query All Text Area Element
 /** @type {NodeListOf<HTMLTextAreaElement>} */
-const queryAllTextArea = document.querySelectorAll("textarea");
+const queryAllHTMLTextArea = document.querySelectorAll("textarea");
 
-// Query Table Foot Element
+// Query All Table Foot Element
 /** @type {NodeListOf<HTMLTableSectionElement>} */
-const queryAllTableFoot = document.querySelectorAll("tfoot");
+const queryAllHTMLTableFoot = document.querySelectorAll("tfoot");
 
-// Query Table Header Element
+// Query All Table Header Element
 /** @type {NodeListOf<HTMLTableCellElement>} */
-const queryAllTableHeader = document.querySelectorAll("th");
+const queryAllHTMLTableHeader = document.querySelectorAll("th");
 
-// Query Table Head Element
+// Query All Table Head Element
 /** @type {NodeListOf<HTMLTableSectionElement>} */
-const queryAllTableHead = document.querySelectorAll("thead");
+const queryAllHTMLTableHead = document.querySelectorAll("thead");
 
-// Query Date Time Element
+// Query All Date Time Element
 /** @type {NodeListOf<HTMLTimeElement>} */
-const queryAllDateTime = document.querySelectorAll("time");
+const queryAllHTMLDateTime = document.querySelectorAll("time");
 
-// Query Document Title Element
+// Query All Document Title Element
 /** @type {NodeListOf<HTMLTitleElement>} */
-const queryAllDocumentTitle  = document.querySelectorAll("title");
+const queryAllHTMLDocumentTitle  = document.querySelectorAll("title");
 
-// Query Table Row Element
+// Query All Table Row Element
 /** @type {NodeListOf<HTMLTableRowElement>} */
-const queryAllTableRow = document.querySelectorAll("tr");
+const queryAllHTMLTableRow = document.querySelectorAll("tr");
 
-// Query Embed Text Track Element
+// Query All Embed Text Track Element
 /** @type {NodeListOf<HTMLTrackElement>} */
-const queryAllEmbedTextTrack = document.querySelectorAll("track");
+const queryAllHTMLEmbedTextTrack = document.querySelectorAll("track");
 
-// Query Unarticulated Annotation Underline Element
+// Query All Unarticulated Annotation Underline Element
 /** @type {NodeListOf<HTMLElement>} */
-const queryAllUnarticulatedAnnotationUnderline = document.querySelectorAll("u");
+const queryAllHTMLUnarticulatedAnnotationUnderline = document.querySelectorAll("u");
 
-// Query Unordered List Element
+// Query All Unordered List Element
 /** @type {NodeListOf<HTMLUListElement>} */
-const queryAllUnorderedList = document.querySelectorAll("ul");
+const queryAllHTMLUnorderedList = document.querySelectorAll("ul");
 
-// Query Variable Element
+// Query All Variable Element
 /** @type {NodeListOf<HTMLElement>} */
-const queryAllHTMLvariable = document.querySelectorAll("var");
+const queryAllHTMLVariable = document.querySelectorAll("var");
 
-// Query Video Embed Element
+// Query All Video Embed Element
 /** @type {NodeListOf<HTMLVideoElement>} */
-const queryAllVideoEmbed = document.querySelectorAll("video");
+const queryAllHTMLVideoEmbed = document.querySelectorAll("video");
 
-// Query Line Break Opportunity Element
+// Query All Line Break Opportunity Element
 /** @type {NodeListOf<HTMLElement>} */
-const queryAllLineBreakOpportunity = document.querySelectorAll("wbr");
+const queryAllHTMLLineBreakOpportunity = document.querySelectorAll("wbr");

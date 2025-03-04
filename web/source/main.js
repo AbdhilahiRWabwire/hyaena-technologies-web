@@ -10,27 +10,28 @@ function main() {
   HTMLDocumentRoot
   HTMLDocumentRoot.lang = String("en");
   
-  documentMetadataHeader
-  externalResourceLink
-  externalResourceLink.href = String("/theme/dark.css");
-  externalResourceLink.rel = String("stylesheet");
-  documentMetadataHeader.appendChild(externalResourceLink);
+  HTMLDocumentMetadataHeader
+  HTMLExternalResourceLink
+  HTMLExternalResourceLink.href = String("/theme/dark.css");
+  HTMLExternalResourceLink.rel = String("stylesheet");
+  HTMLDocumentMetadataHeader.appendChild(HTMLExternalResourceLink);
   HTMLMetadata
   HTMLMetadata.name = String("main-index");
   HTMLMetadata.content = String("width=device-width");
-  documentMetadataHeader.appendChild(HTMLMetadata);
-  HTMLDocumentRoot.appendChild(documentMetadataHeader);
+  HTMLDocumentMetadataHeader.appendChild(HTMLMetadata);
+  HTMLDocumentRoot.appendChild(HTMLDocumentMetadataHeader);
   
-  documentBody
-  documentBody.classList.add(String("dark"));
+  HTMLDocumentBody
+  HTMLDocumentBody.classList.add(String("dark"));
   HTMLMain
   HTMLParagraph
-  HTMLParagraph.innerText = String("Hyaena Technologie");
+  HTMLParagraph.innerText = String("Hyaena Technologies");
   HTMLMain.appendChild(HTMLParagraph);
-  documentBody.appendChild(HTMLMain);
-  HTMLDocumentRoot.appendChild(documentBody);
+  HTMLDocumentBody.appendChild(HTMLMain);
+  HTMLDocumentRoot.appendChild(HTMLDocumentBody);
   
   return document.body.appendChild(HTMLDocumentRoot);
 }
 
 main();
+

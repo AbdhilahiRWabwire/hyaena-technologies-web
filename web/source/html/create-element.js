@@ -14,15 +14,15 @@ const HTMLAbbreviation = document.createElement("abbr");
 
 // Contact Address Element
 /** @type {HTMLElement} */
-const contactAddress = document.createElement("address");
+const HTMLContactAddress = document.createElement("address");
 
 // Image Map Area Element
 /** @type {HTMLAreaElement} */
-const imageMapArea = document.createElement("area");
+const HTMLImageMapArea = document.createElement("area");
 
 // Article Contents Element
 /** @type {HTMLElement} */
-const articleContents = document.createElement("article");
+const HTMLArticleContents = document.createElement("article");
 
 // Aside Element
 /** @type {HTMLElement} */
@@ -30,35 +30,35 @@ const HTMLAside = document.createElement("aside");
 
 // Embed Audio Element
 /** @type {HTMLAudioElement} */
-const embedAudio = document.createElement("audio");
+const HTMLEmbedAudio = document.createElement("audio");
 
 // Bring Attention To Element
 /** @type {HTMLElement} */
-const bringAttentionTo = document.createElement("b");
+const HTMLBringAttentionTo = document.createElement("b");
 
 // Document Base URL Element
 /** @type {HTMLBaseElement} */
-const documentBaseURL = document.createElement("base");
+const HTMLDocumentBaseURL = document.createElement("base");
 
 // Bidirectional Isolate Element
 /** @type {HTMLElement} */
-const bidirectionalIsolate = document.createElement("bdi");
+const HTMLBidirectionalIsolate = document.createElement("bdi");
 
 // Bidirectional Text Override Element
 /** @type {HTMLElement} */
-const bidirectionalTextOverride = document.createElement("bdo");
+const HTMLBidirectionalTextOverride = document.createElement("bdo");
 
 // Block Quotation Element
 /** @type {HTMLQuoteElement} */
-const blockQuotation = document.createElement("blockquote");
+const HTMLBlockQuotation = document.createElement("blockquote");
 
 // Document Body Element
 /** @type {HTMLBodyElement} */
-const documentBody = document.createElement("body");
+const HTMLDocumentBody = document.createElement("body");
 
 // Line Break Element
 /** @type {HTMLBRElement} */
-const lineBreak = document.createElement("br");
+const HTMLLineBreak = document.createElement("br");
 
 // Button Element
 /** @type {HTMLButtonElement} */
@@ -66,11 +66,11 @@ const HTMLButton = document.createElement("button");
 
 // Graphics Canvas Element
 /** @type {HTMLCanvasElement} */
-const graphicsCanvas = document.createElement("canvas");
+const HTMLGraphicsCanvas = document.createElement("canvas");
 
 // Table Caption Element
 /** @type {HTMLTableCaptionElement} */
-const tableCaption = document.createElement("caption");
+const HTMLTableCaption = document.createElement("caption");
 
 // Citation Element
 /** @type {HTMLElement} */
@@ -78,35 +78,35 @@ const HTMLCitation = document.createElement("cite");
 
 // Inline Code Element
 /** @type {HTMLElement} */
-const inlineCode = document.createElement("code");
+const HTMLInlineCode = document.createElement("code");
 
 // Table Column Element
 /** @type {HTMLTableColElement} */
-const tableColumn = document.createElement("col");
+const HTMLTableColumn = document.createElement("col");
 
 // Table Column Group Element
 /** @type {HTMLTableColElement} */
-const tableColumnGroup = document.createElement("colgroup");
+const HTMLTableColumnGroup = document.createElement("colgroup");
 
 // Data Element
 /** @type {HTMLDataElement} */
-const HTMLdata = document.createElement("data");
+const HTMLData = document.createElement("data");
 
 // Data List Element
 /** @type {HTMLDataListElement} */
-const HTMLdataList = document.createElement("datalist");
+const HTMLDataList = document.createElement("datalist");
 
 // Description Details Element
 /** @type {HTMLElement} */
-const descriptionDetails = document.createElement("dd");
+const HTMLDescriptionDetails = document.createElement("dd");
 
 // Deleted Text Element
 /** @type {HTMLModElement} */
-const deletedText = document.createElement("del");
+const HTMLDeletedText = document.createElement("del");
 
 // Details Disclosure Element
 /** @type {HTMLDetailsElement} */
-const detailsDisclosure = document.createElement("details");
+const HTMLDetailsDisclosure = document.createElement("details");
 
 // Definition Element
 /** @type {HTMLElement} */
@@ -118,15 +118,15 @@ const HTMLDialog = document.createElement("dialog");
 
 // Content Division Element
 /** @type {HTMLDivElement} */
-const contentDivision = document.createElement("div");
+const HTMLContentDivision = document.createElement("div");
 
 // Description List Element
 /** @type {HTMLDListElement} */
-const descriptionList = document.createElement("dl");
+const HTMLDescriptionList = document.createElement("dl");
 
 // Description Term Element
 /** @type {HTMLElement} */
-const descriptionTerm = document.createElement("dt");
+const HTMLDescriptionTerm = document.createElement("dt");
 
 // Emphasis Element
 /** @type {HTMLElement} */
@@ -134,19 +134,19 @@ const HTMLEmphasis = document.createElement("em");
 
 // Embed External Content Element
 /** @type {HTMLEmbedElement} */
-const embedExternalContent = document.createElement("embed");
+const HTMLEmbedExternalContent = document.createElement("embed");
 
 // Field Set Element
 /** @type {HTMLFieldSetElement} */
-const fieldSet = document.createElement("fieldset");
+const HTMLFieldSet = document.createElement("fieldset");
 
 // Figure Caption Element
 /** @type {HTMLElement} */
-const figureCaption = document.createElement("figcaption");
+const HTMLFigureCaption = document.createElement("figcaption");
 
 // Figure with Optional Caption Element
 /** @type {HTMLElement} */
-const figureWithOptionalCaption = document.createElement("figure");
+const HTMLFigureWithOptionalCaption = document.createElement("figure");
 
 // Footer Element
 /** @type {HTMLElement} */
@@ -162,7 +162,7 @@ const HTMLSectionHeading = document.createElement("h1");
 
 // Document Metadata Header Element
 /** @type {HTMLHeadElement} */
-const documentMetadataHeader = document.createElement("head");
+const HTMLDocumentMetadataHeader = document.createElement("head");
 
 // Header Element
 /** @type {HTMLElement} */
@@ -170,11 +170,11 @@ const HTMLHeader = document.createElement("header");
 
 // Header Group Element
 /** @type {HTMLElement} */
-const headergGroup = document.createElement("hgroup");
+const HTMLHeadergGroup = document.createElement("hgroup");
 
 // Thematic Break Horizontal Rule Element
 /** @type {HTMLHRElement} */
-const thematicBreakHorizontalRule = document.createElement("hr");
+const HTMLThematicBreakHorizontalRule = document.createElement("hr");
 
 // HTML Document Root Element
 /** @type {HTMLHtmlElement} */
@@ -182,15 +182,15 @@ const HTMLDocumentRoot = document.createElement("html");
 
 // Idiomatic Text Element
 /** @type {HTMLElement} */
-const idiomaticText = document.createElement("i");
+const HTMLIdiomaticText = document.createElement("i");
 
 // Inline Frame Element
 /** @type {HTMLIFrameElement} */
-const inlineFrame = document.createElement("iframe");
+const HTMLInlineFrame = document.createElement("iframe");
 
 // Image Embed Element
 /** @type {HTMLImageElement} */
-const imageEmbed = document.createElement("img");
+const HTMLImageEmbed = document.createElement("img");
 
 // Input Element
 /** @type {HTMLInputElement} */
@@ -198,11 +198,11 @@ const HTMLInput = document.createElement("input");
 
 // Inserted Text Elemen
 /** @type {HTMLModElement} */
-const insertedText = document.createElement("ins");
+const HTMLInsertedText = document.createElement("ins");
 
 // Keyboard Input Element
 /** @type {HTMLElement} */
-const keyboardInput = document.createElement("kbd");
+const HTMLKeyboardInput = document.createElement("kbd");
 
 // Label Element
 /** @type {HTMLLabelElement} */
@@ -210,15 +210,15 @@ const HTMLLabel = document.createElement("label");
 
 // Field Set Legend Element
 /** @type {HTMLLegendElement} */
-const fieldSetLegend = document.createElement("legend");
+const HTMLFieldSetLegend = document.createElement("legend");
 
 // List Item Element
 /** @type {HTMLLIElement} */
-const listItem = document.createElement("li");
+const HTMLListItem = document.createElement("li");
 
 // External Resource Link Element
 /** @type {HTMLLinkElement} */
-const externalResourceLink = document.createElement("link");
+const HTMLExternalResourceLink = document.createElement("link");
 
 // Main Element
 /** @type {HTMLElement} */
@@ -226,11 +226,11 @@ const HTMLMain = document.createElement("main");
 
 // Image Map Element
 /** @type {HTMLMapElement} */
-const imageMap = document.createElement("map");
+const HTMLImageMap = document.createElement("map");
 
 // Mark Text Element
 /** @type {HTMLElement} */
-const markText = document.createElement("mark");
+const HTMLMarkText = document.createElement("mark");
 
 // Menu Element
 /** @type {HTMLMenuElement} */
@@ -246,31 +246,31 @@ const HTMLMeter = document.createElement("meter");
 
 // Navigation Section Element
 /** @type {HTMLElement} */
-const navigationSection = document.createElement("nav");
+const HTMLNavigationSection = document.createElement("nav");
 
 // Noscript Element
 /** @type {HTMLElement} */
-const noScript = document.createElement("noscript");
+const HTMLNoScript = document.createElement("noscript");
 
 // External Object Element
 /** @type {HTMLObjectElement} */
-const externalObject = document.createElement("object");
+const HTMLExternalObject = document.createElement("object");
 
 // Ordered List Element
 /** @type {HTMLOListElement} */
-const orderedList = document.createElement("ol");
+const HTMLOrderedList = document.createElement("ol");
 
 // Option Group Element
 /** @type {HTMLOptGroupElement} */
-const optionGroup = document.createElement("optgroup");
+const HTMLOptionGroup = document.createElement("optgroup");
 
 // Option Element
 /** @type {HTMLOptionElement} */
-const HTMLoption = document.createElement("option");
+const HTMLOption = document.createElement("option");
 
 // Output Element
 /** @type {HTMLOutputElement} */
-const HTMLoutput = document.createElement("output");
+const HTMLOutput = document.createElement("output");
 
 // Paragraph Element
 /** @type {HTMLParagraphElement} */
@@ -282,47 +282,47 @@ const HTMLPicture = document.createElement("picture");
 
 // Preformatted Text Element
 /** @type {HTMLPreElement} */
-const preformattedText = document.createElement("pre");
+const HTMLPreformattedText = document.createElement("pre");
 
 // Progress Indicator Element
 /** @type {HTMLProgressElement} */
-const progressIndicator = document.createElement("progress");
+const HTMLProgressIndicator = document.createElement("progress");
 
 // Inline Quotation Element
 /** @type {HTMLQuoteElement} */
-const inlineQuotation = document.createElement("q");
+const HTMLInlineQuotation = document.createElement("q");
 
 // Ruby Fallback Parenthesis Element
 /** @type {HTMLElement} */
-const rubyFallbackParenthesis = document.createElement("rp");
+const HTMLRubyFallbackParenthesis = document.createElement("rp");
 
 // Ruby Text Element
 /** @type {HTMLElement} */
-const rubyText = document.createElement("rt");
+const HTMLRubyText = document.createElement("rt");
 
 // Ruby Annotation Element
 /** @type {HTMLElement} */
-const rubyAnnotation = document.createElement("ruby");
+const HTMLRubyAnnotation = document.createElement("ruby");
 
-// Strikethrough Element
+// Strike Through Element
 /** @type {HTMLElement} */
-const strikethrough = document.createElement("s");
+const HTMLStrikeThrough = document.createElement("s");
 
 // Sample Output Element
 /** @type {HTMLElement} */
-const sampleOutput = document.createElement("samp");
+const HTMLSampleOutput = document.createElement("samp");
 
 // Script Element
 /** @type {HTMLScriptElement} */
-const HTMLscript = document.createElement("script");
+const HTMLScript = document.createElement("script");
 
 // Generic Search Element
 /** @type {HTMLElement} */
-const genericSearch = document.createElement("search");
+const HTMLGenericSearch = document.createElement("search");
 
 // Generic Search Element
 /** @type {HTMLElement} */
-const genericSection = document.createElement("section");
+const HTMLGenericSection = document.createElement("section");
 
 // Select Element
 /** @type {HTMLSelectElement} */
@@ -330,39 +330,39 @@ const HTMLSelect = document.createElement("select");
 
 // Web Component Slot Element
 /** @type {HTMLSlotElement} */
-const webComponentSlot = document.createElement("slot");
+const HTMLWebComponentSlot = document.createElement("slot");
 
 // Side Comment Element
 /** @type {HTMLElement} */
-const sideComment = document.createElement("small");
+const HTMLSideComment = document.createElement("small");
 
 // Media or Image Source Element
 /** @type {HTMLSourceElement} */
-const mediaOrImageSource = document.createElement("source");
+const HTMLMediaOrImageSource = document.createElement("source");
 
 // Content Span Element
 /** @type {HTMLSpanElement} */
-const contentSpan = document.createElement("span");
+const HTMLContentSpan = document.createElement("span");
 
 // Strong Importance Element
 /** @type {HTMLElement} */
-const strongImportance = document.createElement("strong");
+const HTMLStrongImportance = document.createElement("strong");
 
 // Style Information Element
 /** @type {HTMLStyleElement} */
-const styleInformation = document.createElement("style");
+const HTMLStyleInformation = document.createElement("style");
 
 // Subscript Element
 /** @type {HTMLElement} */
-const subScript = document.createElement("sub");
+const HTMLSubScript = document.createElement("sub");
 
 // Disclosure Summary Element
 /** @type {HTMLElement} */
-const disclosureSummary = document.createElement("summary");
+const HTMLDisclosureSummary = document.createElement("summary");
 
 // Superscript Element
 /** @type {HTMLElement} */
-const superScript = document.createElement("sup");
+const HTMLSuperScript = document.createElement("sup");
 
 // Table Element
 /** @type {HTMLTableElement} */
@@ -370,64 +370,64 @@ const HTMLTable = document.createElement("table");
 
 // Table Body Element
 /** @type {HTMLTableSectionElement} */
-const tableBody = document.createElement("tbody");
+const HTMLTableBody = document.createElement("tbody");
 
 // Table Data Cell Element
 /** @type {HTMLTableCellElement} */
-const tableDataCell = document.createElement("td");
+const HTMLTableDataCell = document.createElement("td");
 
 // Content Template Element
 /** @type {HTMLTemplateElement} */
-const contentTemplate = document.createElement("template");
+const HTMLContentTemplate = document.createElement("template");
 
 // Text Area Element
 /** @type {HTMLTextAreaElement} */
-const textArea = document.createElement("textarea");
+const HTMLTextArea = document.createElement("textarea");
 
 // Table Foot Element
 /** @type {HTMLTableSectionElement} */
-const tableFoot = document.createElement("tfoot");
+const HTMLTableFoot = document.createElement("tfoot");
 
 // Table Header Element
 /** @type {HTMLTableCellElement} */
-const tableHeader = document.createElement("th");
+const HTMLTableHeader = document.createElement("th");
 
 // Table Head Element
 /** @type {HTMLTableSectionElement} */
-const tableHead = document.createElement("thead");
+const HTMLTableHead = document.createElement("thead");
 
 // Date Time Element
 /** @type {HTMLTimeElement} */
-const dateTime = document.createElement("time");
+const HTMLDateTime = document.createElement("time");
 
 // Document Title Element
 /** @type {HTMLTitleElement} */
-const documentTitle  = document.createElement("title");
+const HTMLDocumentTitle  = document.createElement("title");
 
 // Table Row Element
 /** @type {HTMLTableRowElement} */
-const tableRow = document.createElement("tr");
+const HTMLTableRow = document.createElement("tr");
 
 // Embed Text Track Element
 /** @type {HTMLTrackElement} */
-const embedTextTrack = document.createElement("track");
+const HTMLEmbedTextTrack = document.createElement("track");
 
 // Unarticulated Annotation Underline Element
 /** @type {HTMLElement} */
-const unarticulatedAnnotationUnderline = document.createElement("u");
+const HTMLUnarticulatedAnnotationUnderline = document.createElement("u");
 
 // Unordered List Element
 /** @type {HTMLUListElement} */
-const unorderedList = document.createElement("ul");
+const HTMLUnorderedList = document.createElement("ul");
 
 // Variable Element
 /** @type {HTMLElement} */
-const HTMLvariable = document.createElement("var");
+const HTMLVariable = document.createElement("var");
 
 // Video Embed Element
 /** @type {HTMLVideoElement} */
-const videoEmbed = document.createElement("video");
+const HTMLVideoEmbed = document.createElement("video");
 
 // Line Break Opportunity Element
 /** @type {HTMLElement} */
-const lineBreakOpportunity = document.createElement("wbr");
+const HTMLLineBreakOpportunity = document.createElement("wbr");
