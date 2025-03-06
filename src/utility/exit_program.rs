@@ -1,9 +1,13 @@
+use std::process::exit;
+
 // Successful Exit of the Program
-fn SuccesfulExit() {
-	Println!("Exiting Hyaena Technologies: Data Interchange Server");
+pub fn succesful_exit() {
+	Println!("Exiting Hyaena Technologies Web Service");
+	exit(0);
 }
 
 // Program Exit with Error
-fn ErrorExit() {
-	Println!("Exiting Hyaena Technologies: Data Interchange Server");
+pub fn error_exit() {
+	Println!("Exiting Hyaena Technologies Web Service");
+	exit(1);
 }
