@@ -10,12 +10,14 @@ pub mod utility {
     use print_version::print_version_number;
 }
 
+// Flag Definition
 struct Flag {
     name: &String,
     description: &String,
     event: fn()
 }
 
+// Flag Hash Map
 pub fn flag_map() -> HashMap {
     let command_arguments: HashMap = (
         "--exit", Command {

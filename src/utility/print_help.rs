@@ -1,21 +1,23 @@
+use std::fmt;
+
 // Print Help Command Output
 pub fn print_help() {
-	Println!("Hyaena Technologies Web Service");
-	Println!("");
-	Println!("");
-	Println!("Commands:					Description:");
-	Println!("");
-	Println!("configuration 			Configure Server with server-configuration.yaml");
-	Println!("exit 						Exit Server");
-	Println!("help						Print List of Commands and Flags");
-	Println!("serve 					Serve Web Applcation");
-	Println!("version					Print Version Number");
-	Println!("");
-	Println!("");
-	Println!("Flags:				    Description:");
-	Println!("");
-	Println!("--config. --c				Configure Server with server-configuration.yaml");
-	Println!("--exit, --e,				Exit Server");
-	Println!("--help, --h,				Print List of Commands and Flags");
-	Println!("--version, --v,			Print Version Number");
+	format!("Hyaena Technologies Web Service");
+	format!("");
+	format!("");
+	format!("Commands:					Description:");
+	format!("");
+	format!("configuration 				Configure Server with server-configuration.yaml");
+	format!("exit 						Exit Server");
+	format!("help						Print List of Commands and Flags");
+	format!("serve 						Serve Web Applcation");
+	format!("version					Print Version Number");
+	format!("");
+	format!("");
+	format!("Flags:				    	Description:");
+	format!("");
+	format!("--config. --c				Configure Server with server-configuration.yaml");
+	format!("--exit, --e,				Exit Server");
+	format!("--help, --h,				Print List of Commands and Flags");
+	format!("--version, --v,			Print Version Number");
 }

@@ -10,12 +10,14 @@ pub mod utility {
     use print_version::print_version_number;
 }
 
+// Command Definition
 struct Command {
     name: &String,
     description: &String,
     event: fn()
 }
 
+// Command Hash Map
 pub fn command_map() -> HashMap {
     let command_arguments: HashMap = (
         "exit", Command {
