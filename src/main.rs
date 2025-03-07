@@ -6,7 +6,10 @@ mod command {
     use argument_tokenizer::tokenize_arguments;
 }
 
+
 // Main Entry Point
-fn main() {
-    format!("Hyaena Technologies");
+fn main() -> () {
+    println!("Hyaena Technologies");
+
+    return ();
 }

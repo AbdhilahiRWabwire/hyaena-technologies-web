@@ -2,7 +2,15 @@
 
 // @ts-check
 
-import "./html/create-element.js"
+import {
+  htmlDocumentBody,
+  htmlDocumentMetadataHeader,
+  htmlDocumentRoot,
+  htmlExternalResourceLink,
+  htmlMain,
+  htmlMetadata,
+  htmlParagraph
+} from "./html/create-element.js";
 
 // Main Entry Point
 /** @type {function(): HTMLHtmlElement} */

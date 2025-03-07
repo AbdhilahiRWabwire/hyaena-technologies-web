@@ -17,7 +17,7 @@ struct Command {
     event: fn()
 }
 
-// Command Hash Map
+// Command Map
 pub fn command_map() -> HashMap {
     let command_arguments: HashMap = (
         "exit", Command {

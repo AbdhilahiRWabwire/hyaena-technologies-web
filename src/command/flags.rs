@@ -17,7 +17,7 @@ struct Flag {
     event: fn()
 }
 
-// Flag Hash Map
+// Flag Map
 pub fn flag_map() -> HashMap {
     let command_arguments: HashMap = (
         "--exit", Command {

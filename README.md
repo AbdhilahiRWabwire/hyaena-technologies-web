@@ -1,3 +1,4 @@
+[CLIDoc]: https://github.com/HyaenaTechnologies/hyaena-technologies-web/blob/main/documentation/htnet.md
 [Containerman]: https://podman.io/
 [Containerman Pod]: https://docs.podman.io/en/latest/markdown/podman-pod.1.html
 [Etcd-IO]: https://etcd.io/
@@ -49,6 +50,8 @@ Hyaena Technologies is an Open Source Technology company
 
 - **_Container Tools:_** [Knative][K8S Native], [Kompose][K8S Kompose], [Kubectl][K8S Control], [Skaffold][K8S Skaffold]
 
+- [Command Line Documentation][CLIDoc]
+
 - [Rust][Rust Language]
 - [JetBrains Fleet][Fleet]
 - [JetBrains RustRover][RustRover]
@@ -73,7 +76,7 @@ Hyaena Technologies is an Open Source Technology company
 ```shell
 git clone
 
-cargo build --release
+cargo build --release --target x86_64-unknown-linux-gnu
 mv ./target/release/hyaena-technologies-web ./binary
 mv ./binary/hyaena-technologies-web ./binary/htnet
 ./binary/htnet serve
@@ -91,5 +94,4 @@ docker build ./ --file ./hyaena-technologies.Dockerfile --tag hyaena-technologie
 
 ```shell
 echo 'export PATH="$PATH:/usr/local/bin/htnet"' >> ~/.bashrc
-sudo echo 'export PATH="$PATH:/usr/local/bin/htnet"' >> /etc/skel/.bashrc
 ```
