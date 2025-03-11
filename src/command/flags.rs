@@ -1,5 +1,5 @@
 #[path = "../utility"]
-pub mod utility {
+mod utility {
     mod exit_program;
     use exit_program::succesful_exit;
 
@@ -12,8 +12,8 @@ pub mod utility {
 
 // Flag Definition
 struct Flag {
-    name: &String,
-    description: &String,
+    name: String,
+    description: String,
     event: fn()
 }
 
@@ -21,33 +21,33 @@ struct Flag {
 pub fn flag_map() -> HashMap {
     let command_arguments: HashMap = (
         "--exit", Command {
-            name: "exit",
-            description: "Exit Server",
+            name: &"exit",
+            description: &"Exit Server",
             event: succesful_exit()
         },
         "--e", Command {
-            name: "exit",
-            description: "Exit Server",
+            name: &"exit",
+            description: &"Exit Server",
             event: succesful_exit()
         },
         "--help", Command {
-            name: "help",
-            description: "Print List of Commands and Flags",
+            name: &"help",
+            description: &"Print List of Commands and Flags",
             event: print_help()
         },
         "--h", Command {
-            name: "help",
-            description: "Print List of Commands and Flags",
+            name: &"help",
+            description: &"Print List of Commands and Flags",
             event: print_help()
         },
         "--version", Command {
-            name: "version",
-            description: "Print Version Number",
+            name: &"version",
+            description: &"Print Version Number",
             event: print_version_number()
         },
         "--v", Command {
-            name: "version",
-            description: "Print Version Number",
+            name: &"version",
+            description: &"Print Version Number",
             event: print_version_number()
         }
     );

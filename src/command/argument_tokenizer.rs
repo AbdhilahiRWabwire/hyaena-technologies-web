@@ -5,7 +5,7 @@ use std::fmt;
 mod command {
     mod commands;
     use commands::command_map;
-    
+
     mod flags;
     use flags::flag_map;
 }
