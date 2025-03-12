@@ -1,5 +1,7 @@
 "use strict";
 
+// @ts-check
+
 export {
     queryAllHTMLAnchor,
     queryAllHTMLAbbreviation,
@@ -109,8 +111,6 @@ export {
     queryAllHTMLVideoEmbed,
     queryAllHTMLLineBreakOpportunity
 };
-
-// @ts-check
 
 // Cascading Style Sheet Selectors - Query All Hypertext Markup Language Elements
 

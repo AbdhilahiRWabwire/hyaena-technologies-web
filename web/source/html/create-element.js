@@ -1,5 +1,7 @@
 "use strict";
 
+// @ts-check
+
 export {
     htmlAnchor,
     htmlAbbreviation,
@@ -109,8 +111,6 @@ export {
     htmlVideoEmbed,
     htmlLineBreakOpportunity
 };
-
-// @ts-check
 
 // Hypertext Markup Language Elements
 
