@@ -1,5 +1,4 @@
 use std::process::exit;
-use std::fmt;
 
 // Successful Exit of the Program
 pub fn successful_exit() -> ! {

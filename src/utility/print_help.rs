@@ -1,5 +1,3 @@
-use std::fmt;
-
 // Print Help Command Output
 pub fn print_help_message() -> () {
     println!("Hyaena Technologies Web Service");

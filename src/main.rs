@@ -1,15 +1,11 @@
-use std::fmt;
-
-mod command {
-    mod argument_tokenizer;
-    use argument_tokenizer::tokenize_arguments;
-}
+mod arguments;
+use crate::arguments::argument_tokenizer::tokenize_arguments;
 
 // Main Entry Point
 fn main() -> () {
     println!("Hyaena Technologies");
 
-    succesful_exit();
+    tokenize_arguments();
 
     return ();
 }

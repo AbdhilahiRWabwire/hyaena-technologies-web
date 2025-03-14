@@ -1,5 +1,3 @@
-use std::fmt;
-
 // Semantic Version Number Definition
 struct SemanticVersionNumber {
     semantic_version: &String,
