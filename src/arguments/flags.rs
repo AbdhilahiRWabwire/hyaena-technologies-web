@@ -16,7 +16,7 @@ pub fn flag_map() -> HashMap<String, FlagArguments> {
         FlagArguments {
             name: "exit".to_string(),
             description: "Exit Server".to_string(),
-            event: succesful_exit(),
+            event: successful_exit(),
         },
     );
 
@@ -25,7 +25,7 @@ pub fn flag_map() -> HashMap<String, FlagArguments> {
         FlagArguments {
             name: "exit".to_string(),
             description: "Exit Server".to_string(),
-            event: succesful_exit(),
+            event: successful_exit(),
         },
     );
 
@@ -34,7 +34,7 @@ pub fn flag_map() -> HashMap<String, FlagArguments> {
         FlagArguments {
             name: "help".to_string(),
             description: "Print List of Commands and Flags".to_string(),
-            event: print_help(),
+            event: print_help_message(),
         },
     );
 
@@ -43,7 +43,7 @@ pub fn flag_map() -> HashMap<String, FlagArguments> {
         FlagArguments {
             name: "help".to_string(),
             description: "Print List of Commands and Flags".to_string(),
-            event: print_help(),
+            event: print_help_message(),
         },
     );
 
