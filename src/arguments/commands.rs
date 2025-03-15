@@ -1,37 +1,41 @@
 use std::collections::HashMap;
 
-// Command Definition
-struct CommandArguments{
+use crate::utility::exit_program::successful_exit;
+use crate::utility::prin_help::print_help_message;
+use crate::utility::print_version::print_version_number;
+
+// Command Argument Definition
+struct CommandArgument{
     name: String,
     description: String,
     event: fn(),
 }
 
-// Command Map
-pub fn command_map() -> HashMap<String, CommandArguments> {
-    let command_arguments: HashMap<String, CommandArguments> = HashMap::new();
+// Command Argument Hash Map
+pub fn command_map() -> HashMap<String, CommandArgument> {
+    let command_arguments: HashMap<String, CommandArgument> = HashMap::new();
 
     command_arguments.insert( 
         "exit".to_string(),
-        CommandArguments {
+        CommandArgument {
             name: "exit".to_string(),
             description: "Exit Server".to_string(),
-            event: succesful_exit(),
+            event: successful_exit(),
         }
     );
 
     command_arguments.insert(
         "help".to_string(),
-        CommandArguments {
+        CommandArgument {
             name: "help".to_string(),
             description: "Print List of Commands and Flags".to_string(),
-            event: print_help(),
+            event: print_help_message(),
         },
     );
     
     command_arguments.insert(
         "version".to_string(),
-        CommandArguments {
+        CommandArgument {
             name: "version".to_string(),
             description: "Print Version Number".to_string(),
             event: print_version_number(),

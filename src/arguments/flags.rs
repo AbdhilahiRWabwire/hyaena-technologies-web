@@ -1,19 +1,23 @@
 use std::collections::HashMap;
 
-// Flag Definition
-struct FlagArguments {
+use crate::utility::exit_program::successful_exit;
+use crate::utility::prin_help::print_help_message;
+use crate::utility::print_version::print_version_number;
+
+// Flag Argument Definition
+struct FlagArgument {
     name: String,
     description: String,
     event: fn(),
 }
 
-// Flag Map
-pub fn flag_map() -> HashMap<String, FlagArguments> {
-    let flag_arguments: HashMap<String, FlagArguments> = HashMap::new();
+// Flag Argument Hash Map
+pub fn flag_map() -> HashMap<String, FlagArgument> {
+    let flag_arguments: HashMap<String, FlagArgument> = HashMap::new();
 
     flag_arguments.insert(
         "--exit".to_string(),
-        FlagArguments {
+        FlagArgument {
             name: "exit".to_string(),
             description: "Exit Server".to_string(),
             event: successful_exit(),
@@ -22,7 +26,7 @@ pub fn flag_map() -> HashMap<String, FlagArguments> {
 
     flag_arguments.insert(
         "--e".to_string(),
-        FlagArguments {
+        FlagArgument {
             name: "exit".to_string(),
             description: "Exit Server".to_string(),
             event: successful_exit(),
@@ -31,7 +35,7 @@ pub fn flag_map() -> HashMap<String, FlagArguments> {
 
     flag_arguments.insert(
         "--help".to_string(),
-        FlagArguments {
+        FlagArgument {
             name: "help".to_string(),
             description: "Print List of Commands and Flags".to_string(),
             event: print_help_message(),
@@ -40,7 +44,7 @@ pub fn flag_map() -> HashMap<String, FlagArguments> {
 
     flag_arguments.insert(
         "--h".to_string(),
-        FlagArguments {
+        FlagArgument {
             name: "help".to_string(),
             description: "Print List of Commands and Flags".to_string(),
             event: print_help_message(),
@@ -49,7 +53,7 @@ pub fn flag_map() -> HashMap<String, FlagArguments> {
 
     flag_arguments.insert(
         "--version".to_string(),
-        FlagArguments {
+        FlagArgument {
             name: "version".to_string(),
             description: "Print Version Number".to_string(),
             event: print_version_number(),
@@ -58,7 +62,7 @@ pub fn flag_map() -> HashMap<String, FlagArguments> {
     
     flag_arguments.insert(
         "--v".to_string(),
-        FlagArguments {
+        FlagArgument {
             name: "version".to_string(),
             description: "Print Version Number".to_string(),
             event: print_version_number(),
