@@ -1,19 +1,19 @@
 use std::collections::HashMap;
 
 use crate::utility::exit_program::successful_exit;
-use crate::utility::prin_help::print_help_message;
+use crate::utility::print_help::print_help_message;
 use crate::utility::print_version::print_version_number;
 
 // Flag Argument Definition
-struct FlagArgument {
+pub struct FlagArgument {
     name: String,
     description: String,
-    event: fn(),
+    event: (),
 }
 
 // Flag Argument Hash Map
 pub fn flag_map() -> HashMap<String, FlagArgument> {
-    let flag_arguments: HashMap<String, FlagArgument> = HashMap::new();
+    let mut flag_arguments: HashMap<String, FlagArgument> = HashMap::new();
 
     flag_arguments.insert(
         "--exit".to_string(),

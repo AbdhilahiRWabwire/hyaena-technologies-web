@@ -1,19 +1,19 @@
 use std::collections::HashMap;
 
 use crate::utility::exit_program::successful_exit;
-use crate::utility::prin_help::print_help_message;
+use crate::utility::print_help::print_help_message;
 use crate::utility::print_version::print_version_number;
 
 // Command Argument Definition
-struct CommandArgument{
+pub struct CommandArgument {
     name: String,
     description: String,
-    event: fn(),
+    event: (),
 }
 
 // Command Argument Hash Map
 pub fn command_map() -> HashMap<String, CommandArgument> {
-    let command_arguments: HashMap<String, CommandArgument> = HashMap::new();
+    let mut command_arguments: HashMap<String, CommandArgument> = HashMap::new();
 
     command_arguments.insert( 
         "exit".to_string(),
