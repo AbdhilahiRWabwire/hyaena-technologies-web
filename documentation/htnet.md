@@ -4,7 +4,7 @@
 
 | Command       | Description                                     |
 | ------------- | ----------------------------------------------- |
-| configuration | Configure Server with server-configuration.yaml |
+| configuration | Configure Server with server-configuration.yaml | - (In Progress)
 | exit          | Exit Server                                     |
 | help          | Print List of Commands and Flags                |
 | serve         | Serve Web Applcation                            |
@@ -14,8 +14,7 @@
 
 | Command              | Description                                     |
 | -------------------- | ----------------------------------------------- |
-| --configuration, --c | Configure Server with server-configuration.yaml |
-| --exit, --e          | Exit Server                                     |
+| --configuration, --c | Configure Server with server-configuration.yaml | - (In Progress)
 | --help, --h          | Print List of Commands and Flags                |
 | --serve, --s         | Serve Web Applcation                            |
 | --version, --v       | Print Version Number                            |
