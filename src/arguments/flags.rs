@@ -5,6 +5,7 @@ use crate::utility::print_help::print_help_message;
 use crate::utility::print_version::print_version_number;
 
 // Flag Argument Definition
+#[allow(dead_code)]
 pub struct FlagArgument {
     name: String,
     description: String,
@@ -15,6 +16,7 @@ pub struct FlagArgument {
 pub fn flag_map() -> HashMap<String, FlagArgument> {
     let mut flag_arguments: HashMap<String, FlagArgument> = HashMap::new();
 
+    #[allow(unreachable_code)]
     flag_arguments.insert(
         "--exit".to_string(),
         FlagArgument {
@@ -24,6 +26,7 @@ pub fn flag_map() -> HashMap<String, FlagArgument> {
         },
     );
 
+    #[allow(unreachable_code)]
     flag_arguments.insert(
         "--e".to_string(),
         FlagArgument {

@@ -11,8 +11,10 @@ use super::flags::flag_map;
 pub fn tokenize_arguments() {
     let command_line_arguments: Args = args();
 
+    #[allow(unused_variables)]
     let commands: HashMap<String, CommandArgument> = command_map();
 
+    #[allow(unused_variables)]
     let flags: HashMap<String, FlagArgument> = flag_map();
 
     if command_line_arguments.count() < 2 {

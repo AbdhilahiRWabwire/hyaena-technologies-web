@@ -5,6 +5,7 @@ use crate::utility::print_help::print_help_message;
 use crate::utility::print_version::print_version_number;
 
 // Command Argument Definition
+#[allow(dead_code)]
 pub struct CommandArgument {
     name: String,
     description: String,
@@ -15,6 +16,7 @@ pub struct CommandArgument {
 pub fn command_map() -> HashMap<String, CommandArgument> {
     let mut command_arguments: HashMap<String, CommandArgument> = HashMap::new();
 
+    #[allow(unreachable_code)]
     command_arguments.insert( 
         "exit".to_string(),
         CommandArgument {
@@ -24,6 +26,7 @@ pub fn command_map() -> HashMap<String, CommandArgument> {
         }
     );
 
+    #[allow(unreachable_code)]
     command_arguments.insert(
         "help".to_string(),
         CommandArgument {
