@@ -1,15 +1,15 @@
 use std::collections::HashMap;
 
-use crate::utility::exit_program::successful_exit;
-use crate::utility::print_help::print_help_message;
-use crate::utility::print_version::print_version_number;
+use super::exit_program::successful_exit;
+use super::print_help::print_help_message;
+use super::print_version::print_version_number;
 
 // Flag Argument Definition
 #[allow(dead_code)]
 pub struct FlagArgument {
-    name: String,
-    description: String,
-    event: (),
+    pub name: String,
+    pub description: String,
+    pub event: (),
 }
 
 // Flag Argument Hash Map

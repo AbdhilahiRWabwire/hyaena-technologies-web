@@ -5,7 +5,7 @@ use std::process::exit;
 #[allow(unreachable_code)]
 pub fn successful_exit() -> ! {
     println!("Exiting Hyaena Technologies Web Service");
-    exit(0);
+    return exit(0);
 }
 
 #[allow(dead_code)]
@@ -14,5 +14,5 @@ pub fn successful_exit() -> ! {
 pub fn error_exit() -> ! {
     println!("Exiting - Error(1) - Hyaena Technologies Web Service");
 
-    exit(1);
+    return exit(1);
 }
