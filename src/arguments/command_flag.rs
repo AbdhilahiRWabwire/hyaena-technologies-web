@@ -1,7 +1,8 @@
 use std::collections::HashMap;
 
-use super::print_help::print_help_message;
 use super::print_version::print_version_number;
+
+use crate::utility::exit_program::successful_exit;
 
 // Command and Flag Argument Definition
 #[allow(dead_code)]

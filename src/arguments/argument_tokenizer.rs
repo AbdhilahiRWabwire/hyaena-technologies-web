@@ -6,32 +6,38 @@ use std::io::BufRead;
 use super::command_flag::CommandFlagArgument;
 use super::command_flag::command_map;
 use super::command_flag::flag_map;
+use super::command_flag::print_help_message;
 
 // Command Line Argument Tokenizer
 pub fn tokenize_arguments() {
     let mut command_line_arguments: Args = args();
-
+    
+    #[allow(unused_variables)]
     let mut buffered_reader: BufRead<Args> = BufRead::new(command_line_arguments);
 
-    #[allow(unused_variables)]
     let mut commands: HashMap<String, CommandFlagArgument> = command_map();
 
-    #[allow(unused_variables)]
     let mut flags: HashMap<String, CommandFlagArgument> = flag_map();
     
-    if command_line_arguments.by_ref().count() < 2 {
+    if command_line_arguments.count() < 2 {
         println!("Command or Flag Required: {:#?}", command_line_arguments);
+
+        print_help_message();
     }
 
     for (command_argument) in commands.keys() {
-        if command_line_arguments.by_ref() != command_argument.chars() {
-            println!("Command or Flag Required: {:#?}", command_line_arguments);
+        if command_line_arguments != command_argument.starts_with("--") && command_line_arguments != command_argument {
+            println!("Unkown Command: {:#?}", command_line_arguments);
+
+            print_help_message();
         }
     }
 
     for (flag_argument) in flags.keys() {
-        if command_line_arguments.by_ref() != flag_argument.chars() {
-            println!("Command or Flag Required: {:#?}", command_line_arguments);
+        if command_line_arguments = flag_argument.starts_with("--") && command_line_arguments != flag_argument {
+            println!("Uknown Flag: {:#?}", command_line_arguments);
+
+            print_help_message();
         }
     }
     
