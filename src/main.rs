@@ -1,13 +1,11 @@
 mod arguments;
 mod networking;
 mod yaml;
-use crate::arguments::argument_tokenizer::tokenize_arguments;
+use arguments::command_prompt::prompt_command;
 
 // Main Entry Point
 fn main() -> () {
-    println!("Hyaena Technologies");
-
-    tokenize_arguments();
+    prompt_command();
 
     return ();
 }
