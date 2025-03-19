@@ -102,7 +102,7 @@ pub fn print_help_message() -> () {
     println!("Commands:					Description:");
     println!("");
 
-    for (command_argumen) in commands.values() {
+    for (command_argument) in commands.values() {
         println!("{:#?}: {:#?}", command_argument.name, command_argument.description);
     }
 
