@@ -21,7 +21,7 @@ pub fn tokenize_arguments() {
         print_help_message();
     } else {
         for (command_argument) in commands.keys() {
-            if command_line_arguments.get(1) != command_argument.starts_with("--") && command_line_arguments != command_argument.trim() {
+            if command_line_arguments.get(1)? != command_argument.starts_with("--") && command_line_arguments != command_argument.trim() {
                 println!("Unkown Command: {:#?}", command_line_arguments);
                 print_help_message();
                 error_exit();
@@ -29,7 +29,7 @@ pub fn tokenize_arguments() {
         }
 
         for (flag_argument) in flags.keys() {
-            if command_line_arguments.get(1) == flag_argument.starts_with("--") && command_line_arguments != flag_argument.trim() {
+            if command_line_arguments.get(1)? == flag_argument.starts_with("--") && command_line_arguments != flag_argument.trim() {
                 println!("Uknown Flag: {:#?}", command_line_arguments);
                 print_help_message();
                 error_exit();
