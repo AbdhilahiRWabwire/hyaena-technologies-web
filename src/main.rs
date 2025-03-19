@@ -7,7 +7,6 @@ mod utility;
 
 // Main Entry Point
 fn main() -> () {
-   tokenize_arguments();
-
+    tokenize_arguments();
     return ();
 }

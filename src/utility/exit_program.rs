@@ -13,6 +13,5 @@ pub fn successful_exit() -> ! {
 #[allow(unreachable_code)]
 pub fn error_exit() -> ! {
     println!("Exiting - Error(1) - Hyaena Technologies Web Service");
-
     return exit(1);
 }

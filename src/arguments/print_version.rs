@@ -12,7 +12,7 @@ pub fn print_version_number() -> () {
     println!("Hyaena Technologies Web Service");
     println!("");
     println!("");
-    println!("Version Number:		{:#?}", version_number.semantic_version);
+    println!("Version Number:		{:#?}", version_number.semantic_version.trim());
     
     return ();
 }

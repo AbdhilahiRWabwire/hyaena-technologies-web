@@ -94,7 +94,6 @@ pub fn flag_map() -> HashMap<String, CommandFlagArgument> {
 // Print Help Command Output
 pub fn print_help_message() -> () {
     let mut commands: HashMap<String, CommandFlagArgument> = command_map();
-
     let mut flags: HashMap<String, CommandFlagArgument> = flag_map();
 
     println!("Hyaena Technologies Web Service");
