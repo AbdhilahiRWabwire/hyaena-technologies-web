@@ -22,26 +22,25 @@ pub fn tokenize_arguments() {
 
     let mut flags: HashMap<String, CommandFlagArgument> = flag_map();
     
-    if command_line_arguments.count() < 2 {
-        println!("Command or Flag Required: {:#?}", command_line_arguments);
+    if command_line_arguments.count() != 2 {
+        println!("Command or Flag Required but not Both: {:#?}", command_line_arguments);
 
         print_help_message();
-    }
+    } else {
+        for (command_argument) in commands.keys() {
+            if command_line_arguments[2] != command_argument.starts_with("--") && command_line_arguments != command_argument {
+                println!("Unkown Command: {:#?}", command_line_arguments);
 
-    for (command_argument) in commands.keys() {
-        if command_line_arguments != command_argument.starts_with("--") && command_line_arguments != command_argument {
-            println!("Unkown Command: {:#?}", command_line_arguments);
+                print_help_message();
+            }
+        }
 
-            print_help_message();
+        for (flag_argument) in flags.keys() {
+            if command_line_arguments[2] = flag_argument.starts_with("--") && command_line_arguments != flag_argument {
+                println!("Uknown Flag: {:#?}", command_line_arguments);
+
+                print_help_message();
+            }
         }
     }
-
-    for (flag_argument) in flags.keys() {
-        if command_line_arguments = flag_argument.starts_with("--") && command_line_arguments != flag_argument {
-            println!("Uknown Flag: {:#?}", command_line_arguments);
-
-            print_help_message();
-        }
-    }
-    
 }

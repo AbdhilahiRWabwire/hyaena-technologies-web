@@ -8,9 +8,9 @@ pub fn successful_exit() -> ! {
     return exit(0);
 }
 
+// Program Exited with Error
 #[allow(dead_code)]
 #[allow(unreachable_code)]
-// Program Exit with Error
 pub fn error_exit() -> ! {
     println!("Exiting - Error(1) - Hyaena Technologies Web Service");
 
