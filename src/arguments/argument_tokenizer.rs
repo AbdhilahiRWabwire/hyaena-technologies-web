@@ -1,8 +1,7 @@
 use std::collections::HashMap;
 use std::env::Args;
 use std::env::args;
-
-use futures::io::BufReader;
+use std::io::BufRead;
 
 use super::command_flag::CommandFlagArgument;
 use super::command_flag::command_map;
@@ -12,7 +11,7 @@ use super::command_flag::flag_map;
 pub fn tokenize_arguments() {
     let mut command_line_arguments: Args = args();
 
-    let mut buffered_reader: BufReader<Args> = BufReader::new(command_line_arguments);
+    let mut buffered_reader: BufRead<Args> = BufRead::new(command_line_arguments);
 
     #[allow(unused_variables)]
     let mut commands: HashMap<String, CommandFlagArgument> = command_map();
