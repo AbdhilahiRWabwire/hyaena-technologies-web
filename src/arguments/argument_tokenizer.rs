@@ -12,8 +12,11 @@ use super::command_flag::print_help_message;
 pub fn tokenize_arguments() {
     let mut command_line_arguments: Args = args();
     
-    #[allow(unused_variables)]
     let mut buffered_reader: BufRead<Args> = BufRead::new(command_line_arguments);
+
+    let mut command_input_buffer: String = String::new();
+
+    buffered_reader.read_line(&mut command_input_buffer)?;
 
     let mut commands: HashMap<String, CommandFlagArgument> = command_map();
 
