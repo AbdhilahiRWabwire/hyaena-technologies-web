@@ -4,8 +4,7 @@ use std::env::args;
 use super::command_flag::{
     CommandFlagArgument, 
     command_map, 
-    flag_map, 
-    print_help_message
+    flag_map,
 };
 
 use crate::utility::exit_program::error_exit;

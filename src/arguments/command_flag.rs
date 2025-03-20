@@ -1,9 +1,5 @@
 use std::collections::HashMap;
 
-use super::print_version::print_version_number;
-
-use crate::utility::exit_program::successful_exit;
-
 // Command and Flag Argument Definition
 pub struct CommandFlagArgument {
     pub name: String,
@@ -78,38 +74,4 @@ pub fn flag_map() -> HashMap<String, CommandFlagArgument> {
     );
 
     return flag_arguments;
-}
-
-// Print Help Command Output
-pub fn print_help_message() -> () {
-    let commands: HashMap<String, CommandFlagArgument> = command_map();
-    let flags: HashMap<String, CommandFlagArgument> = flag_map();
-
-    println!("Hyaena Technologies Web Service");
-    println!("");
-    println!("");
-    println!("Commands:					Description:");
-    println!("");
-
-    for (command_argument, command_value) in commands {
-        println!(
-            "{:#?}:     {:#?}", 
-            command_argument, 
-            command_value.description
-        );
-    }
-
-    println!("");
-    println!("Flags:				    Description:");
-    println!("");
-
-    for (flag_argument, flag_value) in flags {
-        println!(
-            "{:#?}:     {:#?}", 
-            flag_argument, 
-            flag_value.description
-        );
-    }
-
-    return ();
 }
