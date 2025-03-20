@@ -22,7 +22,7 @@ pub fn tokenize_arguments() {
         print_help_message();
     } else {
         for command_argument in commands.keys() {
-            if command_line_arguments.get(1).unwrap() != command_argument.trim() {
+            if command_line_arguments[1] != command_argument.trim() {
                 println!("Unkown Command: {:#?}", command_line_arguments);
                 print_help_message();
                 error_exit();
@@ -30,7 +30,7 @@ pub fn tokenize_arguments() {
         }
 
         for flag_argument in flags.keys() {
-            if command_line_arguments.get(1).unwrap() != flag_argument.trim() {
+            if command_line_arguments[1] != flag_argument.trim() {
                 println!("Uknown Flag: {:#?}", command_line_arguments);
                 print_help_message();
                 error_exit();

@@ -1,5 +1,5 @@
 mod arguments;
-use arguments::prompt_command::command_prompt;
+use arguments::command_flag::print_help_message;
 
 mod networking;
 mod yaml;
@@ -7,6 +7,6 @@ mod utility;
 
 // Main Entry Point
 fn main() -> () {
-    command_prompt();
+    print_help_message();
     return ();
 }
