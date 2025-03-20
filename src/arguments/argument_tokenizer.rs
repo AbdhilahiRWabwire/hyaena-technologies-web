@@ -1,5 +1,5 @@
 use std::collections::HashMap;
-use std::env::{Args, args};
+use std::env::args;
 
 use super::command_flag::{
     CommandFlagArgument, 
@@ -11,25 +11,26 @@ use super::command_flag::{
 use crate::utility::exit_program::error_exit;
 
 // Command Line Argument Tokenizer
+#[allow(dead_code)]
 pub fn tokenize_arguments() {
-    let mut command_line_arguments: Vec<String> = args().collect();
-    let mut commands: HashMap<String, CommandFlagArgument> = command_map();
-    let mut flags: HashMap<String, CommandFlagArgument> = flag_map();
+    let command_line_arguments: Vec<String> = args().collect();
+    let commands: HashMap<String, CommandFlagArgument> = command_map();
+    let flags: HashMap<String, CommandFlagArgument> = flag_map();
     
     if command_line_arguments.len() != 2 {
         println!("Command or Flag Required but not Both: {:#?}", command_line_arguments);
         print_help_message();
     } else {
-        for (command_argument) in commands.keys() {
-            if command_line_arguments.get(1)? != command_argument.starts_with("--") && command_line_arguments != command_argument.trim() {
+        for command_argument in commands.keys() {
+            if command_line_arguments.get(1).unwrap() != command_argument.trim() {
                 println!("Unkown Command: {:#?}", command_line_arguments);
                 print_help_message();
                 error_exit();
             }
         }
 
-        for (flag_argument) in flags.keys() {
-            if command_line_arguments.get(1)? == flag_argument.starts_with("--") && command_line_arguments != flag_argument.trim() {
+        for flag_argument in flags.keys() {
+            if command_line_arguments.get(1).unwrap() != flag_argument.trim() {
                 println!("Uknown Flag: {:#?}", command_line_arguments);
                 print_help_message();
                 error_exit();

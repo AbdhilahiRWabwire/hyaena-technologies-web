@@ -93,8 +93,8 @@ pub fn flag_map() -> HashMap<String, CommandFlagArgument> {
 
 // Print Help Command Output
 pub fn print_help_message() -> () {
-    let mut commands: HashMap<String, CommandFlagArgument> = command_map();
-    let mut flags: HashMap<String, CommandFlagArgument> = flag_map();
+    let commands: HashMap<String, CommandFlagArgument> = command_map();
+    let flags: HashMap<String, CommandFlagArgument> = flag_map();
 
     println!("Hyaena Technologies Web Service");
     println!("");
@@ -102,16 +102,24 @@ pub fn print_help_message() -> () {
     println!("Commands:					Description:");
     println!("");
 
-    for (command_argument) in commands.values() {
-        println!("{:#?}: {:#?}", command_argument.name, command_argument.description);
+    for command_argument in commands.values() {
+        println!(
+            "{:#?}: {:#?}", 
+            command_argument.name.trim(), 
+            command_argument.description.trim()
+        );
     }
 
     println!("");
     println!("Flags:				    Description:");
     println!("");
 
-    for (flag_argument) in flags.values() {
-        println!("{:#?}: {:#?}", flag_argument.name, flag_argument.description);
+    for flag_argument in flags.values() {
+        println!(
+            "{:#?}: {:#?}", 
+            flag_argument.name.trim(), 
+            flag_argument.description.trim()
+        );
     }
 
     return ();

@@ -1,5 +1,5 @@
 mod arguments;
-use arguments::argument_tokenizer::tokenize_arguments;
+use arguments::prompt_command::command_prompt;
 
 mod networking;
 mod yaml;
@@ -7,6 +7,6 @@ mod utility;
 
 // Main Entry Point
 fn main() -> () {
-    tokenize_arguments();
+    command_prompt();
     return ();
 }
