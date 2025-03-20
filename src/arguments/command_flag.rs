@@ -15,7 +15,6 @@ pub struct CommandFlagArgument {
 pub fn command_map() -> HashMap<String, CommandFlagArgument> {
     let mut command_arguments: HashMap<String, CommandFlagArgument> = HashMap::new();
 
-    #[allow(unreachable_code)]
     command_arguments.insert( 
         "exit".to_string(),
         CommandFlagArgument {
@@ -25,7 +24,6 @@ pub fn command_map() -> HashMap<String, CommandFlagArgument> {
         }
     );
 
-    #[allow(unreachable_code)]
     command_arguments.insert(
         "help".to_string(),
         CommandFlagArgument {
