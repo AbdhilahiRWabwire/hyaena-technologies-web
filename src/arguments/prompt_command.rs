@@ -6,6 +6,12 @@ use super::command_flag::{
     command_map,
 };
 
+use crate::utility::{
+    exit_program::{error_exit, successful_exit}, 
+    print_help::print_help_message,
+    print_version::print_version_number
+};
+
 // Command Prompt: Read, Evaluate, Print, Looop
 pub fn command_prompt() -> () {
     print!("Hyaena-Technologies-Web|> ");
@@ -26,10 +32,21 @@ pub fn command_prompt() -> () {
         continue;
     }
 
-    while command_input_buffer.trim() != "quit" {
+    while command_input_buffer.len() != 0 {
         command_input_buffer.clear();
         command_input.read_line(&mut command_input_buffer).unwrap();
-        println!("You Wrote: {:#?}", command_input_buffer.trim());
+
+        match command_input_buffer.trim() {
+            "exit" => successful_exit(),
+            "help" => print_help_message(),
+            "version" => print_version_number(),
+            "--help" => print_help_message(),
+            "--h" => print_help_message(),
+            "--version" => print_version_number(),
+            "--v" => print_version_number(),
+            &_ => error_exit()
+        }
+
         print!("Hyaena-Technologies-Web|> ");
         command_output_buffer.flush().unwrap();
         continue;

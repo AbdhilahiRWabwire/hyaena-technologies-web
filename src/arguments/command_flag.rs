@@ -1,9 +1,17 @@
 use std::collections::HashMap;
 
+use crate::utility::{
+    exit_program::successful_exit,
+    print_help::print_help_message,
+    print_version::print_version_number
+};
+
+
 // Command and Flag Argument Definition
 pub struct CommandFlagArgument {
     pub name: String,
     pub description: String,
+    pub event: (),
 }
 
 // Command Argument Hash Map
@@ -15,6 +23,7 @@ pub fn command_map() -> HashMap<String, CommandFlagArgument> {
         CommandFlagArgument {
             name: "exit".to_string(),
             description: "Exit Server".to_string(),
+            event: successful_exit(),
         }
     );
 
@@ -23,6 +32,7 @@ pub fn command_map() -> HashMap<String, CommandFlagArgument> {
         CommandFlagArgument {
             name: "help".to_string(),
             description: "Print List of Commands and Flags".to_string(),
+            event: print_help_message(),
         },
     );
     
@@ -31,6 +41,7 @@ pub fn command_map() -> HashMap<String, CommandFlagArgument> {
         CommandFlagArgument {
             name: "version".to_string(),
             description: "Print Version Number".to_string(),
+            event: print_version_number(),
         },
     );
 
@@ -46,6 +57,7 @@ pub fn flag_map() -> HashMap<String, CommandFlagArgument> {
         CommandFlagArgument {
             name: "help".to_string(),
             description: "Print List of Commands and Flags".to_string(),
+            event: print_help_message(),
         },
     );
 
@@ -54,6 +66,7 @@ pub fn flag_map() -> HashMap<String, CommandFlagArgument> {
         CommandFlagArgument {
             name: "help".to_string(),
             description: "Print List of Commands and Flags".to_string(),
+            event: print_help_message(),
         },
     );
 
@@ -62,6 +75,7 @@ pub fn flag_map() -> HashMap<String, CommandFlagArgument> {
         CommandFlagArgument {
             name: "version".to_string(),
             description: "Print Version Number".to_string(),
+            event: print_version_number(),
         },
     );
     
@@ -70,6 +84,7 @@ pub fn flag_map() -> HashMap<String, CommandFlagArgument> {
         CommandFlagArgument {
             name: "version".to_string(),
             description: "Print Version Number".to_string(),
+            event: print_version_number(),
         },
     );
 
