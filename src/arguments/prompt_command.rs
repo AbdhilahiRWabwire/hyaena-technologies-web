@@ -32,6 +32,7 @@ pub fn command_prompt() -> () {
         println!("You Wrote: {:#?}", command_input_buffer.trim());
         print!("Hyaena-Technologies-Web|> ");
         command_output_buffer.flush().unwrap();
+        continue;
     }
 
     println!("Exiting Hyaena Technologies Web Service");
