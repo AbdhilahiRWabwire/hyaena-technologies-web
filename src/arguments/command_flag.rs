@@ -5,7 +5,6 @@ use super::print_version::print_version_number;
 use crate::utility::exit_program::successful_exit;
 
 // Command and Flag Argument Definition
-#[allow(dead_code)]
 pub struct CommandFlagArgument {
     pub name: String,
     pub description: String,
