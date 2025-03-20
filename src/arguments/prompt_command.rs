@@ -1,4 +1,10 @@
+use std::collections::HashMap;
 use std::io::{Stdin, Stdout, Write};
+
+use super::command_flag::{
+    CommandFlagArgument, 
+    command_map,
+};
 
 // Command Prompt: Read, Evaluate, Print, Looop
 pub fn command_prompt() -> () {
@@ -10,6 +16,7 @@ pub fn command_prompt() -> () {
 
     let command_input: Stdin = std::io::stdin();
     let mut command_input_buffer: String = String::new();
+    let commands: HashMap<String, CommandFlagArgument> = command_map();
     
     while command_input_buffer.len() == 0 {
         command_input_buffer.clear();
