@@ -19,22 +19,10 @@ pub fn tokenize_arguments() -> () {
             "exit" => {
                 successful_exit();
             }
-            "help" => {
+            "help" | "--help" | "--h" => {
                 print_help_message();
             }
-            "version" => {
-                print_version_number();
-            }
-            "--help" => {
-                print_help_message();
-            }
-            "--h" => {
-                print_help_message()
-            }
-            "--version" => {
-                print_version_number();
-            }
-            "--v" => {
+            "version" | "--version" |  "--v" => {
                 print_version_number();
             }
             &_ => {
