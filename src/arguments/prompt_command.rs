@@ -29,7 +29,7 @@ pub fn command_prompt() -> () {
         command_input_buffer.clear();
         command_input.read_line(&mut command_input_buffer).unwrap();
 
-        match command_input_buffer.as_str() {
+        match command_input_buffer.trim() {
             "exit" => successful_exit(),
             "help" => print_help_message(),
             "version" => print_version_number(),
