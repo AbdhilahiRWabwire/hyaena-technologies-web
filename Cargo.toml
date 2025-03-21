@@ -10,7 +10,7 @@ include = [
 ]
 name = "hyaena_technologies_web"
 publish = false
-rust-version = "1.85.0"
+rust-version = "1.85.1"
 version = "0.2.0"
 
 [[bin]]
