@@ -6,7 +6,7 @@ pub fn print_help_message() -> () {
     println!("Commands:					Description:");
     println!("");
     println!("configuration             Configure Server with server-configuration.yaml");
-    println!("exit                      Exit Server");
+    println!("exit                      Exit Service");
     println!("help                      Print List of Commands and Flags");
     println!("serve                     Serve Web Applcation");
     println!("version                   Print Version Number");

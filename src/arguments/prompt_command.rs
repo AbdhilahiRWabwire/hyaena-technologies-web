@@ -1,7 +1,7 @@
 use std::io::{Stdin, Stdout, Write};
 
 use crate::utility::{
-    exit_program::{error_exit, successful_exit}, 
+    exit_program::successful_exit, 
     print_help::print_help_message,
     print_version::print_version_number
 };
@@ -20,6 +20,7 @@ pub fn command_prompt() -> () {
     while command_input_buffer.trim() == "" {
         command_input_buffer.clear();
         command_input.read_line(&mut command_input_buffer).unwrap();
+        println!("Command Required: {:#?}", command_input_buffer.trim());
         print!("Hyaena-Technologies-Web|> ");
         command_output_buffer.flush().unwrap();
         continue;
@@ -30,12 +31,20 @@ pub fn command_prompt() -> () {
         command_input.read_line(&mut command_input_buffer).unwrap();
 
         match command_input_buffer.trim() {
-            "exit" => successful_exit(),
-            "help" => print_help_message(),
-            "version" => print_version_number(),
-            &_ => error_exit()
+            "exit" => {
+                successful_exit();
+            }
+            "help" => {
+                print_help_message();
+            }
+            "version" => {
+                print_version_number();
+            }
+            &_ => {
+                println!("Unknown Command: {:#?}", command_input_buffer.trim());
+            }
         }
-
+        
         print!("Hyaena-Technologies-Web|> ");
         command_output_buffer.flush().unwrap();
         continue;

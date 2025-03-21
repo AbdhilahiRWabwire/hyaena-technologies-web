@@ -16,14 +16,32 @@ pub fn tokenize_arguments() -> () {
         error_exit();
     } else {
         match command_line_arguments[1].trim() {
-            "exit" => successful_exit(),
-            "help" => print_help_message(),
-            "version" => print_version_number(),
-            "--help" => print_help_message(),
-            "--h" => print_help_message(),
-            "--version" => print_version_number(),
-            "--v" => print_version_number(),
-            &_ => error_exit()
+            "exit" => {
+                successful_exit();
+            }
+            "help" => {
+                print_help_message();
+            }
+            "version" => {
+                print_version_number();
+            }
+            "--help" => {
+                print_help_message();
+            }
+            "--h" => {
+                print_help_message()
+            }
+            "--version" => {
+                print_version_number();
+            }
+            "--v" => {
+                print_version_number();
+            }
+            &_ => {
+                println!("Uknown Command or Flag: {:#?}", command_line_arguments[1].trim());
+                print_help_message();
+                error_exit()
+            }
         }
     }
 
