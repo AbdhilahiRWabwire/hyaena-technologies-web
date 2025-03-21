@@ -20,7 +20,6 @@ pub fn command_prompt() -> () {
     while command_input_buffer.trim() == "" {
         command_input_buffer.clear();
         command_input.read_line(&mut command_input_buffer).unwrap();
-        println!("Command Required: {:#?}", command_input_buffer.trim());
         print!("Hyaena-Technologies-Web|> ");
         command_output_buffer.flush().unwrap();
         continue;
@@ -44,7 +43,7 @@ pub fn command_prompt() -> () {
                 println!("Unknown Command: {:#?}", command_input_buffer.trim());
             }
         }
-        
+
         print!("Hyaena-Technologies-Web|> ");
         command_output_buffer.flush().unwrap();
         continue;

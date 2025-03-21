@@ -16,9 +16,6 @@ pub fn tokenize_arguments() -> () {
         error_exit();
     } else {
         match command_line_arguments[1].trim() {
-            "exit" => {
-                successful_exit();
-            }
             "help" | "--help" | "--h" => {
                 print_help_message();
             }
