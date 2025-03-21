@@ -3,12 +3,12 @@
 ## Commands
 
 | Command       | Description                                     |
-| ------------- | ----------------------------------------------- |
-| configuration | Configure Server with server-configuration.yaml | - (In Progress)
-| exit          | Exit Service                                    |
-| help          | Print List of Commands and Flags                |
-| serve         | Serve Web Applcation                            |
-| version       | Print Version Number                            |
+| --------------------- | ----------------------------------------------- |
+| configuration         | Configure Server with server-configuration.yaml | - (In Progress)
+| exit (Command Prompt) | Exit Service                                    |
+| help                  | Print List of Commands and Flags                |
+| serve                 | Serve Web Applcation                            |
+| version               | Print Version Number                            |
 
 ## Flags
 
