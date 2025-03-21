@@ -2,7 +2,7 @@
 
 ## Commands
 
-| Command       | Description                                     |
+| Command               | Description                                     |
 | --------------------- | ----------------------------------------------- |
 | configuration         | Configure Server with server-configuration.yaml | - (In Progress)
 | exit (Command Prompt) | Exit Service                                    |
@@ -12,7 +12,7 @@
 
 ## Flags
 
-| Command              | Description                                     |
+| Flag                 | Description                                     |
 | -------------------- | ----------------------------------------------- |
 | --configuration, --c | Configure Server with server-configuration.yaml | - (In Progress)
 | --help, --h          | Print List of Commands and Flags                |
