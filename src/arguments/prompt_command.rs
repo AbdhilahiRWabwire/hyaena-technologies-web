@@ -23,7 +23,7 @@ pub fn command_prompt() -> () {
         print!("Hyaena-Technologies-Web|> ");
         command_output_buffer.flush().unwrap();
         continue;
-    }
+    };
 
     while command_input_buffer.trim() != "" {
         command_input_buffer.clear();
@@ -42,12 +42,12 @@ pub fn command_prompt() -> () {
             &_ => {
                 println!("Unknown Command: {:#?}", command_input_buffer.trim());
             }
-        }
+        };
 
         print!("Hyaena-Technologies-Web|> ");
         command_output_buffer.flush().unwrap();
         continue;
-    }
+    };
     
     return ();
 }

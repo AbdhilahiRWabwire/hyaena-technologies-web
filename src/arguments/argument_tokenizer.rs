@@ -27,8 +27,8 @@ pub fn tokenize_arguments() -> () {
                 print_help_message();
                 error_exit()
             }
-        }
-    }
+        };
+    };
 
     return ();
 }

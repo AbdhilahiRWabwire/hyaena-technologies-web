@@ -51,7 +51,6 @@ Hyaena Technologies is an Open Source Technology company
 - **_Container Tools:_** [Knative][K8S Native], [Kompose][K8S Kompose], [Kubectl][K8S Control], [Skaffold][K8S Skaffold]
 
 - [Command Line Documentation][CLIDoc]
-
 - [Rust][Rust Language]
 - [JetBrains Fleet][Fleet]
 - [JetBrains RustRover][RustRover]
