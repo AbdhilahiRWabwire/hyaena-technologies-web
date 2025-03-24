@@ -12,10 +12,10 @@ pub fn print_help_message() -> () {
     println!("version                   Print Version Number");
     println!("");
     println!("Flags:				    Description:");
-    println!("--configuration --c       Configure Server with server-configuration.yaml");
-    println!("--help --h                Print List of Commands and Flags");
-    println!("--serve --s               Serve Web Applcation");
-    println!("--version --v             Print Version Number");
+    println!("--c                       Configure Server with server-configuration.yaml");
+    println!("--h                       Print List of Commands and Flags");
+    println!("--s                       Serve Web Applcation");
+    println!("--v                       Print Version Number");
     println!("");
 
     return ();

@@ -12,9 +12,9 @@
 
 ## Flags
 
-| Flag                 | Description                                     |
-| -------------------- | ----------------------------------------------- |
-| --configuration, --c | Configure Server with server-configuration.yaml | - (In Progress)
-| --help, --h          | Print List of Commands and Flags                |
-| --serve, --s         | Serve Web Applcation                            |
-| --version, --v       | Print Version Number                            |
+| Flag | Description                                     |
+| ---- | ----------------------------------------------- |
+| --c  | Configure Server with server-configuration.yaml | - (In Progress)
+| --h  | Print List of Commands and Flags                |
+| --s  | Serve Web Applcation                            |
+| --v  | Print Version Number                            |

@@ -1,7 +1,7 @@
 use std::io::{Stdin, Stdout, Write};
+use std::process::exit;
 
 use crate::utility::{
-    exit_program::successful_exit, 
     print_help::print_help_message,
     print_version::print_version_number
 };
@@ -31,7 +31,8 @@ pub fn command_prompt() -> () {
 
         match command_input_buffer.trim() {
             "exit" => {
-                successful_exit();
+                println!("Exiting Hyaena Technologies Web Service");
+                exit(0);
             }
             "help" => {
                 print_help_message();
