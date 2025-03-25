@@ -76,7 +76,7 @@ Hyaena Technologies is an Open Source Technology company
 git clone
 
 cargo build --release --target x86_64-unknown-linux-gnu
-mv ./target/release/htnet ./binary
+mv ./target/x86_64-unkown-linux-gnu/release/htnet ./binary
 ./binary/htnet serve
 ```
 
