@@ -5,8 +5,8 @@ WORKDIR /hyaena-technologies-web
 COPY ./ ./
 
 RUN cargo check \ 
-cargo build --release \ 
-mv ./target/release/hyaena-technologies-web ./binary
+cargo build --release --target x86_64-unknown-linux-gnu \ 
+mv ./target/x86_64-unknown-linux-gnu/release/hyaena-technologies-web ./binary
 
 FROM alpine:latest
 
