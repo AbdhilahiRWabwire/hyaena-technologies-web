@@ -1719,7 +1719,6 @@ dependencies = [
  "opentelemetry-otlp",
  "opentelemetry-stdout",
  "opentelemetry_sdk",
- "regex",
  "serde_json",
  "surrealdb",
 ]
