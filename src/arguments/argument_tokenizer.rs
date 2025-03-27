@@ -20,10 +20,10 @@ pub fn tokenize_arguments() -> ExitCode {
     } else {
         match command_line_arguments[1].trim() {
             "help" | "--h" => {
-                print_help_message();
+                return print_help_message();
             }
             "version" | "--v" => {
-                print_version_number();
+                return print_version_number();
             }
             &_ => {
                 println!("Uknown Command or Flag: {:#?}", command_line_arguments[1].trim());
