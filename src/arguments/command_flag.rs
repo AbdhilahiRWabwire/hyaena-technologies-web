@@ -4,8 +4,8 @@
 #![allow(unused_variables)]
 
 use std::{
-    collections::HashMap,
-    process::ExitCode,
+    collections::HashMap, 
+    process::exit
 };
 
 use crate::utility::{
@@ -13,12 +13,11 @@ use crate::utility::{
     print_version::print_version_number
 };
 
-
 // Command and Flag Argument Definition
 pub struct CommandFlagArgument {
     pub name: String,
     pub description: String,
-    pub event: ExitCode,
+    pub event: (),
 }
 
 // Command Argument Hash Map
@@ -30,7 +29,7 @@ pub fn command_map() -> HashMap<String, CommandFlagArgument> {
         CommandFlagArgument {
             name: "exit".to_string(),
             description: "Exit Server".to_string(),
-            event: ExitCode::SUCCESS,
+            event: exit(0),
         }
     );
 

@@ -1,7 +1,5 @@
-use std::process::ExitCode;
-
 // Print Help Command Output
-pub fn print_help_message() -> ExitCode {
+pub fn print_help_message() -> () {
     println!("Hyaena Technologies Web Service");
     println!("");
     println!("");
@@ -20,5 +18,5 @@ pub fn print_help_message() -> ExitCode {
     println!("--v                       Print Version Number");
     println!("");
 
-    return ExitCode::SUCCESS;
+    return ();
 }

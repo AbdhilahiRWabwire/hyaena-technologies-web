@@ -1,8 +1,6 @@
 use std::{
-    io::Stdin, 
-    io::Stdout, 
-    io::Write,
-    process::ExitCode
+    io::{Stdin, Stdout, Write},
+    process::exit
 };
 
 use crate::utility::{
@@ -11,7 +9,7 @@ use crate::utility::{
 };
 
 // Command Prompt: Read, Evaluate, Print, Looop
-pub fn command_prompt() -> ExitCode {
+pub fn command_prompt() -> () {
     print!("Hyaena-Technologies-Web|> ");
 
     let mut command_output_buffer: Stdout = std::io::stdout();
@@ -36,7 +34,7 @@ pub fn command_prompt() -> ExitCode {
         match command_input_buffer.trim() {
             "exit" => {
                 println!("Exiting Hyaena Technologies Web Service");
-                ExitCode::SUCCESS;
+                exit(0);
             }
             "help" => {
                 print_help_message();
@@ -54,5 +52,5 @@ pub fn command_prompt() -> ExitCode {
         continue;
     };
     
-    return ExitCode::SUCCESS;
+    return ();
 }
