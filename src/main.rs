@@ -1,14 +1,14 @@
 mod arguments;
-use arguments::argument_tokenizer::tokenize_arguments;
+use std::process::ExitCode;
+
+use arguments::prompt_command::command_prompt;
 
 mod networking;
-use networking::serve_application::start_service;
-
 mod yaml;
 mod utility;
 
 // Main Entry Point
-fn main() -> () {
-    start_service();
-    return ();
+fn main() -> ExitCode {
+    command_prompt();
+    return ExitCode::SUCCESS;
 }
