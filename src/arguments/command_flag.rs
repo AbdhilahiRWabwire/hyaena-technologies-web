@@ -3,8 +3,11 @@
 #![allow(unused_imports)]
 #![allow(unused_variables)]
 
-use std::collections::HashMap;
-use std::process::exit;
+use std::{
+    collections::HashMap,
+    process::ExitCode,
+    process::exit,
+};
 
 use crate::utility::{
     print_help::print_help_message,
@@ -28,7 +31,7 @@ pub fn command_map() -> HashMap<String, CommandFlagArgument> {
         CommandFlagArgument {
             name: "exit".to_string(),
             description: "Exit Server".to_string(),
-            event: exit(0),
+            event: exit(ExitCode::SUCCESS),
         }
     );
 

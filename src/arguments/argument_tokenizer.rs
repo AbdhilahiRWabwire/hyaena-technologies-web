@@ -1,5 +1,8 @@
-use std::env::args;
-use std::process::exit;
+use std::{
+    env::args,
+    process::ExitCode,
+    process::exit
+};
 
 use crate::utility::{
     print_help::print_help_message,
@@ -14,7 +17,7 @@ pub fn tokenize_arguments() -> () {
         println!("Command or Flag Required but not Both: {:#?}", command_line_arguments);
         print_help_message();
         println!("Error(1) - Exiting Hyaena Technologies Web Service");
-        exit(1)
+        exit(ExitCode::FAILURE)
     } else {
         match command_line_arguments[1].trim() {
             "help" | "--h" => {
@@ -27,7 +30,7 @@ pub fn tokenize_arguments() -> () {
                 println!("Uknown Command or Flag: {:#?}", command_line_arguments[1].trim());
                 print_help_message();
                 println!("Error(1) - Exiting Hyaena Technologies Web Service");
-                exit(1)
+                exit(ExitCode::FAILURE)
             }
         };
     };
