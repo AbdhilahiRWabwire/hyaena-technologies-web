@@ -37,10 +37,10 @@ pub fn command_prompt() -> ExitCode {
                 return ExitCode::SUCCESS;
             }
             "help" => {
-                return print_help_message();
+                print_help_message();
             }
             "version" => {
-                return print_version_number();
+                print_version_number();
             }
             &_ => {
                 println!("Unknown Command: {:#?}", command_input_buffer.trim());
