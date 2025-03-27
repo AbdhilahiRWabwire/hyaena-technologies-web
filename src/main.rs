@@ -1,5 +1,6 @@
-mod arguments;
+use std::process::ExitCode;
 
+mod arguments;
 use arguments::prompt_command::command_prompt;
 
 mod networking;
@@ -7,8 +8,8 @@ mod yaml;
 mod utility;
 
 // Main Entry Point
-fn main() -> () {
+fn main() -> ExitCode {
     command_prompt();
     
-    return;
+    return ExitCode::SUCCESS;
 }

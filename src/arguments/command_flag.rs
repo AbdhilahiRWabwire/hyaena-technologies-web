@@ -5,7 +5,7 @@
 
 use std::{
     collections::HashMap, 
-    process::exit
+    process::ExitCode
 };
 
 use crate::utility::{
@@ -17,7 +17,7 @@ use crate::utility::{
 pub struct CommandFlagArgument {
     pub name: String,
     pub description: String,
-    pub event: (),
+    pub event: ExitCode,
 }
 
 // Command Argument Hash Map
@@ -29,7 +29,7 @@ pub fn command_map() -> HashMap<String, CommandFlagArgument> {
         CommandFlagArgument {
             name: "exit".to_string(),
             description: "Exit Server".to_string(),
-            event: exit(0),
+            event: ExitCode::SUCCESS,
         }
     );
 
