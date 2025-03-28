@@ -4,7 +4,6 @@
 #![allow(unused_variables)]
 
 use std::{
-    convert::Infallible,
     net::SocketAddr, 
     net::TcpListener
 };
