@@ -7,7 +7,7 @@ use std::{
     net::{
         IpAddr, 
         Ipv4Addr, 
-        SocketAddr, 
+        SocketAddrV4, 
         TcpListener, 
         TcpStream
     },
@@ -15,11 +15,7 @@ use std::{
 };
 
 pub fn web_service() -> () {
-    let socket_address: SocketAddr = SocketAddr::new(
-        IpAddr::V4(
-            Ipv4Addr::new(127, 0, 0, 1)
-        ), 8080
-    );
+    let socket_address: SocketAddrV4 = SocketAddrV4::new(Ipv4Addr::new(127, 0, 0, 1), 8080);
     let transmission_listener:TcpListener = TcpListener::bind(socket_address).unwrap(); 
     let transmission_stream: TcpStream = TcpStream::connect(transmission_control_listener).unwrap();
 
