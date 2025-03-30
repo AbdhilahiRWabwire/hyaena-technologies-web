@@ -21,7 +21,7 @@ pub fn web_service() -> () {
         ), 8080
     );
     let transmission_listener:TcpListener = TcpListener::bind(socket_address).unwrap(); 
-    let transmission_stream: TcpStream = TcpStream::from(transmission_control_listener);
+    let transmission_stream: TcpStream = TcpStream::connect(transmission_control_listener).unwrap();
 
     return ()
 }

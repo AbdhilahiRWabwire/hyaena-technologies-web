@@ -15,7 +15,7 @@ pub fn tokenize_arguments() -> ExitCode {
     let command_line_arguments: Vec<String> = args().collect();
     
     if command_line_arguments.len() != 2 {
-        println!("Command or Flag Required but not Both: {:#?}", command_line_arguments);
+        println!("Command or Flag Required but not Both: {}", command_line_arguments);
         print_help_message();
         println!("Error(1) - Exiting Hyaena Technologies Web Service");
         return ExitCode::FAILURE;
@@ -28,7 +28,7 @@ pub fn tokenize_arguments() -> ExitCode {
                 print_version_number();
             }
             &_ => {
-                println!("Uknown Command or Flag: {:#?}", command_line_arguments[1].trim());
+                println!("Uknown Command or Flag: {}", command_line_arguments[1]);
                 print_help_message();
                 println!("Error(1) - Exiting Hyaena Technologies Web Service");
                 return ExitCode::FAILURE;

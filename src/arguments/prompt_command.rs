@@ -44,7 +44,7 @@ pub fn command_prompt() -> ExitCode {
                 print_version_number();
             }
             &_ => {
-                println!("Unknown Command: {:#?}", command_input_buffer.trim());
+                println!("Unknown Command: {}", command_input_buffer);
             }
         };
 

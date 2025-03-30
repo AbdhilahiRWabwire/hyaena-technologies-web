@@ -14,7 +14,7 @@ pub fn print_version_number() -> ExitCode {
     println!("Hyaena Technologies Web Service");
     println!("");
     println!("");
-    println!("Version Number:		{:#?}", version_number.semantic_version.trim());
+    println!("Version Number:		{}", version_number.semantic_version);
     
     return ExitCode::SUCCESS;
 }
