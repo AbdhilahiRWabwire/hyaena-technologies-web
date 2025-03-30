@@ -3,7 +3,10 @@
 #![allow(unused_imports)]
 #![allow(unused_variables)]
 
-use std::vec::Vec;
+use std::{
+    string::String,
+    vec::Vec
+};
 
 // Hypertext Transfer Protocol Headers
 pub fn http_headers() -> Vec<String> {

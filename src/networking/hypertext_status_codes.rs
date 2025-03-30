@@ -3,8 +3,11 @@
 #![allow(unused_imports)]
 #![allow(unused_variables)]
 
-use std::collections::HashMap;
-use std::vec::Vec;
+
+use std::{
+    collections::HashMap,
+    string::String
+};
 
 // Hypertext Transfer Protocol Status Codes
 pub fn http_status_codes() -> HashMap<String, String> {

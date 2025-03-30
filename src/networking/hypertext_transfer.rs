@@ -3,6 +3,8 @@
 #![allow(unused_imports)]
 #![allow(unused_variables)]
 
+use std::string::String;
+
 // Hypertext Transfer Protocol Definition
 pub struct HypertextTransferProtocol {
     pub body: T,

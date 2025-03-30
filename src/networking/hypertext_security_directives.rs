@@ -3,7 +3,10 @@
 #![allow(unused_imports)]
 #![allow(unused_variables)]
 
-use std::vec::Vec;
+use std::{
+    string::String,
+    vec::Vec
+};
 
 // Hypertext Transfer Protocol Content Security Policy Directives
 pub fn http_security_directives() -> Vec<String> {
