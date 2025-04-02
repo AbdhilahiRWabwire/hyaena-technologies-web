@@ -1,21 +1,16 @@
-use std::{
-    env::args, 
-    process::ExitCode,
-    string::String,
-    vec::Vec
-};
+use std::{env::args, process::ExitCode, string::String, vec::Vec};
 
-use crate::utility::{
-    print_help::print_help_message,
-    print_version::print_version_number
-};
+use crate::utility::{print_help::print_help_message, print_version::print_version_number};
 
 // Command Line Argument Tokenizer
 pub fn tokenize_arguments() -> ExitCode {
     let command_line_arguments: Vec<String> = args().collect();
-    
+
     if command_line_arguments.len() != 2 {
-        println!("Command or Flag Required but not Both: {}", command_line_arguments);
+        println!(
+            "Command or Flag Required but not Both: {:#?}",
+            command_line_arguments
+        );
         print_help_message();
         println!("Error(1) - Exiting Hyaena Technologies Web Service");
         return ExitCode::FAILURE;

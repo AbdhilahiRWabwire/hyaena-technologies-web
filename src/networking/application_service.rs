@@ -4,7 +4,7 @@
 #![allow(unused_variables)]
 
 use std::{
-    net::{IpAddr, Ipv4Addr, SocketAddrV4, TcpListener, TcpStream},
+    net::{Ipv4Addr, SocketAddrV4, TcpListener, TcpStream},
     string::String,
 };
 
