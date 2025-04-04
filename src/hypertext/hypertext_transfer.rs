@@ -6,12 +6,13 @@
 use std::{
     net::{IpAddr, Ipv4Addr, SocketAddr, TcpListener, TcpStream},
     string::String,
+    vec::Vec,
 };
 
 // Hypertext Transfer Protocol Definition
 pub struct HypertextTransferProtocol<T> {
     pub body: T,
-    pub headers: String,
+    pub headers: Vec<String>,
     pub method: String,
     pub status_code: String,
     pub version: String,
