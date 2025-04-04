@@ -9,7 +9,7 @@ export {
 // Hypertext Transfer Protocol Headers
 /** @type {function(): string[][]} */
 function httpHeaders() {
-    const hypertextHeaders = Array([
+    const hypertextHeaders = new Array([
         "Accept",
         "Accept-CH",
         "Accept-Encoding",
