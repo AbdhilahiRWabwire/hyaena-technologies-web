@@ -1,13 +1,10 @@
 use std::{
     io::{Stdin, Stdout, Write},
     process::ExitCode,
-    string::String
+    string::String,
 };
 
-use crate::utility::{
-    print_help::print_help_message,
-    print_version::print_version_number
-};
+use crate::utility::{print_help::print_help_message, print_version::print_version_number};
 
 // Command Prompt: Read, Evaluate, Print, Looop
 pub fn command_prompt() -> ExitCode {
@@ -19,14 +16,14 @@ pub fn command_prompt() -> ExitCode {
 
     let command_input: Stdin = std::io::stdin();
     let mut command_input_buffer: String = String::new();
-    
+
     while command_input_buffer.trim() == "" {
         command_input_buffer.clear();
         command_input.read_line(&mut command_input_buffer).unwrap();
         print!("Hyaena-Technologies-Web|> ");
         command_output_buffer.flush().unwrap();
         continue;
-    };
+    }
 
     while command_input_buffer.trim() != "" {
         command_input_buffer.clear();
@@ -51,7 +48,7 @@ pub fn command_prompt() -> ExitCode {
         print!("Hyaena-Technologies-Web|> ");
         command_output_buffer.flush().unwrap();
         continue;
-    };
-    
+    }
+
     return ExitCode::SUCCESS;
 }
