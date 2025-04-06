@@ -3,16 +3,9 @@
 #![allow(unused_imports)]
 #![allow(unused_variables)]
 
-use std::{
-    collections::HashMap, 
-    process::ExitCode,
-    string::String
-};
+use std::{collections::HashMap, process::ExitCode, string::String};
 
-use crate::utility::{
-    print_help::print_help_message,
-    print_version::print_version_number
-};
+use crate::utility::{print_help::print_help_message, print_version::print_version_number};
 
 // Command and Flag Argument Definition
 pub struct CommandFlagArgument {
@@ -23,14 +16,14 @@ pub struct CommandFlagArgument {
 
 // Command Argument Hash Map
 pub fn command_map() -> HashMap<String, CommandFlagArgument> {
-    let mut command_arguments: HashMap<String, CommandFlagArgument> = HashMap::from([
+    let command_arguments: HashMap<String, CommandFlagArgument> = HashMap::from([
         (
             "exit".to_string(),
             CommandFlagArgument {
                 name: "exit".to_string(),
                 description: "Exit Server".to_string(),
                 event: ExitCode::SUCCESS,
-            }
+            },
         ),
         (
             "help".to_string(),
@@ -38,7 +31,7 @@ pub fn command_map() -> HashMap<String, CommandFlagArgument> {
                 name: "help".to_string(),
                 description: "Print List of Commands and Flags".to_string(),
                 event: print_help_message(),
-            }
+            },
         ),
         (
             "version".to_string(),
@@ -46,8 +39,8 @@ pub fn command_map() -> HashMap<String, CommandFlagArgument> {
                 name: "version".to_string(),
                 description: "Print Version Number".to_string(),
                 event: print_version_number(),
-            }
-        )
+            },
+        ),
     ]);
 
     return command_arguments;
@@ -55,7 +48,7 @@ pub fn command_map() -> HashMap<String, CommandFlagArgument> {
 
 // Flag Argument Hash Map
 pub fn flag_map() -> HashMap<String, CommandFlagArgument> {
-    let mut flag_arguments: HashMap<String, CommandFlagArgument> = HashMap::from([
+    let flag_arguments: HashMap<String, CommandFlagArgument> = HashMap::from([
         (
             "--h".to_string(),
             CommandFlagArgument {
@@ -71,7 +64,7 @@ pub fn flag_map() -> HashMap<String, CommandFlagArgument> {
                 description: "Print Version Number".to_string(),
                 event: print_version_number(),
             },
-        )
+        ),
     ]);
 
     return flag_arguments;

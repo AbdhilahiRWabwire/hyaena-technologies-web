@@ -6,7 +6,7 @@ COPY ./ ./
 
 RUN cargo check \ 
 cargo build --release --target x86_64-unknown-linux-gnu \ 
-mv ./target/x86_64-unknown-linux-gnu/release/hyaena-technologies-web ./binary
+mv ./target/x86_64-unknown-linux-gnu/release/htnet ./binary
 
 FROM alpine:latest
 
@@ -16,4 +16,4 @@ COPY --from=builder ./ ./
 
 EXPOSE 8080/tcp
 
-CMD ["./binary/hyaena-technologies-web", "serve"]
+CMD ["./binary/htnet", "serve"]

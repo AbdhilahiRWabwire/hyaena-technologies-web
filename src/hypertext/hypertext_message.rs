@@ -9,12 +9,13 @@ use std::{
     vec::Vec,
 };
 
-// Hypertext Transfer Protocol Definition
-pub struct HypertextTransferProtocol<T> {
+// Hypertext Transfer Protocol Message Definition
+pub struct HypertextMessage<T> {
     pub body: T,
     pub headers: Vec<String>,
     pub method: String,
     pub status_code: String,
+    pub status_text: String,
     pub version: String,
 }
 
@@ -24,12 +25,12 @@ pub struct HypertextClient {}
 // Hypertext Transfer Protocol Server Definition
 pub struct HypertextServer {}
 
-// Hypertext Transer Protocol Request
+// Hypertext Transer Protocol Request Message
 fn hypertext_request() -> () {
     return ();
 }
 
-// Hypertext Transfer Protocol Response
+// Hypertext Transfer Protocol Response Message
 fn hypertext_response() -> () {
     return ();
 }

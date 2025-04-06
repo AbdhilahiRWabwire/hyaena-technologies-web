@@ -10,23 +10,30 @@ use crate::utility::{print_help::print_help_message, print_version::print_versio
 pub fn command_prompt() -> ExitCode {
     print!("Hyaena-Technologies-Web|> ");
 
-    let mut command_output_buffer: Stdout = std::io::stdout();
-    let command_input: Stdin = std::io::stdin();
-    let mut command_input_buffer: String = String::new();
+    let mut standard_output: Stdout = std::io::stdout();
 
-    while command_input_buffer.trim() == "" {
-        command_input_buffer.clear();
-        command_input.read_line(&mut command_input_buffer).unwrap();
+    standard_output.flush().unwrap();
+
+    let standard_input: Stdin = std::io::stdin();
+    let mut standard_input_buffer: String = String::new();
+
+    while standard_input_buffer.trim() == "" {
+        standard_input_buffer.clear();
+        standard_input
+            .read_line(&mut standard_input_buffer)
+            .unwrap();
         print!("Hyaena-Technologies-Web|> ");
-        command_output_buffer.flush().unwrap();
+        standard_output.flush().unwrap();
         continue;
     }
 
-    while command_input_buffer.trim() != "" {
-        command_input_buffer.clear();
-        command_input.read_line(&mut command_input_buffer).unwrap();
+    while standard_input_buffer.trim() != "" {
+        standard_input_buffer.clear();
+        standard_input
+            .read_line(&mut standard_input_buffer)
+            .unwrap();
 
-        match command_input_buffer.trim() {
+        match standard_input_buffer.trim() {
             "exit" => {
                 println!("Exiting Hyaena Technologies Web Service");
                 return ExitCode::SUCCESS;
@@ -38,12 +45,12 @@ pub fn command_prompt() -> ExitCode {
                 print_version_number();
             }
             &_ => {
-                println!("Unknown Command: {}", command_input_buffer);
+                println!("Unknown Command: {}", standard_input_buffer);
             }
         };
 
         print!("Hyaena-Technologies-Web|> ");
-        command_output_buffer.flush().unwrap();
+        standard_output.flush().unwrap();
         continue;
     }
 
