@@ -11,9 +11,6 @@ pub fn command_prompt() -> ExitCode {
     print!("Hyaena-Technologies-Web|> ");
 
     let mut command_output_buffer: Stdout = std::io::stdout();
-
-    command_output_buffer.flush().unwrap();
-
     let command_input: Stdin = std::io::stdin();
     let mut command_input_buffer: String = String::new();
 
