@@ -1,17 +1,18 @@
-#![allow(dead_code)]
-#![allow(unreachable_code)]
-#![allow(unused_imports)]
-#![allow(unused_variables)]
-
 use std::{
+    io::Write,
     net::{Ipv4Addr, SocketAddrV4, TcpListener, TcpStream},
-    string::String,
+    result::{
+        Result,
+        Result::{Err, Ok},
+    },
 };
 
 pub fn web_service() -> () {
     let socket_address: SocketAddrV4 = SocketAddrV4::new(Ipv4Addr::new(127, 0, 0, 1), 8080);
     let transmission_listener: TcpListener = TcpListener::bind(socket_address).unwrap();
     let transmission_stream: TcpStream = TcpStream::connect(socket_address).unwrap();
+
+    println!("Service Listening on Port: 8080");
 
     return ();
 }

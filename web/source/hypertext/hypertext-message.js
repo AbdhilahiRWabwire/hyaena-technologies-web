@@ -2,6 +2,10 @@
 
 // @ts-check
 
+export {
+    HypertextMessage
+}
+
 // Hypertext Transfer Protocol Message Definition
 /** @type {HypertextMessage} */
 class HypertextMessage {
