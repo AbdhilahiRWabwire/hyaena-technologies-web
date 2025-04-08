@@ -8,14 +8,12 @@ use crate::utility::{print_help::print_help_message, print_version::print_versio
 
 // Command Prompt: Read, Evaluate, Print, Looop
 pub fn command_prompt() -> ExitCode {
-    print!("Hyaena-Technologies-Web|> ");
-
-    let mut standard_output: StdoutLock = std::io::stdout().lock();
-
-    standard_output.flush().unwrap();
-
     let standard_input: Stdin = std::io::stdin();
     let mut standard_input_buffer: String = String::new();
+    let mut standard_output: StdoutLock = std::io::stdout().lock();
+
+    print!("Hyaena-Technologies-Web|> ");
+    standard_output.flush().unwrap();
 
     while standard_input_buffer.trim() == "" {
         standard_input_buffer.clear();
