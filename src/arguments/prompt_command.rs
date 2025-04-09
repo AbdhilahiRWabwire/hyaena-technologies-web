@@ -1,5 +1,5 @@
 use std::{
-    io::{Stdin, StdoutLock, Write},
+    io::{Stdin, StdoutLock, Write, stdin, stdout},
     process::ExitCode,
     string::String,
 };
@@ -8,11 +8,11 @@ use crate::utility::{print_help::print_help_message, print_version::print_versio
 
 // Command Prompt: Read, Evaluate, Print, Looop
 pub fn command_prompt() -> ExitCode {
-    let standard_input: Stdin = std::io::stdin();
+    let standard_input: Stdin = stdin();
     let mut standard_input_buffer: String = String::new();
-    let mut standard_output: StdoutLock = std::io::stdout().lock();
+    let mut standard_output: StdoutLock = stdout().lock();
 
-    print!("Hyaena-Technologies-Web|> ");
+    writeln!(standard_output, "Hyaena-Technologies-Web|> ").unwrap();
     standard_output.flush().unwrap();
 
     while standard_input_buffer.trim() == "" {
@@ -20,7 +20,7 @@ pub fn command_prompt() -> ExitCode {
         standard_input
             .read_line(&mut standard_input_buffer)
             .unwrap();
-        print!("Hyaena-Technologies-Web|> ");
+        writeln!(standard_output, "Hyaena-Technologies-Web|> ").unwrap();
         standard_output.flush().unwrap();
         continue;
     }
@@ -33,7 +33,7 @@ pub fn command_prompt() -> ExitCode {
 
         match standard_input_buffer.trim() {
             "exit" => {
-                println!("Exiting Hyaena Technologies Web Service");
+                writeln!(standard_output, "Exiting Hyaena Technologies Web Service").unwrap();
                 return ExitCode::SUCCESS;
             }
             "help" => {
@@ -43,11 +43,16 @@ pub fn command_prompt() -> ExitCode {
                 print_version_number();
             }
             &_ => {
-                println!("Unknown Command: {}", standard_input_buffer);
+                writeln!(
+                    standard_output,
+                    "Unknown Command: {}",
+                    standard_input_buffer
+                )
+                .unwrap();
             }
         };
 
-        print!("Hyaena-Technologies-Web|> ");
+        writeln!(standard_output, "Hyaena-Technologies-Web|> ").unwrap();
         standard_output.flush().unwrap();
         continue;
     }

@@ -1,5 +1,5 @@
 use std::{
-    io::Write,
+    io::{StdoutLock, Write, stdout},
     net::{Ipv4Addr, SocketAddrV4, TcpListener, TcpStream},
     result::{
         Result,

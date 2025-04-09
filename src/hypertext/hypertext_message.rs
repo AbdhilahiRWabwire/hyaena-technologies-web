@@ -4,6 +4,7 @@
 #![allow(unused_variables)]
 
 use std::{
+    io::{StdoutLock, Write, stdout},
     net::{IpAddr, Ipv4Addr, SocketAddr, TcpListener, TcpStream},
     string::String,
     vec::Vec,
