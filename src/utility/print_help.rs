@@ -35,6 +35,7 @@ pub fn print_help_message() -> ExitCode {
     .unwrap();
     writeln!(standard_output, "").unwrap();
     writeln!(standard_output, "Flags:				    Description:").unwrap();
+    writeln!(standard_output, "").unwrap();
     writeln!(
         standard_output,
         "--c                       Configure Server with server-configuration.yaml"

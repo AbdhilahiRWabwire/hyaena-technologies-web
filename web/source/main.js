@@ -2,19 +2,24 @@
 
 // @ts-check
 
-import {
-  htmlDocumentBody,
-  htmlDocumentMetadataHeader,
-  htmlDocumentRoot,
-  htmlExternalResourceLink,
-  htmlMain,
-  htmlMetadata,
-  htmlParagraph
-} from "./html/create-element.js";
-
 // Main Entry Point
 /** @type {function(): HTMLHtmlElement} */
 function main() {
+  /** @type {HTMLBodyElement} */
+  const htmlDocumentBody = document.createElement("body");
+  /** @type {HTMLHeadElement} */
+  const htmlDocumentMetadataHeader = document.createElement("head");
+  /** @type {HTMLHtmlElement} */
+  const htmlDocumentRoot = document.createElement("html");
+  /** @type {HTMLLinkElement} */
+  const htmlExternalResourceLink = document.createElement("link");
+  /** @type {HTMLElement} */
+  const htmlMain = document.createElement("main");
+  /** @type {HTMLMetaElement} */
+  const htmlMetadata = document.createElement("meta");
+  /** @type {HTMLParagraphElement} */
+  const htmlParagraph = document.createElement("p");
+
   htmlDocumentRoot
   htmlDocumentRoot.lang = String("en");
   
