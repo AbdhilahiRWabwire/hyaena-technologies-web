@@ -40,7 +40,6 @@ Hyaena Technologies is an Open Source Technology company
 ## Features
 
 - Environment Variables
-- [YAML Ain't Markup Language][YAML] - (In Progress)
 
 ## Build
 
@@ -63,8 +62,6 @@ Hyaena Technologies is an Open Source Technology company
 - **_Authorization:_** [Spice][Spice Database] - (In Progress)
 
 - **_Graph:_** [Surreal][Surreal Database]
-
-- **_Key Value:_** [Etcd][Etcd-IO] - (In Progress)
 
 - **_Object Storage:_** [Minio][Minio Database] - (In Progress)
 

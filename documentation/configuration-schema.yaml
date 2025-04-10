@@ -1,7 +1,3 @@
-apiVersion: htnet/v0alpha2 # Configuration Version
-
-kind: Config	# Always Config.
-
 name: # Project Name
 
 sources: # Path to Sources and Assets
@@ -10,10 +6,6 @@ sources: # Path to Sources and Assets
 
   assets:
     path: # Path to Assets: String - *.jpeg, *.png, *.svg, *.webp
-
-env:	# Environment Variables, in key=value form, passed to the server
-# - GOPRIVATE=git.example.com
-# - GOCACHE=/workspace/.gocache
 
 port:	# Server Transmission Control Protocol Port: String
 

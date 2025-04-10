@@ -1,1 +1,1 @@
-pub mod command_configuration;
+pub mod service_configuration;
