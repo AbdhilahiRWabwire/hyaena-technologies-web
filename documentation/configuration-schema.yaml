@@ -1,4 +1,4 @@
-ip: # Service Internet Protocol Address
+IP_ADDRESS: # Service Internet Protocol Address
 
-port:	# Service Transmission Control Protocol Port: String
+PORT:	# Service Transmission Control Protocol Port: String
 
