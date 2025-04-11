@@ -6,6 +6,10 @@
 use std::{
     io::{StdoutLock, Write, stdout},
     net::{IpAddr, Ipv4Addr, SocketAddr, TcpListener, TcpStream},
+    result::{
+        Result,
+        Result::{Err, Ok},
+    },
     string::String,
     vec::Vec,
 };
@@ -20,18 +24,12 @@ pub struct HypertextMessage<T> {
     pub version: String,
 }
 
-// Hypertext Transfer Protocol Client Definition
-pub struct HypertextClient {}
-
-// Hypertext Transfer Protocol Server Definition
-pub struct HypertextServer {}
-
-// Hypertext Transer Protocol Request Message
-fn hypertext_request() -> () {
+// Hypertext Transer Protocol Client
+fn hypertext_client() -> () {
     return ();
 }
 
-// Hypertext Transfer Protocol Response Message
-fn hypertext_response() -> () {
+// Hypertext Transfer Protocol Server
+fn hypertext_server() -> () {
     return ();
 }
