@@ -1,11 +1,4 @@
-name: # Project Name
+ip: # Service Internet Protocol Address
 
-sources: # Path to Sources and Assets
-  sourceCode:
-    path:	# Path to Source Code: String - *.css, *.html, *.js
-
-  assets:
-    path: # Path to Assets: String - *.jpeg, *.png, *.svg, *.webp
-
-port:	# Server Transmission Control Protocol Port: String
+port:	# Service Transmission Control Protocol Port: String
 
