@@ -1,14 +1,15 @@
 mod arguments;
-use arguments::prompt_command::command_prompt;
-
 mod configuration;
 mod hypertext;
+
 mod service;
+use service::application_service::web_service;
+
 mod utility;
 
 // Main Entry Point
 fn main() -> () {
-    command_prompt();
+    web_service();
 
     return ();
 }

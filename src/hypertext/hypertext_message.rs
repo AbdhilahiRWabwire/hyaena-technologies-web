@@ -4,8 +4,8 @@
 #![allow(unused_variables)]
 
 use std::{
-    io::{StdoutLock, Write, stdout},
-    net::{IpAddr, Ipv4Addr, SocketAddr, TcpListener, TcpStream},
+    io::{BufRead, BufReader, Error, StdoutLock, Write, stdout},
+    net::{IpAddr, Ipv4Addr, Shutdown, Shutdown::Both, SocketAddr, TcpListener, TcpStream},
     result::{
         Result,
         Result::{Err, Ok},
@@ -24,12 +24,26 @@ pub struct HypertextMessage<T> {
     pub version: String,
 }
 
+// Hypertext Transfer Protocol Connection
+pub fn hypertext_connection(mut transmission_stream: TcpStream) {
+    let mut standard_output: StdoutLock = stdout().lock();
+    let buffered_reader: BufReader<&TcpStream> = BufReader::new(&transmission_stream);
+    let http_request: Vec<String> = buffered_reader
+        .lines()
+        .map(|result| result.unwrap())
+        .take_while(|line| !line.is_empty())
+        .collect();
+
+    writeln!(standard_output, "Hypertext Request: {:#?}", http_request).unwrap();
+    writeln!(transmission_stream, "HTTP/1.1 200 OK").unwrap();
+}
+
 // Hypertext Transer Protocol Client
-fn hypertext_client() -> () {
+pub fn hypertext_client() -> () {
     return ();
 }
 
 // Hypertext Transfer Protocol Server
-fn hypertext_server() -> () {
+pub fn hypertext_server() -> () {
     return ();
 }
