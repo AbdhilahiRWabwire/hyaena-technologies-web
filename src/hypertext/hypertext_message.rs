@@ -5,7 +5,7 @@
 
 use std::{
     io::{BufRead, BufReader, Error, StdoutLock, Write, stdout},
-    net::{IpAddr, Ipv4Addr, Shutdown, Shutdown::Both, SocketAddr, TcpListener, TcpStream},
+    net::{IpAddr, Ipv4Addr, SocketAddr, TcpListener, TcpStream},
     result::{
         Result,
         Result::{Err, Ok},
@@ -24,8 +24,8 @@ pub struct HypertextMessage<T> {
     pub version: String,
 }
 
-// Hypertext Transfer Protocol Connection
-pub fn hypertext_connection(mut transmission_stream: TcpStream) {
+// Hypertext Transfer Protocol Connection Management
+pub fn hypertext_connection_management(mut transmission_stream: TcpStream) {
     let mut standard_output: StdoutLock = stdout().lock();
     let buffered_reader: BufReader<&TcpStream> = BufReader::new(&transmission_stream);
     let http_request: Vec<String> = buffered_reader
@@ -34,7 +34,12 @@ pub fn hypertext_connection(mut transmission_stream: TcpStream) {
         .take_while(|line| !line.is_empty())
         .collect();
 
-    writeln!(standard_output, "Hypertext Request: {:#?}", http_request).unwrap();
+    writeln!(
+        standard_output,
+        "Hypertext Tranfer Protocol Request: {:#?}",
+        http_request
+    )
+    .unwrap();
     writeln!(transmission_stream, "HTTP/1.1 200 OK").unwrap();
 }
 

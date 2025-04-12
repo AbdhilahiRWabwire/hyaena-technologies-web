@@ -7,7 +7,7 @@ use std::{
     },
 };
 
-use super::super::hypertext::hypertext_message::hypertext_connection;
+use super::super::hypertext::hypertext_message::hypertext_connection_management;
 
 pub fn web_service() -> () {
     let socket_address: SocketAddrV4 = SocketAddrV4::new(Ipv4Addr::new(127, 0, 0, 1), 8080);
@@ -21,7 +21,7 @@ pub fn web_service() -> () {
         let stream: TcpStream = transmission_stream.unwrap();
 
         stream.set_ttl(100).unwrap();
-        hypertext_connection(stream);
+        hypertext_connection_management(stream);
     }
 
     return ();
