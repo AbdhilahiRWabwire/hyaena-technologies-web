@@ -25,7 +25,7 @@ pub struct HypertextMessage<T> {
 }
 
 // Hypertext Transfer Protocol Connection Management
-pub fn hypertext_connection_management(mut transmission_stream: TcpStream) {
+pub fn hypertext_connection_management(mut transmission_stream: TcpStream) -> () {
     let mut standard_output: StdoutLock = stdout().lock();
     let buffered_reader: BufReader<&TcpStream> = BufReader::new(&transmission_stream);
     let http_request: Vec<String> = buffered_reader
@@ -41,6 +41,8 @@ pub fn hypertext_connection_management(mut transmission_stream: TcpStream) {
     )
     .unwrap();
     writeln!(transmission_stream, "HTTP/1.1 200 OK").unwrap();
+
+    return ();
 }
 
 // Hypertext Transer Protocol Client
@@ -49,6 +51,15 @@ pub fn hypertext_client() -> () {
 }
 
 // Hypertext Transfer Protocol Server
-pub fn hypertext_server() -> () {
+pub fn hypertext_server(transmission_listener: TcpListener) -> () {
+    transmission_listener.set_ttl(100).unwrap();
+
+    for transmission_stream in transmission_listener.incoming() {
+        let stream: TcpStream = transmission_stream.unwrap();
+
+        stream.set_ttl(100).unwrap();
+        hypertext_connection_management(stream);
+    }
+
     return ();
 }
