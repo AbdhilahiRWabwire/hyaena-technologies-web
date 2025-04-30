@@ -9,7 +9,7 @@ use super::html_element::HypertextMarkupElement;
 
 pub type HTMLTypeDeclaration = &'static str;
 
-// Hypertext Markup Language Element Document Type Declaration
+// Hypertext Markup Language Document Type Declaration Definition
 pub const HTML_DOCUMENT_TYPE_DECLARATION: HTMLTypeDeclaration = "<!DOCTYPE HTML>";
 
 // Hypertext Markup Language Document Definition

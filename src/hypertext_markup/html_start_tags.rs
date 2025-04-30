@@ -8,9 +8,6 @@ use std::primitive::str;
 // Hypertext Markup Language Element Tag Definition
 pub type HTMLStartTag = &'static str;
 
-// Hypertext Markup Language Element Document Type Tag
-pub const HTML_DOCUMENT_TYPE_TAG: HTMLStartTag = "<!DOCTYPE HTML>";
-
 // Hypertext Markup Language Element Start Tag
 pub const HTML_ANCHOR_START_TAG: HTMLStartTag = "<a>";
 pub const HTML_ABBREVIATION_START_TAG: HTMLStartTag = "<abbr>";
