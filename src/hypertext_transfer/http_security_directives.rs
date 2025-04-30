@@ -3,7 +3,7 @@
 #![allow(unused_imports)]
 #![allow(unused_variables)]
 
-use std::{string::String, vec::Vec};
+use std::{primitive::str, vec::Vec};
 
 // Hypertext Transfer Protocol Content Security Policy Directive Definition
 pub type HTTPSecurityDirective = &'static str;

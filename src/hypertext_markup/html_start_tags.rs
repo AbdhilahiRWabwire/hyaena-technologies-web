@@ -3,6 +3,8 @@
 #![allow(unused_imports)]
 #![allow(unused_variables)]
 
+use std::primitive::str;
+
 // Hypertext Markup Language Element Tag Definition
 pub type HTMLStartTag = &'static str;
 
@@ -242,4 +244,3 @@ pub fn html_start_tags() -> Vec<HTMLStartTag> {
 
     return hypertext_markup_start_tags;
 }
-   

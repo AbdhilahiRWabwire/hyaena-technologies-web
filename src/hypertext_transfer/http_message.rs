@@ -2,6 +2,7 @@ use std::{
     io::{BufRead, BufReader, Error, StdoutLock, Write, stdout},
     net::{IpAddr, Ipv4Addr, SocketAddr, TcpListener, TcpStream},
     option::Option,
+    primitive::str,
     result::{
         Result,
         Result::{Err, Ok},
@@ -21,7 +22,7 @@ use super::{
 pub type HTTPBody<T> = T;
 
 // Hypertext Transfer Protocol Version Definition
-pub type HTTPVersion = String;
+pub type HTTPVersion = &'static str;
 
 // Hypertext Transfer Protocol Message Definition
 pub struct HypertextTransferMessage<T> {

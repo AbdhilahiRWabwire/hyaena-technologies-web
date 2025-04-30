@@ -3,7 +3,7 @@
 #![allow(unused_imports)]
 #![allow(unused_variables)]
 
-use std::{collections::HashMap, string::String};
+use std::{collections::HashMap, primitive::str};
 
 // Hypertext Transfer Protocol Status Code Definition
 pub type HTTPStatusCode = &'static str;
