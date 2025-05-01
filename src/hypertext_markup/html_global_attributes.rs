@@ -3,7 +3,7 @@
 #![allow(unused_imports)]
 #![allow(unused_variables)]
 
-use std::primitive::str;
+use std::{primitive::str, vec::Vec};
 
 // Hypertext Markup Language Element Global Attribute Definition
 pub type HTMLGlobalAttribute = &'static str;

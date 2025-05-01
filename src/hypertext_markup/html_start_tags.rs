@@ -3,7 +3,7 @@
 #![allow(unused_imports)]
 #![allow(unused_variables)]
 
-use std::primitive::str;
+use std::{primitive::str, vec::Vec};
 
 // Hypertext Markup Language Element Tag Definition
 pub type HTMLStartTag = &'static str;

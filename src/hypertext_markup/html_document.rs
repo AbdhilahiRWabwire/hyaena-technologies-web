@@ -3,7 +3,7 @@
 #![allow(unused_imports)]
 #![allow(unused_variables)]
 
-use std::primitive::str;
+use std::{primitive::str, vec::Vec};
 
 use super::html_element::HypertextMarkupElement;
 
@@ -14,6 +14,6 @@ pub const HTML_DOCUMENT_TYPE_DECLARATION: HTMLTypeDeclaration = "<!DOCTYPE HTML>
 
 // Hypertext Markup Language Document Definition
 pub struct HypertextMarkupDocument {
-    pub elements: Vec<&'static HypertextMarkupElement>,
+    pub elements: Vec<HypertextMarkupElement>,
     pub type_declaration: HTMLTypeDeclaration,
 }
