@@ -4,6 +4,8 @@ metadata:
   name: hyaena-technologies-web
 manifests:
   rawYaml:
+    - certificate-manager/cert-manager.yaml
+    - certificate-manager/cert-manager.crds.yaml
     - knative/eventing/event-display.yaml
     - knative/eventing/eventing-core.yaml
     - knative/eventing/eventing-crds.yaml
