@@ -2,7 +2,6 @@
 [Containerman]: https://podman.io/
 [Containerman Pod]: https://docs.podman.io/en/latest/markdown/podman-pod.1.html
 [Etcd-IO]: https://etcd.io/
-[Fleet]: https://www.jetbrains.com/fleet/
 [Greptime Database]: https://greptime.com/
 [K8S Control]: https://kubernetes.io/
 [K8S Kompose]: https://kompose.io/
@@ -16,10 +15,8 @@
 [Moby Compose]: https://docs.docker.com/reference/cli/docker/compose/
 [Moby Swarm]: https://docs.docker.com/reference/cli/docker/swarm/
 [Rust Language]: https://rust-lang.org
-[RustRover]: https://jetbrains.com/rust
 [Spice Database]: https://authzed.com/
 [Surreal Database]: https://surrealdb.com/
-[VSCode]: https://code.visualstudio.com/docs
 [WAI-ARIA]: https://www.w3.org/WAI/ARIA/apg/patterns/
 [YAML]: https://yaml.org/
 
@@ -51,10 +48,7 @@ Hyaena Technologies is an Open Source Technology company
 
 - [Command Line Documentation][CLIDoc]
 - [Rust][Rust Language]
-- [JetBrains Fleet][Fleet]
-- [JetBrains RustRover][RustRover]
 - [Mozilla Developer Network Web Documentation][MDN]
-- [Visual Studio Code][VSCode]
 - [Web Accessibility Initiative][WAI-ARIA]
 
 ## Databases
@@ -73,7 +67,9 @@ Hyaena Technologies is an Open Source Technology company
 git clone
 
 cargo build --release --target x86_64-unknown-linux-gnu
+
 mv ./target/x86_64-unkown-linux-gnu/release/htnet ./binary
+
 ./binary/htnet serve
 ```
 
