@@ -6,6 +6,11 @@ services:
     ports:
       - "8080/tcp"
 
+  dragonfly-key-value:
+    image: dragonflydb/dragonfly:latest
+    ports:
+      - "8080/tcp"
+
   greptime-time-series:
     image: greptime/greptimedb:latest
     ports:
@@ -70,3 +75,4 @@ services:
     image: surrealdb/surrealdb:latest
     ports:
       - "8080/tcp"
+

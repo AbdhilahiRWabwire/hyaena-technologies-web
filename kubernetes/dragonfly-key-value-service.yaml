@@ -5,12 +5,12 @@ metadata:
     kompose.cmd: kompose convert --file ./compose.yaml -o ./kubernetes
     kompose.version: 1.35.0 (9532ceef3)
   labels:
-    io.kompose.service: spice-operator
-  name: spice-operator
+    io.kompose.service: dragonfly-key-value
+  name: dragonfly-key-value
 spec:
   ports:
     - name: "8080"
       port: 8080
       targetPort: 8080
   selector:
-    io.kompose.service: spice-operator
+    io.kompose.service: dragonfly-key-value

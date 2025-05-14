@@ -1,7 +1,7 @@
 [CLIDoc]: https://github.com/HyaenaTechnologies/hyaena-technologies-web/blob/main/documentation/htnet.md
 [Containerman]: https://podman.io/
 [Containerman Pod]: https://docs.podman.io/en/latest/markdown/podman-pod.1.html
-[Etcd-IO]: https://etcd.io/
+[Dragonfly Database]: https://www.dragonflydb.io/
 [Greptime Database]: https://greptime.com/
 [K8S Control]: https://kubernetes.io/
 [K8S Kompose]: https://kompose.io/
@@ -56,6 +56,8 @@ Hyaena Technologies is an Open Source Technology company
 - **_Authorization:_** [Spice][Spice Database] - (In Progress)
 
 - **_Graph:_** [Surreal][Surreal Database]
+
+- **_Key Value:_** [Dragonfly][Dragonfly Database] - (In Progress)
 
 - **_Object Storage:_** [Minio][Minio Database] - (In Progress)
 
