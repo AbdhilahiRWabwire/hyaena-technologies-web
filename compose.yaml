@@ -6,6 +6,11 @@ services:
     ports:
       - "8080/tcp"
 
+  distribution-registry:
+    image: registry:latest
+    ports:
+      - "8080/tcp"
+      
   dragonfly-key-value:
     image: dragonflydb/dragonfly:latest
     ports:
