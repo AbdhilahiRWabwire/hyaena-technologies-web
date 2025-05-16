@@ -68,6 +68,8 @@ Hyaena Technologies is an Open Source Technology company
 ```shell
 git clone
 
+cargo check
+
 cargo build --release --target x86_64-unknown-linux-gnu
 
 mv ./target/x86_64-unkown-linux-gnu/release/htnet ./binary
@@ -102,13 +104,17 @@ git clone
 
 kubectl apply -f './certificate-manager/*.yaml'
  
-kubectl apply -f './knative/*.yaml'
- 
+kubectl apply -f './knative/eventing/*.yaml'
+
+kubectl apply -f './knative/serving/*.yaml' 
+
 kubectl apply -f './kubernetes/*.yaml'
 ||
 minikube kubectl apply -f './certificate-manager/*.yaml'
 
-minikube kubectl apply -f './knative/*.yaml'
+minikube kubectl apply -f './knative/eventing/*.yaml'
+
+minikube kubectl apply -f './knative/serving/*.yaml'
  
 minikube kubectl apply -f './kubernetes/*.yaml'
 ||
