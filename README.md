@@ -80,7 +80,39 @@ mv ./target/x86_64-unkown-linux-gnu/release/htnet ./binary
 ```shell
 git clone
 
-docker build ./ --file ./hyaena-technologies.Dockerfile --tag hyaena-technologies-web:latest
+docker build ./ --file ./web-service.Dockerfile --tag htnet:latest
+||
+nerdctl build ./ --file ./web-service.Dockerfile --tag htnet:latest
+```
+
+## Docker Compose
+
+```shell
+git clone
+
+docker compose up --detach
+||
+nerdctl compose up --detach
+```
+
+## Kubernetes
+
+```shell
+git clone
+
+kubectl apply -f './certificate-manager/*.yaml'
+ 
+kubectl apply -f './knative/*.yaml'
+ 
+kubectl apply -f './kubernetes/*.yaml'
+||
+minikube kubectl apply -f './certificate-manager/*.yaml'
+
+minikube kubectl apply -f './knative/*.yaml'
+ 
+minikube kubectl apply -f './kubernetes/*.yaml'
+||
+skaffold run
 ```
 
 ## Install Web Server

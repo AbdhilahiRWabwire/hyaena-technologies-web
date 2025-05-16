@@ -1,8 +1,8 @@
 name: hyaena-technologies-web
 
 services:
-  web-service:
-    image: hyaena-technologies-web:latest
+  htnet-web:
+    image: htnet:latest
     ports:
       - "7878:7878/tcp"
 

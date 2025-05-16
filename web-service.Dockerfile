@@ -12,7 +12,7 @@ FROM alpine:latest
 
 WORKDIR /hyaena-technologies-web
 
-COPY --from=builder ./ ./ 
+COPY --from=builder ./binary ./binary 
 
 EXPOSE 7878:7878/tcp
 
