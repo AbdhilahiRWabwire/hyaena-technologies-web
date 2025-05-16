@@ -9,75 +9,75 @@ services:
   distribution-registry:
     image: registry:latest
     ports:
-      - "8080:8080/tcp"
+      - "8081:8081/tcp"
             
   dragonfly-key-value:
     image: dragonflydb/dragonfly:latest
     ports:
-      - "8080:8080/tcp"
+      - "8082:8082/tcp"
 
   greptime-time-series:
     image: greptime/greptimedb:latest
     ports:
-      - "8080:8080/tcp"
+      - "8083:8083/tcp"
 
   greptime-operator:
     image: greptime/greptimedb-operator:latest
     ports:
-      - "8080:8080/tcp"
+      - "8084:8084/tcp"
 
   greptime-initializer:
     image: greptime/greptimedb-initializer:latest
     ports:
-      - "8080:8080/tcp"
+      - "8085:8085/tcp"
 
   knative-cli: 
     image: gcr.io/knative-releases/knative.dev/client/cmd/kn:latest
     ports:
-      - "8080:8080/tcp"
+      - "8086:8086/tcp"
 
   knative-functions: 
     image: ghcr.io/knative/func/func:latest
     ports:
-      - "8080:8080/tcp"
+      - "8087:8087/tcp"
 
   minio-storage:
     image: minio/minio:latest
     ports:
-      - "8080:8080/tcp"
+      - "8088:8088/tcp"
 
   minio-operator:
     image: minio/operator:latest
     ports:
-      - "8080:8080/tcp"
+      - "8089:8089/tcp"
 
   minio-control:
     image: minio/mc:latest
     ports:
-      - "8080:8080/tcp"
+      - "8090:8090/tcp"
 
   opentelemetry-collector:
     image: otel/opentelemetry-collector:latest
     ports:
-      - "8080:8080/tcp"
+      - "8091:8091/tcp"
 
   spice-authorization:
     image: authzed/spicedb:latest
     ports:
-      - "8080:8080/tcp"
+      - "8092:8092/tcp"
 
   spice-operator:
     image: authzed/spicedb-operator:latest
     ports:
-      - "8080:8080/tcp"
+      - "8093:8093/tcp"
 
   spice-zed:
     image: authzed/zed:latest
     ports:
-      - "8080:8080/tcp"
+      - "8094:8094/tcp"
 
   surreal-graph:
     image: surrealdb/surrealdb:latest
     ports:
-      - "8080:8080/tcp"
+      - "8095:8095/tcp"
 

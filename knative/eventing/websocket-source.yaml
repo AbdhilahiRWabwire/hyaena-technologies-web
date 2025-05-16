@@ -21,7 +21,7 @@ spec:
   template:
     spec:
       containers:
-        - image: gcr.io/knative-releases/knative.dev/eventing/cmd/websocketsource@sha256:32ab278075863a812dec411050c1f87391882d9db4f5a6601e4c1389fd7ab9f3
+        - image: gcr.io/knative-releases/knative.dev/eventing/cmd/websocketsource@sha256:1509571a149137bad85d2f5eaf6b328fdd0bdce05e9c7be281c5eab61cac3bf7
           name: hue
           securityContext:
             allowPrivilegeEscalation: false

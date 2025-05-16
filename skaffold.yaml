@@ -1,11 +1,13 @@
-apiVersion: skaffold/v4beta11
+apiVersion: skaffold/v4beta13
 kind: Config
 metadata:
   name: hyaena-technologies-web
+
 manifests:
   rawYaml:
-    - certificate-manager/cert-manager.yaml
     - certificate-manager/cert-manager.crds.yaml
+    - certificate-manager/cert-manager.yaml
+    - knative/eventing/appender.yaml
     - knative/eventing/event-display.yaml
     - knative/eventing/eventing-core.yaml
     - knative/eventing/eventing-crds.yaml
@@ -23,16 +25,18 @@ manifests:
     - knative/serving/serving-hpa.yaml
     - knative/serving/serving-post-install-jobs.yaml
     - knative/serving/serving-storage-version-migration.yaml
-    - kubernetes/dragonfly-key-value-deployment.yaml
-    - kubernetes/dragonfly-key-value-service.yaml
     - kubernetes/distribution-registry-deployment.yaml
     - kubernetes/distribution-registry-service.yaml
+    - kubernetes/dragonfly-key-value-deployment.yaml
+    - kubernetes/dragonfly-key-value-service.yaml
     - kubernetes/greptime-initializer-deployment.yaml
     - kubernetes/greptime-initializer-service.yaml
     - kubernetes/greptime-operator-deployment.yaml
     - kubernetes/greptime-operator-service.yaml
     - kubernetes/greptime-time-series-deployment.yaml
     - kubernetes/greptime-time-series-service.yaml
+    - kubernetes/htnet-web-deployment.yaml
+    - kubernetes/htnet-web-service.yaml
     - kubernetes/knative-cli-deployment.yaml
     - kubernetes/knative-cli-service.yaml
     - kubernetes/knative-functions-deployment.yaml
@@ -53,5 +57,4 @@ manifests:
     - kubernetes/spice-zed-service.yaml
     - kubernetes/surreal-graph-deployment.yaml
     - kubernetes/surreal-graph-service.yaml
-    - kubernetes/htnet-web-deployment.yaml
-    - kubernetes/htnet-web-service.yaml
+

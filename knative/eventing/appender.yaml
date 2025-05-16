@@ -1,4 +1,4 @@
-# Copyright 2021 The Knative Authors
+# Copyright 2019 The Knative Authors
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,21 +12,21 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# This is a very simple Knative Eventing Source that produces periodic CloudEvents.
-apiVersion: sources.knative.dev/v1
-kind: ContainerSource
+# This is a very simple Knative Service that writes the incoming CloudEvent to its log.
+apiVersion: serving.knative.dev/v1
+kind: Service
 metadata:
-  name: heartbeats-source
+  name: appender
+  labels:
 spec:
   template:
     spec:
       containers:
-        - image: gcr.io/knative-releases/knative.dev/eventing/cmd/heartbeats@sha256:dcb69a7349771aa40cc0365fd0ec176649a77ab3701ab6dc431887eb294c5026
-          env:
-            - name: POD_NAME
-              value: "heartbeats"
-            - name: POD_NAMESPACE
-              value: "default"
+        - env:
+            - name: MESSAGE
+              value: "...your message goes here..."
+          image: gcr.io/knative-releases/knative.dev/eventing/cmd/appender@sha256:b48cb283c786c2cca360d7f2ee68ac731e772c21ff3b15053f87d1f005921c0e
+          # This is needed to run under the "restricted" Pod Security Standard
           securityContext:
             allowPrivilegeEscalation: false
             readOnlyRootFilesystem: true
@@ -36,10 +36,5 @@ spec:
                 - ALL
             seccompProfile:
               type: RuntimeDefault
-  sink:
-    ref:
-      apiVersion: serving.knative.dev/v1
-      kind: Service
-      name: event-display
 
 ---

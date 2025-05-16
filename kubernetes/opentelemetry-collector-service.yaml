@@ -9,8 +9,8 @@ metadata:
   name: opentelemetry-collector
 spec:
   ports:
-    - name: "8080"
-      port: 8080
-      targetPort: 8080
+    - name: "8091"
+      port: 8091
+      targetPort: 8091
   selector:
     io.kompose.service: opentelemetry-collector

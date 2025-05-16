@@ -9,8 +9,8 @@ metadata:
   name: minio-operator
 spec:
   ports:
-    - name: "8080"
-      port: 8080
-      targetPort: 8080
+    - name: "8089"
+      port: 8089
+      targetPort: 8089
   selector:
     io.kompose.service: minio-operator

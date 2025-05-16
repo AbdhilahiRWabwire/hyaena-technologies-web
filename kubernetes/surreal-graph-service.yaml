@@ -9,8 +9,8 @@ metadata:
   name: surreal-graph
 spec:
   ports:
-    - name: "8080"
-      port: 8080
-      targetPort: 8080
+    - name: "8095"
+      port: 8095
+      targetPort: 8095
   selector:
     io.kompose.service: surreal-graph

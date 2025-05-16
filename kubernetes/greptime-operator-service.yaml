@@ -9,8 +9,8 @@ metadata:
   name: greptime-operator
 spec:
   ports:
-    - name: "8080"
-      port: 8080
-      targetPort: 8080
+    - name: "8084"
+      port: 8084
+      targetPort: 8084
   selector:
     io.kompose.service: greptime-operator

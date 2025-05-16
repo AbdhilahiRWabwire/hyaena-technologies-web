@@ -19,7 +19,7 @@ metadata:
   labels:
     app.kubernetes.io/name: knative-serving
     app.kubernetes.io/component: networking
-    app.kubernetes.io/version: "1.17.0"
+    app.kubernetes.io/version: "1.18.0"
     knative.dev/crd-install: "true"
 spec:
   group: networking.internal.knative.dev
@@ -205,7 +205,7 @@ metadata:
   name: configurations.serving.knative.dev
   labels:
     app.kubernetes.io/name: knative-serving
-    app.kubernetes.io/version: "1.17.0"
+    app.kubernetes.io/version: "1.18.0"
     knative.dev/crd-install: "true"
     duck.knative.dev/podspecable: "true"
 spec:
@@ -520,7 +520,7 @@ spec:
                                 type: object
                                 properties:
                                   exec:
-                                    description: Exec specifies the action to take.
+                                    description: Exec specifies a command to execute in the container.
                                     type: object
                                     properties:
                                       command:
@@ -541,7 +541,7 @@ spec:
                                     type: integer
                                     format: int32
                                   grpc:
-                                    description: GRPC specifies an action involving a GRPC port.
+                                    description: GRPC specifies a GRPC HealthCheckRequest.
                                     type: object
                                     properties:
                                       port:
@@ -557,7 +557,7 @@ spec:
                                         type: string
                                         default: ""
                                   httpGet:
-                                    description: HTTPGet specifies the http request to perform.
+                                    description: HTTPGet specifies an HTTP GET request to perform.
                                     type: object
                                     properties:
                                       host:
@@ -619,7 +619,7 @@ spec:
                                     type: integer
                                     format: int32
                                   tcpSocket:
-                                    description: TCPSocket specifies an action involving a TCP port.
+                                    description: TCPSocket specifies a connection to a TCP port.
                                     type: object
                                     properties:
                                       host:
@@ -688,7 +688,7 @@ spec:
                                 type: object
                                 properties:
                                   exec:
-                                    description: Exec specifies the action to take.
+                                    description: Exec specifies a command to execute in the container.
                                     type: object
                                     properties:
                                       command:
@@ -709,7 +709,7 @@ spec:
                                     type: integer
                                     format: int32
                                   grpc:
-                                    description: GRPC specifies an action involving a GRPC port.
+                                    description: GRPC specifies a GRPC HealthCheckRequest.
                                     type: object
                                     properties:
                                       port:
@@ -725,7 +725,7 @@ spec:
                                         type: string
                                         default: ""
                                   httpGet:
-                                    description: HTTPGet specifies the http request to perform.
+                                    description: HTTPGet specifies an HTTP GET request to perform.
                                     type: object
                                     properties:
                                       host:
@@ -787,7 +787,7 @@ spec:
                                     type: integer
                                     format: int32
                                   tcpSocket:
-                                    description: TCPSocket specifies an action involving a TCP port.
+                                    description: TCPSocket specifies a connection to a TCP port.
                                     type: object
                                     properties:
                                       host:
@@ -953,7 +953,7 @@ spec:
                                 type: object
                                 properties:
                                   exec:
-                                    description: Exec specifies the action to take.
+                                    description: Exec specifies a command to execute in the container.
                                     type: object
                                     properties:
                                       command:
@@ -974,7 +974,7 @@ spec:
                                     type: integer
                                     format: int32
                                   grpc:
-                                    description: GRPC specifies an action involving a GRPC port.
+                                    description: GRPC specifies a GRPC HealthCheckRequest.
                                     type: object
                                     properties:
                                       port:
@@ -990,7 +990,7 @@ spec:
                                         type: string
                                         default: ""
                                   httpGet:
-                                    description: HTTPGet specifies the http request to perform.
+                                    description: HTTPGet specifies an HTTP GET request to perform.
                                     type: object
                                     properties:
                                       host:
@@ -1052,7 +1052,7 @@ spec:
                                     type: integer
                                     format: int32
                                   tcpSocket:
-                                    description: TCPSocket specifies an action involving a TCP port.
+                                    description: TCPSocket specifies a connection to a TCP port.
                                     type: object
                                     properties:
                                       host:
@@ -1110,6 +1110,10 @@ spec:
                                       description: |-
                                         Path within the container at which the volume should be mounted.  Must
                                         not contain ':'.
+                                      type: string
+                                    mountPropagation:
+                                      description: |-
+                                        This is accessible behind a feature flag - kubernetes.podspec-volumes-mount-propagation
                                       type: string
                                     name:
                                       description: This must match the Name of a Volume.
@@ -1348,6 +1352,10 @@ spec:
                                     description: optional specify whether the ConfigMap or its keys must be defined
                                     type: boolean
                                 x-kubernetes-map-type: atomic
+                              csi:
+                                description: This is accessible behind a feature flag - kubernetes.podspec-volumes-csi
+                                type: object
+                                x-kubernetes-preserve-unknown-fields: true
                               emptyDir:
                                 description: |-
                                   This is accessible behind a feature flag - kubernetes.podspec-volumes-emptydir
@@ -1748,7 +1756,7 @@ metadata:
   labels:
     app.kubernetes.io/name: knative-serving
     app.kubernetes.io/component: networking
-    app.kubernetes.io/version: "1.17.0"
+    app.kubernetes.io/version: "1.18.0"
     knative.dev/crd-install: "true"
 spec:
   group: networking.internal.knative.dev
@@ -1825,7 +1833,7 @@ metadata:
   name: domainmappings.serving.knative.dev
   labels:
     app.kubernetes.io/name: knative-serving
-    app.kubernetes.io/version: "1.17.0"
+    app.kubernetes.io/version: "1.18.0"
     knative.dev/crd-install: "true"
 spec:
   group: serving.knative.dev
@@ -2037,7 +2045,7 @@ metadata:
   labels:
     app.kubernetes.io/name: knative-serving
     app.kubernetes.io/component: networking
-    app.kubernetes.io/version: "1.17.0"
+    app.kubernetes.io/version: "1.18.0"
     knative.dev/crd-install: "true"
 spec:
   group: networking.internal.knative.dev
@@ -2425,7 +2433,7 @@ metadata:
   name: metrics.autoscaling.internal.knative.dev
   labels:
     app.kubernetes.io/name: knative-serving
-    app.kubernetes.io/version: "1.17.0"
+    app.kubernetes.io/version: "1.18.0"
     knative.dev/crd-install: "true"
 spec:
   group: autoscaling.internal.knative.dev
@@ -2569,7 +2577,7 @@ metadata:
   name: podautoscalers.autoscaling.internal.knative.dev
   labels:
     app.kubernetes.io/name: knative-serving
-    app.kubernetes.io/version: "1.17.0"
+    app.kubernetes.io/version: "1.18.0"
     knative.dev/crd-install: "true"
 spec:
   group: autoscaling.internal.knative.dev
@@ -2770,7 +2778,7 @@ metadata:
   name: revisions.serving.knative.dev
   labels:
     app.kubernetes.io/name: knative-serving
-    app.kubernetes.io/version: "1.17.0"
+    app.kubernetes.io/version: "1.18.0"
     knative.dev/crd-install: "true"
 spec:
   group: serving.knative.dev
@@ -3061,7 +3069,7 @@ spec:
                         type: object
                         properties:
                           exec:
-                            description: Exec specifies the action to take.
+                            description: Exec specifies a command to execute in the container.
                             type: object
                             properties:
                               command:
@@ -3082,7 +3090,7 @@ spec:
                             type: integer
                             format: int32
                           grpc:
-                            description: GRPC specifies an action involving a GRPC port.
+                            description: GRPC specifies a GRPC HealthCheckRequest.
                             type: object
                             properties:
                               port:
@@ -3098,7 +3106,7 @@ spec:
                                 type: string
                                 default: ""
                           httpGet:
-                            description: HTTPGet specifies the http request to perform.
+                            description: HTTPGet specifies an HTTP GET request to perform.
                             type: object
                             properties:
                               host:
@@ -3160,7 +3168,7 @@ spec:
                             type: integer
                             format: int32
                           tcpSocket:
-                            description: TCPSocket specifies an action involving a TCP port.
+                            description: TCPSocket specifies a connection to a TCP port.
                             type: object
                             properties:
                               host:
@@ -3229,7 +3237,7 @@ spec:
                         type: object
                         properties:
                           exec:
-                            description: Exec specifies the action to take.
+                            description: Exec specifies a command to execute in the container.
                             type: object
                             properties:
                               command:
@@ -3250,7 +3258,7 @@ spec:
                             type: integer
                             format: int32
                           grpc:
-                            description: GRPC specifies an action involving a GRPC port.
+                            description: GRPC specifies a GRPC HealthCheckRequest.
                             type: object
                             properties:
                               port:
@@ -3266,7 +3274,7 @@ spec:
                                 type: string
                                 default: ""
                           httpGet:
-                            description: HTTPGet specifies the http request to perform.
+                            description: HTTPGet specifies an HTTP GET request to perform.
                             type: object
                             properties:
                               host:
@@ -3328,7 +3336,7 @@ spec:
                             type: integer
                             format: int32
                           tcpSocket:
-                            description: TCPSocket specifies an action involving a TCP port.
+                            description: TCPSocket specifies a connection to a TCP port.
                             type: object
                             properties:
                               host:
@@ -3494,7 +3502,7 @@ spec:
                         type: object
                         properties:
                           exec:
-                            description: Exec specifies the action to take.
+                            description: Exec specifies a command to execute in the container.
                             type: object
                             properties:
                               command:
@@ -3515,7 +3523,7 @@ spec:
                             type: integer
                             format: int32
                           grpc:
-                            description: GRPC specifies an action involving a GRPC port.
+                            description: GRPC specifies a GRPC HealthCheckRequest.
                             type: object
                             properties:
                               port:
@@ -3531,7 +3539,7 @@ spec:
                                 type: string
                                 default: ""
                           httpGet:
-                            description: HTTPGet specifies the http request to perform.
+                            description: HTTPGet specifies an HTTP GET request to perform.
                             type: object
                             properties:
                               host:
@@ -3593,7 +3601,7 @@ spec:
                             type: integer
                             format: int32
                           tcpSocket:
-                            description: TCPSocket specifies an action involving a TCP port.
+                            description: TCPSocket specifies a connection to a TCP port.
                             type: object
                             properties:
                               host:
@@ -3651,6 +3659,10 @@ spec:
                               description: |-
                                 Path within the container at which the volume should be mounted.  Must
                                 not contain ':'.
+                              type: string
+                            mountPropagation:
+                              description: |-
+                                This is accessible behind a feature flag - kubernetes.podspec-volumes-mount-propagation
                               type: string
                             name:
                               description: This must match the Name of a Volume.
@@ -3889,6 +3901,10 @@ spec:
                             description: optional specify whether the ConfigMap or its keys must be defined
                             type: boolean
                         x-kubernetes-map-type: atomic
+                      csi:
+                        description: This is accessible behind a feature flag - kubernetes.podspec-volumes-csi
+                        type: object
+                        x-kubernetes-preserve-unknown-fields: true
                       emptyDir:
                         description: |-
                           This is accessible behind a feature flag - kubernetes.podspec-volumes-emptydir
@@ -4327,7 +4343,7 @@ metadata:
   name: routes.serving.knative.dev
   labels:
     app.kubernetes.io/name: knative-serving
-    app.kubernetes.io/version: "1.17.0"
+    app.kubernetes.io/version: "1.18.0"
     knative.dev/crd-install: "true"
     duck.knative.dev/addressable: "true"
 spec:
@@ -4598,7 +4614,7 @@ metadata:
   labels:
     app.kubernetes.io/name: knative-serving
     app.kubernetes.io/component: networking
-    app.kubernetes.io/version: "1.17.0"
+    app.kubernetes.io/version: "1.18.0"
     knative.dev/crd-install: "true"
 spec:
   group: networking.internal.knative.dev
@@ -4822,7 +4838,7 @@ metadata:
   name: services.serving.knative.dev
   labels:
     app.kubernetes.io/name: knative-serving
-    app.kubernetes.io/version: "1.17.0"
+    app.kubernetes.io/version: "1.18.0"
     knative.dev/crd-install: "true"
     duck.knative.dev/addressable: "true"
     duck.knative.dev/podspecable: "true"
@@ -5155,7 +5171,7 @@ spec:
                                 type: object
                                 properties:
                                   exec:
-                                    description: Exec specifies the action to take.
+                                    description: Exec specifies a command to execute in the container.
                                     type: object
                                     properties:
                                       command:
@@ -5176,7 +5192,7 @@ spec:
                                     type: integer
                                     format: int32
                                   grpc:
-                                    description: GRPC specifies an action involving a GRPC port.
+                                    description: GRPC specifies a GRPC HealthCheckRequest.
                                     type: object
                                     properties:
                                       port:
@@ -5192,7 +5208,7 @@ spec:
                                         type: string
                                         default: ""
                                   httpGet:
-                                    description: HTTPGet specifies the http request to perform.
+                                    description: HTTPGet specifies an HTTP GET request to perform.
                                     type: object
                                     properties:
                                       host:
@@ -5254,7 +5270,7 @@ spec:
                                     type: integer
                                     format: int32
                                   tcpSocket:
-                                    description: TCPSocket specifies an action involving a TCP port.
+                                    description: TCPSocket specifies a connection to a TCP port.
                                     type: object
                                     properties:
                                       host:
@@ -5323,7 +5339,7 @@ spec:
                                 type: object
                                 properties:
                                   exec:
-                                    description: Exec specifies the action to take.
+                                    description: Exec specifies a command to execute in the container.
                                     type: object
                                     properties:
                                       command:
@@ -5344,7 +5360,7 @@ spec:
                                     type: integer
                                     format: int32
                                   grpc:
-                                    description: GRPC specifies an action involving a GRPC port.
+                                    description: GRPC specifies a GRPC HealthCheckRequest.
                                     type: object
                                     properties:
                                       port:
@@ -5360,7 +5376,7 @@ spec:
                                         type: string
                                         default: ""
                                   httpGet:
-                                    description: HTTPGet specifies the http request to perform.
+                                    description: HTTPGet specifies an HTTP GET request to perform.
                                     type: object
                                     properties:
                                       host:
@@ -5422,7 +5438,7 @@ spec:
                                     type: integer
                                     format: int32
                                   tcpSocket:
-                                    description: TCPSocket specifies an action involving a TCP port.
+                                    description: TCPSocket specifies a connection to a TCP port.
                                     type: object
                                     properties:
                                       host:
@@ -5588,7 +5604,7 @@ spec:
                                 type: object
                                 properties:
                                   exec:
-                                    description: Exec specifies the action to take.
+                                    description: Exec specifies a command to execute in the container.
                                     type: object
                                     properties:
                                       command:
@@ -5609,7 +5625,7 @@ spec:
                                     type: integer
                                     format: int32
                                   grpc:
-                                    description: GRPC specifies an action involving a GRPC port.
+                                    description: GRPC specifies a GRPC HealthCheckRequest.
                                     type: object
                                     properties:
                                       port:
@@ -5625,7 +5641,7 @@ spec:
                                         type: string
                                         default: ""
                                   httpGet:
-                                    description: HTTPGet specifies the http request to perform.
+                                    description: HTTPGet specifies an HTTP GET request to perform.
                                     type: object
                                     properties:
                                       host:
@@ -5687,7 +5703,7 @@ spec:
                                     type: integer
                                     format: int32
                                   tcpSocket:
-                                    description: TCPSocket specifies an action involving a TCP port.
+                                    description: TCPSocket specifies a connection to a TCP port.
                                     type: object
                                     properties:
                                       host:
@@ -5745,6 +5761,10 @@ spec:
                                       description: |-
                                         Path within the container at which the volume should be mounted.  Must
                                         not contain ':'.
+                                      type: string
+                                    mountPropagation:
+                                      description: |-
+                                        This is accessible behind a feature flag - kubernetes.podspec-volumes-mount-propagation
                                       type: string
                                     name:
                                       description: This must match the Name of a Volume.
@@ -5983,6 +6003,10 @@ spec:
                                     description: optional specify whether the ConfigMap or its keys must be defined
                                     type: boolean
                                 x-kubernetes-map-type: atomic
+                              csi:
+                                description: This is accessible behind a feature flag - kubernetes.podspec-volumes-csi
+                                type: object
+                                x-kubernetes-preserve-unknown-fields: true
                               emptyDir:
                                 description: |-
                                   This is accessible behind a feature flag - kubernetes.podspec-volumes-emptydir
@@ -6512,7 +6536,7 @@ metadata:
   name: images.caching.internal.knative.dev
   labels:
     app.kubernetes.io/name: knative-serving
-    app.kubernetes.io/version: "1.17.0"
+    app.kubernetes.io/version: "1.18.0"
     knative.dev/crd-install: "true"
 spec:
   group: caching.internal.knative.dev

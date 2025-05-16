@@ -1,6 +1,6 @@
 
 ---
-# /tmp/knative.xKuFkQUi/tmp.L7olsUaQ1u/serving-storage-version-migration.yaml
+# /tmp/knative.9J4cahJp/tmp.nKyBZAOhw4/serving-storage-version-migration.yaml
 # Copyright 2020 The Knative Authors
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -24,7 +24,7 @@ metadata:
     app: storage-version-migration-serving
     app.kubernetes.io/name: knative-serving
     app.kubernetes.io/component: storage-version-migration-job
-    app.kubernetes.io/version: "1.17.0"
+    app.kubernetes.io/version: "1.18.0"
 spec:
   ttlSecondsAfterFinished: 600
   backoffLimit: 10
@@ -34,7 +34,7 @@ spec:
         app: storage-version-migration-serving
         app.kubernetes.io/name: knative-serving
         app.kubernetes.io/component: storage-version-migration-job
-        app.kubernetes.io/version: "1.17.0"
+        app.kubernetes.io/version: "1.18.0"
         sidecar.istio.io/inject: "false"
     spec:
       serviceAccountName: controller
@@ -43,7 +43,7 @@ spec:
         - name: migrate
           # This is the Go import path for the binary that is containerized
           # and substituted here.
-          image: gcr.io/knative-releases/knative.dev/pkg/apiextensions/storageversion/cmd/migrate@sha256:c7ae2bf09e8f4236fad16705aa2ec69ab69e0f31ebd53159a6b0d734039538b4
+          image: gcr.io/knative-releases/knative.dev/pkg/apiextensions/storageversion/cmd/migrate@sha256:6b1f25d8ba4a9a4338c4989d8775ef2b8a2a4a6f6cf92e3360153f33182e7037
           args:
             - "services.serving.knative.dev"
             - "configurations.serving.knative.dev"
@@ -69,7 +69,7 @@ spec:
 
 ---
 ---
-# /tmp/knative.xKuFkQUi/tmp.L7olsUaQ1u/cleanup.yaml
+# /tmp/knative.9J4cahJp/tmp.nKyBZAOhw4/cleanup.yaml
 # Copyright 2024 The Knative Authors
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -93,7 +93,7 @@ metadata:
     app: cleanup-serving
     app.kubernetes.io/name: knative-serving
     app.kubernetes.io/component: cleanup-job
-    app.kubernetes.io/version: "1.17.0"
+    app.kubernetes.io/version: "1.18.0"
 spec:
   ttlSecondsAfterFinished: 600
   backoffLimit: 10
@@ -103,7 +103,7 @@ spec:
         app: cleanup-migration-serving
         app.kubernetes.io/name: knative-serving
         app.kubernetes.io/component: cleanup-job
-        app.kubernetes.io/version: "1.17.0"
+        app.kubernetes.io/version: "1.18.0"
         sidecar.istio.io/inject: "false"
     spec:
       serviceAccountName: controller
@@ -112,7 +112,7 @@ spec:
         - name: cleanup
           # This is the Go import path for the binary that is containerized
           # and substituted here.
-          image: gcr.io/knative-releases/knative.dev/serving/pkg/cleanup/cmd/cleanup@sha256:132227372caba8e03df65fcf4d61738c0dfaa7c3a5d3c5fae57e6f4b3655c7d5
+          image: gcr.io/knative-releases/knative.dev/serving/pkg/cleanup/cmd/cleanup@sha256:825b0b4b42c45c79681a2851c1a58ed7631c71933771a3d90771aff2a31397fc
           resources:
             requests:
               cpu: 100m
