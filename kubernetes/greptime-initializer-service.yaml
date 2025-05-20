@@ -9,8 +9,8 @@ metadata:
   name: greptime-initializer
 spec:
   ports:
-    - name: "8085"
-      port: 8085
-      targetPort: 8085
+    - name: "8084"
+      port: 8084
+      targetPort: 8084
   selector:
     io.kompose.service: greptime-initializer

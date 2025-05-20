@@ -18,6 +18,7 @@
 [Rust Language]: https://rust-lang.org
 [Spice Database]: https://authzed.com/
 [Surreal Database]: https://surrealdb.com/
+[Traefik]: https://traefik.io/traefik/
 [WAI-ARIA]: https://www.w3.org/WAI/ARIA/apg/patterns/
 [YAML]: https://yaml.org/
 
@@ -50,6 +51,7 @@ Hyaena Technologies is an Open Source Technology company
 - [Command Line Documentation][CLIDoc]
 - [Rust][Rust Language]
 - [Mozilla Developer Network Web Documentation][MDN]
+- [Traefik Proxy][Traefik] - (In Progress)
 - [Web Accessibility Initiative][WAI-ARIA]
 
 ## Databases
@@ -119,7 +121,9 @@ minikube kubectl apply -f './knative/serving/*.yaml'
  
 minikube kubectl apply -f './kubernetes/*.yaml'
 ||
-skaffold run
+skaffold dev # Development Mode
+
+skaffold run # Production Mode
 ```
 
 ## Install Web Server

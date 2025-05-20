@@ -5,12 +5,12 @@ metadata:
     kompose.cmd: kompose convert -f ./compose.yaml -o ./kubernetes
     kompose.version: 1.35.0 (9532ceef3)
   labels:
-    io.kompose.service: distribution-registry
-  name: distribution-registry
+    io.kompose.service: traefik-proxy
+  name: traefik-proxy
 spec:
   ports:
-    - name: "8081"
-      port: 8081
-      targetPort: 8081
+    - name: "8095"
+      port: 8095
+      targetPort: 8095
   selector:
-    io.kompose.service: distribution-registry
+    io.kompose.service: traefik-proxy

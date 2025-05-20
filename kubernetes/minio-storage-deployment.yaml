@@ -24,6 +24,6 @@ spec:
         - image: minio/minio:latest
           name: minio-storage
           ports:
-            - containerPort: 8088
+            - containerPort: 8087
               protocol: TCP
       restartPolicy: Always

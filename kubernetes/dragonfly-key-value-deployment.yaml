@@ -24,6 +24,6 @@ spec:
         - image: dragonflydb/dragonfly:latest
           name: dragonfly-key-value
           ports:
-            - containerPort: 8082
+            - containerPort: 8081
               protocol: TCP
       restartPolicy: Always

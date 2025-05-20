@@ -24,6 +24,6 @@ spec:
         - image: gcr.io/knative-releases/knative.dev/client/cmd/kn:latest
           name: knative-cli
           ports:
-            - containerPort: 8086
+            - containerPort: 8085
               protocol: TCP
       restartPolicy: Always

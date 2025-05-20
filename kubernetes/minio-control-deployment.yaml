@@ -24,6 +24,6 @@ spec:
         - image: minio/mc:latest
           name: minio-control
           ports:
-            - containerPort: 8090
+            - containerPort: 8089
               protocol: TCP
       restartPolicy: Always

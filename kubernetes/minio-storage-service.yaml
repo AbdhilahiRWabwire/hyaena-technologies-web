@@ -9,8 +9,8 @@ metadata:
   name: minio-storage
 spec:
   ports:
-    - name: "8088"
-      port: 8088
-      targetPort: 8088
+    - name: "8087"
+      port: 8087
+      targetPort: 8087
   selector:
     io.kompose.service: minio-storage
