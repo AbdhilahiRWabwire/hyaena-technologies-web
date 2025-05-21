@@ -50,7 +50,7 @@ Hyaena Technologies is an Open Source Technology company
 - **_Container Tools:_** [Cert-Manager][Certificate Manager], [Knative][K8S Native], [Kompose][K8S Kompose], [Kubectl][K8S Control], [Skaffold][K8S Skaffold]
 
 - [Command Line Documentation][CLIDoc]
-- [Grafana Dashboard][Grafana]
+- [Grafana Dashboard][Grafana] - (In Progress)
 - [Rust][Rust Language]
 - [Mozilla Developer Network Web Documentation][MDN]
 - [Traefik Proxy][Traefik] - (In Progress)
