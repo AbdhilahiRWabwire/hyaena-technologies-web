@@ -24,6 +24,6 @@ spec:
         - image: otel/opentelemetry-collector:latest
           name: opentelemetry-collector
           ports:
-            - containerPort: 8090
+            - containerPort: 8091
               protocol: TCP
       restartPolicy: Always

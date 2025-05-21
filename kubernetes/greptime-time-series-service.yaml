@@ -9,8 +9,8 @@ metadata:
   name: greptime-time-series
 spec:
   ports:
-    - name: "8082"
-      port: 8082
-      targetPort: 8082
+    - name: "8083"
+      port: 8083
+      targetPort: 8083
   selector:
     io.kompose.service: greptime-time-series

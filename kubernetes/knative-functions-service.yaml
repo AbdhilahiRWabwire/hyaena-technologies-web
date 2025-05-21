@@ -9,8 +9,8 @@ metadata:
   name: knative-functions
 spec:
   ports:
-    - name: "8086"
-      port: 8086
-      targetPort: 8086
+    - name: "8087"
+      port: 8087
+      targetPort: 8087
   selector:
     io.kompose.service: knative-functions

@@ -24,6 +24,6 @@ spec:
         - image: minio/operator:latest
           name: minio-operator
           ports:
-            - containerPort: 8088
+            - containerPort: 8089
               protocol: TCP
       restartPolicy: Always

@@ -24,6 +24,6 @@ spec:
         - image: authzed/spicedb:latest
           name: spice-authorization
           ports:
-            - containerPort: 8091
+            - containerPort: 8092
               protocol: TCP
       restartPolicy: Always

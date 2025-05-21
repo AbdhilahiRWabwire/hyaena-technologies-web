@@ -24,6 +24,6 @@ spec:
         - image: ghcr.io/knative/func/func:latest
           name: knative-functions
           ports:
-            - containerPort: 8086
+            - containerPort: 8087
               protocol: TCP
       restartPolicy: Always

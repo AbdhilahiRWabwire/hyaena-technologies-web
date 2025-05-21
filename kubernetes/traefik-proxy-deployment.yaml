@@ -21,9 +21,9 @@ spec:
         io.kompose.service: traefik-proxy
     spec:
       containers:
-        - image: traefik:latest
+        - image: traefik/traefik:latest
           name: traefik-proxy
           ports:
-            - containerPort: 8095
+            - containerPort: 8096
               protocol: TCP
       restartPolicy: Always

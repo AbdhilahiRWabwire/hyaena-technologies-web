@@ -9,8 +9,8 @@ metadata:
   name: spice-authorization
 spec:
   ports:
-    - name: "8091"
-      port: 8091
-      targetPort: 8091
+    - name: "8092"
+      port: 8092
+      targetPort: 8092
   selector:
     io.kompose.service: spice-authorization

@@ -9,8 +9,8 @@ metadata:
   name: knative-cli
 spec:
   ports:
-    - name: "8085"
-      port: 8085
-      targetPort: 8085
+    - name: "8086"
+      port: 8086
+      targetPort: 8086
   selector:
     io.kompose.service: knative-cli

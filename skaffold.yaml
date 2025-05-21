@@ -26,6 +26,8 @@ manifests:
     - knative/serving/serving-storage-version-migration.yaml
     - kubernetes/dragonfly-key-value-deployment.yaml
     - kubernetes/dragonfly-key-value-service.yaml
+    - kubernetes/grafana-dashboard-deployment.yaml
+    - kubernetes/grafana-dashboard-service.yaml
     - kubernetes/greptime-initializer-deployment.yaml
     - kubernetes/greptime-initializer-service.yaml
     - kubernetes/greptime-operator-deployment.yaml

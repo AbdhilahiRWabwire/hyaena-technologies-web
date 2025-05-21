@@ -24,6 +24,6 @@ spec:
         - image: authzed/spicedb-operator:latest
           name: spice-operator
           ports:
-            - containerPort: 8092
+            - containerPort: 8093
               protocol: TCP
       restartPolicy: Always
