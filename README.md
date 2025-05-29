@@ -82,7 +82,7 @@ mv ./target/x86_64-unkown-linux-gnu/release/htnet ./binary
 ./binary/htnet serve
 ```
 
-## Containerize Web Server
+## Docker Build
 
 ```shell
 git clone
@@ -104,7 +104,7 @@ nerdctl compose up --detach
 
 ## Kubernetes
 
-### Generate Kubernetes Configurations and Initialize Skaffold
+### Kompose Kubernetes Configurations and Initialize Skaffold
 
 ```shell
 git clone
