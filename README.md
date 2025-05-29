@@ -104,17 +104,21 @@ nerdctl compose up --detach
 
 ## Kubernetes
 
+### Generate Kubernetes Configurations and Initialize Skaffold
+
 ```shell
 git clone
 
-kubectl apply -f './certificate-manager/*.yaml'
- 
-kubectl apply -f './knative/eventing/*.yaml'
+kompose convert -f ./compose.yaml -o ./kubernetes
 
-kubectl apply -f './knative/serving/*.yaml' 
+skaffold init
+```
 
-kubectl apply -f './kubernetes/*.yaml'
-||
+### Run Kubernetes Cluster
+
+```shell
+git clone
+
 minikube kubectl apply -f './certificate-manager/*.yaml'
 
 minikube kubectl apply -f './knative/eventing/*.yaml'
