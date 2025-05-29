@@ -68,7 +68,7 @@ Hyaena Technologies is an Open Source Technology company
 
 - **_Time Series:_** [Greptime][Greptime Database] - (In Progress)
 
-## Build Web Server
+## Build Web Service
 
 ```shell
 git clone
@@ -132,7 +132,7 @@ skaffold dev # Development Mode
 skaffold run # Production Mode
 ```
 
-## Install Web Server
+## Install Web Service
 
 ```shell
 echo 'export PATH="$PATH:/usr/local/bin/htnet"' >> ~/.bashrc
