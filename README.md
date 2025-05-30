@@ -26,7 +26,7 @@
 <a href="https://github.com/HyaenaTechnologies/hyaena-technologies-web">
   <h1>
     <picture>
-      <img src="https://github.com/HyaenaTechnologies/hyaena-technologies-web/blob/main/assets/ht_markdown.png" alt="">
+      <img src="https://github.com/HyaenaTechnologies/hyaena-technologies-web/blob/main/web/assets/ht_markdown.png" alt="">
     </picture>
   </h1>
 </a>
