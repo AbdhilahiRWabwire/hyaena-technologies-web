@@ -91,8 +91,6 @@ mv ./target/x86_64-unkown-linux-gnu/release/htnet ./binary
 ## Docker Build
 
 ```shell
-git clone
-
 docker build ./ --file ./web-service.Dockerfile --tag htnet:0.2.0
 ||
 nerdctl build ./ --file ./web-service.Dockerfile --tag htnet:0.2.0
@@ -101,8 +99,6 @@ nerdctl build ./ --file ./web-service.Dockerfile --tag htnet:0.2.0
 ## Docker Compose
 
 ```shell
-git clone
-
 docker compose up --detach
 ||
 nerdctl compose up --detach
@@ -113,8 +109,6 @@ nerdctl compose up --detach
 ### Kompose Kubernetes Configurations and Initialize Skaffold
 
 ```shell
-git clone
-
 kompose convert -f ./compose.yaml -o ./kubernetes
 
 skaffold init
@@ -123,8 +117,6 @@ skaffold init
 ### Run Kubernetes Cluster
 
 ```shell
-git clone
-
 minikube kubectl apply -f './certificate-manager/*.yaml'
 
 minikube kubectl apply -f './knative/eventing/*.yaml'
