@@ -5,12 +5,12 @@ metadata:
     kompose.cmd: kompose convert --file ./compose.yaml -o ./kubernetes
     kompose.version: 1.35.0 (9532ceef3)
   labels:
-    io.kompose.service: htnet-web
-  name: htnet-web
+    io.kompose.service: ory-kratos-authentication
+  name: ory-kratos-authentication
 spec:
   ports:
-    - name: "7878"
-      port: 7878
-      targetPort: 7878
+    - name: "8093"
+      port: 8093
+      targetPort: 8093
   selector:
-    io.kompose.service: htnet-web
+    io.kompose.service: ory-kratos-authentication

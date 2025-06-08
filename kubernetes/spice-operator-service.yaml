@@ -2,15 +2,15 @@ apiVersion: v1
 kind: Service
 metadata:
   annotations:
-    kompose.cmd: kompose convert -f ./compose.yaml -o ./kubernetes
+    kompose.cmd: kompose convert --file ./compose.yaml -o ./kubernetes
     kompose.version: 1.35.0 (9532ceef3)
   labels:
     io.kompose.service: spice-operator
   name: spice-operator
 spec:
   ports:
-    - name: "8093"
-      port: 8093
-      targetPort: 8093
+    - name: "8095"
+      port: 8095
+      targetPort: 8095
   selector:
     io.kompose.service: spice-operator

@@ -5,25 +5,25 @@ metadata:
     kompose.cmd: kompose convert --file ./compose.yaml -o ./kubernetes
     kompose.version: 1.35.0 (9532ceef3)
   labels:
-    io.kompose.service: traefik-proxy
-  name: traefik-proxy
+    io.kompose.service: ory-hydra-oidc
+  name: ory-hydra-oidc
 spec:
   replicas: 1
   selector:
     matchLabels:
-      io.kompose.service: traefik-proxy
+      io.kompose.service: ory-hydra-oidc
   template:
     metadata:
       annotations:
         kompose.cmd: kompose convert --file ./compose.yaml -o ./kubernetes
         kompose.version: 1.35.0 (9532ceef3)
       labels:
-        io.kompose.service: traefik-proxy
+        io.kompose.service: ory-hydra-oidc
     spec:
       containers:
-        - image: traefik/traefik:v2.4.9-dyn-buffer
-          name: traefik-proxy
+        - image: oryd/hydra:v2.3.0
+          name: ory-hydra-oidc
           ports:
-            - containerPort: 8098
+            - containerPort: 8094
               protocol: TCP
       restartPolicy: Always

@@ -16,10 +16,12 @@
 [Moby]: http://docker.com
 [Moby Compose]: https://docs.docker.com/reference/cli/docker/compose/
 [Moby Swarm]: https://docs.docker.com/reference/cli/docker/swarm/
+[Ory Identity]: https://www.ory.sh/
 [Rust Language]: https://rust-lang.org
 [Spice Database]: https://authzed.com/
 [Surreal Database]: https://surrealdb.com/
 [Traefik]: https://traefik.io/traefik/
+[Vault]: https://www.hashicorp.com/en/products/vault
 [WAI-ARIA]: https://www.w3.org/WAI/ARIA/apg/patterns/
 [YAML]: https://yaml.org/
 
@@ -43,11 +45,15 @@ Hyaena Technologies is an Open Source Technology company
 
 ## Build
 
+- **_Authentication:_** [Ory][Ory Identity] - (In Progress)
+
 - **_Container Engines:_** [Docker][Moby], [Podman][Containerman]
 
 - **_Container Orchestration Engines:_** [Docker Compose][Moby Compose], [Docker Swarm][Moby Swarm], [KOps][K8S Ops], [Minikube][K8S Kube], [Podman Pods][Containerman Pod]
 
 - **_Container Tools:_** [Cert-Manager][Certificate Manager], [Knative][K8S Native], [Kompose][K8S Kompose], [Kubectl][K8S Control], [Skaffold][K8S Skaffold]
+
+- - **_Secret Management:_** [HashiCorp Vault][Vault] - (In Progress)
 
 - [Command Line Documentation][CLIDoc]
 - [Grafana Dashboard][Grafana] - (In Progress)
@@ -87,9 +93,9 @@ mv ./target/x86_64-unkown-linux-gnu/release/htnet ./binary
 ```shell
 git clone
 
-docker build ./ --file ./web-service.Dockerfile --tag htnet:latest
+docker build ./ --file ./web-service.Dockerfile --tag htnet:0.2.0
 ||
-nerdctl build ./ --file ./web-service.Dockerfile --tag htnet:latest
+nerdctl build ./ --file ./web-service.Dockerfile --tag htnet:0.2.0
 ```
 
 ## Docker Compose

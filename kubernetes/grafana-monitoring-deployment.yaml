@@ -2,27 +2,27 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   annotations:
-    kompose.cmd: kompose convert -f ./compose.yaml -o ./kubernetes
+    kompose.cmd: kompose convert --file ./compose.yaml -o ./kubernetes
     kompose.version: 1.35.0 (9532ceef3)
   labels:
-    io.kompose.service: grafana-dashboard
-  name: grafana-dashboard
+    io.kompose.service: grafana-monitoring
+  name: grafana-monitoring
 spec:
   replicas: 1
   selector:
     matchLabels:
-      io.kompose.service: grafana-dashboard
+      io.kompose.service: grafana-monitoring
   template:
     metadata:
       annotations:
-        kompose.cmd: kompose convert -f ./compose.yaml -o ./kubernetes
+        kompose.cmd: kompose convert --file ./compose.yaml -o ./kubernetes
         kompose.version: 1.35.0 (9532ceef3)
       labels:
-        io.kompose.service: grafana-dashboard
+        io.kompose.service: grafana-monitoring
     spec:
       containers:
-        - image: grafana/grafana:latest
-          name: grafana-dashboard
+        - image: grafana/grafana:12.0.1
+          name: grafana-monitoring
           ports:
             - containerPort: 8082
               protocol: TCP
