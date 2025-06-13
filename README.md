@@ -133,5 +133,5 @@ skaffold run # Production Mode
 ## Install Web Service
 
 ```shell
-echo 'export PATH="$PATH:/usr/local/bin/htnet"' >> ~/.bashrc
+sudo install ./htnet /usr/local/bin/
 ```
