@@ -7,6 +7,7 @@ mod service;
 use service::application_service::web_service;
 
 mod utility;
+mod yaml;
 
 // Main Entry Point
 fn main() -> () {

@@ -24,6 +24,6 @@ spec:
         - image: traefik/traefik:v2.4.9-dyn-buffer
           name: traefik-proxy
           ports:
-            - containerPort: 8098
+            - containerPort: 8097
               protocol: TCP
       restartPolicy: Always

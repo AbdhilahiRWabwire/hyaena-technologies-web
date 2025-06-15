@@ -24,6 +24,6 @@ spec:
         - image: surrealdb/surrealdb:v2.3.3
           name: surreal-graph
           ports:
-            - containerPort: 8097
+            - containerPort: 8096
               protocol: TCP
       restartPolicy: Always

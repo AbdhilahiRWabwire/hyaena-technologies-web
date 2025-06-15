@@ -9,8 +9,8 @@ metadata:
   name: spice-zed
 spec:
   ports:
-    - name: "8096"
-      port: 8096
-      targetPort: 8096
+    - name: "8095"
+      port: 8095
+      targetPort: 8095
   selector:
     io.kompose.service: spice-zed

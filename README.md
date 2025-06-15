@@ -41,7 +41,8 @@ Hyaena Technologies is an Open Source Technology company
 
 ## Features
 
-- (In Progress)
+- Environment Variable Configuration
+- [YAML Configuration][YAML]
 
 ## Build
 

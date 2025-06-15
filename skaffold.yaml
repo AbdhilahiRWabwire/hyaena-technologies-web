@@ -46,8 +46,6 @@ manifests:
     - kubernetes/minio-operator-service.yaml
     - kubernetes/minio-storage-deployment.yaml
     - kubernetes/minio-storage-service.yaml
-    - kubernetes/opentelemetry-collector-deployment.yaml
-    - kubernetes/opentelemetry-collector-service.yaml
     - kubernetes/ory-hydra-oidc-deployment.yaml
     - kubernetes/ory-hydra-oidc-service.yaml
     - kubernetes/ory-kratos-authentication-deployment.yaml
