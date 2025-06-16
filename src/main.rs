@@ -1,6 +1,5 @@
 mod arguments;
 mod configuration;
-mod hypertext_markup;
 mod hypertext_transfer;
 
 mod service;

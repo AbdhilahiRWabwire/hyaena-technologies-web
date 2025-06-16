@@ -22,7 +22,7 @@
 [Surreal Database]: https://surrealdb.com/
 [Traefik]: https://traefik.io/traefik/
 [Vault]: https://www.hashicorp.com/en/products/vault
-[WAI-ARIA]: https://www.w3.org/WAI/ARIA/apg/patterns/
+[W3C]: https://w3.org/TR/
 [YAML]: https://yaml.org/
 
 <a href="https://github.com/HyaenaTechnologies/hyaena-technologies-web">
@@ -56,12 +56,12 @@ Hyaena Technologies is an Open Source Technology company
 
 - **_Secret Management:_** [HashiCorp Vault][Vault] - (In Progress)
 
-- [Command Line Documentation][CLIDoc]
-- [Grafana Dashboard][Grafana] - (In Progress)
 - [Rust][Rust Language]
-- [Mozilla Developer Network Web Documentation][MDN]
+- [Grafana Dashboard][Grafana] - (In Progress)
 - [Traefik Proxy][Traefik] - (In Progress)
-- [Web Accessibility Initiative][WAI-ARIA]
+- [Command Line Documentation][CLIDoc]
+- [Mozilla Developer Network Web Documentation][MDN]
+- [Web Consortium Documentation][W3C]
 
 ## Databases
 
