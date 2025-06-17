@@ -7,3 +7,5 @@ pub mod http_message;
 pub mod http_security_directives;
 
 pub mod http_status_codes;
+
+pub mod http_versions;

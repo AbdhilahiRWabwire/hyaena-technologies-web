@@ -2,7 +2,6 @@ use std::{
     io::{BufRead, BufReader, Error, StdoutLock, Write, stdout},
     net::{IpAddr, Ipv4Addr, SocketAddr, TcpListener, TcpStream},
     option::Option,
-    primitive::str,
     result::{
         Result,
         Result::{Err, Ok},
@@ -16,13 +15,11 @@ use super::{
     http_methods::HTTPMethod,
     http_security_directives::HTTPSecurityDirective,
     http_status_codes::{HTTPStatusCode, HTTPStatusText},
+    http_versions::HTTPVersion,
 };
 
 // Hypertext Transfer Protocol Body Definition
 pub type HTTPBody<T> = T;
-
-// Hypertext Transfer Protocol Version Definition
-pub type HTTPVersion = &'static str;
 
 // Hypertext Transfer Protocol Message Definition
 pub struct HypertextTransferMessage<T> {
@@ -36,7 +33,7 @@ pub struct HypertextTransferMessage<T> {
 }
 
 // Hypertext Transfer Protocol Connection Management
-pub fn http_connection_management(mut transmission_stream: TcpStream) -> () {
+pub fn http_connection_management(transmission_stream: &TcpStream) -> () {
     let mut standard_output: StdoutLock = stdout().lock();
     let buffered_reader: BufReader<&TcpStream> = BufReader::new(&transmission_stream);
     let hypertext_transfer_request: Vec<String> = buffered_reader
@@ -51,7 +48,6 @@ pub fn http_connection_management(mut transmission_stream: TcpStream) -> () {
         hypertext_transfer_request
     )
     .unwrap();
-    writeln!(transmission_stream, "HTTP/1.1 200 OK").unwrap();
 
     return ();
 }

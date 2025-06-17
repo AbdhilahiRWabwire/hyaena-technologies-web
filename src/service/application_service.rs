@@ -8,7 +8,9 @@ use std::{
 };
 
 use crate::hypertext_transfer::http_message::http_connection_management;
+use crate::routing::home_page::home_route;
 
+// Application Service
 pub fn web_service() -> () {
     let socket_address: SocketAddrV4 = SocketAddrV4::new(Ipv4Addr::new(127, 0, 0, 1), 7878);
     let transmission_listener: TcpListener = TcpListener::bind(socket_address).unwrap();
@@ -21,7 +23,8 @@ pub fn web_service() -> () {
         let stream: TcpStream = transmission_stream.unwrap();
 
         stream.set_ttl(100).unwrap();
-        http_connection_management(stream);
+        http_connection_management(&stream);
+        home_route(&stream);
     }
 
     return ();
