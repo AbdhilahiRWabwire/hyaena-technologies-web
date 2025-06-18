@@ -7,7 +7,7 @@ use crate::hypertext_transfer::{
 };
 
 // Application Home Page Route
-pub fn home_route(mut transmission_stream: &TcpStream) -> () {
+pub fn home_route(transmission_stream: &mut TcpStream) -> () {
     let source_path: PathBuf = PathBuf::from("./web/source/main.html");
     let source_file: String = fs::read_to_string(source_path).unwrap();
     let content_length: usize = source_file.len();
