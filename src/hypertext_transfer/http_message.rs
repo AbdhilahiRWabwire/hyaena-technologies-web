@@ -56,6 +56,7 @@ pub fn http_server(transmission_listener: TcpListener) -> () {
         let stream: TcpStream = transmission_stream.unwrap();
 
         stream.set_ttl(100).unwrap();
+        http_connection_management(&stream);
     }
 
     return ();
