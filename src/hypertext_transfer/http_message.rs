@@ -1,11 +1,8 @@
 use std::{
-    io::{BufRead, BufReader, Error, StdoutLock, Write, stdout},
+    io::{BufRead, BufReader, Error, Read, StdoutLock, Write, stdout},
     net::{IpAddr, Ipv4Addr, SocketAddr, TcpListener, TcpStream},
     option::Option,
-    result::{
-        Result,
-        Result::{Err, Ok},
-    },
+    result::Result::{self, Err, Ok},
     string::String,
     vec::Vec,
 };
@@ -35,17 +32,14 @@ pub struct HypertextTransferMessage<T> {
 // Hypertext Transfer Protocol Connection Management
 pub fn http_connection_management(transmission_stream: &TcpStream) -> () {
     let mut standard_output: StdoutLock = stdout().lock();
-    let buffered_reader: BufReader<&TcpStream> = BufReader::new(&transmission_stream);
-    let hypertext_transfer_request: Vec<String> = buffered_reader
-        .lines()
-        .map(|result| result.unwrap())
-        .take_while(|line| !line.is_empty())
-        .collect();
+    let mut buffered_reader: BufReader<&TcpStream> = BufReader::new(&transmission_stream);
+    let mut http_request: String = String::new();
+    buffered_reader.read_to_string(&mut http_request).unwrap();
 
     writeln!(
         standard_output,
-        "Hypertext Tranfer Protocol Request: {:#?}",
-        hypertext_transfer_request
+        "Hypertext Tranfer Protocol Request: {}",
+        http_request
     )
     .unwrap();
 
