@@ -20,11 +20,11 @@ pub fn web_service() -> () {
     writeln!(standard_output, "Service Listening on Port: 7878").unwrap();
 
     for transmission_stream in transmission_listener.incoming() {
-        let stream: TcpStream = transmission_stream.unwrap();
+        let mut stream: TcpStream = transmission_stream.unwrap();
 
         stream.set_ttl(100).unwrap();
         http_connection_management(&stream);
-        home_route(&stream);
+        home_route(&mut stream);
     }
 
     return ();
