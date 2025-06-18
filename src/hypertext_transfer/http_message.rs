@@ -33,15 +33,12 @@ pub struct HypertextTransferMessage<T> {
 pub fn http_connection_management(transmission_stream: &TcpStream) -> () {
     let mut standard_output: StdoutLock = stdout().lock();
     let mut buffered_reader: BufReader<&TcpStream> = BufReader::new(&transmission_stream);
-    let mut http_request: String = String::new();
-    buffered_reader.read_to_string(&mut http_request).unwrap();
+    let mut stream_buffer: String = String::new();
 
-    writeln!(
-        standard_output,
-        "Hypertext Tranfer Protocol Request: {}",
-        http_request
-    )
-    .unwrap();
+    buffered_reader.read_to_string(&mut stream_buffer).unwrap();
+    writeln!(standard_output, "Hypertext Tranfer Protocol Request: ",).unwrap();
+    writeln!(standard_output, "").unwrap();
+    writeln!(standard_output, "{}", stream_buffer).unwrap();
 
     return ();
 }
