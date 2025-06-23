@@ -1,5 +1,6 @@
 mod arguments;
 mod configuration;
+mod errors;
 mod hypertext_transfer;
 mod json;
 mod routing;
