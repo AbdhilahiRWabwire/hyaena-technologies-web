@@ -1,6 +1,6 @@
 use std::{
     fs::File,
-    io::{BufReader, Read, Write},
+    io::{Read, Write},
     net::TcpStream,
     path::PathBuf,
     primitive::usize,
