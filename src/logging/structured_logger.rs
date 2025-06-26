@@ -1,6 +1,6 @@
 #![allow(dead_code)]
 
-use std::string::String;
+use std::{fs::File, io::Write, path::PathBuf, string::String};
 
 // Structured Log Level Definition
 pub type LogLevel = &'static str;
@@ -21,4 +21,12 @@ pub struct StructuredLog {
 }
 
 // Structured Logger
-pub fn logger(structured_log: StructuredLog) {}
+pub fn logger(structured_log: StructuredLog, log_path: PathBuf) -> () {
+    let mut log_file: File = File::create(log_path).unwrap();
+
+    log_file.write_all("".as_bytes()).unwrap();
+    log_file.write_all("".as_bytes()).unwrap();
+    log_file.write_all("{}".as_bytes()).unwrap();
+
+    return ();
+}

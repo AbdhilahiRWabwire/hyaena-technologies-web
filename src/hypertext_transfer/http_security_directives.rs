@@ -32,8 +32,8 @@ pub const HTTP_UPGRADE_INSECURE_REQUESTS: HTTPSecurityDirective = "upgrade-insec
 pub const HTTP_WORKER_SOURCE: HTTPSecurityDirective = "worker-src";
 
 // Hypertext Transfer Protocol Content Security Policy Directive Vector
-pub fn http_security_directives() -> Vec<HTTPSecurityDirective> {
-    let hypertext_transfer_security_directives: Vec<HTTPSecurityDirective> = Vec::from([
+pub fn hypertext_transfer_security_directives() -> Vec<HTTPSecurityDirective> {
+    let http_security_directives: Vec<HTTPSecurityDirective> = Vec::from([
         HTTP_BASE_URI,
         HTTP_CHILD_SOURCE,
         HTTP_CONNECT_SOURCE,
@@ -60,5 +60,5 @@ pub fn http_security_directives() -> Vec<HTTPSecurityDirective> {
         HTTP_WORKER_SOURCE,
     ]);
 
-    return hypertext_transfer_security_directives;
+    return http_security_directives;
 }

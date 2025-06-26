@@ -1,7 +1,7 @@
 use std::{
-    fs,
+    fs::File,
     io::{BufReader, Read, StdoutLock, Write, stdout},
-    net::{TcpListener, TcpStream},
+    net::TcpStream,
     option::Option,
     path::PathBuf,
     primitive::usize,
@@ -43,14 +43,16 @@ pub fn http_connection_management(transmission_stream: &mut TcpStream) -> () {
     let mut buffered_reader: BufReader<&TcpStream> = BufReader::new(&transmission_stream);
     let mut stream_buffer: String = String::new();
     let source_path: PathBuf = PathBuf::from("./web/source/main.js");
-    let source_file: String = fs::read_to_string(source_path).unwrap();
-    let content_length: usize = source_file.len();
+    let mut source_file: File = File::open(source_path).unwrap();
+    let mut file_buffer: String = String::new();
+    let content_length: usize = file_buffer.len();
 
     buffered_reader.read_to_string(&mut stream_buffer).unwrap();
     writeln!(standard_output, "Hypertext Tranfer Protocol Request: ").unwrap();
     writeln!(standard_output, "").unwrap();
     writeln!(standard_output, "{}", stream_buffer).unwrap();
 
+    source_file.read_to_string(&mut file_buffer).unwrap();
     writeln!(
         transmission_stream,
         "{} {} {}",
@@ -66,26 +68,7 @@ pub fn http_connection_management(transmission_stream: &mut TcpStream) -> () {
         content_length
     )
     .unwrap();
-    writeln!(transmission_stream, "{}", source_file).unwrap();
-
-    return ();
-}
-
-// Hypertext Transer Protocol Client
-pub fn http_client() -> () {
-    return ();
-}
-
-// Hypertext Transfer Protocol Server
-pub fn http_server(transmission_listener: TcpListener) -> () {
-    transmission_listener.set_ttl(100).unwrap();
-
-    for transmission_stream in transmission_listener.incoming() {
-        let mut stream: TcpStream = transmission_stream.unwrap();
-
-        stream.set_ttl(100).unwrap();
-        http_connection_management(&mut stream);
-    }
+    writeln!(transmission_stream, "{}", file_buffer).unwrap();
 
     return ();
 }

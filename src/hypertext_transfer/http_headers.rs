@@ -106,8 +106,8 @@ pub const HTTP_X_CONTENT_TYPE_OPTIONS: HTTPHeader = "X-Content-Type-Options";
 pub const HTTP_X_FRAME_OPTIONS: HTTPHeader = "X-Frame-Options";
 
 // Hypertext Transfer Protocol Header Vector
-pub fn http_headers() -> Vec<HTTPHeader> {
-    let hypertext_transfer_headers: Vec<HTTPHeader> = Vec::from([
+pub fn hypertext_transfer_headers() -> Vec<HTTPHeader> {
+    let http_headers: Vec<HTTPHeader> = Vec::from([
         HTTP_ACCEPT,
         HTTP_ACCEPT_CLIENT_HINT,
         HTTP_ACCEPT_ENCODING,
@@ -207,5 +207,5 @@ pub fn http_headers() -> Vec<HTTPHeader> {
         HTTP_X_FRAME_OPTIONS,
     ]);
 
-    return hypertext_transfer_headers;
+    return http_headers;
 }
