@@ -1,4 +1,4 @@
-use std::{fs, io::Write, net::TcpStream, path::PathBuf, primitive::usize};
+use std::{fs, io::Write, net::TcpStream, path::PathBuf, primitive::usize, string::String};
 
 use crate::hypertext_transfer::{
     http_headers::HTTP_CONTENT_LENGTH,
@@ -8,7 +8,7 @@ use crate::hypertext_transfer::{
 
 // Application Home Page Route
 pub fn home_route(transmission_stream: &mut TcpStream) -> () {
-    let source_path: PathBuf = PathBuf::from("./web/source/main.html");
+    let source_path: PathBuf = PathBuf::from("./web/source/main.js");
     let source_file: String = fs::read_to_string(source_path).unwrap();
     let content_length: usize = source_file.len();
 

@@ -1,14 +1,9 @@
 use std::{
     io::{StdoutLock, Write, stdout},
     net::{Ipv4Addr, SocketAddrV4, TcpListener, TcpStream},
-    result::{
-        Result,
-        Result::{Err, Ok},
-    },
 };
 
 use crate::hypertext_transfer::http_message::http_connection_management;
-use crate::routing::home_page::home_route;
 
 // Application Service
 pub fn web_service() -> () {
@@ -23,8 +18,7 @@ pub fn web_service() -> () {
         let mut stream: TcpStream = transmission_stream.unwrap();
 
         stream.set_ttl(100).unwrap();
-        http_connection_management(&stream);
-        home_route(&mut stream);
+        http_connection_management(&mut stream);
     }
 
     return ();

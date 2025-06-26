@@ -1,6 +1,7 @@
 use std::{
     io::{StdoutLock, Write, stdout},
     process::ExitCode,
+    string::String,
 };
 
 // Semantic Version Number Definition
