@@ -1,6 +1,6 @@
 #![allow(dead_code)]
 
-use std::{fs::File, io::Write, path::PathBuf, string::String};
+use std::{fs::File, io::Write, path::PathBuf, string::String, time::SystemTime};
 
 // Structured Log Level Definition
 pub type LogLevel = &'static str;
@@ -15,7 +15,7 @@ pub const LOG_LEVEL_WARN: LogLevel = "WARN";
 
 // Structured Log Definition
 pub struct StructuredLog {
-    pub current_time: String,
+    pub current_time: SystemTime,
     pub log_level: LogLevel,
     pub log_message: String,
 }
@@ -33,7 +33,7 @@ pub fn logger(structured_log: StructuredLog, log_path: PathBuf) -> () {
     )
     .unwrap();
     writeln!(log_file, "{}", structured_log.log_message).unwrap();
-    writeln!(log_file, "Time: {}", structured_log.current_time).unwrap();
+    writeln!(log_file, "Time: {:#?}", structured_log.current_time).unwrap();
 
     return ();
 }
