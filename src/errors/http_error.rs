@@ -14,18 +14,13 @@ pub struct HypertextTransferError {
     pub status_text: HTTPStatusText,
 }
 
-// Application Error
-pub fn app_error(hypertext_transfer_error: HypertextTransferError) -> () {
+// Hypertext Transfer Error
+pub fn hypertext_transfer_error(http_error: HypertextTransferError) -> () {
     let mut standard_output: StdoutLock = stdout().lock();
 
-    writeln!(standard_output, "{}", hypertext_transfer_error.status_code).unwrap();
-    writeln!(standard_output, "{}", hypertext_transfer_error.status_text).unwrap();
-    writeln!(
-        standard_output,
-        "Time: {:#?}",
-        hypertext_transfer_error.current_time
-    )
-    .unwrap();
+    writeln!(standard_output, "{}", http_error.status_code).unwrap();
+    writeln!(standard_output, "{}", http_error.status_text).unwrap();
+    writeln!(standard_output, "Time: {:#?}", http_error.current_time).unwrap();
 
     return ();
 }

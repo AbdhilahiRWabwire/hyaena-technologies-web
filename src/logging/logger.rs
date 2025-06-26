@@ -21,19 +21,14 @@ pub struct StructuredLog {
 }
 
 // Structured Logger
-pub fn logger(structured_log: StructuredLog, log_path: PathBuf) -> () {
+pub fn structured_logger(log: StructuredLog, log_path: PathBuf) -> () {
     let mut log_file: File = File::create(log_path).unwrap();
 
     writeln!(log_file, "").unwrap();
     writeln!(log_file, "").unwrap();
-    writeln!(
-        log_file,
-        "Log Level: {}",
-        structured_log.log_level.to_string()
-    )
-    .unwrap();
-    writeln!(log_file, "{}", structured_log.log_message).unwrap();
-    writeln!(log_file, "Time: {:#?}", structured_log.current_time).unwrap();
+    writeln!(log_file, "Log Level: {}", log.log_level).unwrap();
+    writeln!(log_file, "{}", log.log_message).unwrap();
+    writeln!(log_file, "Time: {:#?}", log.current_time).unwrap();
 
     return ();
 }

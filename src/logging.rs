@@ -1,1 +1,1 @@
-pub mod structured_logger;
+pub mod logger;

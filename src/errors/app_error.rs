@@ -13,16 +13,11 @@ pub struct ApplicationError {
 }
 
 // Application Error
-pub fn app_error(application_error: ApplicationError) -> () {
+pub fn application_error(app_error: ApplicationError) -> () {
     let mut standard_output: StdoutLock = stdout().lock();
 
-    writeln!(standard_output, "{}", application_error.error_message).unwrap();
-    writeln!(
-        standard_output,
-        "Time: {:#?}",
-        application_error.current_time
-    )
-    .unwrap();
+    writeln!(standard_output, "{}", app_error.error_message).unwrap();
+    writeln!(standard_output, "Time: {:#?}", app_error.current_time).unwrap();
 
     return ();
 }
