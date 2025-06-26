@@ -81,10 +81,10 @@ pub fn http_server(transmission_listener: TcpListener) -> () {
     transmission_listener.set_ttl(100).unwrap();
 
     for transmission_stream in transmission_listener.incoming() {
-        let stream: TcpStream = transmission_stream.unwrap();
+        let mut stream: TcpStream = transmission_stream.unwrap();
 
         stream.set_ttl(100).unwrap();
-        http_connection_management(&stream);
+        http_connection_management(&mut stream);
     }
 
     return ();
