@@ -26,9 +26,14 @@ pub fn logger(structured_log: StructuredLog, log_path: PathBuf) -> () {
 
     writeln!(log_file, "").unwrap();
     writeln!(log_file, "").unwrap();
-    writeln!(log_file, "{}", structured_log.log_level.to_string()).unwrap();
+    writeln!(
+        log_file,
+        "Log Level: {}",
+        structured_log.log_level.to_string()
+    )
+    .unwrap();
     writeln!(log_file, "{}", structured_log.log_message).unwrap();
-    writeln!(log_file, "{}", structured_log.current_time).unwrap();
+    writeln!(log_file, "Time: {}", structured_log.current_time).unwrap();
 
     return ();
 }
