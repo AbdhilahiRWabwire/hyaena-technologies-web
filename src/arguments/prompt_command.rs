@@ -4,7 +4,7 @@ use std::{
     string::String,
 };
 
-use crate::utility::{print_help::print_help_message, print_version::print_version_number};
+use crate::arguments::{print_help::print_help_message, print_version::print_version_number};
 
 // Command Prompt: Read, Evaluate, Print, Looop
 pub fn command_prompt() -> ExitCode {

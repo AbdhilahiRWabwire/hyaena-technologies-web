@@ -1,6 +1,16 @@
 #![allow(dead_code)]
 
-use std::{fs::File, io::Write, path::PathBuf, string::String, time::SystemTime};
+use std::{
+    fs::File,
+    io::{Error, Write},
+    path::PathBuf,
+    result::{
+        Result,
+        Result::{Err, Ok},
+    },
+    string::String,
+    time::SystemTime,
+};
 
 // Structured Log Level Definition
 pub type LogLevel = &'static str;
@@ -22,13 +32,20 @@ pub struct StructuredLog {
 
 // Structured Logger
 pub fn structured_logger(log: StructuredLog, log_path: PathBuf) -> () {
-    let mut log_file: File = File::create(log_path).unwrap();
+    let log_file: Result<File, Error> = File::create(log_path);
 
-    writeln!(log_file, "").unwrap();
-    writeln!(log_file, "").unwrap();
-    writeln!(log_file, "Log Level: {}", log.log_level).unwrap();
-    writeln!(log_file, "{}", log.log_message).unwrap();
-    writeln!(log_file, "Time: {:#?}", log.current_time).unwrap();
+    match log_file {
+        Ok(mut file) => {
+            writeln!(file, "").unwrap();
+            writeln!(file, "").unwrap();
+            writeln!(file, "Log Level: {}", log.log_level).unwrap();
+            writeln!(file, "{}", log.log_message).unwrap();
+            writeln!(file, "Time: {:#?}", log.current_time).unwrap();
+        }
+        Err(error) => {
+            eprintln!("Error Creating File: {}", error);
+        }
+    };
 
     return ();
 }
