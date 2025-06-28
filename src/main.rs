@@ -1,6 +1,7 @@
 mod arguments;
 mod configuration;
 mod errors;
+mod eventing;
 mod hypertext_transfer;
 mod json;
 mod logging;
