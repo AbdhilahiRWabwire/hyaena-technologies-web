@@ -4,6 +4,7 @@ use std::{
     fs::File,
     io::{Error, Write},
     path::PathBuf,
+    process::exit,
     result::{
         Result,
         Result::{Err, Ok},
@@ -44,6 +45,7 @@ pub fn structured_logger(log: StructuredLog, log_path: PathBuf) -> () {
         }
         Err(error) => {
             eprintln!("Error Creating File: {}", error);
+            exit(1);
         }
     };
 

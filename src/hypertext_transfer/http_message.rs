@@ -5,6 +5,7 @@ use std::{
     option::Option,
     path::PathBuf,
     primitive::usize,
+    process::exit,
     result::{
         Result,
         Result::{Err, Ok},
@@ -78,6 +79,7 @@ pub fn http_connection_management(transmission_stream: &mut TcpStream) -> () {
         }
         Err(error) => {
             eprintln!("Error Failed to Open Source File: {}", error);
+            exit(1);
         }
     };
 

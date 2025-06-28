@@ -1,6 +1,7 @@
 use std::{
     io::{Error, StdoutLock, Write, stdout},
     net::{Ipv4Addr, SocketAddrV4, TcpListener, TcpStream},
+    process::exit,
     result::{
         Result,
         Result::{Err, Ok},
@@ -32,6 +33,7 @@ pub fn web_service() -> () {
                 "Error Could Not Initialize Transmission Listener: {}",
                 error
             );
+            exit(1);
         }
     };
 

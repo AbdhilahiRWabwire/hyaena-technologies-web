@@ -4,6 +4,7 @@ use std::{
     net::TcpStream,
     path::PathBuf,
     primitive::usize,
+    process::exit,
     result::{
         Result,
         Result::{Err, Ok},
@@ -46,6 +47,7 @@ pub fn home_route(transmission_stream: &mut TcpStream) -> () {
         }
         Err(error) => {
             eprintln!("Error Failed to Open File: {}", error);
+            exit(1);
         }
     };
 
