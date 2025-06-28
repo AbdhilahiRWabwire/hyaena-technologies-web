@@ -2,7 +2,7 @@
 
 use std::{
     fs::File,
-    io::{Error, Write},
+    io::{Error, StdoutLock, Write, stdout},
     path::PathBuf,
     process::exit,
     result::{
@@ -31,9 +31,41 @@ pub struct StructuredLog {
     pub log_message: String,
 }
 
-// Structured Logger
-pub fn structured_logger(log: StructuredLog, log_path: PathBuf) -> () {
+// Create Log File and Write to the Log File
+pub fn create_log(log: StructuredLog, log_path: PathBuf) -> () {
     let log_file: Result<File, Error> = File::create(log_path);
+
+    match log_file {
+        Ok(mut file) => {
+            writeln!(file, "").unwrap();
+            writeln!(file, "").unwrap();
+            writeln!(file, "Log Level: {}", log.log_level).unwrap();
+            writeln!(file, "{}", log.log_message).unwrap();
+            writeln!(file, "Time: {:#?}", log.current_time).unwrap();
+        }
+        Err(error) => {
+            eprintln!("Error Creating File: {}", error);
+            exit(1);
+        }
+    };
+
+    return ();
+}
+
+// Print Log to Standard Output
+pub fn print_log(log: StructuredLog) -> () {
+    let mut standard_output: StdoutLock = stdout().lock();
+
+    writeln!(standard_output, "Log Level: {}", log.log_level).unwrap();
+    writeln!(standard_output, "{}", log.log_message).unwrap();
+    writeln!(standard_output, "Time: {:#?}", log.current_time).unwrap();
+
+    return ();
+}
+
+// Open Log File and Write to the Log File
+pub fn write_log(log: StructuredLog, log_path: PathBuf) -> () {
+    let log_file: Result<File, Error> = File::open(log_path);
 
     match log_file {
         Ok(mut file) => {
