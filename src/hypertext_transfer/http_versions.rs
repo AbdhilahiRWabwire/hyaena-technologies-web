@@ -11,7 +11,7 @@ pub const HTTP_VERSION_TWO: HTTPVersion = "HTTP/2.0";
 pub const HTTP_VERSION_THREE: HTTPVersion = "HTTP/3.0";
 
 // Hypertext Transfer Protocol Version Vector
-pub fn hypertext_transfer_versions() -> Vec<HTTPVersion> {
+pub fn versions_vector() -> Vec<HTTPVersion> {
     let http_versions: Vec<HTTPVersion> =
         Vec::from([HTTP_VERSION_ONE, HTTP_VERSION_TWO, HTTP_VERSION_THREE]);
 

@@ -8,7 +8,7 @@ use std::{
     },
 };
 
-use crate::hypertext_transfer::http_message::http_connection_management;
+use crate::hypertext_transfer::http_message::connection_management;
 
 // Application Service
 pub fn web_service() -> () {
@@ -25,7 +25,7 @@ pub fn web_service() -> () {
                 let mut stream: TcpStream = transmission_stream.unwrap();
 
                 stream.set_ttl(100).unwrap();
-                http_connection_management(&mut stream);
+                connection_management(&mut stream);
             }
         }
         Err(error) => {

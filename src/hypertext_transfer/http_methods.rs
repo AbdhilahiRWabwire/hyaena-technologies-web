@@ -17,7 +17,7 @@ pub const HTTP_PUT: HTTPMethod = "PUT";
 pub const HTTP_TRACE: HTTPMethod = "TRACE";
 
 // Hypertext Transfer Protocol Method Vector
-pub fn hypertext_transfer_methods() -> Vec<HTTPMethod> {
+pub fn methods_vector() -> Vec<HTTPMethod> {
     let http_methods: Vec<HTTPMethod> = Vec::from([
         HTTP_CONNECT,
         HTTP_DELETE,

@@ -8,7 +8,7 @@ use crate::hypertext_transfer::http_message::http_connection_management;
 pub struct HTTPServer {}
 
 // Hypertext Transfer Protocol Server
-pub fn hypertext_transfer_server(transmission_listener: TcpListener) -> () {
+pub fn server(transmission_listener: TcpListener) -> () {
     transmission_listener.set_ttl(100).unwrap();
 
     for transmission_stream in transmission_listener.incoming() {

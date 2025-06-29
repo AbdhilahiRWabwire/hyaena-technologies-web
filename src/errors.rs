@@ -1,4 +1,4 @@
-pub mod app_error;
+pub mod application_error;
 
 pub mod http_error;
 

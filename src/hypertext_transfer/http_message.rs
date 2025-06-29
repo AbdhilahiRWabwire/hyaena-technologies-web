@@ -43,7 +43,7 @@ pub struct HypertextTransferMessage<T> {
 }
 
 // Hypertext Transfer Protocol Connection Management
-pub fn http_connection_management(transmission_stream: &mut TcpStream) -> () {
+pub fn connection_management(transmission_stream: &mut TcpStream) -> () {
     let mut standard_output: StdoutLock = stdout().lock();
     let mut buffered_reader: BufReader<&TcpStream> = BufReader::new(&transmission_stream);
     let mut stream_buffer: String = String::new();

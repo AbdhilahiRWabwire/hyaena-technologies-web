@@ -135,7 +135,7 @@ pub const HTTP_NOT_EXTENDED: HTTPStatusText = "Not Extended";
 pub const HTTP_NETWORK_AUTHENTICATION_REQUIRED: HTTPStatusText = "Network Authentication Required";
 
 // Hypertext Transfer Protocol Status Code and Status Text Hash Map
-pub fn hypertext_transfer_status_codes() -> HashMap<HTTPStatusCode, HTTPStatusText> {
+pub fn status_codes_map() -> HashMap<HTTPStatusCode, HTTPStatusText> {
     let http_status_codes: HashMap<HTTPStatusCode, HTTPStatusText> = HashMap::from([
         (HTTP_ONE_HUNDRED, HTTP_CONTINUE),
         (HTTP_ONE_HUNDRED_ONE, HTTP_SWITCHING_PROTOCOLS),

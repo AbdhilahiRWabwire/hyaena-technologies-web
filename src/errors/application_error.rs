@@ -12,8 +12,8 @@ pub struct ApplicationError {
     pub error_message: String,
 }
 
-// Application Error
-pub fn application_error(app_error: ApplicationError) -> () {
+// Print Application Error to Standard Output
+pub fn print_error(app_error: ApplicationError) -> () {
     let mut standard_output: StdoutLock = stdout().lock();
 
     writeln!(standard_output, "{}", app_error.error_message).unwrap();
