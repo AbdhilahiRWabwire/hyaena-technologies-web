@@ -31,8 +31,20 @@ use crate::hypertext_transfer::{
 // Hypertext Transfer Protocol Body Definition
 pub type HTTPBody<T> = T;
 
-// Hypertext Transfer Protocol Message Definition
-pub struct HypertextTransferMessage<T> {
+// Hypertext Transfer Protocol Request Definition
+pub struct HTTPRequest<T> {
+    pub body: Option<HTTPBody<T>>,
+    pub headers: Vec<HTTPHeader>,
+    pub method: HTTPMethod,
+    pub path: PathBuf,
+    pub security_directives: Option<Vec<HTTPSecurityDirective>>,
+    pub status_code: HTTPStatusCode,
+    pub status_text: HTTPStatusText,
+    pub version: HTTPVersion,
+}
+
+// Hypertext Transfer Protocol Response Definition
+pub struct HTTPResponse<T> {
     pub body: Option<HTTPBody<T>>,
     pub headers: Vec<HTTPHeader>,
     pub method: HTTPMethod,
@@ -40,6 +52,16 @@ pub struct HypertextTransferMessage<T> {
     pub status_code: HTTPStatusCode,
     pub status_text: HTTPStatusText,
     pub version: HTTPVersion,
+}
+
+// Hypertext Transfer Protocol Request Message
+pub fn request_message<T>(request: HTTPRequest<T>) -> () {
+    return ();
+}
+
+// Hypertext Transfer Protocol Response Message
+pub fn response_message<T>(response: HTTPResponse<T>) -> () {
+    return ();
 }
 
 // Hypertext Transfer Protocol Connection Management

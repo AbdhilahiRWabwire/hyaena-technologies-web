@@ -14,8 +14,8 @@ pub struct HypertextTransferError {
     pub status_text: HTTPStatusText,
 }
 
-// Hypertext Transfer Error
-pub fn hypertext_transfer_error(http_error: HypertextTransferError) -> () {
+// Print Hypertext Transfer Error to Standard Output
+pub fn print_error(http_error: HypertextTransferError) -> () {
     let mut standard_output: StdoutLock = stdout().lock();
 
     writeln!(standard_output, "{}", http_error.status_code).unwrap();

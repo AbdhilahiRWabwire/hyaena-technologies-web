@@ -4,6 +4,6 @@
 pub struct HTTPClient {}
 
 // Hypertext Transer Protocol Client
-pub fn client() -> () {
+pub fn protocol_client(client: HTTPClient) -> () {
     return ();
 }
