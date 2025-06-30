@@ -36,7 +36,7 @@ pub struct HTTPRequest<T> {
     pub body: Option<HTTPBody<T>>,
     pub headers: Vec<HTTPHeader>,
     pub method: HTTPMethod,
-    pub path: PathBuf,
+    pub path: String,
     pub security_directives: Option<Vec<HTTPSecurityDirective>>,
     pub status_code: HTTPStatusCode,
     pub status_text: HTTPStatusText,
@@ -65,7 +65,7 @@ pub fn response_message<T>(response: HTTPResponse<T>) -> () {
 }
 
 // Hypertext Transfer Protocol Connection Management
-pub fn connection_management(transmission_stream: &mut TcpStream) -> () {
+pub fn manage_connection(transmission_stream: &mut TcpStream) -> () {
     let mut standard_output: StdoutLock = stdout().lock();
     let mut buffered_reader: BufReader<&TcpStream> = BufReader::new(&transmission_stream);
     let mut stream_buffer: String = String::new();

@@ -10,6 +10,7 @@ mod routing;
 mod service;
 use service::application_service::web_service;
 
+mod tokens;
 mod yaml;
 
 // Main Entry Point

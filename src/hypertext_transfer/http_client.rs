@@ -1,4 +1,5 @@
 #![allow(dead_code)]
+#![allow(unused_variables)]
 
 // Hypertext Transer Protocol Client Definition
 pub struct HTTPClient {}
