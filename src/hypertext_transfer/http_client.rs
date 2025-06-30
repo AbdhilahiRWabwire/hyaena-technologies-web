@@ -2,9 +2,9 @@
 #![allow(unused_variables)]
 
 // Hypertext Transer Protocol Client Definition
-pub struct HTTPClient {}
+pub struct HttpClient {}
 
 // Hypertext Transer Protocol Client
-pub fn protocol_client(client: HTTPClient) -> () {
+pub fn protocol_client(client: HttpClient) -> () {
     return ();
 }

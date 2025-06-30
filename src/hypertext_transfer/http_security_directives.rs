@@ -3,37 +3,37 @@
 use std::{primitive::str, vec::Vec};
 
 // Hypertext Transfer Protocol Content Security Policy Directive Definition
-pub type HTTPSecurityDirective = &'static str;
+pub type HttpSecurityDirective = &'static str;
 
 // Hypertext Transfer Protocol Content Security Policy Directives
-pub const HTTP_BASE_URI: HTTPSecurityDirective = "base-uri";
-pub const HTTP_CHILD_SOURCE: HTTPSecurityDirective = "child-src";
-pub const HTTP_CONNECT_SOURCE: HTTPSecurityDirective = "connect-src";
-pub const HTTP_DEFAULT_SOURCE: HTTPSecurityDirective = "default-src";
-pub const HTTP_FONT_SOURCE: HTTPSecurityDirective = "font-src";
-pub const HTTP_FORM_ACTION: HTTPSecurityDirective = "form-action";
-pub const HTTP_FRAME_ANCESTORS: HTTPSecurityDirective = "frame-ancestors";
-pub const HTTP_FRAME_SOURCE: HTTPSecurityDirective = "frame-src";
-pub const HTTP_IMAGE_SOURCE: HTTPSecurityDirective = "img-src";
-pub const HTTP_MANIFEST_SOURCE: HTTPSecurityDirective = "manifest-src";
-pub const HTTP_MEDIA_SOURCE: HTTPSecurityDirective = "media-src";
-pub const HTTP_OBJECT_SOURCE: HTTPSecurityDirective = "object-src";
-pub const HTTP_REPORT_TO: HTTPSecurityDirective = "report-to";
-pub const HTTP_REQUIRE_TRUSTED_TYPES_FOR: HTTPSecurityDirective = "require-trusted-types-for";
-pub const HTTP_SANDBOX: HTTPSecurityDirective = "sandbox";
-pub const HTTP_SCRIPT_SOURCE: HTTPSecurityDirective = "script-src";
-pub const HTTP_SCRIPT_SOURCE_ATTRIBUTE: HTTPSecurityDirective = "script-src-attr";
-pub const HTTP_SCRIPT_SOURCE_ELEMENT: HTTPSecurityDirective = "script-src-elem";
-pub const HTTP_STYLE_SOURCE: HTTPSecurityDirective = "style-src";
-pub const HTTP_STYLE_SOURCE_ATTRIBUTE: HTTPSecurityDirective = "style-src-attr";
-pub const HTTP_STYLE_SOURCE_ELEMENT: HTTPSecurityDirective = "style-src-elem";
-pub const HTTP_TRUSTED_TYPES: HTTPSecurityDirective = "trusted-types";
-pub const HTTP_UPGRADE_INSECURE_REQUESTS: HTTPSecurityDirective = "upgrade-insecure-requests";
-pub const HTTP_WORKER_SOURCE: HTTPSecurityDirective = "worker-src";
+pub const HTTP_BASE_URI: HttpSecurityDirective = "base-uri";
+pub const HTTP_CHILD_SOURCE: HttpSecurityDirective = "child-src";
+pub const HTTP_CONNECT_SOURCE: HttpSecurityDirective = "connect-src";
+pub const HTTP_DEFAULT_SOURCE: HttpSecurityDirective = "default-src";
+pub const HTTP_FONT_SOURCE: HttpSecurityDirective = "font-src";
+pub const HTTP_FORM_ACTION: HttpSecurityDirective = "form-action";
+pub const HTTP_FRAME_ANCESTORS: HttpSecurityDirective = "frame-ancestors";
+pub const HTTP_FRAME_SOURCE: HttpSecurityDirective = "frame-src";
+pub const HTTP_IMAGE_SOURCE: HttpSecurityDirective = "img-src";
+pub const HTTP_MANIFEST_SOURCE: HttpSecurityDirective = "manifest-src";
+pub const HTTP_MEDIA_SOURCE: HttpSecurityDirective = "media-src";
+pub const HTTP_OBJECT_SOURCE: HttpSecurityDirective = "object-src";
+pub const HTTP_REPORT_TO: HttpSecurityDirective = "report-to";
+pub const HTTP_REQUIRE_TRUSTED_TYPES_FOR: HttpSecurityDirective = "require-trusted-types-for";
+pub const HTTP_SANDBOX: HttpSecurityDirective = "sandbox";
+pub const HTTP_SCRIPT_SOURCE: HttpSecurityDirective = "script-src";
+pub const HTTP_SCRIPT_SOURCE_ATTRIBUTE: HttpSecurityDirective = "script-src-attr";
+pub const HTTP_SCRIPT_SOURCE_ELEMENT: HttpSecurityDirective = "script-src-elem";
+pub const HTTP_STYLE_SOURCE: HttpSecurityDirective = "style-src";
+pub const HTTP_STYLE_SOURCE_ATTRIBUTE: HttpSecurityDirective = "style-src-attr";
+pub const HTTP_STYLE_SOURCE_ELEMENT: HttpSecurityDirective = "style-src-elem";
+pub const HTTP_TRUSTED_TYPES: HttpSecurityDirective = "trusted-types";
+pub const HTTP_UPGRADE_INSECURE_REQUESTS: HttpSecurityDirective = "upgrade-insecure-requests";
+pub const HTTP_WORKER_SOURCE: HttpSecurityDirective = "worker-src";
 
 // Hypertext Transfer Protocol Content Security Policy Directive Vector
-pub fn security_directives_vector() -> Vec<HTTPSecurityDirective> {
-    let http_security_directives: Vec<HTTPSecurityDirective> = Vec::from([
+pub fn security_directives_vector() -> Vec<HttpSecurityDirective> {
+    let security_directives: Vec<HttpSecurityDirective> = Vec::from([
         HTTP_BASE_URI,
         HTTP_CHILD_SOURCE,
         HTTP_CONNECT_SOURCE,
@@ -60,5 +60,5 @@ pub fn security_directives_vector() -> Vec<HTTPSecurityDirective> {
         HTTP_WORKER_SOURCE,
     ]);
 
-    return http_security_directives;
+    return security_directives;
 }

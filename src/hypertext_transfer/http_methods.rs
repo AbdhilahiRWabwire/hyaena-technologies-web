@@ -3,22 +3,22 @@
 use std::{primitive::str, vec::Vec};
 
 // Hypertext Transfer Protocol Method Defintion
-pub type HTTPMethod = &'static str;
+pub type HttpMethod = &'static str;
 
 // Hypertext Transfer Protocol Methods
-pub const HTTP_CONNECT: HTTPMethod = "CONNECT";
-pub const HTTP_DELETE: HTTPMethod = "DELETE";
-pub const HTTP_GET: HTTPMethod = "GET";
-pub const HTTP_HEAD: HTTPMethod = "HEAD";
-pub const HTTP_OPTIONS: HTTPMethod = "OPTIONS";
-pub const HTTP_PATCH: HTTPMethod = "PATCH";
-pub const HTTP_POST: HTTPMethod = "POST";
-pub const HTTP_PUT: HTTPMethod = "PUT";
-pub const HTTP_TRACE: HTTPMethod = "TRACE";
+pub const HTTP_CONNECT: HttpMethod = "CONNECT";
+pub const HTTP_DELETE: HttpMethod = "DELETE";
+pub const HTTP_GET: HttpMethod = "GET";
+pub const HTTP_HEAD: HttpMethod = "HEAD";
+pub const HTTP_OPTIONS: HttpMethod = "OPTIONS";
+pub const HTTP_PATCH: HttpMethod = "PATCH";
+pub const HTTP_POST: HttpMethod = "POST";
+pub const HTTP_PUT: HttpMethod = "PUT";
+pub const HTTP_TRACE: HttpMethod = "TRACE";
 
 // Hypertext Transfer Protocol Method Vector
-pub fn methods_vector() -> Vec<HTTPMethod> {
-    let http_methods: Vec<HTTPMethod> = Vec::from([
+pub fn methods_vector() -> Vec<HttpMethod> {
+    let methods: Vec<HttpMethod> = Vec::from([
         HTTP_CONNECT,
         HTTP_DELETE,
         HTTP_GET,
@@ -30,5 +30,5 @@ pub fn methods_vector() -> Vec<HTTPMethod> {
         HTTP_TRACE,
     ]);
 
-    return http_methods;
+    return methods;
 }

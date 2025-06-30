@@ -5,17 +5,17 @@ use std::{
     time::SystemTime,
 };
 
-use crate::hypertext_transfer::http_status_codes::{HTTPStatusCode, HTTPStatusText};
+use crate::hypertext_transfer::http_status_codes::{HttpStatusCode, HttpStatusText};
 
 // Hypertext Transfer Error Definition
-pub struct HypertextTransferError {
+pub struct HttpError {
     pub current_time: SystemTime,
-    pub status_code: HTTPStatusCode,
-    pub status_text: HTTPStatusText,
+    pub status_code: HttpStatusCode,
+    pub status_text: HttpStatusText,
 }
 
 // Print Hypertext Transfer Error to Standard Output
-pub fn print_error(http_error: HypertextTransferError) -> () {
+pub fn print_error(http_error: HttpError) -> () {
     let mut standard_output: StdoutLock = stdout().lock();
 
     writeln!(standard_output, "{}", http_error.status_code).unwrap();

@@ -15,11 +15,11 @@ use std::{
 };
 
 use super::{
-    http_headers::HTTPHeader,
-    http_methods::HTTPMethod,
-    http_security_directives::HTTPSecurityDirective,
-    http_status_codes::{HTTPStatusCode, HTTPStatusText},
-    http_versions::HTTPVersion,
+    http_headers::HttpHeader,
+    http_methods::HttpMethod,
+    http_security_directives::HttpSecurityDirective,
+    http_status_codes::{HttpStatusCode, HttpStatusText},
+    http_versions::HttpVersion,
 };
 
 use crate::hypertext_transfer::{
@@ -29,38 +29,38 @@ use crate::hypertext_transfer::{
 };
 
 // Hypertext Transfer Protocol Body Definition
-pub type HTTPBody<T> = T;
+pub type HttpBody<T> = T;
 
 // Hypertext Transfer Protocol Request Definition
-pub struct HTTPRequest<T> {
-    pub body: Option<HTTPBody<T>>,
-    pub headers: Vec<HTTPHeader>,
-    pub method: HTTPMethod,
+pub struct HttpRequest<T> {
+    pub body: Option<HttpBody<T>>,
+    pub headers: Vec<HttpHeader>,
+    pub method: HttpMethod,
     pub path: String,
-    pub security_directives: Option<Vec<HTTPSecurityDirective>>,
-    pub status_code: HTTPStatusCode,
-    pub status_text: HTTPStatusText,
-    pub version: HTTPVersion,
+    pub security_directives: Option<Vec<HttpSecurityDirective>>,
+    pub status_code: HttpStatusCode,
+    pub status_text: HttpStatusText,
+    pub version: HttpVersion,
 }
 
 // Hypertext Transfer Protocol Response Definition
-pub struct HTTPResponse<T> {
-    pub body: Option<HTTPBody<T>>,
-    pub headers: Vec<HTTPHeader>,
-    pub method: HTTPMethod,
-    pub security_directives: Option<Vec<HTTPSecurityDirective>>,
-    pub status_code: HTTPStatusCode,
-    pub status_text: HTTPStatusText,
-    pub version: HTTPVersion,
+pub struct HttpResponse<T> {
+    pub body: Option<HttpBody<T>>,
+    pub headers: Vec<HttpHeader>,
+    pub method: HttpMethod,
+    pub security_directives: Option<Vec<HttpSecurityDirective>>,
+    pub status_code: HttpStatusCode,
+    pub status_text: HttpStatusText,
+    pub version: HttpVersion,
 }
 
 // Hypertext Transfer Protocol Request Message
-pub fn request_message<T>(request: HTTPRequest<T>) -> () {
+pub fn request_message<T>(request: HttpRequest<T>) -> () {
     return ();
 }
 
 // Hypertext Transfer Protocol Response Message
-pub fn response_message<T>(response: HTTPResponse<T>) -> () {
+pub fn response_message<T>(response: HttpResponse<T>) -> () {
     return ();
 }
 
