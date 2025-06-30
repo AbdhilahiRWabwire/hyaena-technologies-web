@@ -29,7 +29,7 @@ pub const SUBTRACTION_TOKEN: OperatorToken = "-";
 pub const SUBTRACTION_ASSIGNMENT_TOKEN: OperatorToken = "-=";
 pub const RANGE_TOKEN: OperatorToken = "..";
 
-// Operator Tokens Vector
+// Operator Token Vector
 pub fn operators_vector() -> Vec<OperatorToken> {
     let operators: Vec<OperatorToken> = Vec::from([
         ADDITION_TOKEN,

@@ -59,7 +59,7 @@ pub const CAPITAL_X_TOKEN: CharacterToken = "X";
 pub const CAPITAL_Y_TOKEN: CharacterToken = "Y";
 pub const CAPITAL_Z_TOKEN: CharacterToken = "Z";
 
-// Character Tokens Vector
+// Character Token Vector
 pub fn characters_vector() -> Vec<CharacterToken> {
     let characters: Vec<CharacterToken> = Vec::from([
         A_TOKEN,

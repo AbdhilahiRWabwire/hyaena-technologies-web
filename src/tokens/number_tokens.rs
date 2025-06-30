@@ -17,7 +17,7 @@ pub const SEVEN_TOKEN: NumberToken = "7";
 pub const EIGHT_TOKEN: NumberToken = "8";
 pub const NINE_TOKEN: NumberToken = "9";
 
-// Number Tokens Vector
+// Number Token Vector
 pub fn numbers_vector() -> Vec<NumberToken> {
     let numbers: Vec<NumberToken> = Vec::from([
         ZERO_TOKEN,
