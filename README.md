@@ -22,6 +22,8 @@
 [Surreal Database]: https://surrealdb.com/
 [Traefik]: https://traefik.io/traefik/
 [Vault]: https://www.hashicorp.com/en/products/vault
+[WebGL]: https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API
+[WebGPU]: https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API
 [W3C]: https://w3.org/TR/
 [YAML]: https://yaml.org/
 
@@ -62,6 +64,8 @@ Hyaena Technologies is an Open Source Technology company
 - [Command Line Documentation][CLIDoc]
 - [Mozilla Developer Network Web Documentation][MDN]
 - [Web Consortium Documentation][W3C]
+- [Web Graphics Library][WebGL]
+- [Web GPU][WebGPU]
 
 ## Databases
 
