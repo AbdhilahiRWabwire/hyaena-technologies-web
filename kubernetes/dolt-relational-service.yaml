@@ -5,12 +5,12 @@ metadata:
     kompose.cmd: kompose convert -f ./compose.yaml -o ./kubernetes
     kompose.version: 1.35.0 (9532ceef3)
   labels:
-    io.kompose.service: minio-control
-  name: minio-control
+    io.kompose.service: dolt-relational
+  name: dolt-relational
 spec:
   ports:
-    - name: "8091"
-      port: 8091
-      targetPort: 8091
+    - name: "8083"
+      port: 8083
+      targetPort: 8083
   selector:
-    io.kompose.service: minio-control
+    io.kompose.service: dolt-relational

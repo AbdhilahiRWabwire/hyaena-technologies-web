@@ -3,6 +3,7 @@
 [Containerman]: https://podman.io/
 [Containerman Pod]: https://docs.podman.io/en/latest/markdown/podman-pod.1.html
 [Dragonfly Database]: https://www.dragonflydb.io/
+[Dolt Database]: https://www.dolthub.com/
 [Grafana]: https://grafana.com/oss/grafana/
 [Greptime Database]: https://greptime.com/
 [K8S Control]: https://kubernetes.io/
@@ -19,7 +20,6 @@
 [Ory Identity]: https://www.ory.sh/
 [Rust Language]: https://rust-lang.org
 [Spice Database]: https://authzed.com/
-[Surreal Database]: https://surrealdb.com/
 [Traefik]: https://traefik.io/traefik/
 [Vault]: https://www.hashicorp.com/en/products/vault
 [WebGL]: https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API
@@ -71,11 +71,11 @@ Hyaena Technologies is an Open Source Technology company
 
 - **_Authorization:_** [Spice][Spice Database] - (In Progress)
 
-- **_Graph:_** [Surreal][Surreal Database]
-
 - **_Key Value:_** [Dragonfly][Dragonfly Database] - (In Progress)
 
 - **_Object Storage:_** [Minio][Minio Database] - (In Progress)
+
+- **_Relational:_** [Dolt][Dolt Database]
 
 - **_Time Series:_** [Greptime][Greptime Database] - (In Progress)
 

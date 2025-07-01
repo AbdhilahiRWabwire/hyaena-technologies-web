@@ -24,6 +24,8 @@ manifests:
     - knative/serving/serving-hpa.yaml
     - knative/serving/serving-post-install-jobs.yaml
     - knative/serving/serving-storage-version-migration.yaml
+    - kubernetes/dolt-relational-deployment.yaml
+    - kubernetes/dolt-relational-service.yaml
     - kubernetes/dragonfly-key-value-deployment.yaml
     - kubernetes/dragonfly-key-value-service.yaml
     - kubernetes/grafana-monitoring-deployment.yaml
@@ -56,8 +58,6 @@ manifests:
     - kubernetes/spice-operator-service.yaml
     - kubernetes/spice-zed-deployment.yaml
     - kubernetes/spice-zed-service.yaml
-    - kubernetes/surreal-graph-deployment.yaml
-    - kubernetes/surreal-graph-service.yaml
     - kubernetes/traefik-proxy-deployment.yaml
     - kubernetes/traefik-proxy-service.yaml
     - kubernetes/vault-secrets-deployment.yaml
