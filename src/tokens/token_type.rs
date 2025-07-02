@@ -12,7 +12,7 @@ pub const DELIMITER_TOKEN: TokenType = "DELIMITER";
 pub const KEYWORD_TOKEN: TokenType = "KEYWORD";
 pub const NUMBER_TOKEN: TokenType = "NUMBER";
 pub const OPERATOR_TOKEN: TokenType = "OPERATOR";
-pub const STRING_TOKEN: TokenType = "STRING";
+pub const PUNCTUATION_TOKEN: TokenType = "PUNCTUATION";
 
 // Token Type Vector
 pub fn token_types_vector() -> Vec<TokenType> {
@@ -23,7 +23,7 @@ pub fn token_types_vector() -> Vec<TokenType> {
         KEYWORD_TOKEN,
         NUMBER_TOKEN,
         OPERATOR_TOKEN,
-        STRING_TOKEN,
+        PUNCTUATION_TOKEN,
     ]);
 
     return token_types;

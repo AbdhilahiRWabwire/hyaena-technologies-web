@@ -10,6 +10,6 @@ pub mod number_tokens;
 
 pub mod operator_tokens;
 
-pub mod string_tokens;
+pub mod punctuation_tokens;
 
 pub mod token_type;
