@@ -15,12 +15,15 @@ pub const BITWISE_SHIFT_LEFT_TOKEN: OperatorToken = "<<";
 pub const BITWISE_SHIFT_RIGHT_TOKEN: OperatorToken = ">>";
 pub const BITWISE_SHIFT_LEFT_ASSIGNMENT_TOKEN: OperatorToken = "<<=";
 pub const BITWISE_SHIFT_RIGHT_ASSIGNMENT_TOKEN: OperatorToken = ">>=";
+pub const COLON_TOKEN: OperatorToken = ":";
+pub const COMMA_TOKEN: OperatorToken = ",";
 pub const DIVISION_TOKEN: OperatorToken = "/";
 pub const DIVISION_ASSIGNMENT_TOKEN: OperatorToken = "/=";
 pub const DOLLAR_SIGN_TOKEN: OperatorToken = "$";
 pub const EQUALITY_TOKEN: OperatorToken = "==";
 pub const EXCLUSIVE_OR_TOKEN: OperatorToken = "^";
 pub const FIELD_ACCESS_TOKEN: OperatorToken = ".";
+pub const GRAVE_ACCENT_TOKEN: OperatorToken = "`";
 pub const GREATER_THAN_TOKEN: OperatorToken = ">";
 pub const GREATER_OR_EQUAL_TOKEN: OperatorToken = ">=";
 pub const INCLUSIVE_RANGE_TOKEN: OperatorToken = "..=";
@@ -58,12 +61,15 @@ pub fn operators_vector() -> Vec<OperatorToken> {
         BITWISE_SHIFT_RIGHT_TOKEN,
         BITWISE_SHIFT_LEFT_ASSIGNMENT_TOKEN,
         BITWISE_SHIFT_RIGHT_ASSIGNMENT_TOKEN,
+        COLON_TOKEN,
+        COMMA_TOKEN,
         DIVISION_TOKEN,
         DIVISION_ASSIGNMENT_TOKEN,
         DOLLAR_SIGN_TOKEN,
         EQUALITY_TOKEN,
         EXCLUSIVE_OR_TOKEN,
         FIELD_ACCESS_TOKEN,
+        GRAVE_ACCENT_TOKEN,
         GREATER_THAN_TOKEN,
         GREATER_OR_EQUAL_TOKEN,
         INCLUSIVE_RANGE_TOKEN,
