@@ -50,14 +50,12 @@ pub fn token(arg_value: &'static str, arg_type: TokenType) -> ArgumentToken {
 }
 
 // Tokenize Command Line Arguments
-pub fn tokenize(source: &'static String) -> Vec<ArgumentToken> {
+pub fn tokenize(token_source: &'static String) -> Vec<ArgumentToken> {
     let mut argument_tokens: Vec<ArgumentToken> = Vec::new();
-    let mut source_tokens: Vec<&str> = source.split(" ").collect();
+    let mut source_tokens: Vec<&str> = token_source.split(" ").collect();
 
     while source_tokens.len() > 0 {
-        if source_tokens[0] == DOUBLE_DASH {
-            argument_tokens.push(token(source_tokens.remove(0), FLAG_TOKEN));
-        } else if source_tokens[0] == SINGLE_DASH {
+        if source_tokens[0] == DOUBLE_DASH || source_tokens[0] == SINGLE_DASH {
             argument_tokens.push(token(source_tokens.remove(0), FLAG_TOKEN));
         }
     }
