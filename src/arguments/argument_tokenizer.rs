@@ -1,12 +1,67 @@
 use std::{
     env::args,
-    io::{StdoutLock, Write, stdout},
-    process::ExitCode,
+    io::{BufReader, Error, Read, StdoutLock, Write, stdout},
+    option::Option,
+    path::PathBuf,
+    primitive::str,
+    process::{ExitCode, exit},
+    result::{
+        Result,
+        Result::{Err, Ok},
+    },
     string::String,
     vec::Vec,
 };
 
 use super::{print_help::print_help_message, print_version::print_version_number};
+use crate::tokens::token_type::{FLAG_TOKEN, TokenType};
+
+// Argument Token Definition
+pub struct ArgumentToken {
+    value: &'static str,
+    token_type: TokenType,
+}
+
+// Flag Token Definition
+pub type FlagToken = &'static str;
+
+// Flag Tokens
+pub const DOUBLE_DASH: FlagToken = "--";
+pub const SINGLE_DASH: FlagToken = "-";
+
+// Print Argument Token
+pub fn print_token(token: ArgumentToken) -> () {
+    let mut standard_output: StdoutLock = stdout().lock();
+
+    writeln!(standard_output, "{}", token.value).unwrap();
+    writeln!(standard_output, "{}", token.token_type).unwrap();
+
+    return ();
+}
+
+// Return Argument Token
+pub fn token(arg_value: &'static str, arg_type: TokenType) -> ArgumentToken {
+    let argument_token: ArgumentToken = ArgumentToken {
+        value: arg_value,
+        token_type: arg_type,
+    };
+
+    return argument_token;
+}
+
+// Tokenize Command Line Arguments
+pub fn tokenize(source: &'static String) -> Vec<ArgumentToken> {
+    let mut argument_tokens: Vec<ArgumentToken> = Vec::new();
+    let mut source_tokens: Vec<&str> = source.split(" ").collect();
+
+    while source_tokens.len() > 0 {
+        if source_tokens[0] == DOUBLE_DASH {
+            argument_tokens.push(token(source_tokens.remove(0), FLAG_TOKEN));
+        }
+    }
+
+    return argument_tokens;
+}
 
 // Command Line Argument Tokenizer
 pub fn tokenize_arguments() -> ExitCode {

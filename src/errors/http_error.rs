@@ -45,7 +45,7 @@ pub fn log_error(http_error: HttpError, log_path: PathBuf) -> () {
             writeln!(file, "Time: {:#?}", http_error.current_time).unwrap();
         }
         Err(error) => {
-            eprintln!("Error Creating File: {}", error);
+            eprintln!("Error Writing to File: {}", error);
             exit(1);
         }
     };

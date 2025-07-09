@@ -41,7 +41,7 @@ pub fn log_error(app_error: ApplicationError, log_path: PathBuf) -> () {
             writeln!(file, "Time: {:#?}", app_error.current_time).unwrap();
         }
         Err(error) => {
-            eprintln!("Error Creating File: {}", error);
+            eprintln!("Error Writingrto File: {}", error);
             exit(1);
         }
     };
