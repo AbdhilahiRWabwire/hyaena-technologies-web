@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert -f ./compose.yaml -o ./kubernetes
+    kompose.version: 1.35.0 (9532ceef3)
+  labels:
+    io.kompose.service: traefik-proxy
+  name: traefik-proxy
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: traefik-proxy
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose convert -f ./compose.yaml -o ./kubernetes
+        kompose.version: 1.35.0 (9532ceef3)
+      labels:
+        io.kompose.service: traefik-proxy
+    spec:
+      containers:
+        - image: traefik/traefik:v2.4.9-dyn-buffer
+          name: traefik-proxy
+          ports:
+            - containerPort: 8097
+              protocol: TCP
+      restartPolicy: Always
