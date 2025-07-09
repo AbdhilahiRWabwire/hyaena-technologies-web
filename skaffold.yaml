@@ -24,8 +24,6 @@ manifests:
     - knative/serving/serving-hpa.yaml
     - knative/serving/serving-post-install-jobs.yaml
     - knative/serving/serving-storage-version-migration.yaml
-    - kubernetes/dolt-relational-deployment.yaml
-    - kubernetes/dolt-relational-service.yaml
     - kubernetes/dragonfly-key-value-deployment.yaml
     - kubernetes/dragonfly-key-value-service.yaml
     - kubernetes/grafana-monitoring-deployment.yaml
@@ -52,6 +50,8 @@ manifests:
     - kubernetes/ory-hydra-oidc-service.yaml
     - kubernetes/ory-kratos-authentication-deployment.yaml
     - kubernetes/ory-kratos-authentication-service.yaml
+    - kubernetes/postgres-relational-deployment.yaml
+    - kubernetes/postgres-relational-service.yaml
     - kubernetes/spice-authorization-deployment.yaml
     - kubernetes/spice-authorization-service.yaml
     - kubernetes/spice-operator-deployment.yaml
