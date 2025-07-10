@@ -32,8 +32,29 @@ pub fn print_error(http_error: HttpError) -> () {
     return ();
 }
 
+// Create Log File and Write an Error to the Log File
+pub fn create_error_log(http_error: HttpError, log_path: PathBuf) -> () {
+    let log_file: Result<File, Error> = File::create(log_path);
+
+    match log_file {
+        Ok(mut file) => {
+            writeln!(file, "").unwrap();
+            writeln!(file, "").unwrap();
+            writeln!(file, "Log Level: {}", http_error.status_code).unwrap();
+            writeln!(file, "{}", http_error.status_text).unwrap();
+            writeln!(file, "Time: {:#?}", http_error.current_time).unwrap();
+        }
+        Err(error) => {
+            eprintln!("Error Creating File: {}", error);
+            exit(1);
+        }
+    };
+
+    return ();
+}
+
 // Open Log File and Write an Error to the Log File
-pub fn log_error(http_error: HttpError, log_path: PathBuf) -> () {
+pub fn write_error_log(http_error: HttpError, log_path: PathBuf) -> () {
     let log_file: Result<File, Error> = File::open(log_path);
 
     match log_file {
