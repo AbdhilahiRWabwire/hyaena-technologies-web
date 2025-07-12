@@ -3,6 +3,7 @@
 use std::{
     fs::File,
     io::{Error, StdoutLock, Write, stdout},
+    option::Option,
     path::PathBuf,
     process::exit,
     result::{
@@ -13,10 +14,13 @@ use std::{
     time::SystemTime,
 };
 
+use crate::logging::logger::LogLevel;
+
 // Application Error Definition
 pub struct ApplicationError {
     pub current_time: SystemTime,
     pub error_message: String,
+    pub log_level: Option<LogLevel>,
 }
 
 // Print Application Error to Standard Output
@@ -37,7 +41,8 @@ pub fn create_error_log(app_error: ApplicationError, log_path: PathBuf) -> () {
         Ok(mut file) => {
             writeln!(file, "").unwrap();
             writeln!(file, "").unwrap();
-            writeln!(file, "Log Level: {}", app_error.error_message).unwrap();
+            writeln!(file, "Log Level: {:#?}", app_error.log_level).unwrap();
+            writeln!(file, "{}", app_error.error_message).unwrap();
             writeln!(file, "Time: {:#?}", app_error.current_time).unwrap();
         }
         Err(error) => {
@@ -57,7 +62,8 @@ pub fn write_error_log(app_error: ApplicationError, log_path: PathBuf) -> () {
         Ok(mut file) => {
             writeln!(file, "").unwrap();
             writeln!(file, "").unwrap();
-            writeln!(file, "Log Level: {}", app_error.error_message).unwrap();
+            writeln!(file, "Log Level: {:#?}", app_error.log_level).unwrap();
+            writeln!(file, "{}", app_error.error_message).unwrap();
             writeln!(file, "Time: {:#?}", app_error.current_time).unwrap();
         }
         Err(error) => {
