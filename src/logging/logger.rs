@@ -37,8 +37,6 @@ pub fn create_log(log: StructuredLog, log_path: PathBuf) -> () {
 
     match log_file {
         Ok(mut file) => {
-            writeln!(file, "").unwrap();
-            writeln!(file, "").unwrap();
             writeln!(file, "Log Level: {}", log.log_level).unwrap();
             writeln!(file, "{}", log.log_message).unwrap();
             writeln!(file, "Time: {:#?}", log.current_time).unwrap();

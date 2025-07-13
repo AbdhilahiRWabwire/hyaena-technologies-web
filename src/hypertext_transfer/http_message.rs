@@ -55,13 +55,13 @@ pub struct HttpResponse<T> {
 }
 
 // Hypertext Transfer Protocol Request Message
-pub fn request_message<T>(request: HttpRequest<T>) -> () {
-    return ();
+pub fn request_message<T>(request: HttpRequest<T>) -> HttpRequest<T> {
+    return request;
 }
 
 // Hypertext Transfer Protocol Response Message
-pub fn response_message<T>(response: HttpResponse<T>) -> () {
-    return ();
+pub fn response_message<T>(response: HttpResponse<T>) -> HttpResponse<T> {
+    return response;
 }
 
 // Hypertext Transfer Protocol Connection Management

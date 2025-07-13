@@ -18,8 +18,8 @@ use crate::tokens::token_type::{FLAG_TOKEN, TokenType};
 
 // Argument Token Definition
 pub struct ArgumentToken {
-    value: &'static str,
-    token_type: TokenType,
+    pub value: &'static str,
+    pub token_type: TokenType,
 }
 
 // Flag Token Definition

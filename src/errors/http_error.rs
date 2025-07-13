@@ -41,8 +41,6 @@ pub fn create_error_log(http_error: HttpError, log_path: PathBuf) -> () {
 
     match log_file {
         Ok(mut file) => {
-            writeln!(file, "").unwrap();
-            writeln!(file, "").unwrap();
             writeln!(file, "Log Leve: {:#?}", http_error.log_level).unwrap();
             writeln!(file, "{}", http_error.status_code).unwrap();
             writeln!(file, "{}", http_error.status_text).unwrap();
