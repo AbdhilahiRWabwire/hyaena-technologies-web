@@ -9,8 +9,8 @@ metadata:
   name: postgres-relational
 spec:
   ports:
-    - name: "8088"
-      port: 8088
-      targetPort: 8088
+    - name: "8091"
+      port: 8091
+      targetPort: 8091
   selector:
     io.kompose.service: postgres-relational

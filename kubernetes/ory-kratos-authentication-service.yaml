@@ -9,8 +9,8 @@ metadata:
   name: ory-kratos-authentication
 spec:
   ports:
-    - name: "8090"
-      port: 8090
-      targetPort: 8090
+    - name: "8093"
+      port: 8093
+      targetPort: 8093
   selector:
     io.kompose.service: ory-kratos-authentication

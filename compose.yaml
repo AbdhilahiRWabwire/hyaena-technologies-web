@@ -40,44 +40,58 @@ services:
     image: ghcr.io/knative/func/func:latest
     ports:
       - "8087:8087/tcp"
-  
+
+  minio-storage:
+    image: minio/minio:RELEASE.2025-05-24T17-08-30Z
+    ports:
+      - "8088:8088/tcp"
+
+  minio-operator:
+    image: minio/operator:v7.1.1
+    ports:
+      - "8089:8089/tcp"
+
+  minio-control:
+    image: minio/mc:RELEASE.2025-05-21T01-59-54Z
+    ports:
+      - "8090:8090/tcp"
+
   postgres-relational:
     image: postgres:17.5
     ports:
-      - "8088:8088/tcp"
+      - "8091:8091/tcp"
   
   spice-authorization:
     image: authzed/spicedb:v1.44.2
     ports:
-      - "8089:8089/tcp"
+      - "8092:8092/tcp"
       
   ory-kratos-authentication:
     image: oryd/kratos:v1.3.1
     ports:
-      - "8090:8090/tcp"
+      - "8093:8093/tcp"
   
   ory-hydra-oidc:
     image: oryd/hydra:v2.3.0
     ports:
-      - "8091:8091/tcp"
+      - "8094:8094/tcp"
   
   spice-operator:
     image: authzed/spicedb-operator:v1.20.1
     ports:
-      - "8092:8092/tcp"
+      - "8095:8095/tcp"
 
   spice-zed:
     image: authzed/zed:v0.30.2
     ports:
-      - "8093:8093/tcp"
+      - "8096:8096/tcp"
   
   traefik-proxy:
     image: traefik/traefik:v2.4.9-dyn-buffer
     ports:
-      - "8094:8094/tcp"
+      - "8097:8097/tcp"
 
   vault-secrets:
     image: hashicorp/vault:1.19.5
     ports:
-      - "8095:8095/tcp"
-
+      - "8098:8098/tcp"
