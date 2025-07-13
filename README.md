@@ -12,6 +12,7 @@
 [K8S Ops]: https://kops.sigs.k8s.io/
 [K8S Skaffold]: https://skaffold.dev/
 [MDN]: https://developer.mozilla.org/en-US/docs/Web/API
+[Minio Database]: https://min.io/
 [Moby]: http://docker.com
 [Moby Compose]: https://docs.docker.com/reference/cli/docker/compose/
 [Moby Swarm]: https://docs.docker.com/reference/cli/docker/swarm/
@@ -71,6 +72,8 @@ Hyaena Technologies is an Open Source Technology company
 - **_Authorization:_** [Spice][Spice Database] - (In Progress)
 
 - **_Key Value:_** [Dragonfly][Dragonfly Database] - (In Progress)
+
+**_Object Storage:_** [Minio][Minio Database] - (In Progress)
 
 - **_Relational:_** [Postgres][Postgres Database]
 

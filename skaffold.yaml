@@ -39,7 +39,13 @@ manifests:
     - kubernetes/knative-cli-deployment.yaml
     - kubernetes/knative-cli-service.yaml
     - kubernetes/knative-functions-deployment.yaml
-    - kubernetes/knative-functions-service.yaml    
+    - kubernetes/knative-functions-service.yaml
+    - kubernetes/minio-control-deployment.yaml
+    - kubernetes/minio-control-service.yaml
+    - kubernetes/minio-operator-deployment.yaml
+    - kubernetes/minio-operator-service.yaml
+    - kubernetes/minio-storage-deployment.yaml
+    - kubernetes/minio-storage-service.yaml  
     - kubernetes/ory-hydra-oidc-deployment.yaml
     - kubernetes/ory-hydra-oidc-service.yaml
     - kubernetes/ory-kratos-authentication-deployment.yaml
