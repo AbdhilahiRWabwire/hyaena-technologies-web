@@ -18,8 +18,9 @@ name = "htnet"
 path = "src/main.rs"
 
 [dependencies]
-bzip2 = "0.6.0"
+flate2 = "1.1.2"
 futures = "0.3.31"
 hyper = { version = "1.6.0", features = ["full"] }
+rustls = "0.23.29"
 serde_json = "1.0.140"
 
