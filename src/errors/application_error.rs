@@ -39,8 +39,6 @@ pub fn create_error_log(app_error: ApplicationError, log_path: PathBuf) -> () {
 
     match log_file {
         Ok(mut file) => {
-            writeln!(file, "").unwrap();
-            writeln!(file, "").unwrap();
             writeln!(file, "Log Level: {:#?}", app_error.log_level).unwrap();
             writeln!(file, "{}", app_error.error_message).unwrap();
             writeln!(file, "Time: {:#?}", app_error.current_time).unwrap();

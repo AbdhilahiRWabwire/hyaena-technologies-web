@@ -73,7 +73,7 @@ Hyaena Technologies is an Open Source Technology company
 
 - **_Key Value:_** [Dragonfly][Dragonfly Database] - (In Progress)
 
-**_Object Storage:_** [Minio][Minio Database] - (In Progress)
+- **_Object Storage:_** [Minio][Minio Database] - (In Progress)
 
 - **_Relational:_** [Postgres][Postgres Database]
 
