@@ -24,6 +24,6 @@ spec:
         - image: greptime/greptimedb-operator:v0.3.0
           name: greptime-operator
           ports:
-            - containerPort: 8084
+            - containerPort: 8083
               protocol: TCP
       restartPolicy: Always

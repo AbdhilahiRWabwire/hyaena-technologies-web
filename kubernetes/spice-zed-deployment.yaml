@@ -24,6 +24,6 @@ spec:
         - image: authzed/zed:v0.30.2
           name: spice-zed
           ports:
-            - containerPort: 8096
+            - containerPort: 8095
               protocol: TCP
       restartPolicy: Always

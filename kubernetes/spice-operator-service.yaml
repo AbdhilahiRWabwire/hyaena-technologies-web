@@ -9,8 +9,8 @@ metadata:
   name: spice-operator
 spec:
   ports:
-    - name: "8095"
-      port: 8095
-      targetPort: 8095
+    - name: "8094"
+      port: 8094
+      targetPort: 8094
   selector:
     io.kompose.service: spice-operator

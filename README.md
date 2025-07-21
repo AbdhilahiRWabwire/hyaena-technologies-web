@@ -3,7 +3,6 @@
 [Containerman]: https://podman.io/
 [Containerman Pod]: https://docs.podman.io/en/latest/markdown/podman-pod.1.html
 [Dragonfly Database]: https://www.dragonflydb.io/
-[Grafana]: https://grafana.com/oss/grafana/
 [Greptime Database]: https://greptime.com/
 [K8S Control]: https://kubernetes.io/
 [K8S Kompose]: https://kompose.io/
@@ -59,7 +58,6 @@ Hyaena Technologies is an Open Source Technology company
 - **_Secret Management:_** [HashiCorp Vault][Vault] - (In Progress)
 
 - [Rust][Rust Language]
-- [Grafana Dashboard][Grafana] - (In Progress)
 - [Traefik Proxy][Traefik] - (In Progress)
 - [Command Line Documentation][CLIDoc]
 - [Mozilla Developer Network Web Documentation][MDN]

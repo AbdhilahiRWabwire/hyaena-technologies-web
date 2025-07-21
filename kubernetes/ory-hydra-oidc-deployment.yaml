@@ -24,6 +24,6 @@ spec:
         - image: oryd/hydra:v2.3.0
           name: ory-hydra-oidc
           ports:
-            - containerPort: 8094
+            - containerPort: 8093
               protocol: TCP
       restartPolicy: Always

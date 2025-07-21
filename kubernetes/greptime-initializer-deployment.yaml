@@ -24,6 +24,6 @@ spec:
         - image: greptime/greptimedb-initializer:v0.3.0
           name: greptime-initializer
           ports:
-            - containerPort: 8085
+            - containerPort: 8084
               protocol: TCP
       restartPolicy: Always

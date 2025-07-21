@@ -24,6 +24,6 @@ spec:
         - image: postgres:17.5
           name: postgres-relational
           ports:
-            - containerPort: 8091
+            - containerPort: 8090
               protocol: TCP
       restartPolicy: Always
