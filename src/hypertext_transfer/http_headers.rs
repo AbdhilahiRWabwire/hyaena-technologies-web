@@ -95,7 +95,7 @@ pub const HTTP_TIMING_ALLOW_ORIGIN: HttpHeader = "Timing-Allow-Origin";
 pub const HTTP_TRAILER: HttpHeader = "Trailer";
 pub const HTTP_TRANSFER_ENCODING: HttpHeader = "Transfer-Encoding";
 pub const HTTP_UPGRADE: HttpHeader = "Upgrade";
-pub const HTTP_UPGRADE_INSECURE_REQUESTS: HttpHeader = "Upgrade-Insecure-Requests";
+pub const HTTP_UPGRADE_REQUESTS: HttpHeader = "Upgrade-Insecure-Requests";
 pub const HTTP_USER_AGENT: HttpHeader = "User-Agent";
 pub const HTTP_VARY: HttpHeader = "Vary";
 pub const HTTP_VIA_PROXY: HttpHeader = "Via";
@@ -196,7 +196,7 @@ pub fn headers_vector() -> Vec<HttpHeader> {
         HTTP_TRAILER,
         HTTP_TRANSFER_ENCODING,
         HTTP_UPGRADE,
-        HTTP_UPGRADE_INSECURE_REQUESTS,
+        HTTP_UPGRADE_REQUESTS,
         HTTP_USER_AGENT,
         HTTP_VARY,
         HTTP_VIA_PROXY,
