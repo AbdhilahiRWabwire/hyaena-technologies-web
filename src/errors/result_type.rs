@@ -3,30 +3,30 @@
 use std::{option::Option, primitive::bool};
 
 // Custom Result Type Definition
-pub struct Result<T> {
-    error: Option<T>,
-    successful: bool,
-    value: Option<T>,
+pub struct Resultant<T> {
+    error: bool,
+    error_value: Option<T>,
+    result_value: Option<T>,
 }
 
-// Initialize a Result with a Validated Value
-fn okay<T>(val: Option<T>) -> Result<T> {
-    let result_value: Result<T> = Result {
-        error: None,
-        successful: true,
-        value: val,
+// Initialize a Result with a Value
+fn okay<T>(value: Option<T>) -> Resultant<T> {
+    let result_value: Resultant<T> = Resultant {
+        error: false,
+        error_value: None,
+        result_value: value,
     };
 
     return result_value;
 }
 
-// Initialize a Result with a Validated Error
-fn error<T>(err: Option<T>) -> Result<T> {
-    let result_error: Result<T> = Result {
-        error: err,
-        successful: false,
-        value: None,
+// Initialize a Result with a Error
+fn error<T>(error: Option<T>) -> Resultant<T> {
+    let error_value: Resultant<T> = Resultant {
+        error: true,
+        error_value: error,
+        result_value: None,
     };
 
-    return result_error;
+    return error_value;
 }
