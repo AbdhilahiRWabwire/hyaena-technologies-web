@@ -95,7 +95,9 @@ mv ./target/x86_64-unkown-linux-gnu/release/htnet ./binary
 
 ```shell
 docker build ./ --file ./web-service.Dockerfile --tag htnet:0.2.0
+
 ||
+
 nerdctl build ./ --file ./web-service.Dockerfile --tag htnet:0.2.0
 ```
 
@@ -103,7 +105,9 @@ nerdctl build ./ --file ./web-service.Dockerfile --tag htnet:0.2.0
 
 ```shell
 docker compose up --detach
+
 ||
+
 nerdctl compose up --detach
 ```
 
@@ -127,7 +131,9 @@ minikube kubectl apply -f './knative/eventing/*.yaml'
 minikube kubectl apply -f './knative/serving/*.yaml'
  
 minikube kubectl apply -f './kubernetes/*.yaml'
+
 ||
+
 skaffold dev # Development Mode
 
 skaffold run # Production Mode
