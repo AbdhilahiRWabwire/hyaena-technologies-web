@@ -100,7 +100,7 @@ pub fn manage_connection(transmission_stream: &mut TcpStream) -> () {
             writeln!(transmission_stream, "{}", file_buffer).unwrap();
         }
         Err(error) => {
-            eprintln!("Error Failed to Open Source File: {}", error);
+            eprintln!("Error Opening Source File: {}", error);
             exit(1);
         }
     };
