@@ -46,7 +46,7 @@ pub fn home_route(transmission_stream: &mut TcpStream) -> () {
             writeln!(transmission_stream, "{}", file_buffer).unwrap();
         }
         Err(error) => {
-            eprintln!("Error Failed to Open File: {}", error);
+            eprintln!("Error Opening File: {}", error);
             exit(1);
         }
     };
