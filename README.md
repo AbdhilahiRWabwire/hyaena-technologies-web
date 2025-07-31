@@ -1,7 +1,5 @@
-[Certificate Manager]: https://cert-manager.io/
 [CLIDoc]: https://github.com/HyaenaTechnologies/hyaena-technologies-web/blob/main/documentation/htnet.md
 [Containerman]: https://podman.io/
-[Containerman Pod]: https://docs.podman.io/en/latest/markdown/podman-pod.1.html
 [Dragonfly Database]: https://www.dragonflydb.io/
 [Greptime Database]: https://greptime.com/
 [K8S Control]: https://kubernetes.io/
@@ -13,8 +11,6 @@
 [MDN]: https://developer.mozilla.org/en-US/docs/Web/API
 [Minio Database]: https://min.io/
 [Moby]: http://docker.com
-[Moby Compose]: https://docs.docker.com/reference/cli/docker/compose/
-[Moby Swarm]: https://docs.docker.com/reference/cli/docker/swarm/
 [Ory Identity]: https://www.ory.sh/
 [Postgres Database]: https://www.postgresql.org/
 [Rust Language]: https://rust-lang.org
@@ -49,11 +45,7 @@ Hyaena Technologies is an Open Source Technology company
 
 - **_Authentication:_** [Ory][Ory Identity] - (In Progress)
 
-- **_Container Engines:_** [Docker][Moby], [Podman][Containerman]
-
-- **_Container Orchestration Engines:_** [Docker Compose][Moby Compose], [Docker Swarm][Moby Swarm], [KOps][K8S Ops], [Minikube][K8S Kube], [Podman Pods][Containerman Pod]
-
-- **_Container Tools:_** [Cert-Manager][Certificate Manager], [Knative][K8S Native], [Kompose][K8S Kompose], [Kubectl][K8S Control], [Skaffold][K8S Skaffold]
+- **_Container Tools:_** [Docker][Moby], [Knative][K8S Native], [Kompose][K8S Kompose], [KOps][K8S Ops], [Kubectl][K8S Control], [Minikube][K8S Kube], [Podman][Containerman], [Skaffold][K8S Skaffold]
 
 - **_Secret Management:_** [HashiCorp Vault][Vault] - (In Progress)
 
