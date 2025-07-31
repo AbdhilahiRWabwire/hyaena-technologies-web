@@ -45,7 +45,7 @@ Hyaena Technologies is an Open Source Technology company
 
 - **_Authentication:_** [Ory][Ory Identity] - (In Progress)
 
-- **_Container Tools:_** [Docker][Moby], [Knative][K8S Native], [Kompose][K8S Kompose], [KOps][K8S Ops], [Kubectl][K8S Control], [Minikube][K8S Kube], [Podman][Containerman], [Skaffold][K8S Skaffold]
+- **_Containerization Tools:_** [Docker][Moby], [Knative][K8S Native], [Kompose][K8S Kompose], [KOps][K8S Ops], [Kubectl][K8S Control], [Minikube][K8S Kube], [Podman][Containerman], [Skaffold][K8S Skaffold]
 
 - **_Secret Management:_** [HashiCorp Vault][Vault] - (In Progress)
 
