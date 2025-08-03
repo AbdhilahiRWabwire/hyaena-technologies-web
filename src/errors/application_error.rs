@@ -5,11 +5,7 @@ use std::{
     io::{Error, StdoutLock, Write, stdout},
     option::Option,
     path::PathBuf,
-    process::exit,
-    result::{
-        Result,
-        Result::{Err, Ok},
-    },
+    result::{Result, Result::Ok},
     string::String,
     time::SystemTime,
 };
@@ -34,41 +30,25 @@ pub fn print_error(app_error: ApplicationError) -> () {
 }
 
 // Create Log File and Write an Error to the Log File
-pub fn create_error_log(app_error: ApplicationError, log_path: PathBuf) -> () {
-    let log_file: Result<File, Error> = File::create(log_path);
+pub fn create_error_log(app_error: ApplicationError, log_path: PathBuf) -> Result<File, Error> {
+    let mut log_file: File = File::create(log_path)?;
 
-    match log_file {
-        Ok(mut file) => {
-            writeln!(file, "Log Level: {:#?}", app_error.log_level).unwrap();
-            writeln!(file, "{}", app_error.error_message).unwrap();
-            writeln!(file, "Time: {:#?}", app_error.current_time).unwrap();
-        }
-        Err(error) => {
-            eprintln!("Error Creating File: {}", error);
-            exit(1);
-        }
-    };
+    writeln!(log_file, "Log Level: {:#?}", app_error.log_level).unwrap();
+    writeln!(log_file, "{}", app_error.error_message).unwrap();
+    writeln!(log_file, "Time: {:#?}", app_error.current_time).unwrap();
 
-    return ();
+    Ok(log_file)
 }
 
 // Open Log File and Write an Error to the Log File
-pub fn write_error_log(app_error: ApplicationError, log_path: PathBuf) -> () {
-    let log_file: Result<File, Error> = File::open(log_path);
+pub fn write_error_log(app_error: ApplicationError, log_path: PathBuf) -> Result<File, Error> {
+    let mut log_file: File = File::open(log_path)?;
 
-    match log_file {
-        Ok(mut file) => {
-            writeln!(file, "").unwrap();
-            writeln!(file, "").unwrap();
-            writeln!(file, "Log Level: {:#?}", app_error.log_level).unwrap();
-            writeln!(file, "{}", app_error.error_message).unwrap();
-            writeln!(file, "Time: {:#?}", app_error.current_time).unwrap();
-        }
-        Err(error) => {
-            eprintln!("Error Writingrto File: {}", error);
-            exit(1);
-        }
-    };
+    writeln!(log_file, "").unwrap();
+    writeln!(log_file, "").unwrap();
+    writeln!(log_file, "Log Level: {:#?}", app_error.log_level).unwrap();
+    writeln!(log_file, "{}", app_error.error_message).unwrap();
+    writeln!(log_file, "Time: {:#?}", app_error.current_time).unwrap();
 
-    return ();
+    Ok(log_file)
 }

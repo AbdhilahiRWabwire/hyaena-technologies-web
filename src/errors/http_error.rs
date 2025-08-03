@@ -5,11 +5,7 @@ use std::{
     io::{Error, StdoutLock, Write, stdout},
     option::Option,
     path::PathBuf,
-    process::exit,
-    result::{
-        Result,
-        Result::{Err, Ok},
-    },
+    result::{Result, Result::Ok},
     time::SystemTime,
 };
 
@@ -36,43 +32,27 @@ pub fn print_error(http_error: HttpError) -> () {
 }
 
 // Create Log File and Write an Error to the Log File
-pub fn create_error_log(http_error: HttpError, log_path: PathBuf) -> () {
-    let log_file: Result<File, Error> = File::create(log_path);
+pub fn create_error_log(http_error: HttpError, log_path: PathBuf) -> Result<File, Error> {
+    let mut log_file: File = File::create(log_path)?;
 
-    match log_file {
-        Ok(mut file) => {
-            writeln!(file, "Log Leve: {:#?}", http_error.log_level).unwrap();
-            writeln!(file, "{}", http_error.status_code).unwrap();
-            writeln!(file, "{}", http_error.status_text).unwrap();
-            writeln!(file, "Time: {:#?}", http_error.current_time).unwrap();
-        }
-        Err(error) => {
-            eprintln!("Error Creating File: {}", error);
-            exit(1);
-        }
-    };
+    writeln!(log_file, "Log Leve: {:#?}", http_error.log_level).unwrap();
+    writeln!(log_file, "{}", http_error.status_code).unwrap();
+    writeln!(log_file, "{}", http_error.status_text).unwrap();
+    writeln!(log_file, "Time: {:#?}", http_error.current_time).unwrap();
 
-    return ();
+    Ok(log_file)
 }
 
 // Open Log File and Write an Error to the Log File
-pub fn write_error_log(http_error: HttpError, log_path: PathBuf) -> () {
-    let log_file: Result<File, Error> = File::open(log_path);
+pub fn write_error_log(http_error: HttpError, log_path: PathBuf) -> Result<File, Error> {
+    let mut log_file: File = File::open(log_path)?;
 
-    match log_file {
-        Ok(mut file) => {
-            writeln!(file, "").unwrap();
-            writeln!(file, "").unwrap();
-            writeln!(file, "Log Level: {:#?}", http_error.log_level).unwrap();
-            writeln!(file, "{}", http_error.status_code).unwrap();
-            writeln!(file, "{}", http_error.status_text).unwrap();
-            writeln!(file, "Time: {:#?}", http_error.current_time).unwrap();
-        }
-        Err(error) => {
-            eprintln!("Error Writing to File: {}", error);
-            exit(1);
-        }
-    };
+    writeln!(log_file, "").unwrap();
+    writeln!(log_file, "").unwrap();
+    writeln!(log_file, "Log Level: {:#?}", http_error.log_level).unwrap();
+    writeln!(log_file, "{}", http_error.status_code).unwrap();
+    writeln!(log_file, "{}", http_error.status_text).unwrap();
+    writeln!(log_file, "Time: {:#?}", http_error.current_time).unwrap();
 
-    return ();
+    Ok(log_file)
 }
