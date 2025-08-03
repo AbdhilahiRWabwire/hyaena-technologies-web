@@ -69,7 +69,7 @@ pub fn manage_connection(transmission_stream: &mut TcpStream) -> () {
     let mut standard_output: StdoutLock = stdout().lock();
     let mut buffered_reader: BufReader<&TcpStream> = BufReader::new(&transmission_stream);
     let mut stream_buffer: String = String::new();
-    let source_path: PathBuf = PathBuf::from("./web/source/main.js");
+    let source_path: PathBuf = PathBuf::from("./web/src/main.js");
     let source_file: Result<File, Error> = File::open(source_path);
     let mut file_buffer: String = String::new();
     let content_length: usize = file_buffer.len();
