@@ -25,7 +25,7 @@ pub fn web_service() -> () {
                 let mut stream: TcpStream = transmission_stream.unwrap();
 
                 stream.set_ttl(100).unwrap();
-                manage_connection(&mut stream).unwrap();
+                manage_connection(&mut stream);
             }
         }
         Err(error) => {
