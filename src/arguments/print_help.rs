@@ -1,10 +1,7 @@
-use std::{
-    io::{StdoutLock, Write, stdout},
-    process::ExitCode,
-};
+use std::io::{StdoutLock, Write, stdout};
 
 // Print Help Command Output
-pub fn print_help_message() -> ExitCode {
+pub fn print_help_message() -> () {
     let mut standard_output: StdoutLock = stdout().lock();
 
     writeln!(standard_output, "Hyaena Technologies Web Service").unwrap();
@@ -58,5 +55,5 @@ pub fn print_help_message() -> ExitCode {
     .unwrap();
     writeln!(standard_output, "").unwrap();
 
-    return ExitCode::SUCCESS;
+    return ();
 }
