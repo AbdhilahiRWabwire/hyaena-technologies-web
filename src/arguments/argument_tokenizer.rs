@@ -14,7 +14,7 @@ use std::{
 };
 
 use super::{print_help::print_help_message, print_version::print_version_number};
-use crate::tokens::token_type::{FLAG_TOKEN, TokenType};
+use crate::tokens::token_type::{COMMAND_TOKEN, FLAG_TOKEN, TokenType};
 
 // Argument Token Definition
 pub struct ArgumentToken {
@@ -39,8 +39,25 @@ pub fn print_token(token: ArgumentToken) -> () {
     return ();
 }
 
+// Return Token Type
+pub fn token_type(arg_type: Vec<TokenType>) -> TokenType {
+    match arg_type.as_slice() {
+        [COMMAND_TOKEN] => {
+            return arg_type[2];
+        }
+
+        [FLAG_TOKEN] => {
+            return arg_type[4];
+        }
+
+        _ => {
+            return arg_type[10];
+        }
+    }
+}
+
 // Return Argument Token
-pub fn token(arg_value: &'static str, arg_type: TokenType) -> ArgumentToken {
+pub fn argument_token(arg_value: &'static str, arg_type: TokenType) -> ArgumentToken {
     let argument_token: ArgumentToken = ArgumentToken {
         value: arg_value,
         token_type: arg_type,
