@@ -30,7 +30,7 @@ pub const DOUBLE_DASH: FlagToken = "--";
 pub const SINGLE_DASH: FlagToken = "-";
 
 // Print Argument Token
-pub fn print_token(token: ArgumentToken) -> () {
+pub fn print_argument_token(token: ArgumentToken) -> () {
     let mut standard_output: StdoutLock = stdout().lock();
 
     writeln!(standard_output, "{}", token.value).unwrap();
@@ -39,8 +39,8 @@ pub fn print_token(token: ArgumentToken) -> () {
     return ();
 }
 
-// Return Token Type
-pub fn token_type(arg_type: Vec<TokenType>) -> TokenType {
+// Return Argument Token Type
+pub fn argument_token_type(arg_type: Vec<TokenType>) -> TokenType {
     match arg_type.as_slice() {
         [COMMAND_TOKEN] => {
             return arg_type[2];
@@ -58,12 +58,12 @@ pub fn token_type(arg_type: Vec<TokenType>) -> TokenType {
 
 // Return Argument Token
 pub fn argument_token(arg_value: &'static str, arg_type: TokenType) -> ArgumentToken {
-    let argument_token: ArgumentToken = ArgumentToken {
+    let arg_token: ArgumentToken = ArgumentToken {
         value: arg_value,
         token_type: arg_type,
     };
 
-    return argument_token;
+    return arg_token;
 }
 
 // Tokenize Command Line Arguments
