@@ -73,7 +73,7 @@ pub fn tokenize(token_source: &'static String) -> Vec<ArgumentToken> {
 
     while source_tokens.len() > 0 {
         if source_tokens[0] == DOUBLE_DASH || source_tokens[0] == SINGLE_DASH {
-            argument_tokens.push(token(source_tokens.remove(0), FLAG_TOKEN));
+            argument_tokens.push(argument_token(source_tokens.remove(0), FLAG_TOKEN));
         }
     }
 
