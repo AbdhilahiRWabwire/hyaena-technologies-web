@@ -1,5 +1,5 @@
 use std::{
-    env::args,
+    env::{Args, args},
     io::{BufReader, Error, Read, StdoutLock, Write, stdout},
     option::Option,
     path::PathBuf,
@@ -18,7 +18,7 @@ use crate::tokens::token_type::{COMMAND_TOKEN, FLAG_TOKEN, TokenType};
 
 // Argument Token Definition
 pub struct ArgumentToken {
-    pub value: &'static str,
+    pub value: String,
     pub token_type: TokenType,
 }
 
@@ -57,7 +57,7 @@ pub fn argument_token_type(arg_type: Vec<TokenType>) -> TokenType {
 }
 
 // Return Argument Token
-pub fn argument_token(arg_value: &'static str, arg_type: TokenType) -> ArgumentToken {
+pub fn argument_token(arg_value: String, arg_type: TokenType) -> ArgumentToken {
     let arg_token: ArgumentToken = ArgumentToken {
         value: arg_value,
         token_type: arg_type,
@@ -67,14 +67,12 @@ pub fn argument_token(arg_value: &'static str, arg_type: TokenType) -> ArgumentT
 }
 
 // Tokenize Command Line Arguments
-pub fn tokenize(token_source: &'static String) -> Vec<ArgumentToken> {
+pub fn tokenize() -> Vec<ArgumentToken> {
     let mut argument_tokens: Vec<ArgumentToken> = Vec::new();
-    let mut source_tokens: Vec<&str> = token_source.split(" ").collect();
+    let arguments: Vec<String> = args().collect();
 
-    while source_tokens.len() > 0 {
-        if source_tokens[0] == DOUBLE_DASH || source_tokens[0] == SINGLE_DASH {
-            argument_tokens.push(argument_token(source_tokens.remove(0), FLAG_TOKEN));
-        }
+    if arguments[1].starts_with(DOUBLE_DASH) || arguments[1].starts_with(SINGLE_DASH) {
+        argument_tokens.push(argument_token(arguments[1], FLAG_TOKEN));
     }
 
     return argument_tokens;
