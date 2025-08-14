@@ -72,8 +72,8 @@ pub fn tokenize() -> Vec<ArgumentToken> {
     let arguments: Vec<String> = args().collect();
 
     if arguments[1].starts_with(DOUBLE_DASH) || arguments[1].starts_with(SINGLE_DASH) {
-        argument_tokens.push(argument_token(arguments[1], FLAG_TOKEN));
-    }
+        argument_tokens.push(argument_token(arguments[1].clone(), FLAG_TOKEN));
+    };
 
     return argument_tokens;
 }
