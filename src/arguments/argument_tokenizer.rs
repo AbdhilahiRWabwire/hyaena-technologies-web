@@ -19,7 +19,7 @@ use super::{
 };
 
 use crate::tokens::{
-    operator_tokens::{DECREMENT_TOKEN, INCREMENT_TOKEN},
+    operator_tokens::{DECREMENT_TOKEN, SUBTRACTION_TOKEN},
     token_type::{COMMAND_TOKEN, FLAG_TOKEN, TokenType},
 };
 
@@ -71,7 +71,7 @@ pub fn tokenize() -> Vec<ArgumentToken> {
     let mut argument_tokens: Vec<ArgumentToken> = Vec::new();
     let arguments: Vec<String> = args().collect();
 
-    if arguments[1].starts_with(DECREMENT_TOKEN) || arguments[1].starts_with(INCREMENT_TOKEN) {
+    if arguments[1].starts_with(DECREMENT_TOKEN) || arguments[1].starts_with(SUBTRACTION_TOKEN) {
         argument_tokens.push(argument_token(arguments[1].clone(), FLAG_TOKEN));
     } else {
         argument_tokens.push(argument_token(arguments[1].clone(), COMMAND_TOKEN));
