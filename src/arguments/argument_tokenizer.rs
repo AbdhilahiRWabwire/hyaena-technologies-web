@@ -13,21 +13,21 @@ use std::{
     vec::Vec,
 };
 
-use super::{print_help::print_help_message, print_version::print_version_number};
-use crate::tokens::token_type::{COMMAND_TOKEN, FLAG_TOKEN, TokenType};
+use super::{
+    command_arguments::CommandToken, flag_arguments::FlagToken, print_help::print_help_message,
+    print_version::print_version_number,
+};
+
+use crate::tokens::{
+    operator_tokens::{DECREMENT_TOKEN, INCREMENT_TOKEN},
+    token_type::{COMMAND_TOKEN, FLAG_TOKEN, TokenType},
+};
 
 // Argument Token Definition
 pub struct ArgumentToken {
     pub value: String,
     pub token_type: TokenType,
 }
-
-// Flag Token Definition
-pub type FlagToken = &'static str;
-
-// Flag Tokens
-pub const DOUBLE_DASH: FlagToken = "--";
-pub const SINGLE_DASH: FlagToken = "-";
 
 // Print Argument Token
 pub fn print_argument_token(token: ArgumentToken) -> () {
@@ -71,7 +71,7 @@ pub fn tokenize() -> Vec<ArgumentToken> {
     let mut argument_tokens: Vec<ArgumentToken> = Vec::new();
     let arguments: Vec<String> = args().collect();
 
-    if arguments[1].starts_with(DOUBLE_DASH) || arguments[1].starts_with(SINGLE_DASH) {
+    if arguments[1].starts_with(DECREMENT_TOKEN) || arguments[1].starts_with(INCREMENT_TOKEN) {
         argument_tokens.push(argument_token(arguments[1].clone(), FLAG_TOKEN));
     } else {
         argument_tokens.push(argument_token(arguments[1].clone(), COMMAND_TOKEN));
