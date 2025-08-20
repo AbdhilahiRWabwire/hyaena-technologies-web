@@ -14,7 +14,8 @@ use std::{
 };
 
 use super::{
-    argument_lexer::alphabetic_character, print_help::print_help_message,
+    argument_lexer::{alphabetic_character, integer_character, whitespace_character},
+    print_help::print_help_message,
     print_version::print_version_number,
 };
 
@@ -68,9 +69,12 @@ pub fn argument_token(arg_value: String, arg_type: TokenType) -> ArgumentToken {
 
 // Tokenize Command Line Arguments
 pub fn tokenize() -> Vec<ArgumentToken> {
+    let mut standard_output: StdoutLock = stdout().lock();
     let mut argument_tokens: Vec<ArgumentToken> = Vec::new();
     let mut arguments: Vec<String> = args().collect();
     let character: bool = alphabetic_character(arguments[1].remove(0).to_string());
+    let integer: bool = integer_character(arguments[1].remove(0).to_string());
+    let whitespace: bool = whitespace_character(arguments[1].remove(0).to_string());
     let operators: Vec<OperatorToken> = operators_vector();
     let token_types: Vec<TokenType> = token_types_vector();
 
@@ -78,6 +82,33 @@ pub fn tokenize() -> Vec<ArgumentToken> {
         argument_tokens.push(argument_token(arguments[1].clone(), token_types[2]));
     } else if character == true {
         argument_tokens.push(argument_token(arguments[1].clone(), token_types[4]));
+    } else if integer == true {
+        writeln!(standard_output, "Uknown Command or Flag: {}", arguments[1]).unwrap();
+        print_help_message();
+        writeln!(
+            standard_output,
+            "Error(1) - Exiting Hyaena Technologies Web Service"
+        )
+        .unwrap();
+        exit(1)
+    } else if whitespace == true {
+        writeln!(standard_output, "Uknown Command or Flag: {}", arguments[1]).unwrap();
+        print_help_message();
+        writeln!(
+            standard_output,
+            "Error(1) - Exiting Hyaena Technologies Web Service"
+        )
+        .unwrap();
+        exit(1)
+    } else {
+        writeln!(standard_output, "Uknown Command or Flag: {}", arguments[1]).unwrap();
+        print_help_message();
+        writeln!(
+            standard_output,
+            "Error(1) - Exiting Hyaena Technologies Web Service"
+        )
+        .unwrap();
+        exit(1)
     };
 
     return argument_tokens;
