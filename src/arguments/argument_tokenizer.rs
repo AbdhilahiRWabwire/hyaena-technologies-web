@@ -3,7 +3,7 @@ use std::{
     io::{BufReader, Error, Read, StdoutLock, Write, stdout},
     option::Option,
     path::PathBuf,
-    primitive::str,
+    primitive::{bool, str},
     process::{ExitCode, exit},
     result::{
         Result,
@@ -13,7 +13,10 @@ use std::{
     vec::Vec,
 };
 
-use super::{print_help::print_help_message, print_version::print_version_number};
+use super::{
+    argument_lexer::alphabetic_character, print_help::print_help_message,
+    print_version::print_version_number,
+};
 
 use crate::tokens::{
     operator_tokens::{OperatorToken, operators_vector},
@@ -66,13 +69,14 @@ pub fn argument_token(arg_value: String, arg_type: TokenType) -> ArgumentToken {
 // Tokenize Command Line Arguments
 pub fn tokenize() -> Vec<ArgumentToken> {
     let mut argument_tokens: Vec<ArgumentToken> = Vec::new();
-    let arguments: Vec<String> = args().collect();
+    let mut arguments: Vec<String> = args().collect();
+    let character: bool = alphabetic_character(arguments[1].remove(0).to_string());
     let operators: Vec<OperatorToken> = operators_vector();
     let token_types: Vec<TokenType> = token_types_vector();
 
     if arguments[1].starts_with(operators[11]) || arguments[1].starts_with(operators[42]) {
         argument_tokens.push(argument_token(arguments[1].clone(), token_types[2]));
-    } else {
+    } else if character == true {
         argument_tokens.push(argument_token(arguments[1].clone(), token_types[4]));
     };
 
