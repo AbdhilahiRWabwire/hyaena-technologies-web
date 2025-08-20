@@ -2,19 +2,19 @@
 
 use std::{primitive::str, vec::Vec};
 
-// Command Token Definition
-pub type CommandToken = &'static str;
+// Command Argument Definition
+pub type CommandArgument = &'static str;
 
-// Command Tokens
-pub const CONFIGURATION_COMMAND: CommandToken = "configuration";
-pub const EXIT_COMMAND: CommandToken = "exit";
-pub const HELP_COMMAND: CommandToken = "help";
-pub const SERVE_COMMAND: CommandToken = "serve";
-pub const VERSION_COMMAND: CommandToken = "version";
+// Command Argument
+pub const CONFIGURATION_COMMAND: CommandArgument = "configuration";
+pub const EXIT_COMMAND: CommandArgument = "exit";
+pub const HELP_COMMAND: CommandArgument = "help";
+pub const SERVE_COMMAND: CommandArgument = "serve";
+pub const VERSION_COMMAND: CommandArgument = "version";
 
 // Commands Vector
-pub fn commands_vector() -> Vec<CommandToken> {
-    let commands: Vec<CommandToken> = Vec::from([
+pub fn commands_vector() -> Vec<CommandArgument> {
+    let commands: Vec<CommandArgument> = Vec::from([
         CONFIGURATION_COMMAND,
         EXIT_COMMAND,
         HELP_COMMAND,

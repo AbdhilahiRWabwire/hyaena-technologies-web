@@ -54,8 +54,8 @@ Hyaena Technologies is an Open Source Technology company
 - [Command Line Documentation][CLIDoc]
 - [Mozilla Developer Network Web Documentation][MDN]
 - [Web Consortium Documentation][W3C]
-- [Web Graphics Library][WebGL]
-- [Web GPU][WebGPU]
+- [Web Graphics Library][WebGL] - (In Progress)
+- [Web GPU][WebGPU] - (In Progress)
 
 ## Databases
 

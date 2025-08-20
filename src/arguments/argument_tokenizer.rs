@@ -13,14 +13,11 @@ use std::{
     vec::Vec,
 };
 
-use super::{
-    command_arguments::CommandToken, flag_arguments::FlagToken, print_help::print_help_message,
-    print_version::print_version_number,
-};
+use super::{print_help::print_help_message, print_version::print_version_number};
 
 use crate::tokens::{
-    operator_tokens::{DECREMENT_TOKEN, SUBTRACTION_TOKEN},
-    token_type::{COMMAND_TOKEN, FLAG_TOKEN, TokenType},
+    operator_tokens::{OperatorToken, operators_vector},
+    token_type::{COMMAND_TOKEN, FLAG_TOKEN, TokenType, token_types_vector},
 };
 
 // Argument Token Definition
@@ -70,11 +67,13 @@ pub fn argument_token(arg_value: String, arg_type: TokenType) -> ArgumentToken {
 pub fn tokenize() -> Vec<ArgumentToken> {
     let mut argument_tokens: Vec<ArgumentToken> = Vec::new();
     let arguments: Vec<String> = args().collect();
+    let operators: Vec<OperatorToken> = operators_vector();
+    let token_types: Vec<TokenType> = token_types_vector();
 
-    if arguments[1].starts_with(DECREMENT_TOKEN) || arguments[1].starts_with(SUBTRACTION_TOKEN) {
-        argument_tokens.push(argument_token(arguments[1].clone(), FLAG_TOKEN));
+    if arguments[1].starts_with(operators[11]) || arguments[1].starts_with(operators[42]) {
+        argument_tokens.push(argument_token(arguments[1].clone(), token_types[2]));
     } else {
-        argument_tokens.push(argument_token(arguments[1].clone(), COMMAND_TOKEN));
+        argument_tokens.push(argument_token(arguments[1].clone(), token_types[4]));
     };
 
     return argument_tokens;
