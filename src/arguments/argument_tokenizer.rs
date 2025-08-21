@@ -30,17 +30,17 @@ pub struct ArgumentToken {
     pub token_type: TokenType,
 }
 
-// Print Argument Token
-pub fn print_argument_token(token: ArgumentToken) -> () {
-    let mut standard_output: StdoutLock = stdout().lock();
+// Argument Token
+pub fn argument_token(arg_value: String, arg_type: TokenType) -> ArgumentToken {
+    let arg_token: ArgumentToken = ArgumentToken {
+        value: arg_value,
+        token_type: arg_type,
+    };
 
-    writeln!(standard_output, "{}", token.value).unwrap();
-    writeln!(standard_output, "{}", token.token_type).unwrap();
-
-    return ();
+    return arg_token;
 }
 
-// Return Argument Token Type
+// Argument Token Type
 pub fn argument_token_type(arg_type: Vec<TokenType>) -> TokenType {
     match arg_type.as_slice() {
         [COMMAND_TOKEN] => {
@@ -57,58 +57,56 @@ pub fn argument_token_type(arg_type: Vec<TokenType>) -> TokenType {
     }
 }
 
-// Return Argument Token
-pub fn argument_token(arg_value: String, arg_type: TokenType) -> ArgumentToken {
-    let arg_token: ArgumentToken = ArgumentToken {
-        value: arg_value,
-        token_type: arg_type,
-    };
+// Print Argument Token
+pub fn print_argument_token(token: ArgumentToken) -> () {
+    let mut standard_output: StdoutLock = stdout().lock();
 
-    return arg_token;
+    writeln!(standard_output, "{}", token.value).unwrap();
+    writeln!(standard_output, "{}", token.token_type).unwrap();
+
+    return ();
+}
+
+// Unknow Argument Error
+pub fn unknown_argument() -> () {
+    let mut standard_output: StdoutLock = stdout().lock();
+    let command_line_arguments: Vec<String> = args().collect();
+
+    writeln!(
+        standard_output,
+        "Uknown Command or Flag: {}",
+        command_line_arguments[1]
+    )
+    .unwrap();
+    print_help_message();
+    writeln!(
+        standard_output,
+        "Error(1) - Exiting Hyaena Technologies Web Service"
+    )
+    .unwrap();
+    exit(1)
 }
 
 // Tokenize Command Line Arguments
 pub fn tokenize() -> Vec<ArgumentToken> {
-    let mut standard_output: StdoutLock = stdout().lock();
     let mut argument_tokens: Vec<ArgumentToken> = Vec::new();
     let mut arguments: Vec<String> = args().collect();
     let character: bool = alphabetic_character(arguments[1].remove(0).to_string());
     let integer: bool = integer_character(arguments[1].remove(0).to_string());
-    let whitespace: bool = whitespace_character(arguments[1].remove(0).to_string());
     let operators: Vec<OperatorToken> = operators_vector();
     let token_types: Vec<TokenType> = token_types_vector();
+    let whitespace: bool = whitespace_character(arguments[1].remove(0).to_string());
 
     if arguments[1].starts_with(operators[11]) || arguments[1].starts_with(operators[42]) {
         argument_tokens.push(argument_token(arguments[1].clone(), token_types[2]));
     } else if character == true {
         argument_tokens.push(argument_token(arguments[1].clone(), token_types[4]));
     } else if integer == true {
-        writeln!(standard_output, "Uknown Command or Flag: {}", arguments[1]).unwrap();
-        print_help_message();
-        writeln!(
-            standard_output,
-            "Error(1) - Exiting Hyaena Technologies Web Service"
-        )
-        .unwrap();
-        exit(1)
+        unknown_argument();
     } else if whitespace == true {
-        writeln!(standard_output, "Uknown Command or Flag: {}", arguments[1]).unwrap();
-        print_help_message();
-        writeln!(
-            standard_output,
-            "Error(1) - Exiting Hyaena Technologies Web Service"
-        )
-        .unwrap();
-        exit(1)
+        unknown_argument();
     } else {
-        writeln!(standard_output, "Uknown Command or Flag: {}", arguments[1]).unwrap();
-        print_help_message();
-        writeln!(
-            standard_output,
-            "Error(1) - Exiting Hyaena Technologies Web Service"
-        )
-        .unwrap();
-        exit(1)
+        unknown_argument();
     };
 
     return argument_tokens;
