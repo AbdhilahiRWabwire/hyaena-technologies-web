@@ -23,9 +23,18 @@ pub fn integer_character(mut source: String) -> bool {
         && character <= numbers[9].to_string().remove(0);
 }
 
+// Returns True if Null Character
+pub fn null_character(source: String) -> bool {
+    let escape_tokens: Vec<EscapeToken> = escape_tokens_vector();
+
+    return source == escape_tokens[4].to_string();
+}
+
 // Returns True if Whitespace
 pub fn whitespace_character(source: String) -> bool {
     let escape_tokens: Vec<EscapeToken> = escape_tokens_vector();
 
-    return source == " " || source == escape_tokens[3] || source == escape_tokens[6];
+    return source == " ".to_string()
+        || source == escape_tokens[3].to_string()
+        || source == escape_tokens[6].to_string();
 }
