@@ -1,4 +1,4 @@
-use std::primitive::bool;
+use std::{primitive::bool, vec::Vec};
 
 use crate::arguments::argument_lexer::alphabetic_character;
 use crate::tokens::{
