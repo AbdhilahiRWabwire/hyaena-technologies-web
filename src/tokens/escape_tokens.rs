@@ -13,7 +13,6 @@ pub const NEW_LINE_TOKEN: EscapeToken = "\n";
 pub const NULL_TOKEN: EscapeToken = "\0";
 pub const QUOTATION_MARK_TOKEN: EscapeToken = "\"";
 pub const TAB_TOKEN: EscapeToken = "\t";
-pub const UTF_TWENTY_FOUR_TOKEN: EscapeToken = "\u{7FFF}";
 
 // Escape Token Vector
 pub fn escape_tokens_vector() -> Vec<EscapeToken> {
@@ -25,7 +24,6 @@ pub fn escape_tokens_vector() -> Vec<EscapeToken> {
         NULL_TOKEN,
         QUOTATION_MARK_TOKEN,
         TAB_TOKEN,
-        UTF_TWENTY_FOUR_TOKEN,
     ]);
 
     return strings;

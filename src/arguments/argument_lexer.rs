@@ -1,5 +1,3 @@
-#![allow(dead_code)]
-
 use std::{
     primitive::{bool, char},
     string::String,
