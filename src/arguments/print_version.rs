@@ -13,8 +13,7 @@ pub fn print_version_number() -> () {
 
     writeln!(standard_output, "Hyaena Technologies Web Service").unwrap();
     writeln!(standard_output, "").unwrap();
-    writeln!(standard_output, "").unwrap();
-    writeln!(standard_output, "Version Number:\t\t {}", version_number).unwrap();
+    writeln!(standard_output, "Version Number:\t {}", version_number).unwrap();
 
     return ();
 }
