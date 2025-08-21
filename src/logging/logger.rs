@@ -7,6 +7,7 @@ use std::{
     result::{Result, Result::Ok},
     string::String,
     time::SystemTime,
+    vec::Vec,
 };
 
 // Structured Log Level Definition
@@ -36,6 +37,20 @@ pub fn create_log(log: StructuredLog, log_path: PathBuf) -> Result<File, Error> 
     writeln!(log_file, "Time: {:#?}", log.current_time).unwrap();
 
     Ok(log_file)
+}
+
+// Log Level Vector
+pub fn log_levels_vector() -> Vec<LogLevel> {
+    let log_levels: Vec<LogLevel> = Vec::from([
+        LOG_LEVEL_DEBUG,
+        LOG_LEVEL_ERROR,
+        LOG_LEVEL_INFO,
+        LOG_LEVEL_OFF,
+        LOG_LEVEL_TRACE,
+        LOG_LEVEL_WARN,
+    ]);
+
+    return log_levels;
 }
 
 // Print Log to Standard Output
