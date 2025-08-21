@@ -46,15 +46,15 @@ pub fn argument_token(arg_value: String, arg_type: TokenType) -> ArgumentToken {
 pub fn argument_token_type(arg_type: Vec<TokenType>) -> TokenType {
     match arg_type.as_slice() {
         [COMMAND_TOKEN] => {
-            return arg_type[2];
+            return arg_type[1];
         }
 
         [FLAG_TOKEN] => {
-            return arg_type[4];
+            return arg_type[5];
         }
 
         _ => {
-            return arg_type[10];
+            return arg_type[9];
         }
     }
 }
@@ -100,7 +100,7 @@ pub fn tokenize() -> Vec<ArgumentToken> {
     let token_types: Vec<TokenType> = token_types_vector();
     let whitespace: bool = whitespace_character(arguments[1].remove(0).to_string());
 
-    if arguments[1].starts_with(operators[11]) || arguments[1].starts_with(operators[42]) {
+    if arguments[1].starts_with(operators[11]) || arguments[1].starts_with(operators[39]) {
         argument_tokens.push(argument_token(arguments[1].clone(), token_types[2]));
     } else if character == true {
         argument_tokens.push(argument_token(arguments[1].clone(), token_types[4]));

@@ -10,6 +10,9 @@ mod routing;
 mod service;
 use service::application_service::web_service;
 
+#[cfg(test)]
+mod tests;
+
 mod tokens;
 mod yaml;
 
