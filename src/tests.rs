@@ -1,1 +1,1 @@
-pub mod lexer_alphabetic_test;
+pub mod argument_lexer_test;
