@@ -15,12 +15,10 @@ use std::{
 
 use super::{print_help::print_help_message, print_version::print_version_number};
 
-use crate::{
-    shared::lexer::alphabetic_character,
-    tokens::{
-        operator_tokens::{OperatorToken, operators_vector},
-        token_type::{COMMAND_TOKEN, FLAG_TOKEN, TokenType, token_types_vector},
-    },
+use crate::tokens::{
+    character_tokens::{CharacterToken, characters_vector},
+    operator_tokens::{OperatorToken, operators_vector},
+    token_type::{COMMAND_TOKEN, FLAG_TOKEN, TokenType, token_types_vector},
 };
 
 // Argument Token Definition
@@ -89,18 +87,21 @@ pub fn unknown_argument() -> () {
 // Tokenize Command Line Arguments
 pub fn tokenize() -> Vec<ArgumentToken> {
     let mut argument_tokens: Vec<ArgumentToken> = Vec::new();
-    let mut arguments: Vec<String> = args().collect();
-    let character: bool = alphabetic_character(arguments[1].remove(0).to_string());
+    let arguments: Vec<String> = args().collect();
+    let character_tokens: Vec<CharacterToken> = characters_vector();
     let operators: Vec<OperatorToken> = operators_vector();
     let token_types: Vec<TokenType> = token_types_vector();
 
-    if arguments[1].starts_with(operators[11]) || arguments[1].starts_with(operators[39]) {
-        argument_tokens.push(argument_token(arguments[1].clone(), token_types[2]));
-    } else if character == true {
-        argument_tokens.push(argument_token(arguments[1].clone(), token_types[4]));
-    } else {
-        unknown_argument();
-    };
+    for token in character_tokens {
+        if arguments[1].starts_with(token) {
+            argument_tokens.push(argument_token(arguments[1].clone(), token_types[4]));
+        } else if arguments[1].starts_with(operators[11]) || arguments[1].starts_with(operators[39])
+        {
+            argument_tokens.push(argument_token(arguments[1].clone(), token_types[2]));
+        } else {
+            unknown_argument();
+        }
+    }
 
     return argument_tokens;
 }
