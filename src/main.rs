@@ -6,6 +6,7 @@ mod hypertext_transfer;
 mod json;
 mod logging;
 mod routing;
+mod shared;
 
 mod service;
 use service::application_service::web_service;

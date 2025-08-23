@@ -13,14 +13,14 @@ use std::{
     vec::Vec,
 };
 
-use super::{
-    argument_lexer::alphabetic_character, print_help::print_help_message,
-    print_version::print_version_number,
-};
+use super::{print_help::print_help_message, print_version::print_version_number};
 
-use crate::tokens::{
-    operator_tokens::{OperatorToken, operators_vector},
-    token_type::{COMMAND_TOKEN, FLAG_TOKEN, TokenType, token_types_vector},
+use crate::{
+    shared::lexer::alphabetic_character,
+    tokens::{
+        operator_tokens::{OperatorToken, operators_vector},
+        token_type::{COMMAND_TOKEN, FLAG_TOKEN, TokenType, token_types_vector},
+    },
 };
 
 // Argument Token Definition

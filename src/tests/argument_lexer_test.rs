@@ -1,12 +1,14 @@
 use std::{primitive::bool, vec::Vec};
 
-use crate::arguments::argument_lexer::{
-    alphabetic_character, integer_character, null_character, whitespace_character,
-};
-use crate::tokens::{
-    character_tokens::{CharacterToken, characters_vector},
-    escape_tokens::{EscapeToken, escape_tokens_vector},
-    number_tokens::{NumberToken, numbers_vector},
+use crate::{
+    shared::lexer::{
+        alphabetic_character, integer_character, null_character, whitespace_character,
+    },
+    tokens::{
+        character_tokens::{CharacterToken, characters_vector},
+        escape_tokens::{EscapeToken, escape_tokens_vector},
+        number_tokens::{NumberToken, numbers_vector},
+    },
 };
 
 // Alphabetic Character Test
