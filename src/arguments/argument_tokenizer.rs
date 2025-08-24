@@ -37,6 +37,23 @@ pub fn argument_token(arg_value: String, arg_type: TokenType) -> ArgumentToken {
     return arg_token;
 }
 
+// Argument Token Type
+pub fn argument_token_type(arg_type: Vec<TokenType>) -> TokenType {
+    match arg_type.as_slice() {
+        [COMMAND_TOKEN] => {
+            return arg_type[1];
+        }
+
+        [FLAG_TOKEN] => {
+            return arg_type[5];
+        }
+
+        _ => {
+            return arg_type[9];
+        }
+    }
+}
+
 // Print Argument Token
 pub fn print_argument_token(token: ArgumentToken) -> () {
     let mut standard_output: StdoutLock = stdout().lock();
@@ -47,17 +64,19 @@ pub fn print_argument_token(token: ArgumentToken) -> () {
     return ();
 }
 
+// Tokenize Command Line Arguments
+pub fn tokenize(source: String) -> Vec<ArgumentToken> {
+    let arg_tokens: Vec<ArgumentToken> = Vec::new();
+
+    return arg_tokens;
+}
+
 // Unknow Argument Error
 pub fn unknown_argument() -> () {
     let mut standard_output: StdoutLock = stdout().lock();
-    let command_line_arguments: Vec<String> = args().collect();
+    let arguments: Vec<String> = args().collect();
 
-    writeln!(
-        standard_output,
-        "Uknown Command or Flag: {}",
-        command_line_arguments[1]
-    )
-    .unwrap();
+    writeln!(standard_output, "Uknown Command or Flag: {}", arguments[1]).unwrap();
     print_help_message();
     writeln!(
         standard_output,
@@ -65,26 +84,4 @@ pub fn unknown_argument() -> () {
     )
     .unwrap();
     exit(1)
-}
-
-// Tokenize Command Line Arguments
-pub fn tokenize() -> Vec<ArgumentToken> {
-    let mut argument_tokens: Vec<ArgumentToken> = Vec::new();
-    let arguments: Vec<String> = args().collect();
-    let character_tokens: Vec<CharacterToken> = characters_vector();
-    let operators: Vec<OperatorToken> = operators_vector();
-    let token_types: Vec<TokenType> = token_types_vector();
-
-    for token in character_tokens {
-        if arguments[1].starts_with(token) {
-            argument_tokens.push(argument_token(arguments[1].clone(), token_types[1]));
-        } else if arguments[1].starts_with(operators[11]) || arguments[1].starts_with(operators[39])
-        {
-            argument_tokens.push(argument_token(arguments[1].clone(), token_types[5]));
-        } else {
-            unknown_argument();
-        }
-    }
-
-    return argument_tokens;
 }
