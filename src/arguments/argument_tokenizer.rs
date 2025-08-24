@@ -94,10 +94,10 @@ pub fn tokenize() -> Vec<ArgumentToken> {
 
     for token in character_tokens {
         if arguments[1].starts_with(token) {
-            argument_tokens.push(argument_token(arguments[1].clone(), token_types[4]));
+            argument_tokens.push(argument_token(arguments[1].clone(), token_types[1]));
         } else if arguments[1].starts_with(operators[11]) || arguments[1].starts_with(operators[39])
         {
-            argument_tokens.push(argument_token(arguments[1].clone(), token_types[2]));
+            argument_tokens.push(argument_token(arguments[1].clone(), token_types[5]));
         } else {
             unknown_argument();
         }
