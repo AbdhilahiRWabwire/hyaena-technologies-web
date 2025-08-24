@@ -37,23 +37,6 @@ pub fn argument_token(arg_value: String, arg_type: TokenType) -> ArgumentToken {
     return arg_token;
 }
 
-// Argument Token Type
-pub fn argument_token_type(arg_type: Vec<TokenType>) -> TokenType {
-    match arg_type.as_slice() {
-        [COMMAND_TOKEN] => {
-            return arg_type[1];
-        }
-
-        [FLAG_TOKEN] => {
-            return arg_type[5];
-        }
-
-        _ => {
-            return arg_type[9];
-        }
-    }
-}
-
 // Print Argument Token
 pub fn print_argument_token(token: ArgumentToken) -> () {
     let mut standard_output: StdoutLock = stdout().lock();
