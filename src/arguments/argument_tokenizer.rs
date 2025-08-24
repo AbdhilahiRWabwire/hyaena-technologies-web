@@ -23,14 +23,14 @@ use crate::tokens::{
 
 // Argument Token Definition
 pub struct ArgumentToken {
-    pub value: String,
+    pub lexeme: String,
     pub token_type: TokenType,
 }
 
 // Argument Token
 pub fn argument_token(arg_value: String, arg_type: TokenType) -> ArgumentToken {
     let arg_token: ArgumentToken = ArgumentToken {
-        value: arg_value,
+        lexeme: arg_value,
         token_type: arg_type,
     };
 
@@ -58,7 +58,7 @@ pub fn argument_token_type(arg_type: Vec<TokenType>) -> TokenType {
 pub fn print_argument_token(token: ArgumentToken) -> () {
     let mut standard_output: StdoutLock = stdout().lock();
 
-    writeln!(standard_output, "{}", token.value).unwrap();
+    writeln!(standard_output, "{}", token.lexeme).unwrap();
     writeln!(standard_output, "{}", token.token_type).unwrap();
 
     return ();
