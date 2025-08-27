@@ -18,7 +18,7 @@ pub struct ArgumentLexer {
 // Argument Lexer
 pub fn argument_lexer(
     line: u8,
-    pos: u8,
+    pos: usize,
     input: String,
     chars: Vec<ArgumentToken>,
 ) -> ArgumentLexer {
