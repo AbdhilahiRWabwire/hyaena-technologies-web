@@ -1,11 +1,16 @@
-use std::{primitive::u8, string::String, vec::Vec};
+use std::{
+    primitive::{char, u8, usize},
+    str::Chars,
+    string::String,
+    vec::Vec,
+};
 
 use super::argument_tokenizer::ArgumentToken;
 
 // Argument Lexer Definition
 pub struct ArgumentLexer {
     pub current_line: u8,
-    pub positon: u8,
+    pub positon: usize,
     pub source: String,
     pub tokens: Vec<ArgumentToken>,
 }
@@ -28,8 +33,16 @@ pub fn argument_lexer(
 }
 
 // Append an Argument Token
-pub fn push(mut lexer: ArgumentLexer, token: ArgumentToken) {
+pub fn push(mut lexer: ArgumentLexer, token: ArgumentToken) -> () {
     let argument_token = lexer.tokens.push(token);
 
     return argument_token;
+}
+
+// Lexer Current Position
+pub fn current_position(lexer: ArgumentLexer) -> char {
+    let lexer_position: usize = lexer.positon;
+    let lexer_source: Vec<char> = lexer.source.chars().collect();
+
+    return lexer_source[lexer_position];
 }
