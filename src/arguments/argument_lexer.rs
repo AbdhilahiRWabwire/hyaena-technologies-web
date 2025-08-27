@@ -31,14 +31,14 @@ pub fn argument_lexer(
     return lexer;
 }
 
-// Lexer Advance Position
+// Advance Lexer Position by 1
 pub fn advance_position(lexer: ArgumentLexer) -> usize {
     let position: usize = lexer.positon;
 
     return position + 1;
 }
 
-// Lexer Advance to Position
+// Advance Lexer to Position
 pub fn advance_to_position(lexer: ArgumentLexer, index: usize) -> usize {
     let position: usize = lexer.positon;
 
@@ -53,7 +53,7 @@ pub fn current_position(lexer: ArgumentLexer) -> char {
     return source[position];
 }
 
-// Returns True if Lexer Position at End of File
+// Returns True if Lexer Position is at End of File
 pub fn end_of_file(lexer: ArgumentLexer) -> bool {
     let position: usize = lexer.positon;
     let source: String = lexer.source;
