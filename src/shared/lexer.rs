@@ -16,11 +16,11 @@ pub fn alphabetic_character(source: String) -> bool {
 
 // Returns True if Integer
 pub fn integer_character(mut source: String) -> bool {
-    let character: char = source.remove(0);
+    let character: Vec<char> = source.chars().collect();
     let numbers: Vec<NumberToken> = numbers_vector();
 
-    return character >= numbers[0].to_string().remove(0)
-        && character <= numbers[9].to_string().remove(0);
+    return character[0] >= numbers[0].to_string().remove(0)
+        && character[0] <= numbers[9].to_string().remove(0);
 }
 
 // Returns True if Null Character

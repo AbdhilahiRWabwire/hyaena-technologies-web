@@ -1,6 +1,5 @@
 use std::{
-    primitive::{char, u8, usize},
-    str::Chars,
+    primitive::{bool, char, u8, usize},
     string::String,
     vec::Vec,
 };
@@ -32,17 +31,39 @@ pub fn argument_lexer(
     return lexer;
 }
 
-// Append an Argument Token
-pub fn push(mut lexer: ArgumentLexer, token: ArgumentToken) -> () {
-    let argument_token = lexer.tokens.push(token);
+// Lexer Advance Position
+pub fn advance_position(lexer: ArgumentLexer) -> usize {
+    let position: usize = lexer.positon;
 
-    return argument_token;
+    return position + 1;
+}
+
+// Lexer Advance to Position
+pub fn advance_to_position(lexer: ArgumentLexer, index: usize) -> usize {
+    let position: usize = lexer.positon;
+
+    return position + index;
 }
 
 // Lexer Current Position
 pub fn current_position(lexer: ArgumentLexer) -> char {
-    let lexer_position: usize = lexer.positon;
-    let lexer_source: Vec<char> = lexer.source.chars().collect();
+    let position: usize = lexer.positon;
+    let source: Vec<char> = lexer.source.chars().collect();
 
-    return lexer_source[lexer_position];
+    return source[position];
+}
+
+// Returns True if Lexer Position at End of File
+pub fn end_of_file(lexer: ArgumentLexer) -> bool {
+    let position: usize = lexer.positon;
+    let source: String = lexer.source;
+
+    return position >= source.len();
+}
+
+// Append an Argument Token
+pub fn push(mut lexer: ArgumentLexer, token: ArgumentToken) -> () {
+    let argument_token: () = lexer.tokens.push(token);
+
+    return argument_token;
 }
