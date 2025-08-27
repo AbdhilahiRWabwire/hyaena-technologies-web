@@ -15,7 +15,7 @@ pub fn alphabetic_character(source: String) -> bool {
 }
 
 // Returns True if Integer
-pub fn integer_character(mut source: String) -> bool {
+pub fn integer_character(source: String) -> bool {
     let character: Vec<char> = source.chars().collect();
     let numbers: Vec<NumberToken> = numbers_vector();
 
