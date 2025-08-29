@@ -54,40 +54,15 @@ services:
   postgres-relational:
     image: postgres:17.5
     ports:
-      - "8090:8090/tcp"
-  
-  spice-authorization:
-    image: authzed/spicedb:v1.44.2
-    ports:
-      - "8091:8091/tcp"
+      - "8090:8090/tcp"       
       
-  ory-kratos-authentication:
-    image: oryd/kratos:v1.3.1
-    ports:
-      - "8092:8092/tcp"
-  
-  ory-hydra-oidc:
-    image: oryd/hydra:v2.3.0
-    ports:
-      - "8093:8093/tcp"
-  
-  spice-operator:
-    image: authzed/spicedb-operator:v1.20.1
-    ports:
-      - "8094:8094/tcp"
-
-  spice-zed:
-    image: authzed/zed:v0.30.2
-    ports:
-      - "8095:8095/tcp"
-  
   traefik-proxy:
     image: traefik/traefik:v2.4.9-dyn-buffer
     ports:
-      - "8096:8096/tcp"
+      - "8096:8091/tcp"
 
   vault-secrets:
     image: hashicorp/vault:1.19.5
     ports:
-      - "8097:8097/tcp"
+      - "8097:8092/tcp"
 

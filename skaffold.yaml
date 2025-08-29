@@ -25,7 +25,7 @@ manifests:
     - knative/serving/serving-post-install-jobs.yaml
     - knative/serving/serving-storage-version-migration.yaml
     - kubernetes/dragonfly-key-value-deployment.yaml
-    - kubernetes/dragonfly-key-value-service.yaml    
+    - kubernetes/dragonfly-key-value-service.yaml
     - kubernetes/greptime-initializer-deployment.yaml
     - kubernetes/greptime-initializer-service.yaml
     - kubernetes/greptime-operator-deployment.yaml
@@ -43,19 +43,9 @@ manifests:
     - kubernetes/minio-operator-deployment.yaml
     - kubernetes/minio-operator-service.yaml
     - kubernetes/minio-storage-deployment.yaml
-    - kubernetes/minio-storage-service.yaml  
-    - kubernetes/ory-hydra-oidc-deployment.yaml
-    - kubernetes/ory-hydra-oidc-service.yaml
-    - kubernetes/ory-kratos-authentication-deployment.yaml
-    - kubernetes/ory-kratos-authentication-service.yaml
+    - kubernetes/minio-storage-service.yaml
     - kubernetes/postgres-relational-deployment.yaml
     - kubernetes/postgres-relational-service.yaml
-    - kubernetes/spice-authorization-deployment.yaml
-    - kubernetes/spice-authorization-service.yaml
-    - kubernetes/spice-operator-deployment.yaml
-    - kubernetes/spice-operator-service.yaml
-    - kubernetes/spice-zed-deployment.yaml
-    - kubernetes/spice-zed-service.yaml
     - kubernetes/traefik-proxy-deployment.yaml
     - kubernetes/traefik-proxy-service.yaml
     - kubernetes/vault-secrets-deployment.yaml

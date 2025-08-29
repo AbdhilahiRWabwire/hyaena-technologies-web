@@ -11,10 +11,8 @@
 [MDN]: https://developer.mozilla.org/en-US/docs/Web/API
 [Minio Database]: https://min.io/
 [Moby]: http://docker.com
-[Ory Identity]: https://www.ory.sh/
 [Postgres Database]: https://www.postgresql.org/
 [Rust Language]: https://rust-lang.org
-[Spice Database]: https://authzed.com/
 [Traefik]: https://traefik.io/traefik/
 [Vault]: https://www.hashicorp.com/en/products/vault
 [WebGL]: https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API
@@ -43,8 +41,6 @@ Hyaena Technologies is an Open Source Technology company
 
 ## Build
 
-- **_Authentication:_** [Ory][Ory Identity] - (In Progress)
-
 - **_Containerization Tools:_** [Docker][Moby], [Knative][K8S Native], [Kompose][K8S Kompose], [KOps][K8S Ops], [Kubectl][K8S Control], [Minikube][K8S Kube], [Podman][Containerman], [Skaffold][K8S Skaffold]
 
 - **_Secret Management:_** [HashiCorp Vault][Vault] - (In Progress)
@@ -58,8 +54,6 @@ Hyaena Technologies is an Open Source Technology company
 - [Web GPU][WebGPU] - (In Progress)
 
 ## Databases
-
-- **_Authorization:_** [Spice][Spice Database] - (In Progress)
 
 - **_Key Value:_** [Dragonfly][Dragonfly Database] - (In Progress)
 
