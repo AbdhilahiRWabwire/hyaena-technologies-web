@@ -6,9 +6,11 @@ use std::{
         Result,
         Result::{Err, Ok},
     },
+    thread,
+    thread::JoinHandle,
 };
 
-use crate::hypertext_transfer::http_message::manage_connection;
+use crate::{hypertext_transfer::http_message::manage_connection, routing::home_page::home_route};
 
 // Application Service
 pub fn web_service() -> () {
@@ -18,14 +20,13 @@ pub fn web_service() -> () {
 
     match transmission_listener {
         Ok(listener) => {
-            listener.set_ttl(100).unwrap();
             writeln!(standard_output, "Service Listening on Port: 7878").unwrap();
 
             for transmission_stream in listener.incoming() {
                 let mut stream: TcpStream = transmission_stream.unwrap();
 
-                stream.set_ttl(100).unwrap();
                 manage_connection(&mut stream);
+                home_route(&mut stream);
             }
         }
         Err(error) => {

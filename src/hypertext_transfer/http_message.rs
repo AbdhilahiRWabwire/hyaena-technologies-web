@@ -22,12 +22,6 @@ use super::{
     http_versions::HttpVersion,
 };
 
-use crate::hypertext_transfer::{
-    http_headers::HTTP_CONTENT_LENGTH,
-    http_status_codes::{HTTP_OK, HTTP_TWO_HUNDRED},
-    http_versions::HTTP_VERSION_ONE,
-};
-
 // Hypertext Transfer Protocol Body Definition
 pub type HttpBody<T> = T;
 
@@ -69,41 +63,11 @@ pub fn manage_connection(transmission_stream: &mut TcpStream) -> () {
     let mut standard_output: StdoutLock = stdout().lock();
     let mut buffered_reader: BufReader<&TcpStream> = BufReader::new(&transmission_stream);
     let mut stream_buffer: String = String::new();
-    let source_path: PathBuf = PathBuf::from("./web/src/main.js");
-    let source_file: Result<File, Error> = File::open(source_path);
-    let mut file_buffer: String = String::new();
-    let content_length: usize = file_buffer.len();
 
     buffered_reader.read_to_string(&mut stream_buffer).unwrap();
     writeln!(standard_output, "Hypertext Tranfer Protocol Request: ").unwrap();
     writeln!(standard_output, "").unwrap();
     writeln!(standard_output, "{}", stream_buffer).unwrap();
-
-    match source_file {
-        Ok(mut file) => {
-            file.read_to_string(&mut file_buffer).unwrap();
-            writeln!(
-                transmission_stream,
-                "{} {} {}",
-                HTTP_VERSION_ONE.to_string(),
-                HTTP_TWO_HUNDRED.to_string(),
-                HTTP_OK.to_string()
-            )
-            .unwrap();
-            writeln!(
-                transmission_stream,
-                "{}: {}",
-                HTTP_CONTENT_LENGTH.to_string(),
-                content_length
-            )
-            .unwrap();
-            writeln!(transmission_stream, "{}", file_buffer).unwrap();
-        }
-        Err(error) => {
-            eprintln!("Error Opening Source File: {}", error);
-            exit(1);
-        }
-    };
 
     return ();
 }
