@@ -25,13 +25,9 @@ pub fn web_service() -> () {
             for transmission_stream in listener.incoming() {
                 let stream: TcpStream = transmission_stream.unwrap();
 
-                let connection_thread: JoinHandle<()> = thread::spawn(|| {
-                    manage_connection(stream);
-                });
-
-                connection_thread.join().unwrap();
-                thread::spawn(|| {
-                    home_route();
+                thread::spawn(move || {
+                    manage_connection(&stream);
+                    home_route(&stream);
                 });
             }
         }
