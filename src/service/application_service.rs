@@ -23,10 +23,16 @@ pub fn web_service() -> () {
             writeln!(standard_output, "Service Listening on Port: 7878").unwrap();
 
             for transmission_stream in listener.incoming() {
-                let mut stream: TcpStream = transmission_stream.unwrap();
+                let stream: TcpStream = transmission_stream.unwrap();
 
-                manage_connection(&mut stream);
-                home_route(&mut stream);
+                let connection_thread: JoinHandle<()> = thread::spawn(|| {
+                    manage_connection(stream);
+                });
+
+                connection_thread.join().unwrap();
+                thread::spawn(|| {
+                    home_route();
+                });
             }
         }
         Err(error) => {
