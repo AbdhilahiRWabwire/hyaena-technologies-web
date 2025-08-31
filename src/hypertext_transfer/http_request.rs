@@ -18,10 +18,10 @@ pub struct HttpRequest<T> {
     pub body: Option<HttpBody<T>>,
     pub headers: Vec<HttpHeader>,
     pub method: HttpMethod,
+    pub resource_locator: String,
     pub security_directives: Option<Vec<HttpSecurityDirective>>,
     pub status_code: HttpStatusCode,
     pub status_text: HttpStatusText,
-    pub url: String,
     pub version: HttpVersion,
 }
 
