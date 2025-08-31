@@ -1,6 +1,6 @@
 #![allow(dead_code)]
 
-use std::{net::TcpStream, string::String, thread, thread::JoinHandle, vec::Vec};
+use std::{net::TcpStream, option::Option, string::String, thread, thread::JoinHandle, vec::Vec};
 
 use super::{
     http_headers::HttpHeader,
