@@ -1,10 +1,11 @@
 #![allow(dead_code)]
 
-use std::{net::TcpStream, option::Option, thread, thread::JoinHandle, vec::Vec};
+use std::{option::Option, thread, thread::JoinHandle, vec::Vec};
+
+use crate::hypertext_transfer::http_connection::{HttpBody, HttpConnection};
 
 use super::{
     http_headers::HttpHeader,
-    http_message::HttpBody,
     http_methods::HttpMethod,
     http_security_directives::HttpSecurityDirective,
     http_status_codes::{HttpStatusCode, HttpStatusText},
@@ -13,13 +14,13 @@ use super::{
 
 // Hypertext Transfer Protocol Response Definition
 pub struct HttpResponse<T> {
+    pub connection: HttpConnection,
     pub body: Option<HttpBody<T>>,
     pub headers: Vec<HttpHeader>,
     pub method: HttpMethod,
     pub security_directives: Option<Vec<HttpSecurityDirective>>,
     pub status_code: HttpStatusCode,
     pub status_text: HttpStatusText,
-    pub transmission_stream: TcpStream,
     pub version: HttpVersion,
 }
 

@@ -21,37 +21,41 @@ use crate::hypertext_transfer::{
 };
 
 // Application Home Page Route
-pub fn home_route(mut transmission_stream: &TcpStream) -> () {
-    let source_path: PathBuf = PathBuf::from("./web/src/main.js");
-    let source_file: Result<File, Error> = File::open(source_path);
-    let mut file_buffer: String = String::new();
-    let content_length: usize = file_buffer.len();
+pub fn home_route(mut transmission_stream: TcpStream) -> () {
+    let standard_thread: JoinHandle<()> = thread::spawn(move || {
+        let source_path: PathBuf = PathBuf::from("./web/src/main.js");
+        let source_file: Result<File, Error> = File::open(source_path);
+        let mut file_buffer: String = String::new();
+        let content_length: usize = file_buffer.len();
 
-    match source_file {
-        Ok(mut file) => {
-            file.read_to_string(&mut file_buffer).unwrap();
-            writeln!(
-                transmission_stream,
-                "{} {} {}",
-                HTTP_VERSION_ONE.to_string(),
-                HTTP_TWO_HUNDRED.to_string(),
-                HTTP_OK.to_string()
-            )
-            .unwrap();
-            writeln!(
-                transmission_stream,
-                "{}: {}",
-                HTTP_CONTENT_LENGTH.to_string(),
-                content_length
-            )
-            .unwrap();
-            writeln!(transmission_stream, "{}", file_buffer).unwrap();
-        }
-        Err(error) => {
-            eprintln!("Error Opening File: {}", error);
-            exit(1);
-        }
-    };
+        match source_file {
+            Ok(mut file) => {
+                file.read_to_string(&mut file_buffer).unwrap();
+                writeln!(
+                    transmission_stream,
+                    "{} {} {}",
+                    HTTP_VERSION_ONE.to_string(),
+                    HTTP_TWO_HUNDRED.to_string(),
+                    HTTP_OK.to_string()
+                )
+                .unwrap();
+                writeln!(
+                    transmission_stream,
+                    "{}: {}",
+                    HTTP_CONTENT_LENGTH.to_string(),
+                    content_length
+                )
+                .unwrap();
+                writeln!(transmission_stream, "{}", file_buffer).unwrap();
+            }
+            Err(error) => {
+                eprintln!("Error Opening File: {}", error);
+                exit(1);
+            }
+        };
+    });
+
+    standard_thread.join().unwrap();
 
     return ();
 }

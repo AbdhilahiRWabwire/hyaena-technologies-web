@@ -1,18 +1,39 @@
 use std::{
-    io::{Error, StdoutLock, Write, stdout},
-    net::{Ipv4Addr, SocketAddrV4, TcpListener, TcpStream},
+    io::{BufReader, Error, Read, StdoutLock, Write, stdout},
+    net::{IpAddr, Ipv4Addr, SocketAddr, TcpListener, TcpStream},
     process::exit,
     result::{
         Result,
         Result::{Err, Ok},
     },
+    thread,
+    thread::JoinHandle,
 };
 
-use crate::{hypertext_transfer::http_message::manage_connection, routing::home_page::home_route};
+use crate::routing::home_page::home_route;
+
+// Hypertext Transfer Protocol Connection Management
+pub fn manage_connection(transmission_stream: TcpStream) -> () {
+    let standard_thread: JoinHandle<()> = thread::spawn(move || {
+        let mut standard_output: StdoutLock = stdout().lock();
+        let mut buffered_reader: BufReader<&TcpStream> = BufReader::new(&transmission_stream);
+        let mut stream_buffer: String = String::new();
+
+        buffered_reader.read_to_string(&mut stream_buffer).unwrap();
+        writeln!(standard_output, "Hypertext Tranfer Protocol Request: ").unwrap();
+        writeln!(standard_output, "").unwrap();
+        writeln!(standard_output, "{}", stream_buffer).unwrap();
+    });
+
+    standard_thread.join().unwrap();
+
+    return ();
+}
 
 // Application Service
 pub fn web_service() -> () {
-    let socket_address: SocketAddrV4 = SocketAddrV4::new(Ipv4Addr::new(127, 0, 0, 1), 7878);
+    let ip_address: IpAddr = IpAddr::V4(Ipv4Addr::new(127, 0, 0, 1));
+    let socket_address: SocketAddr = SocketAddr::new(ip_address, 7878);
     let transmission_listener: Result<TcpListener, Error> = TcpListener::bind(socket_address);
     let mut standard_output: StdoutLock = stdout().lock();
 
@@ -23,14 +44,11 @@ pub fn web_service() -> () {
             for transmission_stream in listener.incoming() {
                 let stream: TcpStream = transmission_stream.unwrap();
 
-                home_route(&stream);
+                home_route(stream);
             }
         }
         Err(error) => {
-            eprintln!(
-                "Error Could Not Initialize Transmission Listener: {}",
-                error
-            );
+            eprintln!("Error Initializing Transmission Listener: {}", error);
             exit(1);
         }
     };

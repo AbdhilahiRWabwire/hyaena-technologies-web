@@ -1,10 +1,10 @@
 pub mod http_client;
 
+pub mod http_connection;
+
 pub mod http_headers;
 
 pub mod http_methods;
-
-pub mod http_message;
 
 pub mod http_lexer;
 
