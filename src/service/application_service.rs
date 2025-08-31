@@ -23,7 +23,6 @@ pub fn web_service() -> () {
             for transmission_stream in listener.incoming() {
                 let stream: TcpStream = transmission_stream.unwrap();
 
-                manage_connection(&stream);
                 home_route(&stream);
             }
         }
