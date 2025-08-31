@@ -6,8 +6,6 @@ use std::{
         Result,
         Result::{Err, Ok},
     },
-    thread,
-    thread::JoinHandle,
 };
 
 use crate::{hypertext_transfer::http_message::manage_connection, routing::home_page::home_route};
@@ -25,10 +23,8 @@ pub fn web_service() -> () {
             for transmission_stream in listener.incoming() {
                 let stream: TcpStream = transmission_stream.unwrap();
 
-                thread::spawn(move || {
-                    manage_connection(&stream);
-                    home_route(&stream);
-                });
+                manage_connection(&stream);
+                home_route(&stream);
             }
         }
         Err(error) => {
