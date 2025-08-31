@@ -14,18 +14,14 @@ use crate::routing::home_page::home_route;
 
 // Hypertext Transfer Protocol Connection Management
 pub fn manage_connection(transmission_stream: TcpStream) -> () {
-    let standard_thread: JoinHandle<()> = thread::spawn(move || {
-        let mut standard_output: StdoutLock = stdout().lock();
-        let mut buffered_reader: BufReader<&TcpStream> = BufReader::new(&transmission_stream);
-        let mut stream_buffer: String = String::new();
+    let mut standard_output: StdoutLock = stdout().lock();
+    let mut buffered_reader: BufReader<&TcpStream> = BufReader::new(&transmission_stream);
+    let mut stream_buffer: String = String::new();
 
-        buffered_reader.read_to_string(&mut stream_buffer).unwrap();
-        writeln!(standard_output, "Hypertext Tranfer Protocol Request: ").unwrap();
-        writeln!(standard_output, "").unwrap();
-        writeln!(standard_output, "{}", stream_buffer).unwrap();
-    });
-
-    standard_thread.join().unwrap();
+    buffered_reader.read_to_string(&mut stream_buffer).unwrap();
+    writeln!(standard_output, "Hypertext Tranfer Protocol Request: ").unwrap();
+    writeln!(standard_output, "").unwrap();
+    writeln!(standard_output, "{}", stream_buffer).unwrap();
 
     return ();
 }

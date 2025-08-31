@@ -1,8 +1,8 @@
 #![allow(dead_code)]
 
-use std::{option::Option, string::String, thread, thread::JoinHandle, vec::Vec};
+use std::{primitive::usize, vec::Vec};
 
-use crate::hypertext_transfer::http_connection::{HttpBody, HttpConnection};
+use crate::hypertext_transfer::http_connection::HttpConnection;
 
 use super::{
     http_headers::HttpHeader,
@@ -13,23 +13,19 @@ use super::{
 };
 
 // Hypertext Transfer Protocol Request Definition
-pub struct HttpRequest<T> {
+pub struct HttpRequest {
     pub connection: HttpConnection,
-    pub body: Option<HttpBody<T>>,
+    pub body: usize,
     pub headers: Vec<HttpHeader>,
     pub method: HttpMethod,
     pub resource_locator: String,
-    pub security_directives: Option<Vec<HttpSecurityDirective>>,
+    pub security_directives: HttpSecurityDirective,
     pub status_code: HttpStatusCode,
     pub status_text: HttpStatusText,
     pub version: HttpVersion,
 }
 
 // Hypertext Transfer Protocol Request Message
-pub fn request_message<T>(request: HttpRequest<T>) -> HttpRequest<T> {
-    let standard_thread: JoinHandle<()> = thread::spawn(move || {});
-
-    standard_thread.join().unwrap();
-
+pub fn request_message(request: HttpRequest) -> HttpRequest {
     return request;
 }

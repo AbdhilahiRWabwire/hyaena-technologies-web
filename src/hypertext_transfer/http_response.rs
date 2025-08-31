@@ -1,8 +1,8 @@
 #![allow(dead_code)]
 
-use std::{option::Option, thread, thread::JoinHandle, vec::Vec};
+use std::{primitive::usize, vec::Vec};
 
-use crate::hypertext_transfer::http_connection::{HttpBody, HttpConnection};
+use crate::hypertext_transfer::http_connection::HttpConnection;
 
 use super::{
     http_headers::HttpHeader,
@@ -13,22 +13,18 @@ use super::{
 };
 
 // Hypertext Transfer Protocol Response Definition
-pub struct HttpResponse<T> {
+pub struct HttpResponse {
     pub connection: HttpConnection,
-    pub body: Option<HttpBody<T>>,
+    pub body: usize,
     pub headers: Vec<HttpHeader>,
     pub method: HttpMethod,
-    pub security_directives: Option<Vec<HttpSecurityDirective>>,
+    pub security_directives: HttpSecurityDirective,
     pub status_code: HttpStatusCode,
     pub status_text: HttpStatusText,
     pub version: HttpVersion,
 }
 
 // Hypertext Transfer Protocol Response Message
-pub fn response_message<T>(response: HttpResponse<T>) -> HttpResponse<T> {
-    let standard_thread: JoinHandle<()> = thread::spawn(move || {});
-
-    standard_thread.join().unwrap();
-
+pub fn response_message(response: HttpResponse) -> HttpResponse {
     return response;
 }
