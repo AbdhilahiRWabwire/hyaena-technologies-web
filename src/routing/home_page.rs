@@ -20,7 +20,7 @@ use crate::hypertext_transfer::{
 
 // Application Home Page Route
 pub fn home_route(mut transmission_stream: TcpStream) -> () {
-    let source_path: PathBuf = PathBuf::from("./web/src/main.js");
+    let source_path: PathBuf = PathBuf::from("./web/build/main.js");
     let source_file: Result<File, Error> = File::open(source_path);
     let mut file_buffer: String = String::new();
     let content_length: usize = file_buffer.len();
