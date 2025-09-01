@@ -1,6 +1,6 @@
 use std::{
     fs::File,
-    io::{Error, Read, Write},
+    io::{BufReader, Error, Read, Write},
     net::TcpStream,
     path::PathBuf,
     primitive::usize,
@@ -26,8 +26,10 @@ pub fn home_route(mut transmission_stream: TcpStream) -> () {
     let content_length: usize = file_buffer.len();
 
     match source_file {
-        Ok(mut file) => {
-            file.read_to_string(&mut file_buffer).unwrap();
+        Ok(file) => {
+            let mut buffered_reader: BufReader<&File> = BufReader::new(&file);
+
+            buffered_reader.read_to_string(&mut file_buffer).unwrap();
             writeln!(
                 transmission_stream,
                 "{:#?} {:#?} {:#?}",
