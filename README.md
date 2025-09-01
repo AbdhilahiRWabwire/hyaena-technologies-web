@@ -36,18 +36,17 @@ Web Implementation of Hyaena Technologies
 
 ## Build
 
-- **_Secret Management:_** [HashiCorp Vault][Vault] - (In Progress)
-
 - [Rust][Rust Language]
-- [Deno Runtime][Deno]
+- [Deno Bundler][Deno]
 - [System Daemon][SystemD]
 - [OpenSSH][SSH]
-- [Traefik Proxy][Traefik] - (In Progress)
-- [Command Line Documentation][CLIDoc]
 - [Mozilla Developer Network Web Documentation][MDN]
 - [Web Consortium Documentation][W3C]
 - [Web Graphics Library][WebGL] - (In Progress)
 - [Web GPU][WebGPU] - (In Progress)
+- [Traefik Proxy][Traefik] - (In Progress)
+- [HashiCorp Vault][Vault] - (In Progress)
+- [Command Line Documentation][CLIDoc]
 
 ### Databases
 
@@ -64,7 +63,7 @@ Web Implementation of Hyaena Technologies
 ```shell
 git clone
 
-deno compile ./web/src/*.ts --outdir ./web/build
+deno bundle ./web/src/*.ts --outdir ./web/build
 
 cargo check
 
