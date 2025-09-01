@@ -1,19 +1,13 @@
 [CLIDoc]: https://github.com/HyaenaTechnologies/hyaena-technologies-web/blob/main/documentation/htnet.md
-[Containerman]: https://podman.io/
 [Dragonfly Database]: https://www.dragonflydb.io/
 [Deno]: https://deno.land/
 [Greptime Database]: https://greptime.com/
-[K8S Control]: https://kubernetes.io/
-[K8S Kompose]: https://kompose.io/
-[K8S Kube]: https://minikube.sigs.k8s.io/docs/
-[K8S Native]: https://knative.dev/docs/
-[K8S Ops]: https://kops.sigs.k8s.io/
-[K8S Skaffold]: https://skaffold.dev/
 [MDN]: https://developer.mozilla.org/en-US/docs/Web/API
 [Minio Database]: https://min.io/
-[Moby]: http://docker.com
 [Postgres Database]: https://www.postgresql.org/
 [Rust Language]: https://rust-lang.org
+[SSH]: https://openssh.com/
+[SystemD]: https://systemd.io/
 [Traefik]: https://traefik.io/traefik/
 [Vault]: https://www.hashicorp.com/en/products/vault
 [WebGL]: https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API
@@ -37,17 +31,17 @@ Hyaena Technologies is an Open Source Technology company
 
 ## Features
 
-- Environment Variable Configuration
-- [YAML Configuration][YAML]
+- Environment Variables
+- [YAML Ain't Markup Language][YAML]
 
 ## Build
-
-- **_Containerization Tools:_** [Docker][Moby], [Knative][K8S Native], [Kompose][K8S Kompose], [KOps][K8S Ops], [Kubectl][K8S Control], [Minikube][K8S Kube], [Podman][Containerman], [Skaffold][K8S Skaffold]
 
 - **_Secret Management:_** [HashiCorp Vault][Vault] - (In Progress)
 
 - [Rust][Rust Language]
 - [Deno Runtime][Deno]
+- [System Daemon][SystemD]
+- [OpenSSH][SSH]
 - [Traefik Proxy][Traefik] - (In Progress)
 - [Command Line Documentation][CLIDoc]
 - [Mozilla Developer Network Web Documentation][MDN]
@@ -55,7 +49,7 @@ Hyaena Technologies is an Open Source Technology company
 - [Web Graphics Library][WebGL] - (In Progress)
 - [Web GPU][WebGPU] - (In Progress)
 
-## Databases
+### Databases
 
 - **_Key Value:_** [Dragonfly][Dragonfly Database] - (In Progress)
 
@@ -65,7 +59,7 @@ Hyaena Technologies is an Open Source Technology company
 
 - **_Time Series:_** [Greptime][Greptime Database] - (In Progress)
 
-## Build Web Service
+### Build Web Service
 
 ```shell
 git clone
@@ -83,55 +77,7 @@ mv ./target/x86_64-unkown-linux-gnu/release/htnet ./binary
 ./binary/htnet serve
 ```
 
-## Docker Build
-
-```shell
-docker build ./ --file ./web-service.Dockerfile --tag htnet:0.2.0
-
-||
-
-nerdctl build ./ --file ./web-service.Dockerfile --tag htnet:0.2.0
-```
-
-## Docker Compose
-
-```shell
-docker compose up --detach
-
-||
-
-nerdctl compose up --detach
-```
-
-## Kubernetes
-
-### Kompose Kubernetes Configurations and Initialize Skaffold
-
-```shell
-kompose convert -f ./compose.yaml -o ./kubernetes
-
-skaffold init
-```
-
-### Run Kubernetes Cluster
-
-```shell
-minikube kubectl apply -f './certificate-manager/*.yaml'
-
-minikube kubectl apply -f './knative/eventing/*.yaml'
-
-minikube kubectl apply -f './knative/serving/*.yaml'
- 
-minikube kubectl apply -f './kubernetes/*.yaml'
-
-||
-
-skaffold dev # Development Mode
-
-skaffold run # Production Mode
-```
-
-## Install Web Service
+### Install Web Service
 
 ```shell
 sudo install ./htnet /usr/local/bin/
