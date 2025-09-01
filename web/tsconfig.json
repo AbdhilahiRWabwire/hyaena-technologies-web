@@ -30,6 +30,6 @@
         "strictPropertyInitialization": true,
         "target": "ES2023"
     },
-    "include": ["./source/**/*", "./test/**/*"]
+    "include": ["./src/**/*", "./tests/**/*"]
 }
   

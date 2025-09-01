@@ -70,6 +70,8 @@ Hyaena Technologies is an Open Source Technology company
 ```shell
 git clone
 
+deno bundle ./web/src/*.ts --outdir ./web/build
+
 cargo check
 
 cargo test
