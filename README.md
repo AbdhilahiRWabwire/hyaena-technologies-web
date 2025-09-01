@@ -27,7 +27,7 @@
 
 # Hyaena Technologies Web
 
-Hyaena Technologies is an Open Source Technology company
+Web Implementation of Hyaena Technologies
 
 ## Features
 
