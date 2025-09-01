@@ -1,8 +1,16 @@
-FROM rust:alpine
+FROM denoland/deno:alpine
 
 WORKDIR /hyaena-technologies-web
 
 COPY ./ ./
+
+RUN deno bundle ./web/src/*.ts --outdir ./web/build
+
+FROM rust:alpine
+
+WORKDIR /hyaena-technologies-web
+
+COPY --from=builder ./ ./
 
 RUN cargo check \
 cargo test \
