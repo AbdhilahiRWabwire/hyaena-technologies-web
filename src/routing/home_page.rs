@@ -30,20 +30,20 @@ pub fn home_route(mut transmission_stream: TcpStream) -> () {
             file.read_to_string(&mut file_buffer).unwrap();
             writeln!(
                 transmission_stream,
-                "{} {} {}",
-                HTTP_VERSION_ONE.to_string(),
-                HTTP_TWO_HUNDRED.to_string(),
-                HTTP_OK.to_string()
+                "{:#?} {:#?} {:#?}",
+                HTTP_VERSION_ONE.as_bytes(),
+                HTTP_TWO_HUNDRED.as_bytes(),
+                HTTP_OK.as_bytes()
             )
             .unwrap();
             writeln!(
                 transmission_stream,
-                "{}: {}",
-                HTTP_CONTENT_LENGTH.to_string(),
-                content_length
+                "{:#?}: {:#?}",
+                HTTP_CONTENT_LENGTH.as_bytes(),
+                content_length.to_ne_bytes()
             )
             .unwrap();
-            writeln!(transmission_stream, "{}", file_buffer).unwrap();
+            writeln!(transmission_stream, "{:#?}", file_buffer.as_bytes()).unwrap();
         }
         Err(error) => {
             eprintln!("Error Opening File: {}", error);

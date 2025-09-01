@@ -37,10 +37,8 @@ pub fn web_service() -> () {
         Ok(listener) => {
             writeln!(standard_output, "Service Listening on Port: 7878").unwrap();
 
-            for transmission_stream in listener.incoming() {
-                let stream: TcpStream = transmission_stream.unwrap();
-
-                home_route(stream);
+            for stream in listener.incoming() {
+                manage_connection(stream.unwrap());
             }
         }
         Err(error) => {
