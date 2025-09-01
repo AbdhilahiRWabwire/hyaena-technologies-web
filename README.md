@@ -1,4 +1,3 @@
-[Bun]: https://bun.com/
 [CLIDoc]: https://github.com/HyaenaTechnologies/hyaena-technologies-web/blob/main/documentation/htnet.md
 [Containerman]: https://podman.io/
 [Dragonfly Database]: https://www.dragonflydb.io/
@@ -48,7 +47,6 @@ Hyaena Technologies is an Open Source Technology company
 - **_Secret Management:_** [HashiCorp Vault][Vault] - (In Progress)
 
 - [Rust][Rust Language]
-- [Bun Runtime][Bun]
 - [Deno Runtime][Deno]
 - [Traefik Proxy][Traefik] - (In Progress)
 - [Command Line Documentation][CLIDoc]
