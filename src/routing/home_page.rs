@@ -1,7 +1,7 @@
 use std::{
     fs::File,
     io::{BufReader, Error, Read, Write},
-    net::TcpStream,
+    net::{TcpListener, TcpStream},
     path::PathBuf,
     primitive::usize,
     process::exit,
@@ -10,6 +10,7 @@ use std::{
         Result::{Err, Ok},
     },
     string::String,
+    thread,
 };
 
 use crate::hypertext_transfer::{
@@ -19,36 +20,49 @@ use crate::hypertext_transfer::{
 };
 
 // Application Home Page Route
-pub fn home_route(mut transmission_stream: TcpStream) -> () {
-    let source_path: PathBuf = PathBuf::from("./web/build/main.js");
-    let source_file: Result<File, Error> = File::open(source_path);
-    let mut file_buffer: String = String::new();
-    let content_length: usize = file_buffer.len();
+pub fn home_route(transmission_listener: Result<TcpListener, Error>) -> () {
+    match transmission_listener {
+        Ok(listener) => {
+            for transmission_stream in listener.incoming() {
+                thread::spawn(|| {
+                    let source_path: PathBuf = PathBuf::from("./web/build/main.js");
+                    let source_file: Result<File, Error> = File::open(source_path);
+                    let mut file_buffer: String = String::new();
+                    let content_length: usize = file_buffer.len();
 
-    match source_file {
-        Ok(file) => {
-            let mut buffered_reader: BufReader<&File> = BufReader::new(&file);
+                    match source_file {
+                        Ok(file) => {
+                            let mut buffered_reader: BufReader<&File> = BufReader::new(&file);
+                            let mut stream: TcpStream = transmission_stream.unwrap();
 
-            buffered_reader.read_to_string(&mut file_buffer).unwrap();
-            writeln!(
-                transmission_stream,
-                "{:#?} {:#?} {:#?}",
-                HTTP_VERSION_ONE.as_bytes(),
-                HTTP_TWO_HUNDRED.as_bytes(),
-                HTTP_OK.as_bytes()
-            )
-            .unwrap();
-            writeln!(
-                transmission_stream,
-                "{:#?}: {:#?}",
-                HTTP_CONTENT_LENGTH.as_bytes(),
-                content_length.to_ne_bytes()
-            )
-            .unwrap();
-            writeln!(transmission_stream, "{:#?}", file_buffer.as_bytes()).unwrap();
+                            buffered_reader.read_to_string(&mut file_buffer).unwrap();
+                            writeln!(
+                                stream,
+                                "{:#?} {:#?} {:#?}",
+                                HTTP_VERSION_ONE.as_bytes(),
+                                HTTP_TWO_HUNDRED.as_bytes(),
+                                HTTP_OK.as_bytes()
+                            )
+                            .unwrap();
+                            writeln!(
+                                stream,
+                                "{:#?}: {:#?}",
+                                HTTP_CONTENT_LENGTH.as_bytes(),
+                                content_length.to_ne_bytes()
+                            )
+                            .unwrap();
+                            writeln!(stream, "{:#?}", file_buffer.as_bytes()).unwrap();
+                        }
+                        Err(error) => {
+                            eprintln!("Error Opening File: {}", error);
+                            exit(1);
+                        }
+                    };
+                });
+            }
         }
         Err(error) => {
-            eprintln!("Error Opening File: {}", error);
+            eprintln!("Error Initializing Transmission Listener: {}", error);
             exit(1);
         }
     };
