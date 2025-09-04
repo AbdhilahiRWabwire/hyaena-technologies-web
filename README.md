@@ -1,5 +1,4 @@
 [CLIDoc]: https://github.com/HyaenaTechnologies/hyaena-technologies-web/blob/main/documentation/htnet.md
-[Dragonfly Database]: https://www.dragonflydb.io/
 [Deno]: https://deno.land/
 [Greptime Database]: https://greptime.com/
 [MDN]: https://developer.mozilla.org/en-US/docs/Web/API
@@ -49,8 +48,6 @@ Web Implementation of Hyaena Technologies
 - [Command Line Documentation][CLIDoc]
 
 ### Databases
-
-- **_Key Value:_** [Dragonfly][Dragonfly Database] - (In Progress)
 
 - **_Object Storage:_** [Minio][Minio Database] - (In Progress)
 
