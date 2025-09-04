@@ -11,7 +11,6 @@
 [SystemD]: https://systemd.io/
 [Traefik]: https://traefik.io/traefik/
 [WebAuthn]: https://developer.mozilla.org/en-US/docs/Web/API/Web_Authentication_API
-[Vault]: https://www.hashicorp.com/en/products/vault
 [WebGL]: https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API
 [WebGPU]: https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API
 [W3C]: https://w3.org/TR/
@@ -33,9 +32,9 @@ Web Implementation of Hyaena Technologies
 
 ## Features
 
-- Environment Variables
-- [JavaScript Object Notation Web Token][JWT]
-- [YAML Ain't Markup Language][YAML]
+- Environment Variables - (In Progress)
+- [JavaScript Object Notation Web Token][JWT] - (In Progress)
+- [YAML Ain't Markup Language][YAML] - (In Progress)
 
 ## Build
 
@@ -45,7 +44,7 @@ Web Implementation of Hyaena Technologies
 - [OpenSSH][SSH]
 - [Mozilla Developer Network Web Documentation][MDN]
 - [Web Consortium Documentation][W3C]
-- [Web Authentication][WebAuthn]
+- [Web Authentication][WebAuthn] - (In Progress)
 - [Web Graphics Library][WebGL] - (In Progress)
 - [Web GPU][WebGPU] - (In Progress)
 - [Traefik Proxy][Traefik] - (In Progress)
