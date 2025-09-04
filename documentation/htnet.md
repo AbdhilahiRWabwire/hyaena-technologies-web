@@ -4,7 +4,7 @@
 
 | Command               | Description                                     |
 | --------------------- | ----------------------------------------------- |
-| configuration         | Configure Server with server-configuration.env  | - (In Progress)
+| config                | Configure Server with server-configuration.env  | - (In Progress)
 | exit (Command Prompt) | Exit Service                                    |
 | help                  | Print List of Commands and Flags                |
 | serve                 | Serve Web Applcation                            |

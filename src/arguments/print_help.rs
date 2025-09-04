@@ -11,7 +11,7 @@ pub fn print_help_message() -> () {
     writeln!(standard_output, "").unwrap();
     writeln!(
         standard_output,
-        "configuration\t\t Configure Server with server-configuration.yaml"
+        "config\t\t Configure Server with server-configuration.yaml"
     )
     .unwrap();
     writeln!(standard_output, "exit (Command Prompt)\t\t Exit Service").unwrap();
