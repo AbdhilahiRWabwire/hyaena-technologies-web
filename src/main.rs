@@ -1,9 +1,12 @@
 mod arguments;
+mod authentication;
+mod authorization;
 mod configuration;
 mod errors;
 mod events;
 mod hypertext_transfer;
 mod json;
+mod jwt;
 mod logging;
 mod routing;
 mod shared;
