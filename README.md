@@ -1,6 +1,7 @@
 [CLIDoc]: https://github.com/HyaenaTechnologies/hyaena-technologies-web/blob/main/documentation/htnet.md
 [Deno]: https://deno.land/
 [Greptime Database]: https://greptime.com/
+[JWT]: https://jwt.io/
 [MDN]: https://developer.mozilla.org/en-US/docs/Web/API
 [Minio Database]: https://min.io/
 [Postgres Database]: https://www.postgresql.org/
@@ -31,6 +32,7 @@ Web Implementation of Hyaena Technologies
 ## Features
 
 - Environment Variables
+- [JavaScript Object Notation Web Token][JWT]
 - [YAML Ain't Markup Language][YAML]
 
 ## Build
