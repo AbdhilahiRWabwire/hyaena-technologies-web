@@ -2,6 +2,7 @@
 [Deno]: https://deno.land/
 [Dragonfly Database]: https://www.dragonflydb.io/
 [Greptime Database]: https://greptime.com/
+[JSON]: https://www.json.org/json-en.html
 [JWT]: https://jwt.io/
 [MDN]: https://developer.mozilla.org/en-US/docs/Web/API
 [Minio Database]: https://min.io/
@@ -33,6 +34,7 @@ Web Implementation of Hyaena Technologies
 ## Features
 
 - Environment Variables - (In Progress)
+- [JavaScript Object Notation][JSON]
 - [JavaScript Object Notation Web Token][JWT] - (In Progress)
 - [YAML Ain't Markup Language][YAML] - (In Progress)
 
