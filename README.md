@@ -11,6 +11,7 @@
 [SSH]: https://openssh.com/
 [SystemD]: https://systemd.io/
 [Traefik]: https://traefik.io/traefik/
+[TypeScript Language]: https://www.typescriptlang.org/docs/
 [WebAuthn]: https://developer.mozilla.org/en-US/docs/Web/API/Web_Authentication_API
 [WebGL]: https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API
 [WebGPU]: https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API
@@ -41,6 +42,7 @@ Web Implementation of Hyaena Technologies
 ## Build
 
 - [Rust][Rust Language]
+- [TypeScript][TypeScript Language]
 - [Deno Bundler][Deno]
 - [System Daemon][SystemD]
 - [OpenSSH][SSH]
