@@ -22,13 +22,13 @@ pub fn tokenize(source: &'static String) {
     let lines: Lines<'static> = source.lines();
     let tokens: Vec<ArgumentToken> = Vec::new();
     let lexer: ArgumentLexer = ArgumentLexer {
+        argument_lines: lines,
+        argument_source: source,
         argument_tokens: tokens,
         current_positon: 0,
-        source_arguments: source,
-        source_lines: lines,
     };
     let advance_lexer: usize = advance_position(&lexer);
-    let characters: Vec<char> = lexer.source_arguments.chars().collect();
+    let characters: Vec<char> = lexer.argument_source.chars().collect();
     let character: bool = alphabetic_character(characters[0].to_string());
     let current_character: char = current_position(&lexer);
     let eof: bool = end_of_file(&lexer);

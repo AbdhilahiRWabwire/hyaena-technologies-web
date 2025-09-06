@@ -23,10 +23,10 @@ pub struct ArgumentToken {
 
 // Argument Lexer Definition
 pub struct ArgumentLexer {
+    pub argument_lines: Lines<'static>,
+    pub argument_source: &'static String,
     pub argument_tokens: Vec<ArgumentToken>,
     pub current_positon: usize,
-    pub source_arguments: &'static String,
-    pub source_lines: Lines<'static>,
 }
 
 // Advance Lexer Position by 1
@@ -46,7 +46,7 @@ pub fn advance_to_position(argument_lexer: &ArgumentLexer, index: usize) -> usiz
 // Lexer Current Position
 pub fn current_position(argument_lexer: &ArgumentLexer) -> char {
     let position: usize = argument_lexer.current_positon;
-    let source: Vec<char> = argument_lexer.source_arguments.chars().collect();
+    let source: Vec<char> = argument_lexer.argument_source.chars().collect();
 
     return source[position];
 }
@@ -65,7 +65,7 @@ pub fn flag_character(source_arguments: String) -> bool {
 // Returns True if Lexer Position is at End of File
 pub fn end_of_file(argument_lexer: &ArgumentLexer) -> bool {
     let position: usize = argument_lexer.current_positon;
-    let source: &String = argument_lexer.source_arguments;
+    let source: &'static String = argument_lexer.argument_source;
 
     return position >= source.len();
 }
