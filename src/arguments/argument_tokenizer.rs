@@ -19,13 +19,7 @@ use super::argument_lexer::{
 
 // Tokenize Command Line Arguments
 pub fn tokenize(source: &'static String) {
-    let characters: Vec<char> = source.chars().collect();
-    let character: bool = alphabetic_character(characters[0].to_string());
-    let flag: bool = flag_character(characters[0].to_string());
-    let integer: bool = integer_character(characters[0].to_string());
     let lines: Lines<'static> = source.lines();
-    let null: bool = null_character(characters[0].to_string());
-    let whitespace: bool = whitespace_character(characters[0].to_string());
     let tokens: Vec<ArgumentToken> = Vec::new();
     let lexer: ArgumentLexer = ArgumentLexer {
         argument_tokens: tokens,
@@ -34,8 +28,14 @@ pub fn tokenize(source: &'static String) {
         source_lines: lines,
     };
     let advance_lexer: usize = advance_position(&lexer);
+    let characters: Vec<char> = lexer.source_arguments.chars().collect();
+    let character: bool = alphabetic_character(characters[0].to_string());
     let current_character: char = current_position(&lexer);
     let eof: bool = end_of_file(&lexer);
+    let flag: bool = flag_character(characters[0].to_string());
+    let integer: bool = integer_character(characters[0].to_string());
+    let null: bool = null_character(characters[0].to_string());
+    let whitespace: bool = whitespace_character(characters[0].to_string());
 
     while characters.len() > 0 {}
 }
