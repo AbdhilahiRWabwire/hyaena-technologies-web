@@ -14,47 +14,47 @@ use crate::tokens::{
 
 use super::print_help::print_help_message;
 
-// Argument Lexer Definition
-pub struct ArgumentLexer {
-    pub current_line: u8,
-    pub positon: usize,
-    pub source: String,
-    pub tokens: Vec<ArgumentToken>,
-}
-
 // Argument Token Definition
 pub struct ArgumentToken {
     pub lexeme: String,
     pub token_type: TokenType,
 }
 
+// Argument Lexer Definition
+pub struct ArgumentLexer {
+    pub current_line: u8,
+    pub current_positon: usize,
+    pub source_arguments: String,
+    pub argument_tokens: Vec<ArgumentToken>,
+}
+
 // Advance Lexer Position by 1
-pub fn advance_position(lexer: ArgumentLexer) -> usize {
-    let position: usize = lexer.positon;
+pub fn advance_position(argument_lexer: ArgumentLexer) -> usize {
+    let position: usize = argument_lexer.current_positon;
 
     return position + 1;
 }
 
 // Advance Lexer to Position
-pub fn advance_to_position(lexer: ArgumentLexer, index: usize) -> usize {
-    let position: usize = lexer.positon;
+pub fn advance_to_position(argument_lexer: ArgumentLexer, index: usize) -> usize {
+    let position: usize = argument_lexer.current_positon;
 
     return position + index;
 }
 
 // Lexer Current Position
-pub fn current_position(lexer: ArgumentLexer) -> char {
-    let position: usize = lexer.positon;
-    let source: Vec<char> = lexer.source.chars().collect();
+pub fn current_position(argument_lexer: ArgumentLexer) -> char {
+    let position: usize = argument_lexer.current_positon;
+    let source: Vec<char> = argument_lexer.source_arguments.chars().collect();
 
     return source[position];
 }
 
 // Returns True if Flag Character
-pub fn flag_character(source: String) -> bool {
+pub fn flag_character(source_arguments: String) -> bool {
     let operators: Vec<OperatorToken> = operators_vector();
 
-    if source.starts_with(operators[39]) || source.starts_with(operators[11]) {
+    if source_arguments.starts_with(operators[39]) || source_arguments.starts_with(operators[11]) {
         return true;
     } else {
         return false;
@@ -62,19 +62,19 @@ pub fn flag_character(source: String) -> bool {
 }
 
 // Returns True if Lexer Position is at End of File
-pub fn end_of_file(lexer: ArgumentLexer) -> bool {
-    let position: usize = lexer.positon;
-    let source: String = lexer.source;
+pub fn end_of_file(argument_lexer: ArgumentLexer) -> bool {
+    let position: usize = argument_lexer.current_positon;
+    let source: String = argument_lexer.source_arguments;
 
     return position >= source.len();
 }
 
 // Print Argument Token
-pub fn print_argument_token(token: ArgumentToken) -> () {
+pub fn print_argument_token(argument_token: ArgumentToken) -> () {
     let mut standard_output: StdoutLock = stdout().lock();
 
-    writeln!(standard_output, "{}", token.lexeme).unwrap();
-    writeln!(standard_output, "{}", token.token_type).unwrap();
+    writeln!(standard_output, "{}", argument_token.lexeme).unwrap();
+    writeln!(standard_output, "{}", argument_token.token_type).unwrap();
 
     return ();
 }

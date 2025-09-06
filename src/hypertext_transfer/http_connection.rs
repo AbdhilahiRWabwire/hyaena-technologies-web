@@ -14,7 +14,7 @@ pub struct HttpConnection {
     pub ip_address: IpAddr,
     pub socket_address: SocketAddr,
     pub transmission_listener: Result<TcpListener, Error>,
-    pub datagrm_socket: Result<UdpSocket, Error>,
+    pub datagram_socket: Result<UdpSocket, Error>,
 }
 
 // Print Hypertext Transfer Protocol Requests
