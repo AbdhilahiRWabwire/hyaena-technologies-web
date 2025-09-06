@@ -1,8 +1,4 @@
-use std::{
-    primitive::{bool, char},
-    string::String,
-    vec::Vec,
-};
+use std::{primitive::bool, string::String, vec::Vec};
 
 use crate::tokens::{
     escape_tokens::{EscapeToken, escape_tokens_vector},
@@ -16,11 +12,9 @@ pub fn alphabetic_character(source_code: String) -> bool {
 
 // Returns True if Integer
 pub fn integer_character(source_code: String) -> bool {
-    let character: Vec<char> = source_code.chars().collect();
     let numbers: Vec<NumberToken> = numbers_vector();
 
-    return character[0] >= numbers[0].to_string().remove(0)
-        && character[0] <= numbers[9].to_string().remove(0);
+    return source_code >= numbers[0].to_string() && source_code <= numbers[9].to_string();
 }
 
 // Returns True if Null Character

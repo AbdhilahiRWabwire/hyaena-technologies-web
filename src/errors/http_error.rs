@@ -3,7 +3,6 @@
 use std::{
     fs::File,
     io::{Error, StdoutLock, Write, stdout},
-    option::Option,
     path::PathBuf,
     result::{Result, Result::Ok},
     time::SystemTime,
@@ -15,7 +14,7 @@ use crate::logging::logger::LogLevel;
 // Hypertext Transfer Error Definition
 pub struct HttpError {
     pub current_time: SystemTime,
-    pub log_level: Option<LogLevel>,
+    pub log_level: LogLevel,
     pub status_code: HttpStatusCode,
     pub status_text: HttpStatusText,
 }

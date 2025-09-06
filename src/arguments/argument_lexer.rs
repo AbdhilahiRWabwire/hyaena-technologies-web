@@ -1,8 +1,9 @@
 use std::{
     env::args,
     io::{StdoutLock, Write, stdout},
-    primitive::{bool, char, u8, usize},
+    primitive::{bool, char, usize},
     process::exit,
+    str::Lines,
     string::String,
     vec::Vec,
 };
@@ -22,28 +23,28 @@ pub struct ArgumentToken {
 
 // Argument Lexer Definition
 pub struct ArgumentLexer {
-    pub current_line: u8,
-    pub current_positon: usize,
-    pub source_arguments: String,
     pub argument_tokens: Vec<ArgumentToken>,
+    pub current_positon: usize,
+    pub source_arguments: &'static String,
+    pub source_lines: Lines<'static>,
 }
 
 // Advance Lexer Position by 1
-pub fn advance_position(argument_lexer: ArgumentLexer) -> usize {
+pub fn advance_position(argument_lexer: &ArgumentLexer) -> usize {
     let position: usize = argument_lexer.current_positon;
 
     return position + 1;
 }
 
 // Advance Lexer to Position
-pub fn advance_to_position(argument_lexer: ArgumentLexer, index: usize) -> usize {
+pub fn advance_to_position(argument_lexer: &ArgumentLexer, index: usize) -> usize {
     let position: usize = argument_lexer.current_positon;
 
     return position + index;
 }
 
 // Lexer Current Position
-pub fn current_position(argument_lexer: ArgumentLexer) -> char {
+pub fn current_position(argument_lexer: &ArgumentLexer) -> char {
     let position: usize = argument_lexer.current_positon;
     let source: Vec<char> = argument_lexer.source_arguments.chars().collect();
 
@@ -62,15 +63,15 @@ pub fn flag_character(source_arguments: String) -> bool {
 }
 
 // Returns True if Lexer Position is at End of File
-pub fn end_of_file(argument_lexer: ArgumentLexer) -> bool {
+pub fn end_of_file(argument_lexer: &ArgumentLexer) -> bool {
     let position: usize = argument_lexer.current_positon;
-    let source: String = argument_lexer.source_arguments;
+    let source: &String = argument_lexer.source_arguments;
 
     return position >= source.len();
 }
 
 // Print Argument Token
-pub fn print_argument_token(argument_token: ArgumentToken) -> () {
+pub fn print_argument_token(argument_token: &ArgumentToken) -> () {
     let mut standard_output: StdoutLock = stdout().lock();
 
     writeln!(standard_output, "{}", argument_token.lexeme).unwrap();

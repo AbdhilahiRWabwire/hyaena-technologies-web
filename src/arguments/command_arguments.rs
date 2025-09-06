@@ -6,7 +6,7 @@ use std::{primitive::str, vec::Vec};
 pub type CommandArgument = &'static str;
 
 // Command Argument
-pub const CONFIGURATION_COMMAND: CommandArgument = "configuration";
+pub const CONFIGURATION_COMMAND: CommandArgument = "config";
 pub const EXIT_COMMAND: CommandArgument = "exit";
 pub const HELP_COMMAND: CommandArgument = "help";
 pub const SERVE_COMMAND: CommandArgument = "serve";

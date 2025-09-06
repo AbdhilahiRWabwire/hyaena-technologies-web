@@ -1,5 +1,6 @@
 use std::{
     primitive::{bool, char},
+    str::Lines,
     string::String,
     vec::Vec,
 };
@@ -17,21 +18,24 @@ use super::argument_lexer::{
 };
 
 // Tokenize Command Line Arguments
-pub fn tokenize(source_args: String) {
-    let source: Vec<char> = source_args.chars().collect();
-    let character: bool = alphabetic_character(source[0].to_string());
-    let flag: bool = flag_character(source[0].to_string());
-    let integer: bool = integer_character(source[0].to_string());
-    let null: bool = null_character(source[0].to_string());
-    let whitespace: bool = whitespace_character(source[0].to_string());
+pub fn tokenize(source: &'static String) {
+    let characters: Vec<char> = source.chars().collect();
+    let character: bool = alphabetic_character(characters[0].to_string());
+    let flag: bool = flag_character(characters[0].to_string());
+    let integer: bool = integer_character(characters[0].to_string());
+    let lines: Lines<'static> = source.lines();
+    let null: bool = null_character(characters[0].to_string());
+    let whitespace: bool = whitespace_character(characters[0].to_string());
     let tokens: Vec<ArgumentToken> = Vec::new();
     let lexer: ArgumentLexer = ArgumentLexer {
-        current_line: 1,
-        current_positon: 0,
-        source_arguments: source_args,
         argument_tokens: tokens,
+        current_positon: 0,
+        source_arguments: source,
+        source_lines: lines,
     };
-    let eof: bool = end_of_file(lexer);
+    let advance_lexer: usize = advance_position(&lexer);
+    let current_character: char = current_position(&lexer);
+    let eof: bool = end_of_file(&lexer);
 
-    while source.len() > 0 {}
+    while characters.len() > 0 {}
 }
