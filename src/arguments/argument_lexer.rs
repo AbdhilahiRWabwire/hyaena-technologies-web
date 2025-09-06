@@ -53,8 +53,11 @@ pub fn current_position(argument_lexer: ArgumentLexer) -> char {
 // Returns True if Flag Character
 pub fn flag_character(source_arguments: String) -> bool {
     let operators: Vec<OperatorToken> = operators_vector();
+    let source: Vec<char> = source_arguments.chars().collect();
 
-    if source_arguments.starts_with(operators[39]) || source_arguments.starts_with(operators[11]) {
+    if source[0].to_string() == operators[39].to_string()
+        || source[1].to_string() == operators[39].to_string()
+    {
         return true;
     } else {
         return false;
